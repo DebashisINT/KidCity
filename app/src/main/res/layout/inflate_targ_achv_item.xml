@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_10sdp">
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_enquiry"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="0 | 0"
+        android:textColor="@color/login_txt_color"
+        android:textSize="@dimen/_10sdp" />
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_lead"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="0 | 0"
+        android:textColor="@color/login_txt_color"
+        android:textSize="@dimen/_10sdp" />
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_test_drive"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="0 | 0"
+        android:textColor="@color/login_txt_color"
+        android:textSize="@dimen/_10sdp"/>
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_booking"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="0 | 0"
+        android:textColor="@color/login_txt_color"
+        android:textSize="@dimen/_10sdp" />
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_retail"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="0 | 0"
+        android:textColor="@color/login_txt_color"
+        android:textSize="@dimen/_10sdp" />
+</LinearLayout>

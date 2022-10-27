@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/_10sdp"
+    android:paddingRight="@dimen/_10sdp"
+    android:paddingTop="@dimen/_5sdp"
+    android:paddingBottom="@dimen/_5sdp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="2"
+        android:orientation="vertical"
+        android:gravity="center_vertical">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vikas Kumar Khuranna"
+            android:textColor="@color/login_txt_color"
+            android:textSize="@dimen/_10sdp" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_report_to_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Anil Jain"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_9sdp"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:drawableLeft="@drawable/ic_report_icon"
+            android:drawablePadding="@dimen/_5sdp"/>
+    </LinearLayout>
+
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_login_time"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="10.30 AM"
+        android:textColor="@color/login_txt_color"
+        android:textSize="@dimen/_10sdp"
+        android:gravity="center"/>
+
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_late_hrs"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="00:00"
+        android:textColor="@color/login_txt_color"
+        android:textSize="@dimen/_11sdp"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_status"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="Not Logged In"
+        android:textColor="@color/login_txt_color"
+        android:textSize="@dimen/_10sdp"
+        android:gravity="center"/>
+
+    <RelativeLayout
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="0.6">
+
+        <ImageView
+            android:id="@+id/iv_call_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@null"
+            android:src="@drawable/ic_registered_shop_call_deselect"
+            android:padding="@dimen/_10sdp"
+            android:layout_centerInParent="true" />
+
+        <View
+            android:id="@+id/view"
+            android:layout_width="@dimen/_10sdp"
+            android:layout_height="1dp"
+            android:background="@color/login_txt_color"
+            android:layout_centerInParent="true"
+            android:visibility="gone"/>
+    </RelativeLayout>
+</LinearLayout>

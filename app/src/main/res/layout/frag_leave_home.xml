@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/selector_tab_new_leave_LL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:focusable="true"
+            android:orientation="horizontal"
+            android:weightSum="2">
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/pendings_approval_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selected_new_order_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="Pending Approval"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold"
+                android:textColor="@drawable/selector_text_clor_blue_white_new" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/leave_status_tv"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:background="@drawable/selected_new_order_bg"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:textSize="@dimen/_11sdp"
+                android:padding="@dimen/_10sdp"
+                android:text="Leave Status"
+                android:textStyle="bold"
+                android:textColor="@drawable/selector_text_clor_blue_white_new" />
+
+
+
+        </LinearLayout>
+
+        <androidx.viewpager.widget.ViewPager
+            android:id="@+id/leave_home_viewpager"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    xmlns:fab="http://schemas.android.com/tools"
+    android:id="@+id/rl_member_list_shop_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/smoke_white"
+    android:paddingTop="@dimen/_10sdp">
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_team_struct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_12sdp"
+        android:textStyle="normal"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:visibility="gone"/>
+
+    <RadioGroup
+        android:id="@+id/radio_grp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tv_team_struct"
+        android:visibility="gone">
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb_total_shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/total_shops"
+            android:textColor="@color/colorAccent"
+            android:layout_marginRight="@dimen/_5sdp"/>
+
+        <androidx.appcompat.widget.AppCompatRadioButton
+            android:id="@+id/rb_visit_shop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/new_visit_shop"
+            android:textColor="@color/colorAccent" />
+    </RadioGroup>
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_shop_path"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:layout_below="@+id/radio_grp"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_12sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:visibility="gone"/>
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_shop_count"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:text="Total Shop(s): 0"
+        android:layout_below="@+id/tv_shop_path"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_12sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_5sdp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_team_shop_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/tv_shop_count"
+        android:layout_marginTop="@dimen/_5sdp" />
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_no_data_available"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/no_shop_available"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="normal"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:gravity="center">
+
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:id="@+id/progress_wheel"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            wheel:matProg_barColor="@color/default_text_color"
+            wheel:matProg_progressIndeterminate="true" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_shop_loading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/shop_loading"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="normal"
+            android:gravity="center"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/floating_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_margin="@dimen/_20sdp"
+        android:src="@drawable/ic_dashboard_filter_icon"
+        fab:menu_animationDelayPerItem="0"
+        fab:menu_buttonSpacing="0dp"
+        fab:menu_colorNormal="#1A8BA6"
+        fab:menu_colorPressed="#177D95"
+        fab:menu_colorRipple="#1A8BA6"
+        fab:menu_labels_hideAnimation="@anim/jump_to_down"
+        fab:menu_labels_margin="0dp"
+        fab:menu_labels_showAnimation="@anim/jump_from_down"
+        fab:menu_labels_style="@style/MenuLabelsStyle"
+        fab:menu_shadowColor="#444"
+        android:visibility="gone"/>
+
+</RelativeLayout>

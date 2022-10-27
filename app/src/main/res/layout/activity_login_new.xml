@@ -1,0 +1,424 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusableInTouchMode="true">
+
+    <ImageView
+        android:id="@+id/iv_shopImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_image_upload_icon"
+        android:visibility="invisible" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:nestedScrollingEnabled="false"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_new_login_bg_new3">
+
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/_5sdp"
+                android:text="@string/version_name"
+                android:textSize="@dimen/_10sdp"
+                android:visibility="gone" />
+
+
+            <RelativeLayout
+                android:id="@+id/rl_main_new"
+                android:layout_width="match_parent"
+                android:elevation="@dimen/_10sdp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true">
+
+                <ImageView
+                    android:id="@+id/logo_new"
+                    android:layout_width="@dimen/_175sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:src="@drawable/breezelogo"
+                    android:layout_marginTop="@dimen/_30sdp"
+                    android:layout_centerHorizontal="true"
+                    android:gravity="center|center_horizontal"
+                    android:layout_gravity="center"
+                  />
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/Logo_name_TV"
+                    android:layout_below="@+id/logo_new"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center|center_horizontal"
+                    android:layout_gravity="center"
+                    android:textStyle="bold"
+                    android:layout_centerHorizontal="true"
+                    android:textColor="#287fb2"
+                    android:text="@string/name_filed_managenent_system"
+                    android:textSize="@dimen/_12sdp"
+                    android:visibility="gone"
+                    android:layout_marginTop="@dimen/_10sdp"/>
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/app_title_TV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:text="@string/app_name"
+                    android:textColor="@color/default_text_color"
+                    android:textSize="@dimen/_15sdp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/login_LL"
+                    android:layout_marginTop="@dimen/_145sdp"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="@dimen/_2sdp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_1sdp"
+                            android:layout_marginRight="@dimen/_10sdp"
+                            android:windowSoftInputMode="adjustResize">
+
+
+                            <LinearLayout
+                                    android:background="@drawable/new_login_bg_newscre"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical"
+                                    android:layout_marginRight="@dimen/_30sdp"
+                                    android:paddingTop="@dimen/_10sdp"
+                                    android:paddingBottom="@dimen/_10sdp"
+                                    android:elevation="@dimen/_3sdp">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:orientation="horizontal"
+                                            android:layout_height="@dimen/_45sdp"
+                                            android:layout_marginLeft="@dimen/_10sdp"
+                                            android:layout_marginRight="@dimen/_30sdp"
+                                            android:gravity="center|start">
+
+                                            <ImageView
+                                                android:layout_width="@dimen/_20sdp"
+                                                android:src="@drawable/ic_user_newscr"
+                                                android:layout_gravity="center"
+                                                android:layout_height="@dimen/_25sdp"
+                                                android:layout_marginTop="@dimen/_3sdp"/>
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="@dimen/_35sdp"
+                                                android:textColorHint="@color/gray"
+                                                android:background="@color/transparent"
+                                                android:layout_gravity="center"
+                                                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                                                <com.kcteam.widgets.AppCustomEditText
+                                                    android:id="@+id/username_EDT"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:hint="@string/username_new"
+                                                    android:imeOptions="actionNext"
+                                                    android:layout_gravity="center"
+                                                    android:background="@color/transparent"
+                                                    android:inputType="textEmailAddress"
+                                                    android:singleLine="true"
+                                                    android:paddingStart="@dimen/_10sdp"
+                                                    android:textSize="@dimen/_13sdp"
+                                                    app:theme="@style/EvoEditTextTheme" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+
+                                        </LinearLayout>
+
+                                        <View
+                                            android:layout_width="match_parent"
+                                            android:layout_height="1dp"
+                                            android:layout_marginTop="@dimen/_5sdp"
+                                            android:layout_marginBottom="@dimen/_1sdp"
+                                            android:background="@color/card_custom_back1"
+                                            android:layout_marginLeft="@dimen/_10sdp"
+                                            android:layout_marginRight="@dimen/_10sdp" />
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="@dimen/_45sdp"
+                                            android:orientation="horizontal"
+                                            android:layout_marginLeft="@dimen/_10sdp"
+                                            android:layout_marginRight="@dimen/_30sdp"
+                                            android:gravity="center|start">
+
+                                            <ImageView
+                                                android:layout_width="@dimen/_20sdp"
+                                                android:layout_height="@dimen/_25sdp"
+                                                android:src="@drawable/ic_padlock"
+                                                android:layout_gravity="center"
+                                                android:layout_marginTop="@dimen/_3sdp"/>
+
+                                            <com.google.android.material.textfield.TextInputLayout
+                                                android:layout_width="match_parent"
+                                                android:layout_height="@dimen/_35sdp"
+                                                android:textColorHint="@color/gray"
+                                                app:passwordToggleEnabled="true"
+                                                android:layout_gravity="center"
+                                                android:background="@color/transparent"
+                                                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                                                <com.google.android.material.textfield.TextInputEditText
+                                                    android:id="@+id/password_EDT"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:layout_gravity="center"
+                                                    android:background="@color/transparent"
+                                                    android:hint="@string/password"
+                                                    android:imeOptions="actionDone"
+                                                    android:inputType="textPassword"
+                                                    android:paddingStart="@dimen/_10sdp"
+                                                    android:singleLine="true"
+                                                    android:textSize="@dimen/_13sdp"
+                                                    app:theme="@style/EvoEditTextTheme" />
+
+                                            </com.google.android.material.textfield.TextInputLayout>
+
+                                        </LinearLayout>
+
+
+                                </LinearLayout>
+
+                            <ImageView
+                                android:id="@+id/login_TV"
+                                android:layout_width="@dimen/_59sdp"
+                                android:src="@drawable/sub_loginbtn"
+                                android:layout_gravity="center|end"
+                                android:layout_height="@dimen/_59sdp"
+                                android:elevation="@dimen/_3sdp"/>
+
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/rem_rl"
+                        android:layout_width="wrap_content"
+                        android:layout_gravity="end"
+                        android:layout_height="@dimen/_30sdp"
+                        android:gravity="end"
+                        android:orientation="horizontal"
+                        android:layout_marginRight="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_2sdp">
+
+                        <CheckBox
+                            android:id="@+id/cb_remember_me"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/remember_me"
+                            android:buttonTint="#33BAFF"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/_11sdp"/>
+
+<!--                        <androidx.appcompat.widget.SwitchCompat-->
+<!--                            android:id="@+id/cb_remember_me"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="@dimen/_35sdp"-->
+<!--                            wheel:switchMinWidth="@dimen/_35sdp"-->
+<!--                            wheel:switchPadding="@dimen/_5sdp"-->
+<!--                            android:text="Remember Me"-->
+<!--                            android:thumb="@drawable/login_rem_thumb_selector"-->
+<!--                            wheel:track="@drawable/login_rem_track_selector" />-->
+
+                        <com.kcteam.widgets.AppCustomTextView
+                            android:id="@+id/share_log_login_TV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:drawableStart="@drawable/ic_share_svg"
+                            android:gravity="center"
+                            android:text="@string/share_log"
+                            android:textColor="#084e8b"
+                            android:textStyle="bold"
+                            android:textSize="@dimen/_12sdp"
+                            android:visibility="gone"
+                            android:layout_alignParentRight="true"
+                            android:drawablePadding="5dp"/>
+
+                    </RelativeLayout>
+
+
+                    <com.kcteam.widgets.AppCustomTextView
+                        android:id="@+id/forgot_password_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:text="@string/forgot_password"
+                        android:textColor="@color/default_text_color"
+                        android:textSize="@dimen/_11sdp"
+                        android:visibility="gone" />
+
+                    <!--<com.kcteam.widgets.AppCustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:text="@string/login_logout_msg"
+                        android:textColor="@color/default_text_color"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold"/>
+
+                    <com.kcteam.widgets.AppCustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:gravity="center"
+                        android:text="Internet connection strength is good, you can login now"
+                        android:textColor="@color/default_text_color"
+                        android:textSize="@dimen/_11sdp" />-->
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/setting_ll_activity_login_new"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_7sdp"
+                    android:layout_below="@+id/tv_internet_info">
+
+                    <com.kcteam.widgets.AppCustomTextView
+                        android:id="@+id/activity_login_tvappCustomAnydeskInfo"
+                        android:layout_width="@dimen/_45sdp"
+                        android:layout_height="@dimen/_35sdp"
+                        android:background="@drawable/settings_custom_newscre"
+                        android:drawableStart="@drawable/ic_gear"
+                        android:drawablePadding="8dp"
+                        android:drawableTint="@color/white"
+                        android:gravity="start|center_vertical"
+                        android:paddingHorizontal="@dimen/_10sdp"
+                        android:paddingVertical="@dimen/_12sdp"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+<!--                    <LinearLayout-->
+<!--                        android:id="@+id/activity_login_llList"-->
+<!--                        android:layout_width="wrap_content"-->
+<!--                        android:layout_height="wrap_content"-->
+<!--                        android:layout_marginTop="@dimen/_25sdp"-->
+<!--                        android:layout_marginHorizontal="@dimen/_5sdp"-->
+<!--                        android:background="@drawable/rect_stroke_solid_off_green"-->
+<!--                        android:orientation="vertical"-->
+<!--                        android:paddingHorizontal="@dimen/_8sdp"-->
+<!--                        android:paddingVertical="@dimen/_8sdp"-->
+<!--                        android:layout_marginStart="@dimen/_1sdp"-->
+<!--                        android:visibility="invisible">-->
+
+<!--                        <com.kcteam.widgets.AppCustomTextView-->
+<!--                            android:id="@+id/activity_login_tvappCustomAnydesk"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center_vertical"-->
+<!--                            android:background="@drawable/selector_green_botton_bg_1"-->
+<!--                            android:gravity="center"-->
+<!--                            android:paddingHorizontal="@dimen/_10sdp"-->
+<!--                            android:paddingVertical="@dimen/_5sdp"-->
+<!--                            android:text="@string/report"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:textSize="@dimen/_8sdp" />-->
+
+<!--                        <com.kcteam.widgets.AppCustomTextView-->
+<!--                            android:id="@+id/activity_login_tvappCustomLogs"-->
+<!--                            android:layout_width="wrap_content"-->
+<!--                            android:layout_height="wrap_content"-->
+<!--                            android:layout_gravity="center_vertical"-->
+<!--                            android:layout_marginTop="@dimen/_8sdp"-->
+<!--                            android:background="@drawable/selector_green_botton_bg_1"-->
+<!--                            android:gravity="center"-->
+<!--                            android:paddingHorizontal="@dimen/_10sdp"-->
+<!--                            android:paddingVertical="@dimen/_5sdp"-->
+<!--                            android:text="@string/share_log"-->
+<!--                            android:textColor="@color/white"-->
+<!--                            android:textSize="@dimen/_8sdp" />-->
+<!--                    </LinearLayout>-->
+
+                </LinearLayout>
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/tv_internet_info"
+                    android:layout_width="@dimen/_265sdp"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/login_LL"
+                    android:padding="@dimen/_5sdp"
+                    android:layout_toRightOf="@+id/icon_internet"
+                    android:text="@string/login_logout_msg"
+                    android:textSize="@dimen/_11sdp"
+                    android:textColor="@color/color_deep_blue" />
+
+                <ImageView
+                    android:id="@+id/icon_internet"
+                    android:src="@drawable/ic_info_interenet"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_below="@+id/login_LL"
+                    android:layout_margin="@dimen/_2sdp"
+                    android:layout_height="@dimen/_25sdp"/>
+
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/version_name_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="@dimen/_5sdp"
+        android:gravity="bottom"
+        android:text="@string/version_name"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_10sdp"
+        android:visibility="visible" />
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@+id/progress_wheel"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        wheel:matProg_barColor="@color/default_text_color"
+        wheel:matProg_progressIndeterminate="true" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/alert_snack_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+
+
+
+</RelativeLayout>

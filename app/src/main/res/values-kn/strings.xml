@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Chat Bot-->
+    <string name="attendance" translatable="false">ಹಾಜರಾತಿ</string>
+    <string name="reports" translatable="false">ವರದಿಗಳು</string>
+    <string name="logout" translatable="false">ಲಾಗ್ ಔಟ್</string>
+    <string name="yes" translatable="false">ಹೌದು</string>
+    <string name="no" translatable="false">ಇಲ್ಲ</string>
+    <string name="history" translatable="false">ಸಮಯಸೂಚಿಗಳು</string>
+    <string name="login" translatable="false">ಲಾಗಿನ್ ಮಾಡಿ</string>
+    <string name="open" translatable="false">ತೆರೆಯಿರಿ</string>
+    <string name="visit" translatable="false">ಭೇಟಿಗಳು</string>
+    <string name="total_visit_without_colon" translatable="false">ಒಟ್ಟು ಭೇಟಿ</string>
+    <string name="revisit" translatable="false">ಪುನಃ ಭೇಟಿ ನೀಡಿ</string>
+    <string name="visit_sync" translatable="false">ಸಿಂಕ್ ಗೆ ಭೇಟಿ ನೀಡಿ</string>
+    <string name="help" translatable="false">ಸಹಾಯ</string>
+    <string name="tips" translatable="false">ಸಲಹೆಗಳು</string>
+    <string name="data_clear" translatable="false">ಡೇಟಾ ತೆರವುಗೊಳಿಸಿ</string>
+    <string name="sync_data" translatable="false">ಡೇಟಾವನ್ನು ಸಿಂಕ್ ಮಾಡಿ</string>
+    <string name="contact_us" translatable="false">ನಮ್ಮನ್ನು ಸಂಪರ್ಕಿಸಿ</string>
+    <string name="sales" translatable="false">ಮಾರಾಟ</string>
+    <string name="analytics" translatable="false">ವಿಶ್ಲೇಷಣೆ</string>
+    <string name="only_weather" translatable="false">ಹವಾಮಾನ</string>
+    <string name="reach_us" translatable="false">ನಮ್ಮನ್ನು ತಲುಪಿ</string>
+    <string name="share_log_only" translatable="false">ಹಂಚಿಕೆ ಲಾಗ್</string>
+    <string name="please_select_to_started" translatable="false">ಪ್ರಾರಂಭಿಸಲು ದಯವಿಟ್ಟು ಈ ಕೆಳಗಿನ ಆಯ್ಕೆಗಳನ್ನು ಆರಿಸಿ.</string>
+    <string name="wrong_date" translatable="false">ನೀವು ನಮೂದಿಸಿದ ದಿನಾಂಕವು ಪ್ರಸ್ತುತ ದಿನಾಂಕ ಅಥವಾ ಭವಿಷ್ಯದ ದಿನಾಂಕವಾಗಿರಬಾರದು.</string>
+    <string name="can_i_help" translatable="false">ಬೇರೆ ಯಾವುದಕ್ಕೂ ನಾನು ನಿಮಗೆ ಸಹಾಯ ಮಾಡಬಹುದೇ?</string>
+    <string name="want_to_see_visit_report" translatable="false">ಒಟ್ಟು ಭೇಟಿಯ ವರದಿಯ ದಿನಾಂಕವನ್ನು ನೀವು ನೋಡಲು ಬಯಸುವಿರಾ?</string>
+    <string name="your_total_visit" translatable="false">ನಿಮ್ಮ ಒಟ್ಟು ಭೇಟಿಗಳು\u0020</string>
+    <string name="is_with_space" translatable="false">\u0020ಇದೆ\u0020</string>
+    <string name="check_attendance" translatable="false">ಹಾಜರಾತಿಯನ್ನು ಪರಿಶೀಲಿಸಿ.</string>
+    <string name="enter_date_for_attendance" translatable="false">ಹಾಜರಾತಿ ಸ್ಥಿತಿಯನ್ನು ಪರಿಶೀಲಿಸಲು ದಯವಿಟ್ಟು ದಿನಾಂಕವನ್ನು ನಮೂದಿಸಿ.</string>
+    <string name="thanks_want_all_visit" translatable="false">ಧನ್ಯವಾದಗಳು. ಎಲ್ಲಾ ಭೇಟಿ ಆಯ್ಕೆಗಳನ್ನು ನೋಡಲು ನೀವು ಬಯಸುವಿರಾ?</string>
+    <string name="thanks_want_all_options" translatable="false">ಧನ್ಯವಾದಗಳು. ನೀವು ಎಲ್ಲಾ ಆಯ್ಕೆಗಳನ್ನು ನೋಡಲು ಬಯಸುವಿರಾ?</string>
+    <string name="have_grt_dat" translatable="false">ಧನ್ಯವಾದಗಳು! ಶುಭ ದಿನ:)</string>
+    <string name="check_total_visit" translatable="false">ಒಟ್ಟು ಭೇಟಿಗಳನ್ನು ಪರಿಶೀಲಿಸಿ.</string>
+    <string name="enter_date_check_total_visit" translatable="false">ಒಟ್ಟು ಭೇಟಿಗಳನ್ನು ಪರಿಶೀಲಿಸಲು ದಯವಿಟ್ಟು ದಿನಾಂಕವನ್ನು ನಮೂದಿಸಿ.</string>
+    <string name="only_visit" translatable="false">ಭೇಟಿ</string>
+    <string name="data_clr_alert" translatable="false">ನಿಮಗೆ ಖಚಿತವಾಗಿದೆಯೇ, ಏಕೆಂದರೆ ಅದು APP ಯನ್ನು ಲಾಗ್ out ಟ್ ಮಾಡುತ್ತದೆ ಮತ್ತು ನೀವು ಅನುಮತಿಗಳೊಂದಿಗೆ ಮರು-ಲಾಗಿನ್ ಮಾಡಬೇಕೇ?</string>
+    <string name="write_us" translatable="false">"ನಮಗೆ ಬರೆಯಿರಿ:\n"</string>
+    <string name="login_msg" translatable="false">"1. ಸಂದೇಶದ ಕೆಳಗೆ ಲಾಗಿನ್ ಆಗಿರುವಾಗ ಉತ್ತಮ ಇಂಟರ್ನೆಟ್ ಹೊಂದಿರಬೇಕು: \n 'ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕ ಕಡಿತಗೊಂಡಿದೆ, ನೀವು ಲಾಗಿನ್ ಆಗಲು ಸಾಧ್ಯವಿಲ್ಲ, ದಯವಿಟ್ಟು ಇಂಟರ್ನೆಟ್ ಅನ್ನು ಬದಲಾಯಿಸಿ.'
+        \n2. ಲಾಗಿನ್ ಮಾಡುವಾಗ ನೀವು ನಮೂದಿಸಿದ ಲಾಗಿನ್ ಐಡಿ ಮತ್ತು ಪಾಸ್‌ವರ್ಡ್ ಸರಿಯಾಗಿದೆ ಎಂದು ಖಚಿತಪಡಿಸಿಕೊಳ್ಳಿ ಇಲ್ಲದಿದ್ದರೆ ಸಂದೇಶವು ಕೆಳಗೆ ಗೋಚರಿಸುತ್ತದೆ: \n 'ಡೇಟಾ ಕಂಡುಬಂದಿಲ್ಲ.'
+        \n3. ಸರಿಯಾದ ಲಾಗಿನ್ ಐಡಿ ಮತ್ತು ಪಾಸ್‌ವರ್ಡ್‌ನೊಂದಿಗೆ ಲಾಗಿನ್ ಆಗಿರುವಾಗ, ಈ ಕೆಳಗಿನ ಸಂದೇಶವು ಕಾಣಿಸಿಕೊಂಡರೆ: \n 'ನಿಮ್ಮ IMEI ಗೆ ಅಧಿಕಾರವಿಲ್ಲ. ದಯವಿಟ್ಟು ನಿರ್ವಾಹಕರೊಂದಿಗೆ ಸಂಪರ್ಕ ಸಾಧಿಸಿ. '\n ನಂತರ ಇದನ್ನು ತಿಳಿಸಲು ದಯವಿಟ್ಟು ನಿಮ್ಮ ಸಂಸ್ಥೆ ಮುಖ್ಯಸ್ಥರಿಗೆ ಕರೆ ಮಾಡಿ ಮತ್ತು ಅವರು ಅಧಿಕಾರ ನೀಡಿದ ನಂತರ, ನೀವು ಯಶಸ್ವಿಯಾಗಿ ಲಾಗಿನ್ ಆಗಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ.
+        \n4. ಹ್ಯಾಂಡ್‌ಸೆಟ್ ಬದಲಾಯಿಸಲಾಗಿದೆಯೇ? ಇದರ ಬಗ್ಗೆ ಸಂಸ್ಥೆ ಮುಖ್ಯಸ್ಥರೊಂದಿಗೆ ಮಾತನಾಡಿ, ಅವರು ಇದನ್ನು ಅಧಿಕೃತಗೊಳಿಸುತ್ತಾರೆ ಮತ್ತು ನಿಮ್ಮ ಹೊಸ ಹ್ಯಾಂಡ್‌ಸೆಟ್‌ನಲ್ಲಿ ನೀವು ಯಶಸ್ವಿಯಾಗಿ ಲಾಗಿನ್ ಆಗಲು ಸಾಧ್ಯವಾಗುತ್ತದೆ. "</string>
+
+    <string name="attendance_msg" translatable="false">"1. ನಿಧಾನ ಲಾಗಿನ್?
+        \na. ಎಪಿಪಿಯಲ್ಲಿ ಕೊನೆಯ ದಿನದ ಲಾಗ್ out ಟ್ ಮಾಡದಿದ್ದರೆ, ಅದು ಮೊದಲು ಲಾಗ್ out ಟ್ ಆಗುತ್ತದೆ ಮತ್ತು ನಂತರ ಲಾಗಿನ್ ಆಗುತ್ತದೆ. ಆದ್ದರಿಂದ, ಅಪ್ಲಿಕೇಶನ್‌ನಲ್ಲಿ ಕೆಲಸ ಪೂರ್ಣಗೊಂಡ ನಂತರ ದಯವಿಟ್ಟು ಪ್ರತಿದಿನ ಲಾಗ್ out ಟ್ ಮಾಡಿ.
+        \nb. ನೀವು ಎಪಿಪಿಯಲ್ಲಿ ಸ್ಪಷ್ಟ ಡೇಟಾವನ್ನು ಹೊಂದಿದ್ದರೆ, ಅದು ಎಲ್ಲಾ ಡೇಟಾವನ್ನು ಹ್ಯಾಂಡ್‌ಸೆಟ್‌ಗೆ ಸಿಂಕ್ ಮಾಡುತ್ತದೆ ಇದರಿಂದ ಎಪಿಪಿಯಲ್ಲಿ ಆಫ್‌ಲೈನ್ ಕೆಲಸ ಸಾಧ್ಯ. ಆದ್ದರಿಂದ, ಇದು ಸ್ವಲ್ಪ ಸಮಯ ತೆಗೆದುಕೊಳ್ಳುತ್ತದೆ.
+        \nc. ವೇಗವಾಗಿ ಲಾಗಿನ್ ಆಗಲು ಸ್ಥಿರ ಇಂಟರ್ನೆಟ್ ಸಂಪರ್ಕವು ಮುಖ್ಯವಾಗಿದೆ. ದಯವಿಟ್ಟು ಇಂಟರ್ನೆಟ್ ಪರಿಶೀಲಿಸಿ.
+        \n2. ಲಾಗಿನ್ ಮಾಡಿದ ನಂತರ ಏನು ಮಾಡಬೇಕು?
+        \na. ಕೆಲಸದಲ್ಲಿ: ಇದು ನಿಮ್ಮ ಸಮಯದೊಂದಿಗೆ ದಿನವನ್ನು ಪ್ರಸ್ತುತಪಡಿಸುತ್ತದೆ. ನೀವು ಕೆಲಸದ ಪ್ರಕಾರವನ್ನು ಸಹ ಆರಿಸಬೇಕಾಗುತ್ತದೆ. \n ದಯವಿಟ್ಟು ನಿಮ್ಮ ಸಂಸ್ಥೆಯ ನೀತಿಯ ಪ್ರಕಾರ ಹೊಂದಿಸಲಾಗಿರುವ ಸಮಯವನ್ನು ಅನ್ವಯಿಸಿ.
+        \nb. ರಜೆ ಮೇಲೆ: ಇದು ನೀವು ಆಯ್ಕೆ ಮಾಡಿದ ರಜೆಯೊಂದಿಗೆ ದಿನವನ್ನು ಬಿಡಿ ಎಂದು ಗುರುತಿಸುತ್ತದೆ. ಇಂದಿನಿಂದ ಇಲ್ಲಿಯವರೆಗೆ ಬಿಡಿ ಮತ್ತು ಟೀಕೆಗಳನ್ನು ಹಾಕಬಹುದು.
+        \n3. ಹಾಜರಾತಿ ಮತ್ತು ವರದಿಗಳನ್ನು ಬಿಡಲು ಬಯಸುವಿರಾ? \n ಮೆನು ತೆರೆಯಲು ಮೇಲಿನ ಎಡ ಆಯ್ಕೆ ಆಯ್ಕೆಯಿಂದ, ನಂತರ 'ಹಾಜರಾತಿಯನ್ನು ವೀಕ್ಷಿಸಿ' ಆಯ್ಕೆಮಾಡಿ ಅಥವಾ ಡ್ಯಾಶ್‌ಬೋರ್ಡ್‌ನಿಂದ ಆಯ್ಕೆ ಮಾಡಿ, ಮೇಲ್ಭಾಗದಲ್ಲಿ ಪ್ರದರ್ಶಿಸಲಾದ 'ಹಾಜರಾತಿ' ಆಯ್ಕೆಮಾಡಿ.
+        \n4. ಪಾಸ್‌ವರ್ಡ್ ಬದಲಾಯಿಸಲು ಬಯಸುವಿರಾ? \n ನಿಮ್ಮ ಸಂಸ್ಥೆಯ ನೀತಿಯಂತೆ, ನಿಮಗಾಗಿ ಇದನ್ನು ಮಾಡಲು ನೀವು ಸಂಸ್ಥೆಯ ಮುಖ್ಯಸ್ಥರನ್ನು ವಿನಂತಿಸಬೇಕಾಗಬಹುದು. ಇದನ್ನು ನೀವೇ ಮಾಡಲು ಅವರು ಅನುಮತಿಸಿದರೆ, ನೀವು ಮೆನು ಆಯ್ಕೆಗಳನ್ನು ತೆರೆಯಬಹುದು ಮತ್ತು ಅದೇ ರೀತಿ ಮಾಡಲು 'ಪಾಸ್‌ವರ್ಡ್ ಬದಲಾಯಿಸಿ' ಆಯ್ಕೆಮಾಡಿ.
+        \n5. ಲಾಗಿನ್ ಮತ್ತು ಹಾಜರಾತಿಯ ನಂತರ, ಭವಿಷ್ಯದ ದಿನಾಂಕಕ್ಕಾಗಿ ರಜೆ ಅರ್ಜಿ ಸಲ್ಲಿಸಲು ಬಯಸುವಿರಾ? ಮೆನು ಆಯ್ಕೆಯಿಂದ ನೀವು ಅದೇ ರೀತಿ ಮಾಡಲು 'ಅನ್ವಯಿಸು ರಜೆ' ಆಯ್ಕೆಯನ್ನು ಹೊಂದಿರುತ್ತೀರಿ. "</string>
+
+    <string name="r_u_sure" translatable="false">ನೀವು ಖಚಿತವಾಗಿರುವಿರಾ?</string>
+    <string name="typing" translatable="false">ಟೈಪ್ ಮಾಡಲಾಗುತ್ತಿದೆ ...</string>
+    <string name="leave_status" translatable="false">"ನಿಮ್ಮ ಹಾಜರಾತಿ ಸ್ಥಿತಿ 'ಬಿಡಿ'."</string>
+    <string name="present_status" translatable="false">"ನಿಮ್ಮ ಹಾಜರಾತಿ ಸ್ಥಿತಿ 'ಪ್ರಸ್ತುತ'."</string>
+    <string name="absent_status" translatable="false">"Your attendance status is 'Absent'."</string>
+    <string name="want_to_see_attendance" translatable="false">ನೀವು ಹಾಜರಾತಿ ವರದಿಯನ್ನು ನೋಡಲು ಬಯಸುವಿರಾ?</string>
+    <string name="can_not_get_attendance_status" translatable="false">ಹಾಜರಾತಿ ಸ್ಥಿತಿ ಪಡೆಯಲು ಸಾಧ್ಯವಿಲ್ಲ.</string>
+    <string name="visit_already_syncing" translatable="false">ಭೇಟಿ ಈಗಾಗಲೇ ಅಪ್ಲಿಕೇಶನ್‌ನಿಂದ ಸಿಂಕ್ ಆಗುತ್ತಿದೆ.</string>
+    <string name="sync_done" translatable="false">ಸಿಂಕ್ ಯಶಸ್ವಿಯಾಗಿ ಮಾಡಲಾಗಿದೆ. ಧನ್ಯವಾದಗಳು.</string>
+    <string name="req_done" translatable="false">ವಿನಂತಿ ಮುಗಿದಿದೆ.</string>
+    <string name="unsuccessful_sync" translatable="false">ಸಿಂಕ್ ವಿಫಲವಾಗಿದೆ.</string>
+    <string name="visit_msg" translatable="false">"1. ಹೊಸ ಭೇಟಿ ಮಾಡಲು ಬಯಸುವಿರಾ? \n ಯಶಸ್ವಿ ಹಾಜರಾತಿಯ ನಂತರ (+) ತೇಲುವ ಐಕಾನ್ ಕ್ಲಿಕ್ ಮಾಡಿ. ನಿಮ್ಮ ಪ್ರಸ್ತುತ ಸ್ಥಳವನ್ನು ಕಂಡುಹಿಡಿಯಬೇಕು. ಭೇಟಿ ಡೇಟಾವನ್ನು ನಮೂದಿಸಿ ಮತ್ತು ಉಳಿಸಬೇಕಾಗಿದೆ.
+        \n2. ರಿವಿಸಿಟ್ ಮಾಡಲು ಬಯಸುವಿರಾ?
+        \na. ನೀವು ಭೇಟಿ ನೀಡಲು ಬಯಸುವ ಪಾರ್ಟಿಯ ಹತ್ತಿರದ ಸ್ಥಳದಲ್ಲಿದ್ದರೆ, ಪ್ರದರ್ಶಿಸಲು ಸ್ವಯಂಚಾಲಿತವಾಗಿ ಅಧಿಸೂಚನೆಯನ್ನು ಮೇಲಕ್ಕೆ ತಳ್ಳಿರಿ ಮತ್ತು ನಿಮ್ಮಿಂದ ಮತ್ತೆ ಭೇಟಿ ಕೇಳಿ. 'ಹೌದು' ಆಯ್ಕೆಮಾಡಿ ಮತ್ತು ಮರುಪರಿಶೀಲನೆಯನ್ನು ಪೂರ್ಣಗೊಳಿಸಲು ಅಗತ್ಯ ವಿವರಗಳನ್ನು ಇರಿಸಿ.
+        \nb. ಜಿಪಿಎಸ್ ಸಮಸ್ಯೆಯಿಂದಾಗಿ ನಿಮಗೆ ಅಧಿಸೂಚನೆ ಸಿಗದಿದ್ದರೆ, ನೀವು ಎಡಭಾಗದ ಮೆನು ಆಯ್ಕೆಯನ್ನು ತೆರೆಯಬಹುದು ಮತ್ತು ಪಟ್ಟಿಯನ್ನು ಪಡೆಯಲು 'ಹತ್ತಿರದ' ವೈಶಿಷ್ಟ್ಯದಿಂದ ಪರಿಶೀಲಿಸಬಹುದು ಮತ್ತು ಅಲ್ಲಿಂದ ನೀವು ಪುನಃ ಭೇಟಿ ಮಾಡಬಹುದು.
+        \nc. ಪಾರ್ಟಿ ಫಾರ್ ರಿವಿಸಿಟ್ ಪಟ್ಟಿಯನ್ನು ನೀವು ಪಡೆಯದಿದ್ದರೆ, ಪೋರ್ಟಲ್‌ನಿಂದ ಜಿಪಿಎಸ್ ಮೌಲ್ಯವನ್ನು ಹೆಚ್ಚಿಸುವ ಮೂಲಕ ನಿಮಗೆ ಸಹಾಯ ಮಾಡಲು ನಿಮ್ಮ ಮೇಲ್ವಿಚಾರಕ ಮತ್ತು / ಅಥವಾ ಸಂಸ್ಥೆಯ ಮುಖ್ಯಸ್ಥರೊಂದಿಗೆ ಮಾತನಾಡಿ.
+        \n3. ಭೇಟಿ ವರದಿಗಳನ್ನು ನೋಡಲು ಬಯಸುವಿರಾ? \n ಡ್ಯಾಶ್‌ಬೋರ್ಡ್‌ನಿಂದ 'ಒಟ್ಟು ಭೇಟಿಗಳು' ಆಯ್ಕೆಮಾಡಿ.
+        \n4. ಪ್ರತಿ ಭೇಟಿಗಳಲ್ಲಿ ನೀವು ಕಳೆದ ಸಮಯವನ್ನು ನೋಡಲು ಬಯಸುವಿರಾ? \n ಡ್ಯಾಶ್‌ಬೋರ್ಡ್‌ನಿಂದ 'ಭೇಟಿ ಅವಧಿ' ಆಯ್ಕೆಮಾಡಿ.
+        \n5. ನೀವು ಆರ್ಡರ್ ಬುಕಿಂಗ್ ಸೌಲಭ್ಯವನ್ನು ಹೊಂದಿದ್ದರೆ, ನೀವು ಕಾಯ್ದಿರಿಸಿದ ಆದೇಶಗಳನ್ನು ನೋಡಲು ಬಯಸುವಿರಾ? \n ಡ್ಯಾಶ್‌ಬೋರ್ಡ್‌ನಿಂದ 'ಒಟ್ಟು ಆದೇಶ (ಗಳು)' ಆಯ್ಕೆಮಾಡಿ.
+        \n6. ಟೈಮ್‌ಲೈನ್‌ನೊಂದಿಗೆ ನೀವು ಇಂದು ಚಲಿಸುವ ಸ್ಥಳಗಳನ್ನು ನೋಡಲು ಬಯಸುವಿರಾ?
+        \n ಡ್ಯಾಶ್‌ಬೋರ್ಡ್‌ನಿಂದ 'ಟೈಮ್‌ಲೈನ್' ಆಯ್ಕೆಮಾಡಿ. ಬೇರೆ ದಿನಾಂಕವನ್ನು ಆರಿಸುವ ಮೂಲಕ ನೀವು ಹಿಂದಿನ ದಿನಗಳ ಡೇಟಾವನ್ನು ಸಹ ವೀಕ್ಷಿಸಬಹುದು. "</string>
+
+    <string name="sale_msg" translatable="false">"1. ಆದೇಶಗಳನ್ನು ಹೇಗೆ ತೆಗೆದುಕೊಳ್ಳುವುದು?
+        \na. ನೀವು ಯಾವುದೇ ಪಕ್ಷಕ್ಕೆ ಭೇಟಿ ನೀಡಿ ಅಥವಾ ಪುನಃ ಭೇಟಿ ಮಾಡುತ್ತಿದ್ದರೆ, ಒಮ್ಮೆ ಭೇಟಿ / ಮರುಪರಿಶೀಲನೆ ನಿಮ್ಮಿಂದ ದೃ ೀಕರಿಸಲ್ಪಟ್ಟರೆ, ಅಪ್ಲಿಕೇಶನ್ ಸ್ವತಃ ಪುಸ್ತಕ ಆದೇಶಕ್ಕೆ ಆಯ್ಕೆಯನ್ನು ನೀಡುತ್ತದೆ. ನೀವು ಐಟಂಗಳನ್ನು ಆಯ್ಕೆ ಮಾಡಬೇಕಾಗುತ್ತದೆ, ಕ್ಯೂಟಿ, ದರ ಮತ್ತು ಆದೇಶವನ್ನು ಸಲ್ಲಿಸಬಹುದು.
+        \nb. ಡ್ಯಾಶ್‌ಬೋರ್ಡ್‌ನಿಂದ, ಪಟ್ಟಿಯನ್ನು ಪಡೆಯಲು 'ಪಾರ್ಟಿ (ಗಳು)' ಕ್ಲಿಕ್ ಮಾಡಿ, ಅವರಿಂದ ನೀವು ಇದನ್ನು ಕಾಯ್ದಿರಿಸಲು 'ಆರ್ಡರ್' ಆಯ್ಕೆ ಮಾಡಬಹುದು. ಇದು ಪಕ್ಷದ ಅಸ್ತಿತ್ವದಲ್ಲಿರುವ ಆದೇಶ ಪಟ್ಟಿಯನ್ನು ನಿಮಗೆ ತೋರಿಸುತ್ತದೆ ಮತ್ತು (+) ಚಿಹ್ನೆಯೊಂದಿಗೆ ಒಂದು ತೇಲುವ ಐಕಾನ್ ಅನ್ನು ನೀವು ಆದೇಶಗಳನ್ನು ಕಾಯ್ದಿರಿಸಬಹುದು.
+        \n2. ಆದೇಶದ ಇತಿಹಾಸವನ್ನು ನೋಡಲು ಬಯಸುವಿರಾ? \n ಡ್ಯಾಶ್‌ಬೋರ್ಡ್ 'ಆದೇಶಗಳು' ಕ್ಲಿಕ್ ಮಾಡಿದರೆ, ಅದು ನಿಮಗೆ ಎಲ್ಲಾ ವಿವರಗಳನ್ನು ನೀಡುತ್ತದೆ ಮತ್ತು ನೀವು ಐಟಂಗಳು, ಕ್ಯೂಟಿ, ದರ ಮಟ್ಟದ ವಿವರಗಳನ್ನು ನೋಡಬಹುದು.
+        \n3. ದರವನ್ನು ತೋರಿಸದ ಆದೇಶಗಳು ಅಥವಾ ದರವನ್ನು ನಮೂದಿಸಲು ಸಾಧ್ಯವಾಗುತ್ತಿಲ್ಲವೇ?
+        \n ಇದನ್ನು ಪಡೆಯಲು ನಿಮ್ಮ ವರದಿ ಮಾಡುವ ಮುಖ್ಯಸ್ಥ / ಸಂಸ್ಥೆಯ ಮುಖ್ಯಸ್ಥರೊಂದಿಗೆ ಮಾತನಾಡಿ. "</string>
+    <string name="orders" translatable="false">ಆದೇಶಗಳು</string>
+</resources>

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ll_visit_report_details_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    android:orientation="vertical">
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_member_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_10sdp"
+        android:text="Vikas Kumar Khurana"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_11sdp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/attendance_report_header_blue"
+        android:padding="@dimen/_10sdp"
+        android:weightSum="5">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_shop_name"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:gravity="center_vertical"
+            android:text="@string/shop_name"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_10sdp" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/stage"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_10sdp" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/visit_date"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_10sdp" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/time"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_10sdp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_view_report_details_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_no_data_available"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/no_data_available"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="normal"
+            android:visibility="gone" />
+    </RelativeLayout>
+</LinearLayout>

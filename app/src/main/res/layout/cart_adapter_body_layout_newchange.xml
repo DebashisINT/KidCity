@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/shape_cursor_one">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/color_silver">
+
+        <!--MRP-->
+        <RelativeLayout
+            android:id="@+id/rl_mrp"
+            android:layout_width="@dimen/_56sdp"
+            android:layout_height="@dimen/_54sdp"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:background="@color/report_blue"
+            android:gravity="center_vertical"
+            android:visibility="gone"
+            android:layout_toLeftOf="@+id/time_RL"
+            android:layout_marginLeft="@dimen/_1sdp">
+
+            <com.kcteam.widgets.AppCustomEditText
+                android:id="@+id/et_mrp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:hint="0.00"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="5"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/avg_shop_blue"
+                android:textCursorDrawable="@drawable/white_cursor_drawable"
+                android:textSize="@dimen/_11sdp" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Mins"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9sdp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/time_RL"
+            android:layout_width="@dimen/_56sdp"
+            android:layout_height="@dimen/_54sdp"
+            android:layout_toLeftOf="@+id/rl_qty"
+            android:background="@color/report_blue"
+            android:gravity="center_vertical"
+            android:visibility="visible">
+
+            <com.kcteam.widgets.AppCustomEditText
+                android:id="@+id/et_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:hint="0.00"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/avg_shop_blue"
+                android:textCursorDrawable="@drawable/white_cursor_drawable"
+                android:textSize="@dimen/_10sdp" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/avg_min_label_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Mins"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9sdp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <!--Scheme rate-->
+        <RelativeLayout
+            android:id="@+id/scheme_RL"
+            android:layout_marginTop="@dimen/_2sdp"
+            android:layout_width="@dimen/_52sdp"
+            android:layout_height="@dimen/_34sdp"
+            android:layout_below="@+id/time_RL"
+            android:layout_toLeftOf="@+id/rl_qty"
+            android:background="@drawable/shape_cursor_button3"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <com.kcteam.widgets.AppCustomEditText
+                android:id="@+id/scheme_et_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:hint="Scheme\nRate"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textCursorDrawable="@drawable/white_cursor_drawable"
+                android:textSize="@dimen/_10sdp" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/scheme_avg_min_label_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Mins"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9sdp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_qty"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_54sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@color/colorPrimaryDark"
+            android:gravity="center_vertical"
+            android:visibility="visible"
+            android:layout_marginLeft="@dimen/_1sdp">
+
+            <com.kcteam.widgets.AppCustomEditText
+                android:id="@+id/et_qty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:hint="0"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/white"
+                android:textColorHint="@color/avg_shop_blue"
+                android:textCursorDrawable="@drawable/white_cursor_drawable"
+                android:textSize="@dimen/_11sdp" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Mins"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9sdp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+
+        <!--Scheme qty-->
+        <RelativeLayout
+            android:id="@+id/schemeqty_RL"
+            android:layout_margin="@dimen/_2sdp"
+            android:layout_width="@dimen/_52sdp"
+            android:layout_height="@dimen/_34sdp"
+            android:layout_below="@+id/rl_qty"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:background="@drawable/shape_cursor_button3"
+            android:gravity="center_vertical"
+            android:visibility="gone">
+
+            <com.kcteam.widgets.AppCustomEditText
+                android:id="@+id/schemeqty_et_qty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:hint="Scheme\nQty"
+                android:imeOptions="actionNext"
+                android:inputType="numberDecimal"
+                android:padding="@dimen/_5sdp"
+                android:textColor="@color/black"
+                android:textColorHint="@color/black"
+                android:textCursorDrawable="@drawable/white_cursor_drawable"
+                android:textSize="@dimen/_10sdp" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/schemeqty_avg_min_label_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Mins"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9sdp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/clock_icon_IV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="-15dp"
+            android:layout_toLeftOf="@id/time_RL"
+            android:src="@drawable/ic_report_time_spent_icon_blue"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/clock_icon_IV"
+            android:padding="@dimen/_10sdp">
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_particular_item"
+                android:layout_width="@dimen/_120sdp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:paddingLeft="@dimen/_3sdp"
+                android:paddingRight="@dimen/_3sdp"
+                android:text="@string/product_particulars"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_9sdp" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/shop_address_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dashboard_kcteam_address"
+                android:textColor="@color/login_txt_color"
+                android:textSize="@dimen/_9sdp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
+

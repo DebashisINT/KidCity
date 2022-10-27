@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="#F8F7F7"
+    android:layout_margin="@dimen/_2sdp"
+    app:cardElevation="@dimen/_5sdp"
+    android:outlineSpotShadowColor="#4FFFD700"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_item_survey_dropdown_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center">
+
+            <TextView
+                android:id="@+id/tv_item_survey_qtext"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:gravity="center|start"
+                android:textColor="@color/colorPrimaryDark"
+                android:paddingStart="@dimen/_5sdp"/>
+
+            <EditText
+                android:id="@+id/edt_item_survey_ettext"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_35sdp"
+                android:gravity="center|start"
+                android:textColor="@color/dark_gray"
+                android:paddingStart="@dimen/_5sdp"
+                android:textSize="@dimen/_11sdp"
+                android:background="@drawable/curve_border_bg"/>
+
+            <Space
+                android:layout_width="@dimen/_10sdp"
+                android:layout_height="match_parent"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/light_gray"
+            android:layout_marginTop="@dimen/_5sdp"/>
+
+    </LinearLayout>
+
+
+
+
+</androidx.cardview.widget.CardView>

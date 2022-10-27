@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rcv_item_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/nearby_shop_list_bg"
+    android:orientation="vertical"
+    android:layout_marginLeft="@dimen/_5sdp"
+    android:layout_marginRight="@dimen/_5sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:paddingTop="@dimen/_10sdp"
+    android:paddingBottom="@dimen/_10sdp"
+    android:paddingLeft="@dimen/_7sdp"
+    android:paddingRight="@dimen/_5sdp">
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_plan_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="18-Dec-2019"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_11sdp"
+        android:drawableLeft="@drawable/ic_calender"
+        android:drawablePadding="@dimen/_5sdp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Party: "
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_10sdp" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_party"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Shop Name 1"
+            android:textSize="@dimen/_10sdp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Planned: "
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_10sdp" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_plan_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="\u20B9 99999999.99"
+            android:textSize="@dimen/_10sdp" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="Achieved: "
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_achv_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="\u20B9 99999999.99"
+            android:textSize="@dimen/_10sdp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:text="@string/percentage"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_11sdp" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_percent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="2 %"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/login_txt_color"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/plan_remark"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_11sdp" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_plan_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_text"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/login_txt_color"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/achv_remark"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_11sdp" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_achv_remark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_text"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/login_txt_color"/>
+
+    </LinearLayout>
+
+</LinearLayout>

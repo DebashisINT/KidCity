@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_shop_bill_list_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/smoke_white">
+
+    <LinearLayout
+        android:id="@+id/shop_list_LL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/shop_detail_RL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/shop_image_IV"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="@dimen/_45sdp"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:contentDescription="@null"
+                android:padding="@dimen/_10sdp"
+                android:src="@drawable/ic_logo"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/shop_IV"
+                android:layout_width="@dimen/_43sdp"
+                android:layout_height="@dimen/_43sdp"
+                android:contentDescription="@null"
+                android:visibility="visible" />
+
+            <RelativeLayout
+                android:id="@+id/shop_details_rl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toRightOf="@id/shop_IV">
+
+                <RelativeLayout
+                    android:id="@+id/sync_RL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+
+                    <com.kcteam.widgets.AppCustomTextView
+                        android:id="@+id/myshop_name_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:singleLine="true"
+                        android:textColor="@color/login_txt_color"
+                        android:textSize="@dimen/_14sdp" />
+                    <!--android:text="@string/capital_electronics"-->
+
+                </RelativeLayout>
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/myshop_address_TV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/sync_RL"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    android:textColor="@color/light_gray"
+                    android:textSize="@dimen/_11sdp" />
+                <!--android:text="@string/address_txt"-->
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/tv_contact_number"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/myshop_address_TV"
+                    android:layout_marginBottom="@dimen/_3sdp"
+                    android:singleLine="true"
+                    android:textColor="@color/light_gray"
+                    android:textSize="@dimen/_11sdp" />
+                <!--android:text="Contact Number : N.A."-->
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_contact_number">
+
+                    <com.kcteam.widgets.AppCustomTextView
+                        android:id="@+id/order_amount_tv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_marginBottom="@dimen/_3sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_toLeftOf="@+id/view_all_tv"
+                        android:singleLine="true"
+                        android:text="@string/order_amount_text"
+                        android:textColor="@color/light_gray"
+                        android:textSize="@dimen/_11sdp"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center_vertical"
+            android:paddingLeft="@dimen/_10sdp">
+
+            <ImageView
+                android:id="@+id/shop_IV_flase"
+                android:layout_width="@dimen/_43sdp"
+                android:layout_height="0dp"
+                android:contentDescription="@null"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+
+        <ImageView
+            android:id="@+id/menu_IV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="@dimen/_10sdp"
+            android:src="@drawable/ic_registered_shop_shortcut_menu_icon_deselect"
+            android:visibility="gone" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_billing_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="@dimen/_7sdp"
+        android:layout_marginRight="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:layout_below="@+id/shop_list_LL"/>
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@+id/progress_wheel"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        wheel:matProg_barColor="@color/default_text_color"
+        wheel:matProg_progressIndeterminate="true" />
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_no_data_available"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/no_billing_available"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="normal" />
+
+</RelativeLayout>

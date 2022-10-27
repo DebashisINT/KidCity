@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <!--<RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingTop="@dimen/_5sdp">
+
+        <com.fieldtrackingsystem.widgets.AppCustomTextView
+            android:id="@+id/order_date_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/sync_RL"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:singleLine="true"
+            android:text="@string/date"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_11sdp" />
+
+        <com.fieldtrackingsystem.widgets.AppCustomTextView
+            android:id="@+id/ordered_amount_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_date_tv"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:singleLine="true"
+            android:text="@string/order_amount"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_11sdp" />
+    </RelativeLayout>-->
+
+    <LinearLayout
+        android:id="@+id/rcv_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10sdp"
+        android:weightSum="4">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/ta_date_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="-10dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="16-NOV-17"
+            android:textColor="@color/login_txt_color"
+            android:textSize="@dimen/_11sdp" />
+
+        <RelativeLayout
+            android:id="@+id/amount_RL"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/amount_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="10:30"
+                android:textColor="@color/login_txt_color"
+                android:textSize="@dimen/_11sdp" />
+
+            />
+
+
+        </RelativeLayout>
+
+
+        <!--<com.fieldtrackingsystem.widgets.AppCustomTextView
+            android:id="@+id/view_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:text="9 Hrs"
+            android:textSize="@dimen/_11sdp" />-->
+
+        <ImageView
+            android:id="@+id/view_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:src="@drawable/ic_view_icon"
+            android:text="9 Hrs"
+            android:textSize="@dimen/_11sdp" />
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:visibility="visible">
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/status_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="7:30"
+                android:textColor="@color/login_txt_color"
+                android:textSize="@dimen/_11sdp"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/sync_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.8"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:gravity="center"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_registered_shop_sync"
+                android:textSize="@dimen/_11sdp" />
+
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

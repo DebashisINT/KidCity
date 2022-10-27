@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="@dimen/_95sdp"
+    android:layout_height="@dimen/_95sdp"
+    android:layout_margin="@dimen/_7sdp">
+
+    <RelativeLayout
+        android:layout_width="@dimen/_85sdp"
+        android:layout_height="@dimen/_85sdp"
+        android:padding="@dimen/_1sdp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/rounded_corner_gray_boarder_trans_bg">
+
+        <androidx.cardview.widget.CardView
+            app:cardCornerRadius="@dimen/_5sdp"
+            app:cardElevation="0dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/item_img_IV"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:scaleType="fitXY"
+                android:src="@mipmap/ic_launcher" />
+        </androidx.cardview.widget.CardView>
+
+        <ImageView
+            android:id="@+id/img_upload_IV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:src="@drawable/ic_image_upload_icon"
+            android:visibility="gone"
+
+            />
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/delete_img_IV"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="@dimen/delete_icon_padding"
+        android:layout_marginTop="@dimen/delete_icon_padding"
+        android:clickable="true"
+        android:padding="@dimen/_7sdp"
+        android:src="@drawable/ic_image_upload_cross_icon" />
+
+</RelativeLayout>

@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/_5sdp"
+    app:cardBackgroundColor="#F1EFEF"
+    app:cardElevation="@dimen/_5sdp"
+    app:cardCornerRadius="@dimen/_5sdp">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/_30sdp"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:background="@drawable/ic_date_icon"
+                android:backgroundTint="@color/color_blue_light_dark"
+                android:layout_gravity="center"/>
+
+            <Space
+                android:layout_width="@dimen/_5sdp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/tv_row_view_acti_lead_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/_35sdp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:text="Date"
+                android:gravity="center|start"
+                android:layout_gravity="center"
+                android:textSize="@dimen/_11sdp"/>
+
+            <ImageView
+                android:layout_width="@dimen/_17sdp"
+                android:layout_height="@dimen/_17sdp"
+                android:background="@drawable/ic_clock"
+                android:backgroundTint="@color/color_blue_light_dark"
+                android:layout_gravity="center"/>
+
+            <Space
+                android:layout_width="@dimen/_5sdp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/tv_row_view_acti_lead_time"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/_35sdp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:text="Time"
+                android:gravity="center|start"
+                android:textSize="@dimen/_11sdp"
+                android:layout_gravity="center"/>
+
+            <ImageView
+                android:layout_width="@dimen/_17sdp"
+                android:layout_height="@dimen/_17sdp"
+                android:background="@drawable/ic_party_status"
+                android:backgroundTint="@color/color_blue_light_dark"
+                android:layout_gravity="center"/>
+
+            <Space
+                android:layout_width="@dimen/_5sdp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:id="@+id/tv_row_view_acti_lead_status"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/_35sdp"
+                android:layout_weight="1"
+                android:textColor="@color/black"
+                android:text="Status"
+                android:gravity="center"
+                android:textSize="@dimen/_11sdp"
+                android:layout_gravity="center"/>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/_30sdp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/_17sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:background="@drawable/ic_activity"
+                android:backgroundTint="@color/color_blue_light_dark"
+                android:layout_gravity="center"/>
+
+            <Space
+                android:layout_width="@dimen/_5sdp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/_25sdp"
+                android:textColor="@color/black"
+                android:text="Activity Type   :"
+                android:textSize="@dimen/_11sdp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tv_row_view_acti_lead_type"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center|start"
+                android:text="Type"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp"
+                android:paddingStart="@dimen/_5sdp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/_35sdp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/_17sdp"
+                android:layout_height="@dimen/_17sdp"
+                android:background="@drawable/ic_task_details"
+                android:backgroundTint="@color/color_blue_light_dark"
+                android:layout_gravity="center"/>
+
+            <Space
+                android:layout_width="@dimen/_5sdp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Details             : "
+                android:textSize="@dimen/_11sdp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tv_row_view_acti_lead_dtls"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp"
+                android:text="Details"
+                android:gravity="center|start"
+                android:paddingStart="@dimen/_5sdp"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="@dimen/_35sdp"
+            android:orientation="horizontal"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="@dimen/_17sdp"
+                android:layout_height="@dimen/_17sdp"
+                android:background="@drawable/ic_remarks_icon"
+                android:backgroundTint="@color/color_blue_light_dark"
+                android:layout_gravity="center"/>
+
+            <Space
+                android:layout_width="@dimen/_5sdp"
+                android:layout_height="match_parent"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Remarks         : "
+                android:textSize="@dimen/_11sdp"
+                android:gravity="center"/>
+
+            <TextView
+                android:id="@+id/tv_row_view_acti_lead_remarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:text="Remarks"
+                android:textSize="@dimen/_11sdp"
+                android:gravity="center|start"
+                android:paddingStart="@dimen/_5sdp"/>
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/iv_row_view_acti_lead_edit"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:background="@drawable/ic_edit_icon"
+            android:layout_gravity="end"/>
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

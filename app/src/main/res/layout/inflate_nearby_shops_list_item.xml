@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/_160sdp"
+    android:layout_marginTop="@dimen/_3sdp"
+   >
+
+    <ImageView
+        android:id="@+id/shop_image_IV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:contentDescription="@null"
+        android:scaleType="fitCenter"
+        android:adjustViewBounds="true"
+        android:src="@mipmap/ic_launcher" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/translucent_black"
+        />
+
+
+    <RelativeLayout
+        android:id="@+id/shop_detail_RL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerVertical="true"
+        android:background="@color/white"
+        android:padding="@dimen/_5sdp">
+        <ImageView
+            android:id="@+id/map_IV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:contentDescription="@null"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_registered_shop_map_icon" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/map_IV"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            >
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/myshop_name_TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/capital_electronics"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_13sdp" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/myshop_address_TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/myshop_name_TV"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:singleLine="true"
+                android:text="@string/address_txt"
+                android:textColor="@color/light_gray"
+                android:textSize="@dimen/_11sdp" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/contact_IV"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@id/shop_detail_RL"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginTop="-20dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:background="@drawable/selector_shop_call_bg" />
+
+    <ImageView
+        android:id="@+id/order_IV"
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_alignTop="@id/shop_detail_RL"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginTop="-20dp"
+        android:layout_toLeftOf="@id/contact_IV"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/selector_shop_order_bg" />
+
+</RelativeLayout>

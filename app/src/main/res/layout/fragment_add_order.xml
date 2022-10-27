@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_silver"
+    android:clickable="true"
+    >
+
+    <LinearLayout
+        android:id="@+id/bottom_layout_LL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:weightSum="1">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.6"
+            android:background="@drawable/shape_cursor_two"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp">
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/total_price_TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/total_price_label"
+                android:textColor="@color/login_txt_color"
+                android:textSize="@dimen/_10sdp" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/total_price_value_TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/total_price_TV"
+                android:text="@string/add_order_total_price_txt"
+                android:textColor="@color/login_txt_color"
+                android:textSize="@dimen/_14sdp" />
+
+        </RelativeLayout>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.4"
+            android:background="@drawable/shape_custom_border_blue_button"
+            android:clickable="true"
+            android:drawableRight="@drawable/ic_continue_icon"
+            android:focusable="true"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/add_order_continue"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_14sdp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/bottom_layout_LL">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/shop_name_TL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColorHint="@color/light_gray"
+            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+            <com.kcteam.widgets.AppCustomEditText
+                android:id="@+id/shop_name_EDT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/shop_name"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textSize="@dimen/_12sdp"
+                app:theme="@style/EvoEditTextTheme" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/order_date_TL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/shop_name_TL"
+            android:textColorHint="@color/light_gray"
+            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+            <com.kcteam.widgets.AppCustomEditText
+                android:id="@+id/order_date_EDT"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/add_order_order_date"
+                android:imeOptions="actionNext"
+                android:inputType="textEmailAddress"
+                android:singleLine="true"
+                android:textSize="@dimen/_12sdp"
+                android:focusable="false"
+                app:theme="@style/EvoEditTextTheme" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/add_item_TV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/order_date_TL"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/add_item"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_12sdp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/added_item_RCV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add_item_TV"
+            android:layout_margin="@dimen/_7sdp"
+            />
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_4sdp"
+    android:background="@drawable/shape_cursor_one">
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="5dp"
+        android:layout_height="@dimen/_76sdp"
+        android:layout_marginBottom="@dimen/_1sdp"
+        android:layout_marginLeft="1.7dp"
+        android:layout_marginTop="@dimen/_1sdp"
+        android:background="@drawable/left_rounded_corner_view_bg" />
+
+    <RelativeLayout
+        android:id="@+id/rl_pjp_status"
+        android:layout_width="@dimen/_60sdp"
+        android:layout_height="@dimen/_77sdp"
+        android:layout_alignParentEnd="true"
+        android:background="@drawable/rounded_right_corner_blue_bg"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/_5sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingRight="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_10sdp"
+        android:visibility="visible">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true">
+
+            <ImageView
+                android:id="@+id/iv_task_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_2sdp"
+                android:src="@drawable/ic_others_icon" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_task_icon"
+                android:layout_centerInParent="true"
+                android:gravity="center_horizontal"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:text="Pending"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10sdp" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_toLeftOf="@+id/rl_pjp_status"
+        android:paddingLeft="@dimen/_10sdp"
+        android:orientation="vertical">
+
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_pjp_shop_revisit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="Revisit Shop(Detected Nearby)"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_11sdp"
+            android:visibility="gone"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_pjp_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="The Tommy Hilfinger"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_11sdp" />
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

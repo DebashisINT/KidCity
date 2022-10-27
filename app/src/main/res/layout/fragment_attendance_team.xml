@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:background="@color/white"
+    android:clickable="true"
+    android:padding="@dimen/_5sdp">
+
+    <RelativeLayout
+        android:id="@+id/rl_team_name_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_frag_attend_team_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:gravity="center"
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_11sdp" />
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/attendance_header_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_team_name_root">
+
+
+        <RadioGroup
+            android:id="@+id/radio_grp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/_5sdp">
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/attandence_radio_button_last_fifteen_days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:checked="true"
+                android:text="@string/last_15_days"
+                android:textColor="@color/colorAccent" />
+
+            <androidx.appcompat.widget.AppCompatRadioButton
+                android:id="@+id/attendance_header_radio_button_date_range_picker"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_5sdp"
+                android:text="@string/date_range"
+                android:textColor="@color/colorAccent" />
+        </RadioGroup>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_show_date_range"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/radio_grp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:padding="@dimen/_5sdp"
+            android:text="rgesrgesrg"
+            android:textColor="@color/colorPrimaryDark"
+            android:textSize="@dimen/_10sdp"
+            android:visibility="gone" />
+
+        <include
+            layout="@layout/inflate_attendance_rcv_item_header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tv_show_date_range"
+            android:layout_marginTop="@dimen/_5sdp" />
+    </RelativeLayout>
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/attendance_list_RCV"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/attendance_header_radio_group"
+        android:overScrollMode="never" />
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/no_attendance_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:gravity="center"
+        android:text="@string/no_data_available"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_13sdp"
+        android:textStyle="normal"
+        android:visibility="gone" />
+
+
+    <ProgressBar
+        android:id="@+id/refresh_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:indeterminate="true"
+        android:indeterminateBehavior="repeat"
+        android:indeterminateDrawable="@drawable/progress_loading"
+        android:indeterminateDuration="1500"
+        android:visibility="gone" />
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@+id/progress_wheel"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        wheel:matProg_barColor="@color/default_text_color"
+        wheel:matProg_progressIndeterminate="true" />
+
+</RelativeLayout>

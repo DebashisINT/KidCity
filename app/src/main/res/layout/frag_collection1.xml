@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:focusable="true"
+    android:clickable="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:focusable="true"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/tv_collection_frag_notification_tab"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selected_new_order_bg"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Nofication"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_9sdp"
+                    android:textColor="@drawable/selector_text_clor_blue_white_new" />
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/tv_collection_frag_pendingcollection_tab"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selected_new_order_bg"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="Collection"
+                    android:textColor="@drawable/selector_text_clor_blue_white_new"
+                    android:textSize="@dimen/_9sdp"
+                    android:textStyle="bold" />
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/tv_zero_collection_frag_tab"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:background="@drawable/selected_new_order_bg"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:gravity="center"
+                    android:padding="@dimen/_10sdp"
+                    android:text="0 Collection"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_9sdp"
+                    android:textColor="@drawable/selector_text_clor_blue_white_new" />
+
+            </LinearLayout>
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/vp_collection_frag"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:id="@+id/progress_wheel"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_centerVertical="true"
+            wheel:matProg_barColor="@color/default_text_color"
+            wheel:matProg_progressIndeterminate="true" />
+
+
+
+    </FrameLayout>
+
+</LinearLayout>

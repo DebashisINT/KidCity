@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp">
+
+        <TextView
+            android:id="@+id/tv_row_add_stock_product_name"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:hint="Product Name"
+            android:gravity="center|start"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <TextView
+            android:id="@+id/tv_row_add_stock_brand"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:hint="Brand"
+            android:gravity="center|start"
+            android:textColor="@android:color/black"
+            android:textSize="@dimen/_13sdp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_row_add_stock_measure"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:hint="Measurement"
+                android:gravity="center|start"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_13sdp"/>
+
+            <EditText
+                android:id="@+id/et_row_add_stock_qty"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="2"
+                android:background="@drawable/rectangular_black_border_bg"
+                android:hint="Enter Qty"
+                android:gravity="center"
+                android:inputType="numberDecimal"
+                android:paddingLeft="@dimen/_5sdp"/>
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

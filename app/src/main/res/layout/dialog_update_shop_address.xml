@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/_10sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner_white_bg"
+        android:orientation="vertical"
+        >
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/dialog_header_TV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/update_address"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_15sdp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_5sdp"
+            android:background="@drawable/gradient_bottom"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/shop_name_TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:text="@string/shop_name"
+                android:textColor="@color/black_50"
+                android:textSize="@dimen/_13sdp" />
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shop_name_TV"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:textColorHint="@color/light_gray"
+                android:visibility="visible"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <com.kcteam.widgets.AppCustomEditText
+                    android:id="@+id/address_EDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:hint="@string/old_address"
+                    android:inputType="text"
+                    android:textSize="@dimen/_13sdp"
+                    android:maxLines="4"
+                    android:minLines="2"
+                    android:lines="2"
+                    app:theme="@style/EvoEditTextTheme" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_new_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/til_address"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:textColorHint="@color/light_gray"
+                android:visibility="visible"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <com.kcteam.widgets.AppCustomEditText
+                    android:id="@+id/new_address_EDT"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:hint="@string/new_address"
+                    android:inputType="text"
+                    android:textSize="@dimen/_13sdp"
+                    android:maxLines="4"
+                    android:minLines="2"
+                    android:lines="2"
+                    app:theme="@style/EvoEditTextTheme" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+        </RelativeLayout>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/update_TV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:text="@string/update"
+            android:textSize="@dimen/_13sdp"
+            android:gravity="center"
+            android:background="@drawable/deselected_new_order_history"
+            android:textColor="@drawable/selector_text_clor_blue_white"
+            android:clickable="true"
+            android:focusable="true"
+            />
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

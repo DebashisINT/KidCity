@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@color/transparent"
+    app:cardCornerRadius="@dimen/_5sdp"
+    android:layout_margin="@dimen/_1sdp"
+    app:cardElevation="0dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/_25sdp"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/shape_cursor_one">
+
+        <TextView
+            android:id="@+id/tv_row_coll_sub_coll_dt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/login_txt_color"
+            android:gravity="center"
+            android:text="Collection Date"/>
+
+        <TextView
+            android:id="@+id/tv_row_coll_sub_coll_amt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.2"
+            android:textColor="@color/login_txt_color"
+            android:gravity="center"
+            android:text="Collection Amount"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

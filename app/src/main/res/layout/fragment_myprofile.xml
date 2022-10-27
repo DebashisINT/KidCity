@@ -1,0 +1,362 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_silver">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layerType="software"
+        android:background="@color/color_silver">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/profile_picture_IV"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_100sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:src="@drawable/ic_menu_profile_image"
+            app:civ_border_color="@color/colorAccent"
+            app:civ_border_width="@dimen/_2sdp" />
+
+        <RelativeLayout
+            android:id="@+id/profilename_Rl"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/profile_picture_IV"
+            android:gravity="center">
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/profile_name_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:drawablePadding="@dimen/_15sdp"
+                android:gravity="center"
+                android:padding="@dimen/_7sdp"
+                android:text="@string/vikas_malhotra"
+                android:textColor="@color/default_text_color"
+                android:textSize="@dimen/_15sdp" />
+
+            <ImageView
+                android:id="@+id/edit_user_name_IV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_toEndOf="@id/profile_name_TV"
+                android:src="@drawable/ic_report_time_spent_icon_blue"
+                android:visibility="gone" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/user_address_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/profilename_Rl"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:background="@drawable/nearby_shop_list_bg"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:paddingTop="@dimen/_10sdp">
+
+            <!--Address-->
+            <RelativeLayout
+                android:id="@+id/user_address_RL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:padding="@dimen/_5sdp">
+
+                <ImageView
+                    android:id="@+id/address_IV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:src="@drawable/ic_add_shop_address_icon" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/address_TL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@id/address_IV"
+                    android:gravity="center_vertical"
+                    android:textColorHint="@color/light_gray"
+                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                    <com.kcteam.widgets.AppCustomEditText
+                        android:id="@+id/address_EDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Address"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:lines="2"
+                        android:textSize="@dimen/_13sdp"
+                        app:theme="@style/EvoEditTextTheme" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+            <!--pincode-->
+            <RelativeLayout
+                android:id="@+id/pincode_RL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:padding="@dimen/_5sdp">
+
+                <ImageView
+                    android:id="@+id/pincode_IV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:src="@drawable/ic_add_shop_pin_icon" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/pincode_TL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@id/pincode_IV"
+                    android:gravity="center_vertical"
+                    android:textColorHint="@color/light_gray"
+                    android:layout_toLeftOf="@+id/iv_apply"
+                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                    <com.kcteam.widgets.AppCustomEditText
+                        android:id="@+id/pincode_EDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Pincode"
+                        android:imeOptions="actionDone"
+                        android:inputType="number"
+                        android:maxLength="6"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_13sdp"
+                        android:background="@android:color/transparent"
+                        app:theme="@style/EvoEditTextTheme" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_apply"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_confirm"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_5sdp"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/gray"
+                    android:layout_below="@+id/pincode_TL"
+                    android:layout_alignLeft="@+id/pincode_TL"/>
+            </RelativeLayout>
+
+
+            <!--city-->
+            <RelativeLayout
+                android:id="@+id/city_RL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:padding="@dimen/_5sdp">
+
+                <ImageView
+                    android:id="@+id/city_IV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:src="@drawable/ic_city_icon" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/city_TL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@id/city_IV"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:textColorHint="@color/light_gray"
+                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                    <com.kcteam.widgets.AppCustomEditText
+                        android:id="@+id/city_EDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="City"
+                        android:imeOptions="actionNext"
+                        android:inputType="none"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_13sdp"
+                        app:theme="@style/EvoEditTextTheme" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_5sdp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_gray_down_arrow_icon" />
+            </RelativeLayout>
+
+            <!--state-->
+            <RelativeLayout
+                android:id="@+id/state_RL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:padding="@dimen/_5sdp">
+
+                <ImageView
+                    android:id="@+id/state_IV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:src="@drawable/ic_state_icon" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/state_TL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@id/state_IV"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:gravity="center_vertical"
+                    android:textColorHint="@color/light_gray"
+                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                    <com.kcteam.widgets.AppCustomEditText
+                        android:id="@+id/state_EDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:clickable="false"
+                        android:editable="false"
+                        android:focusable="false"
+                        android:hint="State"
+                        android:imeOptions="actionNext"
+                        android:inputType="none"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_13sdp"
+                        app:theme="@style/EvoEditTextTheme" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:padding="@dimen/_5sdp"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_gray_down_arrow_icon" />
+            </RelativeLayout>
+
+
+
+            <!--country-->
+            <RelativeLayout
+                android:id="@+id/country_RL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:padding="@dimen/_5sdp">
+
+                <ImageView
+                    android:id="@+id/country_IV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:src="@drawable/ic_country_icon" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/country_TL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_toRightOf="@id/country_IV"
+                    android:gravity="center_vertical"
+                    android:textColorHint="@color/light_gray"
+                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                    <com.kcteam.widgets.AppCustomEditText
+                        android:id="@+id/country_EDT"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Country"
+                        android:imeOptions="actionNext"
+                        android:inputType="none"
+                        android:singleLine="true"
+                        android:textSize="@dimen/_13sdp"
+                        app:theme="@style/EvoEditTextTheme" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </RelativeLayout>
+
+
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/update_TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_60sdp"
+                android:layout_marginRight="@dimen/_60sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:background="@drawable/shape_custom_border_blue_button"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="@dimen/_8sdp"
+                android:text="@string/update"
+                android:textColor="@android:color/white"
+                android:textSize="@dimen/_13sdp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:id="@+id/progress_wheel"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            wheel:matProg_barColor="@color/default_text_color"
+            wheel:matProg_progressIndeterminate="true" />
+
+    </RelativeLayout>
+</ScrollView>

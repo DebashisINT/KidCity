@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_5sdp">
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_stock_date"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:textColor="@color/login_txt_color"
+        android:textSize="@dimen/_10sdp" />
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_stock_amount"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:textColor="@color/login_txt_color"
+        android:textSize="@dimen/_10sdp" />
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_mo_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:textColor="@color/login_txt_color"
+        android:textSize="@dimen/_10sdp" />
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_co_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:textColor="@color/login_txt_color"
+        android:textSize="@dimen/_10sdp" />
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_po_value"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:padding="@dimen/_5sdp"
+        android:textColor="@color/login_txt_color"
+        android:textSize="@dimen/_10sdp"
+        android:textStyle="bold"
+        android:visibility="gone" />
+
+</LinearLayout>

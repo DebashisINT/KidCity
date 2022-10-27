@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="#F8F7F7"
+    android:layout_margin="@dimen/_1sdp"
+    app:cardElevation="@dimen/_5sdp">
+
+    <LinearLayout
+        android:id="@+id/rcv_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="@dimen/_30sdp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/stock_date_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:textColor="@color/login_txt_color"
+            android:textSize="@dimen/_11sdp"
+            android:gravity="center"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/stock_qty_tv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text=""
+            android:textSize="@dimen/_11sdp" />
+
+        <ImageView
+            android:id="@+id/tv_stock_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            android:contentDescription="@null"
+            android:gravity="center"
+            android:src="@drawable/ic_view_icon"
+            android:textSize="@dimen/_11sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.1"
+            android:gravity="center">
+            <ImageView
+                android:id="@+id/sync_status_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:src="@drawable/ic_registered_shop_sync"
+                android:textSize="@dimen/_11sdp"
+                android:contentDescription="@null"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

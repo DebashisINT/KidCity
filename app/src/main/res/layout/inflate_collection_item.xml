@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/rcv_item_bg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/order_date_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:textColor="@color/login_txt_color"
+            android:textSize="@dimen/_11sdp"
+            android:text="ldsfhlkjasd"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/ordered_amount_tv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="l;fjkdsfh"
+            android:textSize="@dimen/_11sdp" />
+
+        <ImageView
+            android:id="@+id/tv_order_view"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:contentDescription="@null"
+            android:gravity="center"
+            android:src="@drawable/ic_view_icon"
+            android:textSize="@dimen/_11sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_5sdp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/sync_status_iv"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:src="@drawable/ic_registered_shop_sync"
+            android:textSize="@dimen/_11sdp"
+            android:contentDescription="@null"/>
+    </LinearLayout>
+</LinearLayout>

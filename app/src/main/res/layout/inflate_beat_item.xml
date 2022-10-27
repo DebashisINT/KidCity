@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="@dimen/_10sdp">
+
+    <ImageView
+        android:id="@+id/iv_beat"
+        android:layout_width="@dimen/_43sdp"
+        android:layout_height="@dimen/_43sdp"
+        android:contentDescription="@null"
+        android:src="@drawable/ic_logo"
+        android:layout_gravity="center_vertical"/>
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_beat_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/dummy_text"
+        android:textColor="@color/login_txt_color"
+        android:textSize="@dimen/_14sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_gravity="center_vertical"/>
+</LinearLayout>

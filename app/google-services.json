@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "859882991671",
+    "project_id": "kc-team-1bef6",
+    "storage_bucket": "kc-team-1bef6.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:859882991671:android:4ea61674157b1e28674fb2",
+        "android_client_info": {
+          "package_name": "com.kcteam"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "859882991671-079vm36jcedju5ts93vkgr0uderqsfj4.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBvSLKjrzObfDfwtY32TZRGtvwQOQjT2RA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "859882991671-079vm36jcedju5ts93vkgr0uderqsfj4.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

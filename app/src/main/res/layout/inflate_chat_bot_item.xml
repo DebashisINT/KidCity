@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_marginBottom="@dimen/_10sdp">
+
+    <LinearLayout
+        android:id="@+id/ll_bot_msg"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:orientation="vertical"
+        android:layout_gravity="left"
+        android:background="@drawable/rounded_top_right_bottom_corner_blue_bg">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_bot_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_text"
+            android:textStyle="bold"
+            android:textSize="@dimen/_13sdp"
+            android:textColor="@color/white"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_bot_action"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/open"
+            android:textColor="@color/white"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_12sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:textStyle="bold"
+            android:visibility="gone"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_mic"
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_gravity="right"
+            app:srcCompat="@drawable/ic_mic_white"
+            android:layout_marginTop="@dimen/_7sdp"
+            android:visibility="gone"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_user_msg"
+        android:layout_width="@dimen/_230sdp"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:orientation="vertical"
+        android:layout_gravity="right"
+        android:background="@drawable/rounded_top_left_bottom_corner_gray_bg">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_user_msg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/dummy_text"
+            android:textSize="@dimen/_13sdp"
+            android:textColor="@color/black"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/open"
+            android:textColor="@color/black"
+            android:textAllCaps="true"
+            android:textSize="@dimen/_12sdp"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+
+</LinearLayout>

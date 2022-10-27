@@ -1,0 +1,661 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_add_timesheet_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_silver">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/nsv_apply_reimbursement"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/submit_button_TV"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="@dimen/_5sdp"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/select_date_tv"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="Select Date (You can add Timesheet for 30 days only)"
+                    android:padding="@dimen/_11sdp"
+                    android:textSize="@dimen/_11sdp" />
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_3sdp"
+                    android:paddingTop="@dimen/_15sdp"
+                    android:text="@string/mandatory_mark"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/_15sdp"
+                    android:visibility="gone"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:background="@color/light_gray" />
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvDateList"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/supervisor_name" />
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/tv_supervisor_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:text="N.A."
+                    android:textColor="@color/black" />
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl_client"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:id="@+id/ll_client"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.kcteam.widgets.AppCustomTextView
+                        android:id="@+id/tv_client_header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:drawableLeft="@drawable/ic_client"
+                        android:drawablePadding="@dimen/_9sdp"
+                        android:text="@string/client_name_without_colon"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <com.kcteam.widgets.AppCustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:paddingTop="@dimen/_7sdp"
+                        android:text="@string/mandatory_mark"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_15sdp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/tv_client_dropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_client"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_toLeftOf="@+id/ll_icons"
+                    android:hint="@string/select_client"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_icons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/view2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="10dp"
+                    android:paddingEnd="@dimen/_25sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_client_cross_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:contentDescription="@null"
+                        android:padding="@dimen/_2sdp"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_cross" />
+
+                    <ImageView
+                        android:id="@+id/iv_client_dropdown_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:contentDescription="@null"
+                        android:padding="@dimen/_3sdp"
+                        android:src="@drawable/ic_gray_down_arrow_icon" />
+                </LinearLayout>
+
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_below="@id/tv_client_dropdown"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginRight="@dimen/_25sdp"
+                    android:background="@color/light_gray" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_project"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:id="@+id/ll_project"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.kcteam.widgets.AppCustomTextView
+                        android:id="@+id/tv_project_header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:drawableLeft="@drawable/ic_projects"
+                        android:drawablePadding="@dimen/_9sdp"
+                        android:text="@string/project_without_colon"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <com.kcteam.widgets.AppCustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:paddingTop="@dimen/_7sdp"
+                        android:text="@string/mandatory_mark"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_15sdp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/tv_project_dropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_project"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_toLeftOf="@+id/ll_project_icons"
+                    android:hint="@string/select_project"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_project_icons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/project_view"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="10dp"
+                    android:paddingEnd="@dimen/_25sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_project_cross_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:contentDescription="@null"
+                        android:padding="@dimen/_2sdp"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_cross" />
+
+                    <ImageView
+                        android:id="@+id/iv_project_dropdown_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:contentDescription="@null"
+                        android:padding="@dimen/_3sdp"
+                        android:src="@drawable/ic_gray_down_arrow_icon" />
+                </LinearLayout>
+
+
+                <View
+                    android:id="@+id/project_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_below="@id/tv_project_dropdown"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginRight="@dimen/_25sdp"
+                    android:background="@color/light_gray" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_activity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:id="@+id/ll_activity"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.kcteam.widgets.AppCustomTextView
+                        android:id="@+id/tv_activity_header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:drawableLeft="@drawable/ic_activity"
+                        android:drawablePadding="@dimen/_9sdp"
+                        android:text="@string/activity_without_colon"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <com.kcteam.widgets.AppCustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:paddingTop="@dimen/_17sdp"
+                        android:text="@string/mandatory_mark"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_15sdp" />
+                </LinearLayout>
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/tv_activity_dropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_activity"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_toLeftOf="@+id/ll_activity_icons"
+                    android:hint="@string/select_activity"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_minus5sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_activity_icons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/activity_view"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="10dp"
+                    android:paddingEnd="@dimen/_25sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_activity_cross_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:contentDescription="@null"
+                        android:padding="@dimen/_2sdp"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_cross" />
+
+                    <ImageView
+                        android:id="@+id/iv_activity_dropdown_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:contentDescription="@null"
+                        android:padding="@dimen/_3sdp"
+                        android:src="@drawable/ic_gray_down_arrow_icon" />
+                </LinearLayout>
+
+
+                <View
+                    android:id="@+id/activity_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_below="@id/tv_activity_dropdown"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginRight="@dimen/_25sdp"
+                    android:background="@color/light_gray" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl_product"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <LinearLayout
+                    android:id="@+id/ll_product"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.kcteam.widgets.AppCustomTextView
+                        android:id="@+id/tv_product_header"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_10sdp"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:drawableLeft="@drawable/ic_product"
+                        android:drawablePadding="@dimen/_9sdp"
+                        android:text="@string/product_without_colon"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <com.kcteam.widgets.AppCustomTextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:paddingTop="@dimen/_7sdp"
+                        android:text="@string/mandatory_mark"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_15sdp"
+                        android:visibility="gone" />
+                </LinearLayout>
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/tv_product_dropdown"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/ll_product"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_toLeftOf="@+id/ll_product_icons"
+                    android:hint="@string/select_product"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_13sdp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_product_icons"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/product_view"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginBottom="10dp"
+                    android:paddingEnd="@dimen/_25sdp">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_product_cross_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:contentDescription="@null"
+                        android:padding="@dimen/_2sdp"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_cross" />
+
+                    <ImageView
+                        android:id="@+id/iv_product_dropdown_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:contentDescription="@null"
+                        android:padding="@dimen/_3sdp"
+                        android:src="@drawable/ic_gray_down_arrow_icon" />
+                </LinearLayout>
+
+
+                <View
+                    android:id="@+id/product_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_below="@id/tv_product_dropdown"
+                    android:layout_marginLeft="@dimen/_30sdp"
+                    android:layout_marginRight="@dimen/_25sdp"
+                    android:background="@color/light_gray" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp">
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/tv_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@drawable/ic_timeslot"
+                    android:drawablePadding="@dimen/_10sdp"
+                    android:text="@string/time_slot"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_marginRight="@dimen/_3sdp"
+                    android:paddingTop="@dimen/_7sdp"
+                    android:text="@string/mandatory_mark"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/_15sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_30sdp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:src="@drawable/ic_timeslot"
+                    android:visibility="gone" />
+
+                <com.kcteam.widgets.AppCustomEditText
+                    android:id="@+id/et_hrs"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="wrap_content"
+                    android:hint="00"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=":" />
+
+                <com.kcteam.widgets.AppCustomEditText
+                    android:id="@+id/et_mins"
+                    android:layout_width="@dimen/_50sdp"
+                    android:layout_height="wrap_content"
+                    android:hint="00"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="2"
+                    android:gravity="center"/>
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:paddingEnd="@dimen/_20sdp"
+                android:paddingStart="@dimen/_7sdp"
+                android:visibility="gone">
+
+                <ImageView
+                    android:id="@+id/iv_address_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:src="@drawable/ic_timeslot" />
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/tv_address_asterisk_mark"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="@dimen/_3sdp"
+                    android:paddingTop="@dimen/_15sdp"
+                    android:text="@string/mandatory_mark"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/_15sdp" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_time"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/_5sdp"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_toLeftOf="@+id/tv_address_asterisk_mark"
+                    android:layout_toRightOf="@+id/iv_address_icon"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:textColorHint="@color/light_gray"
+                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                    <com.kcteam.widgets.AppCustomEditText
+                        android:id="@+id/et_time"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:hint="@string/time"
+                        android:imeOptions="actionNext"
+                        android:inputType="text"
+                        android:maxLength="5"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp"
+                        app:theme="@style/EvoEditTextTheme" />
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_1sdp"
+                    android:layout_alignLeft="@+id/til_time"
+                    android:layout_below="@id/til_time"
+                    android:layout_marginRight="@dimen/_2sdp"
+                    android:background="@color/light_gray" />
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:orientation="horizontal"
+                android:paddingEnd="@dimen/_20sdp"
+                android:paddingStart="@dimen/_7sdp">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginRight="@dimen/_3sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:src="@drawable/ic_remarks_icon" />
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/til_comment"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColorHint="@color/light_gray"
+                    app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                    <com.kcteam.widgets.AppCustomEditText
+                        android:id="@+id/et_comment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/comments"
+                        android:maxLength="500"
+                        android:maxLines="7"
+                        android:scrollbars="vertical"
+                        android:textColor="@color/black"
+                        android:textSize="@dimen/_13sdp"
+                        app:theme="@style/EvoEditTextTheme" />
+
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_28sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/upload_image"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_13sdp" />
+
+            <ImageView
+                android:id="@+id/iv_upload_photo"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginStart="@dimen/_28sdp"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_upload_icon" />
+
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/submit_button_TV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/deselected_new_order_history"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:padding="@dimen/_8sdp"
+        android:text="@string/Submit"
+        android:textColor="@drawable/selector_text_clor_blue_white"
+        android:textSize="@dimen/_14sdp" />
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@+id/progress_wheel"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        wheel:matProg_barColor="@color/default_text_color"
+        wheel:matProg_progressIndeterminate="true" />
+
+</RelativeLayout>

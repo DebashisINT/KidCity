@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rl_cart_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/color_silver"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_patient"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:visibility="gone">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_patient_asterisk_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_3sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:text="@string/mandatory_mark"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_15sdp"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_patient"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_toLeftOf="@+id/tv_patient_asterisk_mark"
+            android:textColorHint="@color/light_gray"
+            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+            <com.kcteam.widgets.AppCustomEditText
+                android:id="@+id/et_patient"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/patient"
+                android:textSize="@dimen/_13sdp"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="50"
+                app:theme="@style/EvoEditTextTheme"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_alignLeft="@+id/tl_patient"
+            android:layout_below="@id/tl_patient"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:background="@color/light_gray" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_patient"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:visibility="gone">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_address_asterisk_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_3sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:text="@string/mandatory_mark"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_15sdp"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_address"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_toLeftOf="@+id/tv_address_asterisk_mark"
+            android:textColorHint="@color/light_gray"
+            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+            <com.kcteam.widgets.AppCustomEditText
+                android:id="@+id/et_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/address"
+                android:textSize="@dimen/_13sdp"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="50"
+                app:theme="@style/EvoEditTextTheme"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_alignLeft="@+id/tl_address"
+            android:layout_below="@id/tl_address"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:background="@color/light_gray" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_address"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:visibility="gone">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_phone_asterisk_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_3sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:text="@string/mandatory_mark"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_15sdp"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_toLeftOf="@+id/tv_phone_asterisk_mark"
+            android:textColorHint="@color/light_gray"
+            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+            <com.kcteam.widgets.AppCustomEditText
+                android:id="@+id/et_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="@string/phone"
+                android:textSize="@dimen/_13sdp"
+                android:imeOptions="actionNext"
+                android:inputType="number"
+                android:maxLength="10"
+                app:theme="@style/EvoEditTextTheme"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_alignLeft="@+id/tl_phone"
+            android:layout_below="@id/tl_phone"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:background="@color/light_gray" />
+    </RelativeLayout>
+
+    <!--06-01-2022-->
+
+    <RelativeLayout
+        android:id="@+id/rl_lab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_phone"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:visibility="gone">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_lab_asterisk_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_3sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:text="@string/mandatory_mark"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_15sdp"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_lab"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_toLeftOf="@+id/tv_lab_asterisk_mark"
+            android:textColorHint="@color/light_gray"
+            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+            <com.kcteam.widgets.AppCustomEditText
+                android:id="@+id/et_lab"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Hospital/Lab"
+                android:textSize="@dimen/_13sdp"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="50"
+                app:theme="@style/EvoEditTextTheme"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_alignLeft="@+id/tl_lab"
+            android:layout_below="@id/tl_lab"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:background="@color/light_gray" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_emailaddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_lab"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:visibility="gone">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_emailaddress_asterisk_mark"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_3sdp"
+            android:paddingTop="@dimen/_7sdp"
+            android:text="@string/mandatory_mark"
+            android:textColor="@color/red"
+            android:textSize="@dimen/_15sdp"
+            android:layout_alignParentRight="true"
+            android:visibility="gone"/>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tl_emailaddress"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_toLeftOf="@+id/tv_emailaddress_asterisk_mark"
+            android:textColorHint="@color/light_gray"
+            app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+            <com.kcteam.widgets.AppCustomEditText
+                android:id="@+id/et_emailaddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@android:color/transparent"
+                android:hint="Email Address"
+                android:textSize="@dimen/_13sdp"
+                android:imeOptions="actionNext"
+                android:inputType="text"
+                android:maxLength="50"
+                app:theme="@style/EvoEditTextTheme"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_alignLeft="@+id/tl_emailaddress"
+            android:layout_below="@id/tl_emailaddress"
+            android:layout_marginRight="@dimen/_2sdp"
+            android:background="@color/light_gray" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_emailaddress"
+        android:background="#5ea5b6"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="@dimen/_10sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_particular"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/selected_product"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="bold" />
+
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_mrp"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="MRP (\u20B9)\n0.00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_brand"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Rate (\u20B9)\n0.00"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="bold" />
+
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_category"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Qty\n0"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="bold" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_watt"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="@string/product_total_amount"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="bold"
+            android:visibility="gone" />
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_10sdp"
+        android:visibility="gone">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_shop_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="left"
+            android:paddingRight="@dimen/_10sdp"
+            android:text="@string/shop_name"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_12sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/order_id"
+                android:textColor="@color/login_txt_color"
+                android:textSize="@dimen/_11sdp" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_order_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_11sdp"
+                android:layout_marginLeft="@dimen/_10sdp"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginTop="@dimen/_5sdp">
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/order_date"
+                android:textColor="@color/login_txt_color"
+                android:textSize="@dimen/_11sdp" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_order_date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text=""
+                android:layout_marginLeft="@dimen/_10sdp"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_11sdp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:id="@+id/cart_view"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/ll_top"
+        android:background="@android:color/black"
+        android:visibility="gone"/>
+
+    <LinearLayout
+        android:id="@+id/ll_footer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@android:color/black" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.65">
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/total_items"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/tv_total_order_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_11sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/tv_stock_value"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="@string/total_order_value_with_colon"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/tv_total_order_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_11sdp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_frag_cart_new_scheme_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/_5sdp">
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.65">
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/tv_total_scheme_qty"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_11sdp" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text="Total Scheme Value((\u20B9):"
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_11sdp"
+                    android:textStyle="bold" />
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/tv_total_scheme_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:text=""
+                    android:textColor="@android:color/black"
+                    android:textSize="@dimen/_11sdp" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_btns"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone">
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_cancel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@drawable/selector_rectengular_blue_btn_bg"
+                android:gravity="center"
+                android:padding="@dimen/_7sdp"
+                android:text="@string/cancel"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold" />
+
+            <View
+                android:layout_width="1dp"
+                android:layout_height="match_parent" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_continue"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@drawable/selector_rectengular_blue_btn_bg"
+                android:gravity="center"
+                android:padding="@dimen/_7sdp"
+                android:text="@string/confirm_order"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_11sdp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ll_footer"
+        android:layout_below="@+id/ll_header">
+
+        <com.kcteam.app.utils.swipemenulayout.SwipeMenuRecyclerView
+            android:id="@+id/rv_cart_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/_5sdp" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_no_data_available"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="@string/no_data_available"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"
+            android:textStyle="normal"
+            android:visibility="gone"/>
+
+    </RelativeLayout>
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|end"
+        android:layout_marginRight="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_70sdp"
+        android:src="@drawable/ic_add"
+        app:fabSize="normal"
+        android:visibility="gone"/>
+
+</RelativeLayout>

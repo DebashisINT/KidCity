@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/popup_element"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@color/popup_window_bg"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/_5sdp"
+        android:visibility="gone">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/shop_type_TV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/shop_type"
+            android:textColor="@color/login_txt_color"
+            android:textSize="@dimen/_11sdp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@color/popup_window_bar_color" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/distributor_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/distributor_type"
+            android:textColor="@color/login_txt_color"
+            android:textSize="@dimen/_11sdp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@color/popup_window_bar_color" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/pp_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/pp_type"
+            android:textColor="@color/login_txt_color"
+            android:textSize="@dimen/_11sdp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@color/popup_window_bar_color" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/new_party_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/new_party_type"
+            android:textColor="@color/login_txt_color"
+            android:textSize="@dimen/_11sdp"
+            android:visibility="gone"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@color/popup_window_bar_color"
+            android:visibility="gone"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/diamond_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/diamond_type"
+            android:textColor="@color/login_txt_color"
+            android:textSize="@dimen/_11sdp" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/lead_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp"
+            android:gravity="center"
+            android:singleLine="true"
+            android:text="@string/diamond_type"
+            android:textColor="@color/login_txt_color"
+            android:textSize="@dimen/_11sdp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@color/popup_window_bar_color"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_type_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/popup_window_bg"
+        android:padding="@dimen/_5sdp"/>
+
+</LinearLayout>

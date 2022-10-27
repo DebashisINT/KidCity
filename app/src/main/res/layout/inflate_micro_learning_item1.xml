@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_5sdp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_8sdp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="@dimen/_5sdp"
+        app:cardElevation="@dimen/_5sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_10sdp"
+            android:background="@drawable/shape_cursor_two"
+            android:paddingRight="@dimen/_5sdp">
+
+            <LinearLayout
+                android:id="@+id/iv_thumbnail_ll"
+                android:layout_width="match_parent"
+                android:orientation="horizontal"
+                android:layout_height="wrap_content">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:id="@+id/iv_thumbnail"
+                    android:layout_width="@dimen/_235sdp"
+                    android:layout_height="@dimen/_125sdp"
+                    android:scaleType="fitCenter"
+                    android:paddingTop="@dimen/_5sdp"
+                    app:srcCompat="@drawable/ic_image" />
+
+                <LinearLayout
+                    android:id="@+id/icon_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:id="@+id/icon_llll"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:background="@drawable/download_rounded_bg"
+                        android:orientation="vertical">
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_update_note"
+                        android:layout_width="@dimen/_20sdp"
+                        android:layout_height="@dimen/_20sdp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:rotation="-180"
+                        app:srcCompat="@drawable/ic_edit_file" />
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/icon_lll"
+                        android:layout_width="@dimen/_60sdp"
+                        android:layout_height="@dimen/_60sdp"
+                        android:background="@drawable/notes_rounded_bg"
+                        android:orientation="vertical">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_download"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_gravity="center_horizontal"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_marginEnd="@dimen/_5sdp"
+                            app:srcCompat="@drawable/ic_down_vote_arrow" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_category"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/iv_thumbnail_ll"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="Category"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                android:textStyle="bold" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_category"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:text="@string/dummy_text"
+                android:textSize="@dimen/_9sdp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_below="@id/tv_desc"
+                android:layout_alignLeft="@+id/tv_desc"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_2sdp"
+                android:background="#dedede" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_video_duration_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_desc"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:text="@string/video_duration1"
+                android:textColor="#b47d06"
+                android:textSize="@dimen/_11sdp" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_video_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_desc"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_toRightOf="@+id/tv_video_duration_header"
+                android:text="01:22"
+                android:textColor="#b47d06"
+                android:textSize="@dimen/_11sdp" />
+
+
+
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_file_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:text="abc.mp4"
+                android:textColor="@color/black_de"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textSize="@dimen/_12sdp"
+                android:layout_below="@+id/tv_desc"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_size_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/iv_thumbnail"
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:text="@string/size"
+                android:textColor="@color/black"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textSize="@dimen/_12sdp"
+                android:layout_below="@+id/tv_file_name"
+                android:visibility="gone"/>
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_size"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/tv_size_header"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:text="10MB"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:textSize="@dimen/_12sdp"
+                android:layout_below="@+id/tv_file_name"
+                android:textStyle="bold"
+                android:visibility="gone"/>
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_update_note"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tv_size_header"
+                android:layout_marginLeft="@dimen/_7sdp"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:layout_toRightOf="@+id/iv_thumbnail"
+                android:drawableLeft="@drawable/ic_edit_icon"
+                android:drawablePadding="@dimen/_5sdp"
+                android:text="@string/update_note"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_13sdp"
+                android:visibility="gone" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.kcteam.features.dashboard.presentation.DashboardActivity" />
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_save_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="@dimen/_15sdp"
+        android:layout_marginLeft="@dimen/_50sdp"
+        android:layout_marginRight="@dimen/_50sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:background="@drawable/selector_blue_botton_bg"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:padding="@dimen/_8sdp"
+        android:text="@string/save"
+        android:textColor="@android:color/white"
+        android:textSize="@dimen/_13sdp"
+        android:visibility="visible" />
+
+    <RelativeLayout
+        android:id="@+id/rl_radius"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner_white_bg_shops"
+        android:layout_margin="@dimen/_10sdp"
+        android:layout_centerHorizontal="true">
+
+        <com.kcteam.widgets.AppCustomEditText
+            android:id="@+id/et_radius"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="@string/radius"
+            android:textColor="@color/black"
+            android:layout_toLeftOf="@+id/tv_radius_unit"
+            android:layout_alignParentLeft="true"
+            android:paddingLeft="@dimen/_5sdp"
+            android:maxLength="10"
+            android:inputType="number"
+            android:imeOptions="actionDone"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_radius_unit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/meter"
+            android:layout_centerVertical="true"
+            android:paddingRight="@dimen/_5sdp"
+            android:textColor="@color/black"/>
+    </RelativeLayout>
+
+    <!--<fragment
+        android:id="@+id/autocomplete_fragment"
+        android:name="com.google.android.libraries.places.widget.AutocompleteSupportFragment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_radius"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"/>-->
+
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:background="@drawable/searchablecolor"
+        android:layout_below="@+id/rl_radius"
+        android:visibility="gone">
+
+        <com.kcteam.widgets.AppCustomEditText
+            android:id="@+id/searchLocation_edt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_toLeftOf="@+id/cross_iv"
+            android:background="@null"
+            android:backgroundTint="@null"
+            android:hint="@string/search_hint"
+            android:imeOptions="actionDone"
+            android:maxLines="1"
+            android:padding="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_5sdp"
+            android:singleLine="true"
+            android:textSize="@dimen/_12sdp" />
+
+        <ImageView
+            android:id="@+id/cross_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:layout_marginRight="@dimen/_10sdp"
+            android:drawablePadding="@dimen/_5sdp"
+            android:src="@drawable/ic_image_upload_cross_icon" />
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rl_search"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginRight="@dimen/_15sdp"
+        android:visibility="gone">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_address_list"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white" />
+
+        <ProgressBar
+            android:id="@+id/search_progress"
+            style="?android:attr/progressBarStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone" />
+    </FrameLayout>
+
+
+</RelativeLayout>

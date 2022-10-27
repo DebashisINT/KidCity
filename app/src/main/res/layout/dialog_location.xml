@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/iv_close_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:padding="@dimen/_10sdp"
+        android:contentDescription="@null"
+        app:srcCompat="@drawable/ic_no" />
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/iv_close_icon"
+        android:layout_centerHorizontal="true"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/use_location"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp" />
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_body"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_header"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/loc_msg"
+        android:textColor="@color/black_50"
+        android:textSize="@dimen/_13sdp" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_margin="@dimen/_30sdp"
+        android:layout_below="@+id/tv_body"
+        android:src="@drawable/map"/>
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_ok"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:gravity="center"
+        android:padding="@dimen/_15sdp"
+        android:text="@string/ok"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_15sdp"
+        android:textStyle="bold" />
+
+</RelativeLayout>

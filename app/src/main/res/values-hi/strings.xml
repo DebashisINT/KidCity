@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Chat Bot-->
+    <string name="attendance" translatable="false">उपस्थिति</string>
+    <string name="reports" translatable="false">रिपोर्ट</string>
+    <string name="logout" translatable="false">लॉग आउट</string>
+    <string name="yes" translatable="false">हाँ</string>
+    <string name="no" translatable="false">नहीं</string>
+    <string name="history" translatable="false">समयसीमा</string>
+    <string name="open" translatable="false">खुला हुआ</string>
+    <string name="login" translatable="false">लॉग इन करें</string>
+    <string name="visit" translatable="false">दौरा</string>
+    <string name="total_visit_without_colon" translatable="false">कुल यात्रा</string>
+    <string name="revisit" translatable="false">फिर से आना</string>
+    <string name="visit_sync" translatable="false">सिंक पर जाएँ</string>
+    <string name="help" translatable="false">मदद</string>
+    <string name="tips" translatable="false">टिप्स</string>
+    <string name="data_clear" translatable="false">डेटा क्लियर</string>
+    <string name="sync_data" translatable="false">सिंक डेटा</string>
+    <string name="contact_us" translatable="false">संपर्क करें</string>
+    <string name="sales" translatable="false">बिक्री</string>
+    <string name="analytics" translatable="false">एनालिटिक्स</string>
+    <string name="only_weather" translatable="false">मौसम</string>
+    <string name="reach_us" translatable="false">हम तक पहुँचे</string>
+    <string name="share_log_only" translatable="false">शेयर लॉग</string>
+    <string name="please_select_to_started" translatable="false">आरंभ करने के लिए कृपया निम्नलिखित विकल्पों का चयन करें।</string>
+    <string name="wrong_date" translatable="false">आपके द्वारा दर्ज की गई तिथि वर्तमान तिथि या भविष्य की तारीख नहीं हो सकती है।</string>
+    <string name="can_i_help" translatable="false">क्या मैं आपकी कुछ और मदद कर सकता हूँ?</string>
+    <string name="want_to_see_visit_report" translatable="false">क्या आप कुल भेंट की रिपोर्ट तिथि को देखना चाहते हैं?</string>
+    <string name="your_total_visit" translatable="false">आपके कुल दौरे\u0020</string>
+    <string name="is_with_space" translatable="false">\u0020है\u0020</string>
+    <string name="check_attendance" translatable="false">उपस्थिति की जाँच करें।</string>
+    <string name="enter_date_for_attendance" translatable="false">उपस्थिति की स्थिति की जाँच करने के लिए कृपया तारीख डालें।</string>
+    <string name="thanks_want_all_visit" translatable="false">धन्यवाद। क्या आप यात्रा के सभी विकल्पों को देखना चाहते हैं?</string>
+    <string name="thanks_want_all_options" translatable="false">धन्यवाद। क्या आप सभी विकल्प देखना चाहते हैं?</string>
+    <string name="have_grt_dat" translatable="false">धन्यवाद! आपका दिन अच्छा रहे:)</string>
+    <string name="check_total_visit" translatable="false">कुल यात्राओं की जाँच करें।</string>
+    <string name="enter_date_check_total_visit" translatable="false">कुल विज़िट देखने के लिए कृपया तारीख डालें।</string>
+    <string name="only_visit" translatable="false">पर जाएँ</string>
+    <string name="data_clr_alert" translatable="false">क्या आप सुनिश्चित हैं, क्योंकि यह एपीपी को लॉगआउट करेगा और आपको अनुमतियों के साथ पुनः लॉगिन करने की आवश्यकता है?</string>
+    <string name="write_us" translatable="false">"हमें लिखें:\n"</string>
+    <string name="login_msg" translatable="false">"1। लॉग इन करते समय अच्छा इंटरनेट होना चाहिए अन्यथा नीचे संदेश दिखाई देता है: \n'इंटरनेट डिस्कनेक्ट हो गया है, आप लॉगिन नहीं कर सकते, कृपया इंटरनेट पर स्विच करें। '
+        \n2। लॉगिन करते समय आप यह सुनिश्चित करते हैं कि आपके द्वारा दर्ज किया गया लॉगिन आईडी और पासवर्ड उचित है अन्यथा संदेश नीचे दिखाई देता है: \n 'कोई डेटा नहीं मिला।'
+        \n3। जबकि उचित लॉगिन आईडी और पासवर्ड के साथ लॉग इन करें, यदि निम्न संदेश दिखाई देता है: \n 'आपका आईएमईआई अधिकृत नहीं है। कृपया व्यवस्थापक से कनेक्ट करें। '\n तो कृपया अपने संगठन प्रमुख को यह सूचित करने के लिए फोन करें और एक बार जब वह अधिकृत हो जाए, तो आप सफलतापूर्वक लॉगिन कर पाएंगे।
+        \n4। हैंडसेट बदला? \n कृपया इस बारे में संगठन प्रमुख से बात करें, वे इसे अधिकृत करेंगे और आप अपने नए हैंडसेट में सफलतापूर्वक लॉगिन कर पाएंगे। "</string>
+
+    <string name="attendance_msg" translatable="false">"1। धीरे लॉग इन करें?
+        \na। यदि अंतिम दिन लॉगआउट एप्लिकेशन में नहीं किया जाता है, तो यह पहले लॉगआउट करेगा और फिर लॉगिन करेगा। इसलिए, कृपया एप्लिकेशन को पूरा करने के बाद हर रोज लॉगआउट करें।
+        \nb। यदि आपके पास एप्लिकेशन में स्पष्ट डेटा है, तो यह सभी डेटा को हैंडसेट में सिंक करेगा, ताकि एप्लिकेशन में ऑफ़लाइन काम संभव हो सके। इसलिए, इसमें कुछ समय लगेगा।
+        \nc। महत्वपूर्ण तेजी से लॉगिन करने के लिए स्थिर इंटरनेट कनेक्टिविटी है। कृपया इंटरनेट की जाँच करें।
+        \n2। लॉगिन करने के बाद क्या करना है?
+        \na। कार्य पर: यह आपको अपने समय के साथ दिन के लिए उपस्थित करेगा। आपको कार्य का प्रकार भी चुनने की आवश्यकता है। \n कृपया समय में लागू होने योग्य देखें जो आपकी संगठन नीति के अनुसार निर्धारित है।
+        \nb। छुट्टी पर: यह आपके द्वारा चुने गए अवकाश के प्रकार के साथ आपको दिन के लिए अवकाश चिह्नित करेगा। आपको लीव फ्रॉम एंड टु डेट सेलेक्ट करना है और रिमार्क्स डाल सकते हैं।
+        \n3। अटेंडेंस एंड लीव रिपोर्ट्स देखना चाहते हैं? मेन्यू खोलने के लिए \n टॉप लेफ्ट सेलेक्ट का विकल्प, फिर 'अटेंडेंस व्यू' चुनें या फिर डैशबोर्ड से, टॉप पर प्रदर्शित 'अटेंडेंस' चुनें।
+        \n4। पासवर्ड बदलने की इच्छा? \n अपनी संगठन नीति के अनुसार, आपके लिए ऐसा करने के लिए आपको संगठन प्रमुख से अनुरोध करना पड़ सकता है। यदि वे आपको ऐसा करने की अनुमति देते हैं, तो आप मेनू विकल्प खोल सकते हैं और ऐसा करने के लिए 'चेंज पासवर्ड' चुनें।
+        \n5। लॉगिन और उपस्थिति के बाद, भविष्य की तारीख के लिए छुट्टी लागू करना चाहते हैं? मेनू विकल्प से आपके पास ऐसा करने के लिए विकल्प "लागू छुट्टी" होगा।"</string>
+
+    <string name="r_u_sure" translatable="false">क्या आपको यकीन है?</string>
+    <string name="typing" translatable="false">टाइपिंग ...</string>
+    <string name="leave_status" translatable="false">"आपकी उपस्थिति की स्थिति 'छुट्टी' है।"</string>
+    <string name="present_status" translatable="false">"आपकी उपस्थिति की स्थिति 'वर्तमान' है।"</string>
+    <string name="absent_status" translatable="false">"आपकी उपस्थिति की स्थिति 'अनुपस्थित' है।"</string>
+    <string name="want_to_see_attendance" translatable="false">क्या आप उपस्थिति रिपोर्ट देखना चाहते हैं?</string>
+    <string name="can_not_get_attendance_status" translatable="false">उपस्थिति का दर्जा नहीं मिल सकता।</string>
+    <string name="visit_already_syncing" translatable="false">यात्रा पहले से ही ऐप से सिंक हो रही है।</string>
+    <string name="sync_done" translatable="false">सफलतापूर्वक सिंक करें। धन्यवाद।</string>
+    <string name="req_done" translatable="false">निवेदन किया।</string>
+    <string name="unsuccessful_sync" translatable="false">सिंक असफल है।</string>
+    <string name="visit_msg" translatable="false">"1। एक नया दौरा करने की इच्छा है? \n जस्ट सफल उपस्थिति के बाद (+) फ्लोटिंग आइकन पर क्लिक करें। आपकी वर्तमान स्थिति का पता लगाया जाएगा। डेटा दर्ज करने और सहेजने की आवश्यकता है।
+        \n2। रेविसिट करना चाहते हैं?
+        \na। यदि आप जिस पार्टी में जाना चाहते हैं, उसके आस-पास के स्थान पर हैं, तो स्वचालित रूप से शीर्ष पर अधिसूचना को प्रदर्शित करने के लिए पुश करें और आपसे रिविज़िट पूछें। बस 'हां' का चयन करें और फिर से आना को पूरा करने के लिए आवश्यक विवरण डालें।
+        \nb। अगर आपको GPS इश्यू के कारण नोटिफिकेशन नहीं मिल रहा है, तो आप लेफ्ट साइड मेन्यू ऑप्शन को ओपन कर सकते हैं और लिस्ट पाने के लिए 'पास ही' फीचर से चेक कर सकते हैं और वहीं से आप फिर से आना कर सकते हैं।
+        \nc। यदि आप पार्टी फॉर रिविसिट की सूची नहीं प्राप्त कर रहे हैं, तो पोर्टल से जीपीएस मूल्य बढ़ाकर आपकी सहायता करने के लिए अपने पर्यवेक्षक और / या संगठन प्रमुख से बात करें।
+        \n3। विज़िट रिपोर्ट देखने की इच्छा करें? \n डैशबोर्ड से 'कुल विज़िट' चुनें।
+        \n4। प्रत्येक विज़िट में आपके द्वारा बिताए गए समय को देखने की इच्छा? \n डैशबोर्ड से 'विज़िट की अवधि' चुनें।
+        \n5। यदि आपके पास ऑर्डर बुकिंग सुविधा है, तो आपके द्वारा बुक किए गए ऑर्डर देखने की इच्छा है? \n डैशबोर्ड से 'कुल ऑर्डर (ओं) का चयन करें।'
+        \n6। क्या आप उन स्थानों को देखना चाहते हैं जिन्हें आप समयरेखा के साथ आज स्थानांतरित करते हैं?
+        \n डैशबोर्ड से 'टाइमलाइन' चुनें। आप पिछले दिनों के डेटा को अलग-अलग तारीख का चयन करके भी देख सकते हैं। "</string>
+
+    <string name="sale_msg" translatable="false">"1। ऑर्डर कैसे लें?
+        \na। अगर आप किसी भी पार्टी में विजिट या रिविसिट कर रहे हैं, तो एक बार विजिट / रिविसिट आपके द्वारा कन्फर्म हो जाता है, ऐप खुद आपको बुक ऑर्डर का विकल्प देगा। आप आइटम, मात्रा, दर का चयन करें और आदेश प्रस्तुत कर सकते हैं।
+        \nb। डैशबोर्ड से भी, सूची प्राप्त करने के लिए 'पार्टी (ओं) पर क्लिक करें, उनकी ओर से आप इसे बुक करने के लिए' ऑर्डर 'का चयन कर सकते हैं। यह आपको पार्टी की मौजूदा ऑर्डर सूची और एक फ्लोटिंग आइकन (+) चिन्ह दिखाएगा जिस पर क्लिक करके आप ऑर्डर बुक कर सकते हैं।
+        \n2। ऑर्डर इतिहास देखना चाहते हैं?\nडैशबोर्ड पर 'आदेश' पर क्लिक करें, यह आपको सभी विवरण देगा और आप आइटम, मात्रा, दर स्तर विवरण तक देख सकते हैं।
+        \n3। दर नहीं दिखा रहा है या दर दर्ज करने में असमर्थ है?\nइसे प्राप्त करने के लिए अपने रिपोर्टिंग प्रमुख / संगठन प्रमुख से बात करें।"</string>
+    <string name="orders" translatable="false">आदेश</string>
+</resources>

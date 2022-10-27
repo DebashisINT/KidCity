@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingLeft="@dimen/_7sdp"
+    android:paddingRight="@dimen/_7sdp"
+    >
+    <RelativeLayout
+        android:id="@+id/item_RL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:clickable="true"
+        >
+        <RelativeLayout
+            android:id="@+id/right_RL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:gravity="right"
+            >
+            <ImageView
+                android:id="@+id/marketing_item_chkbox_IV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_marketing_cat_chkbox"
+                android:layout_centerVertical="true"
+                android:clickable="false"
+                />
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/marketing_item_date_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_10sdp"
+                android:text="21-Feb-18"
+                android:padding="@dimen/_5sdp"
+                android:layout_centerVertical="true"
+                android:visibility="gone"
+                />
+
+        </RelativeLayout>
+
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/marketing_item_name_TV"
+            android:layout_toLeftOf="@id/right_RL"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/login_txt_color"
+            android:textSize="@dimen/_10sdp"
+            android:text="Item"
+            android:padding="@dimen/_5sdp"
+            android:layout_centerVertical="true"
+            />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/gray_50"
+        android:layout_below="@id/item_RL"
+        android:layout_marginTop="@dimen/_5sdp"
+        />
+
+</RelativeLayout>

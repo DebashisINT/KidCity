@@ -1,0 +1,717 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_2sdp"
+    android:layout_marginLeft="@dimen/_5sdp"
+    android:layout_marginRight="@dimen/_5sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:background="@drawable/nearby_shop_list_bg"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/_15sdp"
+    android:paddingLeft="@dimen/_10sdp"
+    android:paddingRight="@dimen/_10sdp"
+    android:paddingTop="@dimen/_15sdp">
+
+    <LinearLayout
+        android:id="@+id/ll_schedule_date_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/schedule_date_time"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_schedule_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12th April, 2021 11:56 AM"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_job_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/job_code"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_job_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JOB100190"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_service_for"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/services_for"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_service_for"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JOB100190"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_area"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_area_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/area"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_area"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JOB100190"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_team"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/team"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JOB100190"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/status_with_colon"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JOB100190"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_start_date_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/start_date_time"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_start_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12th April, 2021 11:56 AM"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_service_due_for"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_service_due_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Service due for:"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_service_due"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JOB100190"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_service_completed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_service_completed_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Service completed for:"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_service_completed"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="JOB100190"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_next_date_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/next_date_time"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_next_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="12th April, 2021 11:56 AM"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_wip_remarks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remarks_colon"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_wip_remarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_wip_attachment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/attachment_colon"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_wip_attachment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_wip_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/photo"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_wip_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_hold_date_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hold_date_time"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_hold_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_reason_hold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hold_reason"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_hold_reason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_hold_remarks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remarks_colon"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_hold_remarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_hold_attachment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/attachment_colon"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_hold_attachment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_hold_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/photo"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_hold_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:id="@+id/ll_completed_date_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/completed_date_time"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_completed_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_completed_remarks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remarks_colon"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_completed_remarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_complete_attachment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/attachment_colon"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_completed_attachment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_complete_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/photo"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_completed_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_canceled_date_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/cancelled_date_time"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_canceled_date_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_cancel_reason"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hold_reason"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_cancel_reason"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_cancel_remarks"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/remarks_colon"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_cancel_remarks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_cancel_attachment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/attachment_colon"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_cancel_attachment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_cancel_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/photo"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_cancel_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_review_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_12sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/review_details"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_review_details"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_review_attachment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/attachment_colon"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_review_attachment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_review_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/photo"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_review_photo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp"
+            android:layout_marginLeft="@dimen/_5sdp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_ratings"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/ratings"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_13sdp"/>
+
+        <RatingBar
+            android:id="@+id/rating_bar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:numStars="5"
+            android:stepSize="0.5"
+            android:theme="@style/RatingBar" />
+    </LinearLayout>
+</LinearLayout>
+</ScrollView>

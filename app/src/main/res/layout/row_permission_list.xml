@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="@dimen/_4sdp"
+    app:cardElevation="@dimen/_2sdp"
+    android:layout_margin="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="5dp"
+        android:paddingStart="10dp"
+        android:background="@drawable/shape_cursor_one">
+
+        <TextView
+            android:id="@+id/tv_permi_name"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center|start"
+            android:textSize="@dimen/_12sdp"
+            android:hint="Permission Name"/>
+
+        <TextView
+            android:id="@+id/tv_permi_tag"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:gravity="center|start"
+            android:textSize="@dimen/_11sdp"
+            android:hint="Permission Status"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

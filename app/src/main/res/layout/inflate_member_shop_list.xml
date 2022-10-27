@@ -1,0 +1,482 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/shop_list_LL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_2sdp"
+    android:layout_marginLeft="@dimen/_5sdp"
+    android:layout_marginRight="@dimen/_5sdp"
+    android:layout_marginTop="@dimen/_10sdp"
+    android:background="@drawable/nearby_shop_list_bg"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/_5sdp">
+
+    <RelativeLayout
+        android:id="@+id/visit_rl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="end">
+
+        <ImageView
+            android:id="@+id/visit_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_tick_select_icon"
+            android:visibility="visible" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/visit_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toStartOf="@+id/visit_icon"
+            android:padding="@dimen/_5sdp"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/colorAccent"
+            android:textSize="@dimen/_11sdp" />
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:id="@+id/shop_detail_RL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:paddingBottom="@dimen/_5sdp"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp">
+
+        <ImageView
+            android:id="@+id/shop_IV"
+            android:layout_width="@dimen/_43sdp"
+            android:layout_height="@dimen/_43sdp"
+            android:layout_centerVertical="true"
+            android:contentDescription="@null"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:id="@+id/shop_details_rl"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_toRightOf="@id/shop_IV">
+
+            <RelativeLayout
+                android:id="@+id/sync_RL"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/myshop_name_TV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="@string/capital_electronics"
+                    android:textColor="@color/login_txt_color"
+                    android:textSize="@dimen/_14sdp"
+                    android:layout_toLeftOf="@+id/sync_icon"/>
+
+                <ImageView
+                    android:id="@+id/sync_icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:clickable="true"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingTop="@dimen/_5sdp"
+                    android:paddingBottom="@dimen/_5sdp"
+                    android:src="@drawable/ic_registered_shop_sync"
+                    android:contentDescription="@null"
+                    android:visibility="gone"/>
+            </RelativeLayout>
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/myshop_address_TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/sync_RL"
+                android:layout_marginBottom="@dimen/_3sdp"
+                android:text="@string/address_txt"
+                android:textColor="@color/light_gray"
+                android:textSize="@dimen/_11sdp" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_shop_contact_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/myshop_address_TV"
+                android:drawableLeft="@drawable/ic_registered_shop_call_select"
+                android:drawablePadding="@dimen/_5sdp"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/light_gray"
+                android:textSize="@dimen/_11sdp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_shop_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/_7sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="@string/shop_code"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_11sdp" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_shop_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:singleLine="true"
+            android:text="dwgsfs"
+            android:textColor="@color/login_txt_color"
+            android:textSize="@dimen/_11sdp" />
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center_vertical"
+        android:paddingLeft="@dimen/_7sdp">
+
+        <RelativeLayout
+            android:id="@+id/total_visited_RL"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/order_RL"
+            android:paddingTop="@dimen/_5sdp">
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/total_v_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:singleLine="true"
+                android:text="@string/total_visitd"
+                android:textColor="@color/light_gray"
+                android:textSize="@dimen/_11sdp" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/total_visited_value_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_toRightOf="@id/total_v_TV"
+                android:singleLine="true"
+                android:text="1"
+                android:textColor="@color/login_txt_color"
+                android:textSize="@dimen/_11sdp" />
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_shop_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_toRightOf="@id/total_visited_RL">
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:singleLine="true"
+                android:text="@string/type"
+                android:textColor="@color/light_gray"
+                android:textSize="@dimen/_11sdp" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_shop_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:singleLine="true"
+                android:text="Shop"
+                android:textColor="@color/login_txt_color"
+                android:textSize="@dimen/_11sdp" />
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/_7sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/last_visited_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:singleLine="true"
+            android:text="@string/last_visits"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_11sdp" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/last_visited_date_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:layout_toRightOf="@id/last_visited_TV"
+            android:singleLine="true"
+            android:text="21-Jan-2020"
+            android:textColor="@color/login_txt_color"
+            android:textSize="@dimen/_11sdp" />
+
+        <LinearLayout
+            android:id="@+id/ll_dd_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/last_visited_date_TV"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_alignTop="@+id/last_visited_date_TV"
+            android:layout_marginTop="@dimen/_minus3sdp"
+            android:visibility="gone">
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="@string/distributor_with_colon"
+                android:textColor="@color/light_gray"
+                android:textSize="@dimen/_10sdp" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_dd_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_2sdp"
+                android:singleLine="true"
+                android:text="@string/shop"
+                android:textColor="@color/login_txt_color"
+                android:textSize="@dimen/_10sdp" />
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_stage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="@dimen/_7sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_stage_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="@string/stage_with_colon"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_11sdp" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_stage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:singleLine="true"
+            android:text="vcvxcgfdsfg"
+            android:textColor="@color/login_txt_color"
+            android:textSize="@dimen/_11sdp" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_funnel_stage_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:singleLine="true"
+            android:text="@string/funnel_stage_with_colon"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_11sdp"
+            android:layout_marginLeft="@dimen/_10sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_funnel_stage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_2sdp"
+            android:singleLine="true"
+            android:text="adlsjkfkjkfehkhf"
+            android:textColor="@color/login_txt_color"
+            android:textSize="@dimen/_11sdp" />
+    </LinearLayout>
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_update_address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/_5sdp"
+        android:paddingTop="@dimen/_5sdp"
+        android:singleLine="true"
+        android:text="@string/update_address"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_8sdp"
+        android:visibility="gone"
+        android:paddingLeft="@dimen/_7sdp"
+        android:layout_marginTop="@dimen/_5sdp" />
+
+    <LinearLayout
+        android:id="@+id/iconWrapper_rl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/_7sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:id="@+id/shop_damage_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_damage" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="Damage"
+                android:textColor="@color/login_txt_color"
+                android:textSize="@dimen/_8sdp"  />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/shop_damage_view"
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@color/popup_window_bar_color" />
+
+        <LinearLayout
+            android:id="@+id/history_llll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/history_iv"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_add_order_report_icon"
+                android:backgroundTint="@color/black"/>
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/history_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="History"
+                android:textColor="@color/login_txt_color"
+                android:textSize="@dimen/_8sdp"  />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/history_vvview"
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@color/popup_window_bar_color" />
+
+        <LinearLayout
+            android:id="@+id/add_order_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/order_iv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_registered_shop_add_order_deselect" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/order_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/order"
+                android:textColor="@color/login_txt_color"
+                android:textSize="@dimen/_8sdp"  />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/order_view"
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_marginLeft="@dimen/_5sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:background="@color/popup_window_bar_color" />
+
+        <LinearLayout
+            android:id="@+id/add_quot_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/quot_iv"
+                android:layout_width="@dimen/_25sdp"
+                android:layout_height="@dimen/_25sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_quotation" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/quot_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:singleLine="true"
+                android:text="@string/quot"
+                android:textColor="@color/login_txt_color"
+                android:textSize="@dimen/_8sdp"  />
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>
+
+
+

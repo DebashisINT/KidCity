@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_4sdp"
+    android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_route_shop_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_route_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"/>
+
+    <!--<android.support.v7.widget.CardView
+        android:id="@+id/cv_work_plan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_4sdp">-->
+
+            <RelativeLayout
+                android:id="@+id/rl_work_plan"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_cursor_one">
+
+                <View
+                    android:id="@+id/view"
+                    android:layout_width="5dp"
+                    android:layout_height="@dimen/_76sdp"
+                    android:background="@drawable/left_rounded_corner_view_bg"
+                    android:layout_marginLeft="1.7dp"
+                    android:layout_marginTop="@dimen/_1sdp"
+                    android:layout_marginBottom="@dimen/_1sdp"/>
+
+                <RelativeLayout
+                    android:id="@+id/time_RL"
+                    android:layout_width="@dimen/_60sdp"
+                    android:layout_height="@dimen/_77sdp"
+                    android:layout_alignParentEnd="true"
+                    android:background="@drawable/custom_toolbar_back2"
+                    android:gravity="center_vertical"
+                    android:paddingTop="@dimen/_10sdp"
+                    android:paddingBottom="@dimen/_10sdp"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    android:visibility="visible">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true">
+
+                        <ImageView
+                            android:id="@+id/iv_task_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ic_others_icon"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_2sdp"/>
+
+                        <com.kcteam.widgets.AppCustomTextView
+                            android:id="@+id/avg_order_val_TV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerInParent="true"
+                            android:layout_below="@+id/iv_task_icon"
+                            android:paddingLeft="@dimen/_5sdp"
+                            android:paddingRight="@dimen/_5sdp"
+                            android:text="Pending"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </RelativeLayout>
+
+                    <com.kcteam.widgets.AppCustomTextView
+                        android:id="@+id/avg_min_label_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:gravity="center"
+                        android:text="Mins"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_9sdp"
+                        android:visibility="gone" />
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/clock_icon_IV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="-15dp"
+                    android:layout_toLeftOf="@id/time_RL"
+                    android:src="@drawable/ic_report_time_spent_icon_blue"
+                    android:visibility="gone" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toLeftOf="@id/clock_icon_IV"
+                    android:paddingLeft="@dimen/_10sdp"
+                    android:paddingRight="@dimen/_10sdp">
+
+                    <com.kcteam.widgets.AppCustomTextView
+                        android:id="@+id/shop_name_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="The Tommy Hilfinger"
+                        android:textColor="@color/colorPrimary"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <!--<com.fieldtrackingsystem.widgets.AppCustomTextView
+                        android:id="@+id/shop_address_TV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/shop_name_TV"
+                        android:text="@string/dashboard_kcteam_address"
+                        android:textColor="@color/login_txt_color"
+                        android:textSize="@dimen/_9sdp"
+                        android:layout_marginTop="@dimen/_2sdp"/>-->
+
+                    <LinearLayout
+                        android:id="@+id/ll_route_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/shop_name_TV">
+
+                        <com.kcteam.widgets.AppCustomTextView
+                            android:id="@+id/tv_route"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/route"
+                            android:textColor="@color/login_txt_color"
+                            android:textSize="@dimen/_9sdp"
+                            android:layout_marginTop="@dimen/_2sdp"/>
+
+                        <FrameLayout
+                            android:id="@+id/fl_dot"
+                            android:layout_width="@dimen/_7sdp"
+                            android:layout_height="@dimen/_7sdp"
+                            android:background="@drawable/gray_circle"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"
+                            android:layout_gravity="center_vertical"/>
+
+                        <com.kcteam.widgets.AppCustomTextView
+                            android:id="@+id/shop_address_TV"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/dashboard_kcteam_address"
+                            android:textColor="@color/login_txt_color"
+                            android:textSize="@dimen/_9sdp"
+                            android:layout_marginTop="@dimen/_2sdp"
+                            android:layout_marginLeft="@dimen/_5sdp"/>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+            </RelativeLayout>
+
+
+    <!--</android.support.v7.widget.CardView>-->
+</LinearLayout>

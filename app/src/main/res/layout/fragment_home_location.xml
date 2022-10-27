@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/color_silver">
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/your_home_loc"
+        android:layout_marginLeft="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:textSize="@dimen/_14sdp"
+        android:textColor="@color/colorPrimary"/>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="@dimen/_4sdp"
+        app:cardElevation="@dimen/_2sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/_10sdp"
+            android:paddingRight="@dimen/_10sdp"
+            android:paddingTop="@dimen/_5sdp"
+            android:paddingBottom="@dimen/_15sdp"
+            android:background="@drawable/shape_cursor_two">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_share_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                app:srcCompat="@drawable/ic_share"
+                android:padding="@dimen/_5sdp"/>
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/iv_location_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:srcCompat="@drawable/ic_registered_shop_direction_select"
+                android:layout_toLeftOf="@+id/iv_share_icon"
+                android:padding="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_2sdp"/>
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_lat_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/latitude"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_12sdp"
+                android:layout_below="@+id/iv_share_icon"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_lat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22.68136781"
+                android:textColor="@color/black_50"
+                android:textSize="@dimen/_12sdp"
+                android:layout_below="@+id/iv_share_icon"
+                android:layout_toRightOf="@+id/tv_lat_header"
+                android:layout_marginLeft="@dimen/_12sdp"
+                android:layout_alignBaseline="@+id/tv_lat_header"/>
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_long_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/longitude"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_12sdp"
+                android:layout_below="@+id/tv_lat_header"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_long"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="22.68136781"
+                android:textColor="@color/black_50"
+                android:textSize="@dimen/_12sdp"
+                android:layout_below="@+id/tv_lat_header"
+                android:layout_toRightOf="@+id/tv_long_header"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:layout_alignBaseline="@+id/tv_long_header"/>
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_address_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/address_colon"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_12sdp"
+                android:layout_below="@+id/tv_long_header"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dummy_text"
+                android:textColor="@color/black_50"
+                android:textSize="@dimen/_12sdp"
+                android:layout_below="@+id/tv_long_header"
+                android:layout_toRightOf="@+id/tv_address_header"
+                android:layout_marginLeft="@dimen/_14sdp"
+                android:layout_alignBaseline="@+id/tv_address_header"/>
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_city_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/city_colon"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_12sdp"
+                android:layout_below="@+id/tv_address"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_city"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Kolkata"
+                android:textColor="@color/black_50"
+                android:textSize="@dimen/_12sdp"
+                android:layout_below="@+id/tv_address"
+                android:layout_toRightOf="@+id/tv_city_header"
+                android:layout_marginLeft="@dimen/_38sdp"
+                android:layout_alignBaseline="@+id/tv_city_header"/>
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_state_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/state_colon"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_12sdp"
+                android:layout_below="@+id/tv_city_header"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_state"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="West Bengal"
+                android:textColor="@color/black_50"
+                android:textSize="@dimen/_12sdp"
+                android:layout_below="@+id/tv_city_header"
+                android:layout_toRightOf="@+id/tv_state_header"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_alignBaseline="@+id/tv_state_header"/>
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_country_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/country_colon"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_12sdp"
+                android:layout_below="@+id/tv_state_header"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_country"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="India"
+                android:textColor="@color/black_50"
+                android:textSize="@dimen/_12sdp"
+                android:layout_below="@+id/tv_state_header"
+                android:layout_toRightOf="@+id/tv_country_header"
+                android:layout_marginLeft="@dimen/_18sdp"
+                android:layout_alignBaseline="@+id/tv_country_header"/>
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_pincode_header"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/pincode_colon"
+                android:textColor="@android:color/black"
+                android:textSize="@dimen/_12sdp"
+                android:layout_below="@+id/tv_country_header"
+                android:layout_marginTop="@dimen/_10sdp"/>
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_pincode"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="700091"
+                android:textColor="@color/black_50"
+                android:textSize="@dimen/_12sdp"
+                android:layout_below="@+id/tv_country_header"
+                android:layout_toRightOf="@+id/tv_pincode_header"
+                android:layout_marginLeft="@dimen/_13sdp"
+                android:layout_alignBaseline="@+id/tv_pincode_header"/>
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

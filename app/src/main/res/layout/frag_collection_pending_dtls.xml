@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:focusable="true"
+    android:clickable="true">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_frag_coll_pending_dtle_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            wheel:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:id="@+id/progress_wheel"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            wheel:matProg_barColor="@color/default_text_color"
+            wheel:matProg_progressIndeterminate="true" />
+
+        <TextView
+            android:id="@+id/tv_coll_pend_dtls_list_noData"
+            android:layout_width="wrap_content"
+            android:layout_gravity="center"
+            android:text="No Data Found"
+            android:visibility="gone"
+            android:gravity="center"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp"
+            android:layout_height="wrap_content"/>
+
+    </FrameLayout>
+
+
+
+
+</LinearLayout>

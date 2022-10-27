@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/_5sdp"
+    android:layout_marginRight="@dimen/_5sdp"
+    android:background="@color/popup_window_bg"
+    android:orientation="vertical">
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:padding="@dimen/_6sdp"
+        android:text="Improve location accuracy?"
+        android:textColor="@color/login_txt_color"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_1sdp"
+        android:background="@color/colorPrimary" />
+
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:gravity="left"
+        android:padding="@dimen/_6sdp"
+        android:text="This app needs GPS service up and running"
+        android:textColor="@color/login_txt_color"
+      />
+
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:drawableLeft="@drawable/ic_registered_shop_map_icon"
+        android:gravity="center_vertical"
+        android:padding="@dimen/_6sdp"
+        android:text=" Use GPS service."
+        android:textColor="@color/login_txt_color"
+        />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/yesButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Try again" />
+    </LinearLayout>
+
+
+</LinearLayout>

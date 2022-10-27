@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/_10sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner_white_bg"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/dialog_header_TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="@dimen/_10sdp"
+                android:text="@string/update_stock"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_15sdp" />
+
+            <ImageView
+                android:id="@+id/iv_close_icon"
+                android:layout_width="@dimen/_22sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@null"
+                android:src="@drawable/ic_close" />
+
+        </RelativeLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_5sdp"
+            android:background="@drawable/gradient_bottom"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:visibility="visible" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/shop_name_TV"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="left"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:text="@string/shop_name"
+                android:textColor="@color/black_50"
+                android:textSize="@dimen/_13sdp"
+                android:visibility="gone" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/opening_stock_edt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/shop_name_TV"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:clickable="false"
+                android:drawablePadding="@dimen/_5sdp"
+                android:editable="false"
+                android:hint="@string/opening_stock_text"
+                android:inputType="text"
+                android:lines="2"
+                android:maxLines="4"
+                android:minLines="2"
+                android:paddingLeft="@dimen/_12sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:textSize="@dimen/_10sdp"
+                app:theme="@style/EvoEditTextTheme" />
+
+            <!--<android.support.design.widget.TextInputLayout
+                android:id="@+id/til_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/opening_stock_edt"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:hint="Amount"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:textColorHint="@color/light_gray"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <com.fieldtrackingsystem.widgets.AppCustomEditText
+                    android:id="@+id/closing_stock_edt"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:singleLine="true"
+                    android:text="@string/rupee_symbol_with_space"
+                    android:textSize="@dimen/_13sdp"
+                    app:theme="@style/EvoEditTextTheme" />
+
+            </android.support.design.widget.TextInputLayout>-->
+
+
+            <LinearLayout
+                android:id="@+id/til_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/opening_stock_edt"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_12sdp"
+                android:paddingRight="@dimen/_12sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rupee_symbol_with_space"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <com.kcteam.widgets.AppCustomEditText
+                        android:id="@+id/closing_stock_edt"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:inputType="number"
+                        android:maxLength="10"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_13sdp"
+                        app:theme="@style/EvoEditTextTheme" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@color/light_gray" />
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/tv_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Closing Stock"
+                    android:textColor="@color/light_gray"
+                    android:textSize="@dimen/_7sdp"
+                    android:visibility="visible"
+                    app:theme="@style/EvoEditTextTheme"
+                    android:layout_marginTop="@dimen/_5sdp"/>
+            </LinearLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/til_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/til_address"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:hint="Description"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:textColorHint="@color/light_gray"
+                android:visibility="gone"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <com.kcteam.widgets.AppCustomEditText
+                    android:id="@+id/et_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:imeOptions="actionNext"
+                    android:inputType="textCapCharacters|textMultiLine"
+                    android:maxLength="150"
+                    android:textSize="@dimen/_13sdp"
+                    app:theme="@style/EvoEditTextTheme" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <!--<android.support.design.widget.TextInputLayout
+                android:id="@+id/til_mo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/til_desc"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:hint="M/O"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:textColorHint="@color/light_gray"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <com.fieldtrackingsystem.widgets.AppCustomEditText
+                    android:id="@+id/et_mo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:imeOptions="actionNext"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:singleLine="true"
+                    android:text="@string/rupee_symbol_with_space"
+                    android:textSize="@dimen/_13sdp"
+                    app:theme="@style/EvoEditTextTheme" />
+            </android.support.design.widget.TextInputLayout>-->
+
+
+            <LinearLayout
+                android:id="@+id/til_mo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/til_desc"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_12sdp"
+                android:paddingRight="@dimen/_12sdp">
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/market_outstanding"
+                    android:textColor="@color/light_gray"
+                    android:textSize="@dimen/_9sdp"
+                    android:visibility="visible"
+                    app:theme="@style/EvoEditTextTheme" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rupee_symbol_with_space"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <com.kcteam.widgets.AppCustomEditText
+                        android:id="@+id/et_mo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:inputType="numberDecimal"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_13sdp"
+                        app:theme="@style/EvoEditTextTheme" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@color/light_gray" />
+            </LinearLayout>
+
+            <!--<android.support.design.widget.TextInputLayout
+                android:id="@+id/til_co"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/til_mo"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:hint="C/O"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:textColorHint="@color/light_gray"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <com.fieldtrackingsystem.widgets.AppCustomEditText
+                    android:id="@+id/et_co"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:singleLine="true"
+                    android:text="@string/rupee_symbol_with_space"
+                    android:textSize="@dimen/_13sdp"
+                    app:theme="@style/EvoEditTextTheme" />
+            </android.support.design.widget.TextInputLayout>-->
+
+
+            <LinearLayout
+                android:id="@+id/til_co"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/til_mo"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_12sdp"
+                android:paddingRight="@dimen/_12sdp">
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/company_outstanding"
+                    android:textColor="@color/light_gray"
+                    android:textSize="@dimen/_9sdp"
+                    android:visibility="visible"
+                    app:theme="@style/EvoEditTextTheme" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rupee_symbol_with_space"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <com.kcteam.widgets.AppCustomEditText
+                        android:id="@+id/et_co"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:inputType="numberDecimal"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_13sdp"
+                        app:theme="@style/EvoEditTextTheme" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@color/light_gray" />
+            </LinearLayout>
+
+            <!--<android.support.design.widget.TextInputLayout
+                android:id="@+id/til_po"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/til_co"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:hint="P/O"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:textColorHint="@color/light_gray"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                <com.fieldtrackingsystem.widgets.AppCustomEditText
+                    android:id="@+id/et_po"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:drawablePadding="@dimen/_5sdp"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:singleLine="true"
+                    android:text="@string/rupee_symbol_with_space"
+                    android:textSize="@dimen/_13sdp"
+                    app:theme="@style/EvoEditTextTheme" />
+            </android.support.design.widget.TextInputLayout>-->
+
+
+            <LinearLayout
+                android:id="@+id/til_po"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/til_co"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/_10sdp"
+                android:paddingLeft="@dimen/_12sdp"
+                android:paddingRight="@dimen/_12sdp"
+                android:visibility="gone">
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/pp_outstanding"
+                    android:textColor="@color/light_gray"
+                    android:textSize="@dimen/_9sdp"
+                    android:visibility="visible"
+                    app:theme="@style/EvoEditTextTheme" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/rupee_symbol_with_space"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <com.kcteam.widgets.AppCustomEditText
+                        android:id="@+id/et_po"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@android:color/transparent"
+                        android:inputType="numberDecimal"
+                        android:paddingLeft="@dimen/_5sdp"
+                        android:textColor="@android:color/black"
+                        android:textSize="@dimen/_13sdp"
+                        app:theme="@style/EvoEditTextTheme" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:background="@color/light_gray" />
+            </LinearLayout>
+
+            <!--<android.support.design.widget.TextInputLayout
+                android:id="@+id/til_new_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/til_address"
+                android:layout_marginBottom="@dimen/_5sdp"
+                android:paddingLeft="@dimen/_10sdp"
+                android:paddingRight="@dimen/_10sdp"
+                android:textColorHint="@color/light_gray"
+                android:visibility="visible"
+                app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">-->
+
+
+            <!--</android.support.design.widget.TextInputLayout>-->
+        </RelativeLayout>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/update_TV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:background="@drawable/deselected_new_order_history"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="@string/update"
+            android:textColor="@drawable/selector_text_clor_blue_white"
+            android:textSize="@dimen/_13sdp" />
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

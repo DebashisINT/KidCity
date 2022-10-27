@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Chat Bot-->
+    <string name="attendance" translatable="false">హాజరు</string>
+    <string name="reports" translatable="false">నివేదికలు</string>
+    <string name="logout" translatable="false">లాగ్ అవుట్</string>
+    <string name="yes" translatable="false">అవును</string>
+    <string name="no" translatable="false">లేదు</string>
+    <string name="history" translatable="false">కాలక్రమాలు</string>
+    <string name="login" translatable="false">ప్రవేశించండి</string>
+    <string name="open" translatable="false">తెరవండి</string>
+    <string name="visit" translatable="false">సందర్శనలు</string>
+    <string name="total_visit_without_colon" translatable="false">మొత్తం సందర్శన</string>
+    <string name="revisit" translatable="false">తిరిగి సందర్శించండి</string>
+    <string name="visit_sync" translatable="false">సమకాలీకరణను సందర్శించండి</string>
+    <string name="help" translatable="false">సహాయం</string>
+    <string name="tips" translatable="false">చిట్కాలు</string>
+    <string name="data_clear" translatable="false">డేటా క్లియర్</string>
+    <string name="sync_data" translatable="false">డేటాను సమకాలీకరించండి</string>
+    <string name="contact_us" translatable="false">మమ్మల్ని సంప్రదించండి</string>
+    <string name="sales" translatable="false">అమ్మకాలు</string>
+    <string name="analytics" translatable="false">విశ్లేషణలు</string>
+    <string name="only_weather" translatable="false">వాతావరణం</string>
+    <string name="reach_us" translatable="false">మమ్మల్ని చేరుకోండి</string>
+    <string name="share_log_only" translatable="false">మమ్మల్ని చేరుకోండి</string>
+    <string name="please_select_to_started" translatable="false">ప్రారంభించడానికి దయచేసి క్రింది ఎంపికలను ఎంచుకోండి.</string>
+    <string name="wrong_date" translatable="false">మీరు నమోదు చేసిన తేదీ ప్రస్తుత తేదీ లేదా భవిష్యత్తు తేదీ కాదు.</string>
+    <string name="can_i_help" translatable="false">నేను మీకు ఏదైనా సహాయం చేయగలనా?</string>
+    <string name="want_to_see_visit_report" translatable="false">మీరు మొత్తం సందర్శన నివేదిక తేదీని చూడాలనుకుంటున్నారా?</string>
+    <string name="your_total_visit" translatable="false">మీ మొత్తం సందర్శనలు\u0020</string>
+    <string name="is_with_space" translatable="false">\u0020ఉంది\u0020</string>
+    <string name="check_attendance" translatable="false">హాజరును తనిఖీ చేయండి.</string>
+    <string name="enter_date_for_attendance" translatable="false">హాజరు స్థితిని తనిఖీ చేయడానికి దయచేసి తేదీని నమోదు చేయండి.</string>
+    <string name="thanks_want_all_visit" translatable="false">ధన్యవాదాలు. మీరు అన్ని సందర్శన ఎంపికలను చూడాలనుకుంటున్నారా?</string>
+    <string name="thanks_want_all_options" translatable="false">ధన్యవాదాలు. మీరు అన్ని ఎంపికలను చూడాలనుకుంటున్నారా?</string>
+    <string name="have_grt_dat" translatable="false">ధన్యవాదాలు! ఈ రోజు మీకు కుశలంగా ఉండును:)</string>
+    <string name="check_total_visit" translatable="false">మొత్తం సందర్శనలను తనిఖీ చేయండి.</string>
+    <string name="enter_date_check_total_visit" translatable="false">మొత్తం సందర్శనలను తనిఖీ చేయడానికి దయచేసి తేదీని నమోదు చేయండి.</string>
+    <string name="only_visit" translatable="false">సందర్శించండి</string>
+    <string name="data_clr_alert" translatable="false">మీకు ఖచ్చితంగా తెలుసా, ఎందుకంటే ఇది APP ని లాగ్ అవుట్ చేస్తుంది మరియు మీరు అనుమతులతో తిరిగి లాగిన్ అవ్వాలి?</string>
+    <string name="write_us" translatable="false">"మాకు వ్రాయండి:\n"</string>
+    <string name="login_msg" translatable="false">"1. సందేశం క్రింద లాగిన్ అయితే మంచి ఇంటర్నెట్ ఉండాలి: \n 'ఇంటర్‌నెట్ డిస్‌కనెక్ట్ చేయబడింది, మీరు లాగిన్ చేయలేరు, దయచేసి ఇంటర్నెట్‌లో మారండి.'
+        \n2. లాగిన్ అయితే మీరు నమోదు చేసిన లాగిన్ ఐడి  పాస్‌వర్డ్ సరైనదని నిర్ధారించుకోండి లేకపోతే సందేశం క్రింద కనిపిస్తుంది: \n 'డేటా కనుగొనబడలేదు.'
+        \n3. సరైన లాగిన్ ID  పాస్‌వర్డ్‌తో లాగిన్ అయితే, కింది సందేశం కనిపిస్తే: \n 'మీ IMEI కి అధికారం లేదు. దయచేసి నిర్వాహకుడితో కనెక్ట్ అవ్వండి. '\n ఈ విషయాన్ని తెలియజేయడానికి దయచేసి మీ సంస్థ అధిపతికి కాల్ చేయండి మరియు అతను అధికారం పొందిన తర్వాత, మీరు విజయవంతంగా లాగిన్ అవ్వగలరు.
+        \n4. హ్యాండ్‌సెట్ మార్చారా? దీని గురించి ఆర్గనైజేషన్ హెడ్‌తో మాట్లాడండి, వారు దీనికి అధికారం ఇస్తారు మరియు మీరు మీ కొత్త హ్యాండ్‌సెట్‌లో విజయవంతంగా లాగిన్ అవ్వగలరు. "</string>
+
+    <string name="attendance_msg" translatable="false">"1. నెమ్మదిగా లాగిన్?
+        \na. చివరి రోజు లాగ్అవుట్ APP లో చేయకపోతే, అది మొదట లాగ్అవుట్ అవుతుంది మరియు తరువాత లాగిన్ అవుతుంది. కాబట్టి, అనువర్తనంలో పని పూర్తయిన తర్వాత ప్రతిరోజూ లాగ్ అవుట్ చేయండి.
+        \nb. మీరు APP లో స్పష్టమైన డేటాను కలిగి ఉంటే, అది అన్ని డేటాను హ్యాండ్‌సెట్‌లోకి సమకాలీకరిస్తుంది, తద్వారా APP లో ఆఫ్‌లైన్ పని సాధ్యమవుతుంది. అందువల్ల, దీనికి కొంత సమయం పడుతుంది.
+        \nc. ముఖ్యమైనది వేగంగా లాగిన్ అవ్వడానికి స్థిరమైన ఇంటర్నెట్ కనెక్టివిటీ. దయచేసి ఇంటర్నెట్‌ను తనిఖీ చేయండి.
+        \n2. లాగిన్ అయిన తర్వాత ఏమి చేయాలి?
+        \na. పనిలో: ఇది మీ సమయంతో రోజుకు హాజరవుతుందని సూచిస్తుంది. మీరు పని రకాన్ని కూడా ఎంచుకోవాలి. \n దయచేసి మీ సంస్థ విధానం ప్రకారం సెట్ చేయబడిన వర్తించే సమయాన్ని పరిశీలించండి.
+        \nb. సెలవులో: ఇది మీరు ఎంచుకున్న సెలవు రకంతో రోజుకు సెలవు అని గుర్తు చేస్తుంది. మీరు సెలవు నుండి తేదీ వరకు ఎంచుకోవాలి మరియు వ్యాఖ్యలను ఉంచవచ్చు.
+        \n3. అటెండెన్స్ లీవ్ రిపోర్టులను చూడాలనుకుంటున్నారా? \n మెనుని తెరవడానికి ఎగువ ఎడమ ఎంపిక ఎంపిక నుండి, ఆపై 'హాజరును వీక్షించండి' ఎంచుకోండి లేదా డాష్‌బోర్డ్ నుండి, పైన ప్రదర్శించబడే 'హాజరు' ఎంచుకోండి.
+        \n4. పాస్‌వర్డ్‌ను మార్చాలనుకుంటున్నారా? \n మీ సంస్థ విధానం ప్రకారం, మీ కోసం దీన్ని చేయమని మీరు సంస్థ అధిపతిని అభ్యర్థించవలసి ఉంటుంది. మీరే దీన్ని చేయటానికి వారు మిమ్మల్ని అనుమతిస్తే, మీరు మెను ఎంపికలను తెరిచి, 'పాస్‌వర్డ్ మార్చండి' ఎంచుకోండి.
+        \n5. లాగిన్ హాజరు తరువాత, భవిష్యత్ తేదీకి సెలవు దరఖాస్తు చేయాలనుకుంటున్నారా? మెను ఆప్షన్ నుండి మీకు అదే విధంగా 'అప్లై లీవ్' ఎంపిక ఉంటుంది. "</string>
+
+    <string name="r_u_sure" translatable="false">మీరు చెప్పేది నిజమా?</string>
+    <string name="typing" translatable="false">టైప్ చేస్తోంది ...</string>
+    <string name="leave_status" translatable="false">"మీ హాజరు స్థితి 'వదిలివేయండి'."</string>
+    <string name="present_status" translatable="false">"మీ హాజరు స్థితి 'ప్రస్తుతం'."</string>
+    <string name="absent_status" translatable="false">"మీ హాజరు స్థితి 'లేకపోవడం'."</string>
+    <string name="want_to_see_attendance" translatable="false">మీరు హాజరు నివేదికను చూడాలనుకుంటున్నారా?</string>
+    <string name="can_not_get_attendance_status" translatable="false">హాజరు స్థితిని పొందలేరు.</string>
+    <string name="visit_already_syncing" translatable="false">సందర్శన ఇప్పటికే అనువర్తనం నుండి సమకాలీకరిస్తోంది.</string>
+    <string name="sync_done" translatable="false">సమకాలీకరణ విజయవంతంగా పూర్తయింది. ధన్యవాదాలు.</string>
+    <string name="req_done" translatable="false">అభ్యర్థన పూర్తయింది.</string>
+    <string name="unsuccessful_sync" translatable="false">సమకాలీకరణ విజయవంతం కాలేదు.</string>
+    <string name="visit_msg" translatable="false">"1. క్రొత్త సందర్శన చేయాలనుకుంటున్నారా? \n విజయవంతంగా హాజరైన తర్వాత (+) తేలియాడే చిహ్నంపై క్లిక్ చేయండి. మీ ప్రస్తుత స్థానాన్ని గుర్తించవచ్చు. సందర్శన డేటా ఎంటర్ చేసి సేవ్ చేయాలి.
+        \n2. రివిజిట్ చేయాలనుకుంటున్నారా?
+        \na. మీరు సందర్శించాలనుకుంటున్న పార్టీకి సమీపంలో ఉన్న ప్రదేశంలో ఉంటే, ప్రదర్శించబడటానికి స్వయంచాలకంగా నోటిఫికేషన్‌ను పైకి నెట్టండి మరియు మీ నుండి మళ్ళీ సందర్శించండి. 'అవును' ఎంచుకుని, రివిజిట్ పూర్తి చేయడానికి అవసరమైన వివరాలను ఉంచండి.
+        \nb. జిపియస్ సమస్య కారణంగా మీకు నోటిఫికేషన్ రాకపోతే, మీరు ఎడమ వైపు మెను ఎంపికను తెరిచి, జాబితాను పొందడానికి 'సమీప' ఫీచర్ నుండి తనిఖీ చేయవచ్చు మరియు అక్కడ నుండి మీరు తిరిగి సందర్శించవచ్చు.
+        \nc. మీరు పార్టీ కోసం రివిజిట్ జాబితాను పొందలేకపోతే, పోర్టల్ నుండి జిపియస్ విలువను పెంచడం ద్వారా మీకు సహాయం చేయడానికి మీ పర్యవేక్షకుడు / లేదా సంస్థ అధిపతితో మాట్లాడండి.
+        \n3. సందర్శన నివేదికలను చూడాలనుకుంటున్నారా? \n డాష్‌బోర్డ్ నుండి 'మొత్తం సందర్శనలు' ఎంచుకోండి.
+        \n4. ప్రతి సందర్శనలలో మీరు గడిపిన సమయాన్ని చూడాలనుకుంటున్నారా? \n డాష్‌బోర్డ్ నుండి 'సందర్శన వ్యవధి' ఎంచుకోండి.
+        \n5. మీకు ఆర్డర్ బుకింగ్ సౌకర్యం ఉంటే, మీరు బుక్ చేసిన ఆర్డర్‌లను చూడాలనుకుంటున్నారా? \n డాష్‌బోర్డ్ నుండి 'మొత్తం ఆర్డర్ (లు) ఎంచుకోండి.'
+        \n6. ఈ రోజు మీరు కదిలే స్థలాలను టైమ్‌లైన్‌తో చూడాలనుకుంటున్నారా?
+        \n డాష్‌బోర్డ్ నుండి 'టైమ్‌లైన్' ఎంచుకోండి. వేరే తేదీని ఎంచుకోవడం ద్వారా మీరు గత రోజుల డేటాను కూడా చూడవచ్చు. "</string>
+
+    <string name="sale_msg" translatable="false">"1. ఆర్డర్లు ఎలా తీసుకోవాలి?
+        \na. మీరు ఏదైనా పార్టీని సందర్శించండి లేదా తిరిగి సందర్శిస్తుంటే, ఒకసారి మీ సందర్శన / సందర్శన ధృవీకరించినట్లయితే, అనువర్తనం మీకు బుక్ ఆర్డర్‌కు ఎంపికను ఇస్తుంది. మీరు అంశాలను ఎంచుకోవాలి, క్యూటీ, రేట్ ఆర్డర్ సమర్పించవచ్చు.
+        \nb. డాష్‌బోర్డ్ నుండి, జాబితాను పొందడానికి 'పార్టీ (లు)' పై క్లిక్ చేయండి, వారి నుండి మీరు దీన్ని బుక్ చేయడానికి 'ఆర్డర్' ఎంచుకోవచ్చు. ఇది పార్టీ యొక్క ప్రస్తుత ఆర్డర్ జాబితాను మీకు చూపుతుంది (+) గుర్తుతో ఒక తేలియాడే చిహ్నం మీరు ఆర్డర్‌లను బుక్ చేసుకోవచ్చు.
+        \n2. ఆర్డర్ చరిత్రను చూడాలనుకుంటున్నారా? \n డాష్‌బోర్డ్ 'ఆర్డర్స్' పై క్లిక్ చేస్తే, ఇది మీకు అన్ని వివరాలను ఇస్తుంది  మీరు అంశాలు, క్యూటీ, రేట్ స్థాయి వివరాల వరకు చూడవచ్చు.
+        \n3. ఆర్డర్లు రేట్ చూపించలేదా లేదా రేట్ ఎంటర్ చేయలేదా?
+        \n దీన్ని పొందడానికి మీ రిపోర్టింగ్ హెడ్ / ఆర్గనైజేషన్ హెడ్‌తో మాట్లాడండి. "</string>
+    <string name="orders" translatable="false">ఆదేశాలు</string>
+</resources>

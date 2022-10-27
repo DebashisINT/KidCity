@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.tabs.TabLayout
+        android:id="@+id/TL_resource_parent"
+        android:layout_width="match_parent"
+        style="@style/CustomTabLayout_Fixed"
+        android:layout_height="@dimen/_40sdp"
+        android:fillViewport="true"
+        app:tabGravity="fill"
+        app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/colorPrimaryDark"
+        app:tabTextColor="@color/login_txt_color" />
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/VP_resource_parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/TL_resource_parent"
+        android:layout_marginTop="@dimen/_5sdp" />
+</RelativeLayout>

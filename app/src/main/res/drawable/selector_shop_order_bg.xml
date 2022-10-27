@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/ic_registered_add_order_select_with_circle"
+        android:state_selected="true" />
+    <item android:drawable="@drawable/ic_registered_add_order_with_circle" /> <!-- default -->
+</selector>

@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/order_item_CV"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="@dimen/_5sdp"
+    card_view:cardElevation="@dimen/_3sdp"
+    card_view:cardUseCompatPadding="true"
+    android:layout_marginTop="@dimen/_7sdp"
+
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_7sdp"
+        android:background="@color/add_item_card_color"
+        >
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/order_amount_price_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="@string/order_amount_price"
+            android:textColor="@color/default_text_color"
+            android:textSize="@dimen/_14sdp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/add_item_detail_RL"
+            android:layout_below="@id/order_amount_price_TV"
+            >
+            <ImageView
+                android:id="@+id/item_img_IV"
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_90sdp"
+                android:src="@mipmap/ic_launcher"
+                android:layout_centerVertical="true"
+                />
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/item_img_IV"
+                android:layout_marginLeft="@dimen/_5sdp"
+                android:gravity="left"
+                >
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/item_name_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/philips_led_bulb"
+                    android:textColor="@color/login_txt_color"
+                    android:textSize="@dimen/_14sdp" />
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/item_desc_TV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/item_name_TV"
+                    android:text="@string/variety_of_bulbs"
+                    android:textColor="@color/light_gray"
+                    android:textSize="@dimen/_11sdp" />
+
+                <com.kcteam.widgets.AppCustomEditText
+                    android:id="@+id/item_quantity_EDT"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/item_desc_TV"
+                    android:inputType="text"
+                    android:singleLine="true"
+                    android:text="150 Pcs"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/login_txt_color"
+                    />
+                <ImageView
+                    android:id="@+id/item_chkbox_IV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/selector_add_order_chkbox"
+                    android:layout_below="@id/item_desc_TV"
+                    android:layout_alignParentRight="true"
+                    android:padding="@dimen/_10sdp"
+                    android:clickable="true"
+                    android:focusable="true"
+                    />
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

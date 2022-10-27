@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Chat Bot-->
+    <string name="attendance" translatable="false">উপস্থিতি</string>
+    <string name="reports" translatable="false">রিপোর্ট</string>
+    <string name="logout" translatable="false">প্রস্থান</string>
+    <string name="yes" translatable="false">হ্যাঁ</string>
+    <string name="no" translatable="false">না</string>
+    <string name="history" translatable="false">টাইমলাইন</string>
+    <string name="login" translatable="false">প্রবেশ করুন</string>
+    <string name="open" translatable="false">খোলা</string>
+    <string name="visit" translatable="false">দর্শন</string>
+    <string name="total_visit_without_colon" translatable="false">মোট দর্শন</string>
+    <string name="revisit" translatable="false">পুনর্বিবেচনা</string>
+    <string name="visit_sync" translatable="false">সিঙ্ক দেখুন</string>
+    <string name="help" translatable="false">সহায়তা</string>
+    <string name="tips" translatable="false">পরামর্শ</string>
+    <string name="data_clear" translatable="false">ডেটা সাফ</string>
+    <string name="sync_data" translatable="false">সিঙ্ক ডেটা</string>
+    <string name="contact_us" translatable="false">যোগাযোগ করুন</string>
+    <string name="sales" translatable="false">বিক্রয়</string>
+    <string name="analytics" translatable="false">বিশ্লেষণ</string>
+    <string name="only_weather" translatable="false">আবহাওয়া</string>
+    <string name="reach_us" translatable="false">আমাদের কাছে পৌঁছে দিন</string>
+    <string name="share_log_only" translatable="false">লগ শেয়ার করুন</string>
+    <string name="please_select_to_started" translatable="false">শুরু করতে দয়া করে নিম্নলিখিত বিকল্পগুলি নির্বাচন করুন।</string>
+    <string name="wrong_date" translatable="false">আপনার প্রবেশের তারিখটি বর্তমান তারিখ বা ভবিষ্যতের তারিখ হতে পারে না।</string>
+    <string name="can_i_help" translatable="false">আর কিছু লাগবে?</string>
+    <string name="want_to_see_visit_report" translatable="false">আপনি কি মোট পরিদর্শনের রিপোর্টের তারিখ অনুসারে দেখতে চান?</string>
+    <string name="your_total_visit" translatable="false">আপনার মোট পরিদর্শন অন\u0020</string>
+    <string name="is_with_space" translatable="false">\u0020হয়\u0020</string>
+    <string name="check_attendance" translatable="false">উপস্থিতি যাচাই করুন।</string>
+    <string name="enter_date_for_attendance" translatable="false">উপস্থিতি স্থিতি পরীক্ষা করতে তারিখ লিখুন।</string>
+    <string name="thanks_want_all_visit" translatable="false">ধন্যবাদ. আপনি কি সমস্ত দর্শন বিকল্প দেখতে চান?</string>
+    <string name="thanks_want_all_options" translatable="false">ধন্যবাদ আপনি কি সমস্ত বিকল্প দেখতে চান?</string>
+    <string name="have_grt_dat" translatable="false">ধন্যবাদ! দিন শুভ হোক:)</string>
+    <string name="check_total_visit" translatable="false">মোট পরিদর্শন পরীক্ষা করুন।</string>
+    <string name="enter_date_check_total_visit" translatable="false">মোট দর্শনার্থীদের চেক করতে দয়া করে তারিখ প্রবেশ করুন।</string>
+    <string name="only_visit" translatable="false">দর্শন</string>
+    <string name="data_clr_alert" translatable="false">আপনি কি নিশ্চিত, কারণ এটি অ্যাপ্লিকেশনটিকে লগআউট করবে এবং আপনাকে অনুমতি নিয়ে পুনরায় লগইন করতে হবে?</string>
+    <string name="write_us" translatable="false">"আমাদের লিখুন:\n"</string>
+    <string name="login_msg" translatable="false">"1। লগইন করার সময় অবশ্যই ভাল ইন্টারনেট থাকতে হবে অন্যথায় নীচের বার্তাটি প্রদর্শিত হচ্ছে: \n'ইন্টারনেট সংযোগ বিচ্ছিন্ন হয়েছে, আপনি লগইন করতে পারবেন না, দয়া করে ইন্টারনেটে স্যুইচ করুন'
+        \n2। লগইন করার সময় আপনি নিশ্চিত হন যে আপনি যে লগইন আইডি এবং পাসওয়ার্ডটি লিখেছেন তা সঠিকভাবে অন্যথায় নীচের বার্তাটি উপস্থিত রয়েছে: \n 'কোনও ডেটা পাওয়া যায় নি'
+        \n3। যথাযথ লগইন আইডি এবং পাসওয়ার্ড দিয়ে লগইন করার সময়, যদি নিম্নলিখিত বার্তাটি উপস্থিত হয়: \n'আপনার আইএমইআই অনুমোদিত নয়। দয়া করে প্রশাসকের সাথে সংযুক্ত হন '\n তারপরে দয়া করে আপনার সংস্থা প্রধানকে কল করুন এবং একবার তিনি অনুমোদিত হয়ে গেলে আপনি সফলভাবে লগইন করতে সক্ষম হবেন।
+        \n4। হ্যান্ডসেট পরিবর্তন হয়েছে? \n দয়া করে এই সম্পর্কে সংস্থা প্রধানের সাথে কথা বলুন, তারা এটিকে অনুমোদন দেবে এবং আপনি আপনার নতুন হ্যান্ডসেটে সফলভাবে লগইন করতে সক্ষম হবেন। "</string>
+
+    <string name="attendance_msg" translatable="false">"1। স্লো লগইন?
+        \na। যদি গত দিন লগআউটটি অ্যাপ্লিকেশনটিতে না করা হয়, তবে এটি প্রথমে লগআউট এবং তারপরে লগইন করবে। সুতরাং, দয়া করে একবার অ্যাপে কাজ শেষ হয়ে গেলে প্রতিদিন লগআউট করুন।
+        \nb। আপনার যদি অ্যাপ্লিকেশনে স্পষ্ট ডেটা থাকে, তবে এটি হ্যান্ডসেটের সাথে সমস্ত ডেটা সিঙ্ক করবে যাতে অ্যাপে অফলাইনে কাজ সম্ভব হয় সুতরাং, এটি কিছু সময় নিতে হবে।
+        \nc। দ্রুত লগইন করার জন্য গুরুত্বপূর্ণ স্থিতিশীল ইন্টারনেট সংযোগ। দয়া করে ইন্টারনেট পরীক্ষা করুন।
+        \n2। লগইন করার পরে কী করবেন?
+        \na। কর্মস্থলে: এটি আপনার সময়ের সাথে আপনাকে দিনের জন্য উপস্থিত হিসাবে চিহ্নিত করবে। আপনার কাজের ধরণটিও নির্বাচন করতে হবে \n দয়া করে প্রযোজ্য সময়ে যা আপনার সংস্থা নীতি অনুযায়ী সেট করা আছে তা দেখুন।
+        \nb। ছুটিতে: এটি আপনার নির্বাচিত ছুটির প্রকারের সাথে দিনের জন্য ছুটি চিহ্নিত করবে। আপনাকে তারিখ থেকে ও তারিখ ছেড়ে নির্বাচন করতে হবে এবং মন্তব্যগুলি রাখতে পারেন।
+        \n3। উপস্থিতি ও ত্যাগের প্রতিবেদনগুলি দেখতে চান? \n মেনু খোলার জন্য উপরের বাম নির্বাচনের বিকল্প থেকে 'উপস্থিতি দেখুন' বা অন্যথায় ড্যাশবোর্ড থেকে শীর্ষে প্রদর্শিত 'উপস্থিতি' নির্বাচন করুন।
+        \n4। পাসওয়ার্ড পরিবর্তন করতে চান? \n আপনার সংস্থা নীতি অনুসারে, আপনার পক্ষে এটি করার জন্য আপনাকে সংগঠন প্রধানকে অনুরোধ করতে হতে পারে। যদি তারা আপনাকে নিজে থেকে এটি করার অনুমতি দেয় তবে আপনি মেনু বিকল্পগুলি খুলতে পারেন এবং এটি করতে 'পাসওয়ার্ড পরিবর্তন করুন' নির্বাচন করতে পারেন।
+        \n5। লগইন এবং উপস্থিতি পরে, ভবিষ্যতের তারিখের জন্য ছুটি আবেদন করতে চান? মেনু অপশন থেকে আপনার কাছে একই কাজ করার জন্য 'প্রয়োগ ছেড়ে দিন' বিকল্প থাকবে "</string>
+
+    <string name="r_u_sure" translatable="false">তুমি কি নিশ্চিত?</string>
+    <string name="typing" translatable="false">টাইপ করা হচ্ছে ...</string>
+    <string name="leave_status" translatable="false">"আপনার উপস্থিতির স্থিতি 'ছাড়ুন'।"</string>
+    <string name="present_status" translatable="false">"আপনার উপস্থিতির স্থিতি 'বর্তমান'।"</string>
+    <string name="absent_status" translatable="false">"আপনার উপস্থিতির স্থিতি 'অনুপস্থিত'।"</string>
+    <string name="want_to_see_attendance" translatable="false">আপনি কি উপস্থিতি রিপোর্ট দেখতে চান?</string>
+    <string name="can_not_get_attendance_status" translatable="false">উপস্থিতি স্থিতি পেতে পারেন না।</string>
+    <string name="visit_already_syncing" translatable="false">ভিজিটটি ইতিমধ্যে অ্যাপ থেকে সিঙ্ক হচ্ছে</string>
+    <string name="sync_done" translatable="false">সিঙ্ক সফলভাবে সম্পন্ন হয়েছে। ধন্যবাদ</string>
+    <string name="req_done" translatable="false">অনুরোধ সম্পন্ন হয়েছে।</string>
+    <string name="unsuccessful_sync" translatable="false">সিঙ্ক ব্যর্থ।</string>
+    <string name="visit_msg" translatable="false">"1। নতুন দর্শন করতে চান? \n সফল উপস্থিতির পরে কেবল (+) ভাসমান আইকনটিতে ক্লিক করুন আপনার বর্তমান অবস্থানটি সনাক্ত করতে হবে।
+        \n2। পুনর্বিবেচনা করতে চান?
+        \na। আপনি যে পার্টিতে যেতে চান তার কাছাকাছি অবস্থানে থাকলে, স্বয়ংক্রিয়ভাবে প্রদর্শিত বিজ্ঞপ্তিটি প্রদর্শিত হবে এবং আপনার কাছ থেকে পুনর্বিবেচনাটি জিজ্ঞাসা করুন। কেবল 'হ্যাঁ' নির্বাচন করুন এবং পুনর্বিবেচনা সম্পূর্ণ করতে প্রয়োজনীয় বিবরণ দিন।
+        \nb। জিপিএস সমস্যার কারণে আপনি যদি বিজ্ঞপ্তিটি না পেয়ে থাকেন তবে আপনি বাম পাশের মেনু বিকল্পটি খুলতে পারেন এবং তালিকাটি পেতে 'কাছাকাছি' বৈশিষ্ট্যটি থেকে পরীক্ষা করতে পারেন এবং সেখান থেকে আপনি পুনর্বিবেচনা করতে পারেন।
+        \nc। আপনি যদি দলের জন্য পুনর্বিবেচনার তালিকাটি না পেয়ে থাকেন তবে পোর্টাল থেকে জিপিএসের মান বাড়িয়ে আপনাকে সহায়তা করতে আপনার সুপারভাইজার এবং / অথবা সংস্থা প্রধানের সাথে কথা বলুন।
+        \n3। দর্শনীয় প্রতিবেদনগুলি দেখতে চান? \n ড্যাশবোর্ড থেকে 'মোট দর্শন' নির্বাচন করুন।
+        \n4। আপনি প্রতিটি ভিজিটে কাটানো সময়টি দেখতে চান? \n ড্যাশবোর্ড থেকে 'পরিদর্শন সময়কাল' নির্বাচন করুন।
+        \n5। যদি আপনার কাছে অর্ডার বুকিং সুবিধা রয়েছে তবে আপনি যে অর্ডারগুলি বুক করেছেন সেগুলি দেখতে চান? \n ড্যাশবোর্ড থেকে 'মোট আদেশ (গুলি)' নির্বাচন করুন।
+        \n6। টাইমলাইনের সাথে আপনি আজ যে স্থানগুলি সরিয়ে নিয়েছেন তা দেখতে চান?
+        \n ড্যাশবোর্ড থেকে 'টাইমলাইন' নির্বাচন করুন। আপনি পৃথক তারিখটি নির্বাচন করে গত দিনের ডেটাও দেখতে পারেন।"</string>
+
+    <string name="sale_msg" translatable="false">"1। অর্ডার কিভাবে নেবেন?
+        \na। আপনি যদি কোনও পক্ষের সাথে দেখা বা পুনর্বিবেচনা করছেন, একবার আপনার দ্বারা পরিদর্শন / পুনর্বিবেচনার নিশ্চিত হয়ে যায়, অ্যাপ্লিকেশন নিজেই আপনাকে বুক অর্ডারের বিকল্প দেবে। আপনার আইটেম, পরিমাণ, হার এবং অর্ডার জমা দিতে পারেন নির্বাচন করতে হবে।
+        \nb। এছাড়াও ড্যাশবোর্ড থেকে, তালিকা পেতে 'পার্টি (গুলি) এ ক্লিক করুন, তাদের থেকে আপনি এটি বুক করতে' অর্ডার 'নির্বাচন করতে পারেন। এটি আপনাকে পার্টির বিদ্যমান অর্ডার তালিকা এবং (+) সাইন ক্লিক সহ একটি আদেশের আইকন প্রদর্শন করবে যেখানে আপনি অর্ডার বুক করতে পারবেন।
+        \n2। অর্ডার ইতিহাস দেখতে চান? \n ড্যাশবোর্ড থেকে 'আদেশ' ক্লিক করুন, এটি আপনাকে সমস্ত বিবরণ দেবে এবং আপনি আইটেম, পরিমাণ, হার স্তর বিশদ পর্যন্ত দেখতে পারবেন see
+        \n3। অর্ডারগুলি রেট দেখাচ্ছে না বা রেটে প্রবেশ করতে অক্ষম?
+        \n এটি পেতে আপনার প্রতিবেদনের প্রধান / সংস্থার প্রধানের সাথে কথা বলুন।"</string>
+    <string name="orders" translatable="false">অর্ডার</string>
+</resources>

@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/transparent"
+    app:cardBackgroundColor="@color/transparent"
+    app:cardCornerRadius="@dimen/_10sdp"
+    android:layout_height="match_parent">
+
+      <LinearLayout
+        android:layout_width="@dimen/_250sdp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner_white_bg"
+        android:orientation="vertical">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/dialog_qa_headerTV"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:gravity="center"
+            android:padding="@dimen/_1sdp"
+            android:text="Settings"
+            android:drawablePadding="@dimen/_5sdp"
+            android:layout_gravity="center_horizontal"
+            android:drawableLeft="@drawable/ic_gear"
+            android:drawableTint="@color/colorPrimary"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_12sdp" />
+
+        <View
+            android:id="@+id/dialog_adhaar_reg_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:background="@color/light_gray" />
+
+    <LinearLayout
+        android:id="@+id/activity_login_llList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="@dimen/_5sdp"
+        android:background="@drawable/rect_stroke_solid_off_green"
+        android:orientation="vertical"
+        android:paddingHorizontal="@dimen/_8sdp"
+        android:paddingVertical="@dimen/_8sdp"
+        android:layout_marginStart="@dimen/_2sdp"
+        android:layout_marginEnd="@dimen/_2sdp"
+        android:layout_marginTop="@dimen/_2sdp"
+        android:layout_marginBottom="@dimen/_2sdp"
+        android:visibility="visible">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/activity_login_tvappCustomAnydesk"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center|center_vertical"
+            android:background="@drawable/selector_green_botton_bg_1"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/ic_anydesk"
+            android:drawablePadding="@dimen/_5sdp"
+            android:paddingHorizontal="@dimen/_30sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:text="@string/label_install_anydesk"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/activity_login_tvappCustomLogs"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center|center_vertical"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/selector_green_botton_bg_1"
+            android:gravity="center"
+            android:drawablePadding="@dimen/_5sdp"
+            android:drawableLeft="@drawable/ic_share"
+            android:drawableTint="@color/white"
+            android:paddingHorizontal="@dimen/_30sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:text="@string/share_log"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/activity_login_tvappdbLogs"
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_gravity="center|center_vertical"
+            android:layout_marginTop="@dimen/_8sdp"
+            android:background="@drawable/selector_green_botton_bg_1"
+            android:gravity="center"
+            android:drawablePadding="@dimen/_5sdp"
+            android:drawableLeft="@drawable/ic_data_sync"
+            android:drawableTint="@color/white"
+            android:paddingHorizontal="@dimen/_30sdp"
+            android:paddingVertical="@dimen/_5sdp"
+            android:text="@string/share_db"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp" />
+
+    </LinearLayout>
+
+      </LinearLayout>
+
+</LinearLayout>

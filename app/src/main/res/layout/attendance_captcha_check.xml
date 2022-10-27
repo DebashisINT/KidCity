@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/_10sdp"
+    android:orientation="vertical"
+    app:cardCornerRadius="@dimen/_10sdp"
+    app:cardBackgroundColor="@color/transparent"
+    android:background="@color/transparent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@drawable/rounded_corner_white_bg">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:orientation="horizontal">
+            <com.kcteam.widgets.AppCustomTextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="Captcha : "
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_13sdp" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_captcha_no"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:hint="Number"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_15sdp" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_5sdp"
+            android:background="@drawable/gradient_bottom"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:visibility="visible" />
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/et_captcha1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/rectangular_black_border_bg"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:layout_marginLeft="@dimen/_3sdp"/>
+
+            <EditText
+                android:id="@+id/et_captcha2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/rectangular_black_border_bg"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"/>
+
+            <EditText
+                android:id="@+id/et_captcha3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/rectangular_black_border_bg"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"/>
+
+            <EditText
+                android:id="@+id/et_captcha4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/rectangular_black_border_bg"
+                android:layout_marginLeft="@dimen/_3sdp"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1"
+                android:layout_marginRight="@dimen/_3sdp"/>
+
+
+
+        </LinearLayout>
+
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_submit_captcha"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:text="Submit"
+            android:textSize="@dimen/_13sdp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:background="@drawable/deselected_new_order_history"
+            android:textColor="@drawable/selector_text_clor_blue_white"
+            android:clickable="true"
+            android:focusable="true"
+            android:layout_marginTop="@dimen/_10sdp"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

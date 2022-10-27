@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--Chat Bot-->
+    <string name="attendance" translatable="false">موجودگی</string>
+    <string name="reports" translatable="false">رپورٹ کریں</string>
+    <string name="logout" translatable="false">باہر نکلیں</string>
+    <string name="yes" translatable="false">جی ہاں</string>
+    <string name="no" translatable="false">نہیں.</string>
+    <string name="history" translatable="false">ٹائم لائن</string>
+    <string name="login" translatable="false">داخل کریں</string>
+    <string name="open" translatable="false">کھولو</string>
+    <string name="visit" translatable="false">وزٹ</string>
+    <string name="total_visit_without_colon" translatable="false">کل ملاحظہ کریں</string>
+    <string name="revisit" translatable="false">دوبارہ دیکھیں</string>
+    <string name="visit_sync" translatable="false">ملاحظہ کریں</string>
+    <string name="help" translatable="false">مدد</string>
+    <string name="tips" translatable="false">اشارے</string>
+    <string name="data_clear" translatable="false">ڈیٹا صاف ہے</string>
+    <string name="sync_data" translatable="false">مطابقت پذیری کا ڈیٹا</string>
+    <string name="contact_us" translatable="false">ہم سے رابطہ کریں</string>
+    <string name="sales" translatable="false">فروخت</string>
+    <string name="analytics" translatable="false">تجزیات</string>
+    <string name="only_weather" translatable="false">موسم</string>
+    <string name="reach_us" translatable="false">ہم تک پہنچیں</string>
+    <string name="share_log_only" translatable="false">بانٹیں لاگ</string>
+    <string name="please_select_to_started" translatable="false">شروع کرنے کے لئے نیچے دیئے گئے اختیارات میں سے انتخاب کریں۔</string>
+    <string name="wrong_date" translatable="false">آپ کی درج کردہ تاریخ موجودہ تاریخ یا آئندہ تاریخ نہیں ہوسکتی ہے۔</string>
+    <string name="can_i_help" translatable="false">کیا میں آپ کی کسی اور چیز کی مدد کرسکتا ہوں؟</string>
+    <string name="want_to_see_visit_report" translatable="false">کیا آپ کل وزٹ کی رپورٹ کی تاریخ کے مطابق دیکھنا چاہتے ہیں؟</string>
+    <string name="your_total_visit" translatable="false">آپ کے کل وزٹرز\u0020</string>
+    <string name="is_with_space" translatable="false">\u0020ہے\u0020</string>
+    <string name="check_attendance" translatable="false">حاضری چیک کریں۔</string>
+    <string name="enter_date_for_attendance" translatable="false">حاضری کی حیثیت چیک کرنے کے لئے تاریخ درج کریں۔</string>
+    <string name="thanks_want_all_visit" translatable="false">شکریہ کیا آپ وزٹ کے سبھی آپشنز دیکھنا چاہتے ہیں؟</string>
+    <string name="thanks_want_all_options" translatable="false">شکریہ. کیا آپ تمام اختیارات دیکھنا چاہتے ہیں؟</string>
+    <string name="have_grt_dat" translatable="false">آپ کا شکریہ! آپ کا دن اچھا گزرا :)</string>
+    <string name="check_total_visit" translatable="false">کل ملاحظہ کریں</string>
+    <string name="enter_date_check_total_visit" translatable="false">براہ کرم کل وزٹ چیک کرنے کیلئے تاریخ درج کریں۔</string>
+    <string name="only_visit" translatable="false">ملاحظہ کریں</string>
+    <string name="data_clr_alert" translatable="false">کیا آپ کو یقین ہے ، کیونکہ اس سے اے پی پی لاگ آؤٹ ہوجائے گا اور آپ کو اجازت کے ساتھ دوبارہ لاگ ان کرنے کی ضرورت ہے؟</string>
+    <string name="write_us" translatable="false">"ہمیں لکھیں:\n"</string>
+    <!--<string name="login_msg" translatable="false">"1. How to take Orders?\n\na. If you are doing Visit or Revisit to any party, once visit/revisit confirms by you, app will itself give you option to Book Order. You need to Select Items, Qty, Rate &amp; can submit the order.\n\nb. Also from Dashboard, click on 'Party(s)' to get the list, from their you may select 'Order' to book this. It will show you existing order list of the party &amp; one floating icon with (+) sign clicking on which you can book orders.\n\n2. Wish to see order history?\nFrom the Dashboard click on 'Orders', it will give you all the details &amp; you can see upto Items, Qty, Rate level details.\n\n3. Orders not showing Rate or unable to enter Rate?\n\nTalk to your reporting head/Organization head to get this."</string>-->
+    <string name="login_msg" translatable="false">"1. لاگ ان کرتے وقت اچھا انٹرنیٹ ہونا ضروری ہے ورنہ نیچے پیغام آتا ہے۔'
+        \n2. ۔ لاگ ان کے دوران آپ اس بات کو یقینی بناتے ہیں کہ آپ نے جو لاگ ان ID اور پاس ورڈ درج کیا ہے وہ مناسب ہے ورنہ ذیل میں میسج آتا ہے:\n 'کوئی ڈیٹا نہیں ملا۔'
+        \n3. ۔ مناسب لاگ ان ID اور پاس ورڈ کے ساتھ لاگ ان کرتے ہوئے ، اگر مندرجہ ذیل پیغام ظاہر ہوتا ہے: \n'آپ IMEI کی اجازت نہیں رکھتے ہیں۔ براہ کرم ایڈمنسٹریٹر سے رابطہ کریں۔ '\n اس کے بعد براہ کرم اپنے آرگنائزیشن ہیڈ کو فون کریں اور اس کے مجاز ہونے کے بعد ، آپ کامیابی کے ساتھ لاگ ان کرسکیں گے۔
+        \n4. ۔ ہینڈسیٹ بدل گیا؟ \n براہ کرم اس بارے میں آرگنائزیشن ہیڈ سے بات کریں ، وہ اس کی اجازت دیں گے اور آپ اپنے نئے ہینڈسیٹ میں کامیابی کے ساتھ لاگ ان کرسکیں گے۔"</string>
+
+    <string name="attendance_msg" translatable="false">"1. سست لاگ ان؟
+        \na. اگر گذشتہ روز لاگ آؤٹ اے پی پی میں نہیں کیا گیا ہے ، تو پھر پہلے لاگ آؤٹ ہوگا اور پھر لاگ ان ہوگا۔ لہذا ، براہ کرم ایک بار ایپ میں کام مکمل ہونے کے بعد ہر روز لاگ آؤٹ کریں۔
+        \nb. اگر آپ کے پاس اے پی پی میں واضح ڈیٹا موجود ہے تو ، پھر یہ تمام اعداد و شمار کو ہینڈسیٹ میں ہم آہنگ کرے گا تاکہ اے پی پی میں آف لائن کام ممکن ہوسکے۔ لہذا ، اس میں کچھ وقت لگے گا۔
+        \nc. تیزی سے لاگ ان کرنے کے لئے مستحکم انٹرنیٹ رابطہ ہے۔ براہ کرم انٹرنیٹ چیک کریں۔
+        \n2. ۔ لاگ ان کے بعد کیا کرنا ہے؟
+        \na. کام پر: یہ آپ کو اپنے وقت کے ساتھ دن کے ل موجودہ پیش کرنے کی نشاندہی کرے گا۔ آپ کو کام کی قسم کو بھی منتخب کرنے کی ضرورت ہے۔ \n *** براہ کرم قابل اطلاق وقت پر غور کریں جو آپ کی تنظیم کی پالیسی کے مطابق طے کیا گیا ہے۔
+        \nb. چھٹی پر: یہ آپ کو منتخب کردہ چھٹی کی قسم کے ساتھ دن کے لئے چھٹی کا نشان لگائے گا۔ آپ کو تاریخ سے چھوڑیں کو منتخب کرنا ہوگا اور ریمارکس ڈال سکتے ہیں۔
+        \n3. ۔ حاضری اور چھوڑو کی رپورٹس دیکھنا چاہتے ہیں ؟ مینو کھولنے کے لئے بائیں سے بائیں منتخب آپشن سے ، پھر 'حاضری دیکھیں' کو منتخب کریں یا ورنہ ڈیش بورڈ سے ، اوپر دکھائے ہوئے 'حاضری' کو منتخب کریں۔
+        \n4. ۔ پاس ورڈ تبدیل کرنا چاہتے ہیں؟ \n آپ کی تنظیم کی پالیسی کے مطابق ، آپ کو تنظیم کے سربراہ سے یہ کام کرنے کی درخواست کرنی پڑسکتی ہے۔ اگر وہ آپ کو بذات خود یہ کام کرنے دیتے ہیں تو آپ مینو کے اختیارات کھول سکتے ہیں اور ایسا کرنے کے لئے 'پاس ورڈ تبدیل کریں' کو منتخب کرسکتے ہیں۔
+        \n5. ۔ لاگ ان اور حاضری کے بعد ، آئندہ کی تاریخ کے لئے رخصت کا اطلاق کرنا چاہتے ہیں؟ ایسا کرنے کے ل سے آپ کے پاس مینو آپشن سے 'اپلوڈ رخصت' کا آپشن ہوگا۔"</string>
+
+    <string name="r_u_sure" translatable="false">کیا تمہیں یقین ہے؟</string>
+    <string name="typing" translatable="false">ٹائپنگ…</string>
+    <string name="leave_status" translatable="false">"آپ کی حاضری کی حیثیت 'رخصت' ہے۔"</string>
+    <string name="present_status" translatable="false">"آپ کی حاضری کی حیثیت 'حال' ہے۔"</string>
+    <string name="absent_status" translatable="false">"آپ کی حاضری کی حیثیت 'غیر حاضر' ہے۔"</string>
+    <string name="want_to_see_attendance" translatable="false">کیا آپ حاضری کی رپورٹ دیکھنا چاہتے ہیں؟</string>
+    <string name="can_not_get_attendance_status" translatable="false">حاضری کی حیثیت حاصل نہیں کرسکتی۔</string>
+    <string name="visit_already_syncing" translatable="false">ملاحظہ کریں پہلے سے ہی ایپ سے موافقت پذیر ہے۔</string>
+    <string name="sync_done" translatable="false">ہم آہنگی کامیابی کے ساتھ ہو گئی۔ شکریہ.</string>
+    <string name="req_done" translatable="false">درخواست کی گئی۔</string>
+    <string name="unsuccessful_sync" translatable="false">مطابقت پذیری ناکام ہے۔</string>
+    <string name="visit_msg" translatable="false">"1. ایک نیا وزٹ کرنا چاہتے ہیں؟ n\ کامیاب حاضری کے بعد بس (+) تیرتے آئیکن پر کلیک کریں۔ آپ کی موجودہ جگہ کا سراغ لگانا ہے۔ ملاحظہ کریں ڈیٹا کو داخل کرنے اور محفوظ کرنے کی ضرورت ہے۔
+        \n2. ۔ نظرثانی کرنا چاہتے ہیں؟
+        \na. اگر آپ جس پارٹی کی سیر کرنا چاہتے ہیں اس کے قریبی مقام پر ہیں تو ، خود بخود نوٹیفکیشن دبائیں اور ظاہر ہونے کے ل. آپ سے دوبارہ جائیں۔ صرف 'ہاں' کو منتخب کریں اور دوبارہ جانے کی تکمیل کے لئے ضروری تفصیلات ڈالیں۔
+        \nb. اگر آپ کو جی پی ایس جاری ہونے کی وجہ سے اطلاع موصول نہیں ہو رہی ہے تو ، آپ فہرست حاصل کرنے کے لئے بائیں جانب مینو آپشن کھول سکتے ہیں اور 'قریبی' کی خصوصیت سے جانچ کر سکتے ہیں اور وہاں سے دوبارہ نظرثانی کر سکتے ہیں۔
+        \nc. اگر آپ پارٹی برائے نظرثانی کی فہرست نہیں حاصل کررہے ہیں تو ، اپنے نگران اور / یا تنظیم کے سربراہ سے بات کریں تاکہ پورٹل سے جی پی ایس کی قیمت میں اضافہ کرکے آپ کی مدد کریں۔
+        \n3. ۔ وزٹ کی رپورٹ دیکھنا چاہتے ہیں؟ \n ڈیش بورڈ سے 'کل وزٹ' منتخب کریں۔
+        \n4.۔ کیا آپ دیکھنا چاہتے ہیں کہ آپ نے ہر دورے میں کیا وقت گزارا ہے؟ \n ڈیش بورڈ سے 'دورے کا دورانیہ' منتخب کریں۔
+        \n5. ۔ اگر آپ کے پاس آرڈر بکنگ کی سہولت ہے تو ، آرڈرز دیکھنا چاہتے ہیں جو آپ نے بک کیے ہیں؟ \n ڈیش بورڈ سے 'ٹوٹل آرڈر' منتخب کریں۔
+        \n6. ۔ ٹائم لائن کے ساتھ آپ آج کے مقامات دیکھنا چاہتے ہیں؟
+        \n ڈیش بورڈ سے 'ٹائم لائن' منتخب کریں۔ آپ مختلف تاریخوں کا انتخاب کرکے گذشتہ دنوں کا ڈیٹا بھی دیکھ سکتے ہیں۔"</string>
+
+    <string name="sale_msg" translatable="false">"1. آرڈر کیسے لیں؟
+        \na. اگر آپ کسی پارٹی میں وزٹ یا دوبارہ ملاحظہ کر رہے ہیں تو ، ایک بار جب آپ کی طرف سے تصدیق / تصدیق / جائزہ لیں تو ایپ خود آپ کو بک آرڈر کا آپشن دے گی۔ آپ کو اشیا ، مقدار ، شرح منتخب کرنے اور آرڈر جمع کرانے کی ضرورت ہے۔
+        \nb. اس کے علاوہ ، ڈیش بورڈ سے ، فہرست حاصل کرنے کے لئے 'پارٹی (زبانیں) پر کلک کریں ، ان کی طرف سے آپ اس کو بکنے کے لئے' آرڈر 'منتخب کرسکتے ہیں۔ یہ آپ کو پارٹی کی موجودہ آرڈر لسٹ اور (+) نشان پر مشتمل ایک تیرتے آئیکن دکھائے گا جس پر آپ آرڈر بک کرسکتے ہیں۔
+        \n2. ۔ آرڈر کی تاریخ دیکھنا چاہتے ہیں؟ \n ڈیش بورڈ سے 'آرڈر' پر کلک کریں ، اس سے آپ کو تمام تفصیلات ملیں گی اور آپ آئٹمز ، مقدار ، شرح کی سطح تک کی تفصیلات دیکھ سکتے ہیں۔
+        \n3. ۔ احکامات نہیں دکھا رہے ہیں یا شرح داخل کرنے سے قاصر ہیں؟
+        \n یہ جاننے کے لئے اپنے رپورٹنگ ہیڈ / تنظیم کے سربراہ سے بات کریں۔"</string>
+    <string name="orders" translatable="false">ترتیب</string>
+</resources>

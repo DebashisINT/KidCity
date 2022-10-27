@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_5sdp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="@dimen/_4sdp"
+        android:padding="@dimen/_5sdp"
+        app:cardElevation="@dimen/_2sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_10sdp">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/tv_customrname"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:layout_gravity="center"
+                    android:text="@string/cust_name"
+                    android:textColor="@color/login_txt_color"
+                    android:textSize="@dimen/_14sdp" />
+                <LinearLayout
+                    android:padding="@dimen/_5sdp"
+                    android:background="@color/navy_blue"
+                    android:layout_weight="0.3"
+                    android:layout_width="0dp"
+                    android:gravity="center"
+                    android:layout_marginLeft="@dimen/_5sdp"
+                    android:layout_height="wrap_content">
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/logistic_awaited"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_12sdp" />
+                </LinearLayout>
+            </LinearLayout>
+            <com.kcteam.widgets.AppCustomTextView
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:id="@+id/tv_address"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="9,Lake Terrace Santoshpur kolkata,West bengal"
+                android:textColor="@color/login_txt_color"
+                android:textSize="@dimen/_13sdp"
+                android:visibility="gone"
+                tools:visibility="visible" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/iv_call_icon"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:layout_alignParentLeft="true"
+                    android:layout_marginRight="@dimen/_5sdp"
+                    android:contentDescription="@null"
+                    android:padding="@dimen/_5sdp"
+                    android:src="@drawable/ic_registered_shop_call_select" />
+
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/tv_phn_no"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.7"
+                    android:singleLine="true"
+                    android:text="Jesus (98314546791)"
+                    android:layout_gravity="center"
+                    android:textColor="@color/login_txt_color"
+                    android:textSize="@dimen/_12sdp"
+                    android:visibility="gone"
+                    tools:visibility="visible" />
+
+                <RelativeLayout
+                    android:id="@+id/rl_icons"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.1"
+                    android:layout_marginLeft="@dimen/_10sdp">
+
+                    <ImageView
+                        android:id="@+id/iv_map_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:contentDescription="@null"
+                        android:padding="@dimen/_5sdp"
+                        android:src="@drawable/ic_registered_shop_direction_deselect" />
+
+
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@android:color/black" />
+
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/tv_view_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/view_details"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

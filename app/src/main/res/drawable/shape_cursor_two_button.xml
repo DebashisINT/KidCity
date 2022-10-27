@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item>
+        <shape android:shape="rectangle">
+            <gradient android:startColor="@color/card_custom_back1"
+                android:centerColor="@color/card_custom_back1"
+                android:endColor="@color/card_custom_back2"
+                android:angle="360"
+                android:type="linear"
+                android:gradientRadius="@dimen/_10sdp"/>
+            <corners android:radius="@dimen/_5sdp"/>
+        </shape>
+    </item>
+</selector>

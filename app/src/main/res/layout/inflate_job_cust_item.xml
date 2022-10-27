@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/nearby_shop_list_bg"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp"
+    android:layout_marginBottom="@dimen/_10sdp"
+    android:layout_marginLeft="@dimen/_5sdp"
+    android:layout_marginRight="@dimen/_5sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_cust_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/capital_electronics"
+            android:textColor="@color/login_txt_color"
+            android:textSize="@dimen/_13sdp"
+            android:layout_centerVertical="true"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_status"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="In Progress"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11sdp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/rectangular_blue_bg"
+            android:padding="@dimen/_7sdp"/>
+    </RelativeLayout>
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_cust_address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_3sdp"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:text="@string/address_txt"
+        android:textColor="@color/light_gray"
+        android:textSize="@dimen/_11sdp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/tv_shop_contact_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@drawable/ic_registered_shop_call_select"
+            android:drawablePadding="@dimen/_5sdp"
+            android:gravity="center_vertical"
+            android:text="97316318731634"
+            android:textColor="@color/light_gray"
+            android:textSize="@dimen/_11sdp"
+            android:textStyle="bold"
+            android:layout_centerVertical="true"/>
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/iv_map_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:srcCompat="@drawable/ic_registered_shop_direction_select"
+            android:layout_alignParentRight="true"
+            android:padding="@dimen/_5sdp"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/lightest_gray" />
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_view_details"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/view_details"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_13sdp"
+        android:gravity="center_horizontal"
+        android:paddingLeft="@dimen/_10sdp"
+        android:paddingTop="@dimen/_10sdp"
+        android:paddingRight="@dimen/_10sdp"
+        android:paddingBottom="@dimen/_5sdp"/>
+</LinearLayout>

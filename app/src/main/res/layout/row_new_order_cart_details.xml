@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="@dimen/_5sdp">
+
+
+    <LinearLayout
+        android:id="@+id/ll_root_new_or"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_row_new_order_product_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="Product Name"
+                    android:gravity="center|start"
+                    android:textSize="@dimen/_12sdp"
+                    android:textColor="@color/colorPrimary"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="Gender : "
+                    android:gravity="center|start"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="@dimen/_12sdp"/>
+
+                <TextView
+                    android:id="@+id/tv_row_new_order_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:hint="Gender"
+                    android:gravity="center|start"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_row_new_order_color"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:hint="Color"
+                android:gravity="center|start"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_12sdp"/>
+
+        </LinearLayout>
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_order_details"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

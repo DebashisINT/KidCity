@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_4sdp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:id="@+id/time_RL"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:background="@color/report_blue"
+            android:gravity="center_vertical"
+            android:padding="@dimen/_10sdp"
+            android:visibility="visible">
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/avg_order_val_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:paddingBottom="@dimen/_6sdp"
+                android:paddingLeft="@dimen/_5sdp"
+                android:paddingRight="@dimen/_5sdp"
+                android:paddingTop="@dimen/_6sdp"
+                android:text="151515"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_12sdp" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/avg_min_label_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/avg_order_val_TV"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:text="Mins"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_9sdp"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/clock_icon_IV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="-15dp"
+            android:layout_toLeftOf="@id/time_RL"
+            android:src="@drawable/ic_report_time_spent_icon_blue"
+            android:visibility="gone" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@id/clock_icon_IV"
+            android:padding="@dimen/_10sdp">
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/shop_name_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="The Tommy Hilfinger"
+                android:textColor="@color/login_txt_color"
+                android:textSize="@dimen/_11sdp" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/shop_address_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/shop_name_TV"
+                android:text="@string/dashboard_kcteam_address"
+                android:textColor="@color/login_txt_color"
+                android:textSize="@dimen/_9sdp" />
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</androidx.cardview.widget.CardView>

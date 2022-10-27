@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="@dimen/_4sdp"
+    app:cardElevation="@dimen/_2sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_3sdp"
+        android:background="@drawable/shape_cursor_one">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                android:layout_weight="1">
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/photo_reg_user_name_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginLeft="@dimen/_11sdp"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:textColor="@color/login_txt_color"
+                    android:textSize="@dimen/_11sdp" />
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/photo_reg_user_adhaar_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginLeft="@dimen/_11sdp"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:textColor="@color/login_txt_color"
+                    android:textSize="@dimen/_11sdp" />
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/photo_reg_dd_name_tv"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_30sdp"
+                    android:layout_marginLeft="@dimen/_11sdp"
+                    android:layout_weight="1"
+                    android:gravity="center|start"
+                    android:textColor="@color/login_txt_color"
+                    android:textSize="@dimen/_11sdp" />
+
+            </LinearLayout>
+
+
+            <FrameLayout
+                android:layout_width="@dimen/_90sdp"
+                android:layout_height="@dimen/_90sdp">
+
+                <ImageView
+                    android:id="@+id/iv_row_face_attd_face"
+                    android:layout_width="@dimen/_90sdp"
+                    android:layout_height="@dimen/_90sdp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tv_row_user_list_face_attend_face_not"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:text="Face not registered."
+                    android:gravity="center"
+                    android:textColor="@color/color_custom_red"
+                    android:textSize="@dimen/_12sdp"/>
+
+            </FrameLayout>
+
+
+
+        </LinearLayout>
+
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:background="@color/light_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_25sdp"
+            android:orientation="horizontal"
+            android:gravity="center"
+            android:padding="@dimen/_1sdp"
+            android:layout_marginBottom="@dimen/_5sdp">
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/click_for_photo_attd"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:gravity="start|center"
+                android:paddingStart="@dimen/_10sdp"
+                android:text="Click for Attendance"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/_11sdp" />
+
+
+            <Space
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="match_parent"/>
+
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/click_for_photo_attd_report"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:gravity="end|center"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="View Attendance"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/_11sdp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

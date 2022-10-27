@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/main_content"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/iv_shopImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/ic_image_upload_icon"
+        android:visibility="invisible" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_new_login_bg">
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/version_name_TV"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/_5sdp"
+                android:text="@string/version_name"
+                android:textSize="@dimen/_10sdp" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/activity_login_tvappCustomAnydeskInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="@dimen/_2sdp"
+                android:drawableStart="@drawable/ic_gear"
+                android:drawablePadding="5dp"
+                android:drawableTint="@color/color_deep_blue"
+                android:gravity="center_vertical"
+                android:textColor="@color/color_deep_blue"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:layout_marginHorizontal="@dimen/_5sdp"/>
+
+            <LinearLayout
+                android:id="@+id/activity_login_llList"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rect_stroke_solid_off_grey"
+                android:layout_below="@+id/activity_login_tvappCustomAnydeskInfo"
+                android:orientation="vertical"
+                android:paddingVertical="@dimen/_8sdp"
+                android:paddingHorizontal="@dimen/_8sdp"
+                android:visibility="gone"
+                android:layout_marginHorizontal="@dimen/_5sdp">
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/activity_login_tvappCustomAnydesk"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/report"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:background="@drawable/selector_blue_botton_bg"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_8sdp"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:paddingHorizontal="@dimen/_10sdp"/>
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/activity_login_tvappCustomLogs"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/share_log"
+                    android:background="@drawable/selector_blue_botton_bg"
+                    android:textColor="@color/white"
+                    android:layout_gravity="center_vertical"
+                    android:gravity="center"
+                    android:textSize="@dimen/_8sdp"
+                    android:layout_marginTop="@dimen/_8sdp"
+                    android:paddingVertical="@dimen/_5sdp"
+                    android:paddingHorizontal="@dimen/_10sdp"/>
+            </LinearLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+
+                >
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/app_title_TV"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:gravity="center"
+                    android:text="@string/app_name"
+                    android:textColor="@color/default_text_color"
+                    android:textSize="@dimen/_15sdp"
+                    android:visibility="gone" />
+
+                <LinearLayout
+                    android:id="@+id/login_LL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="@dimen/_10sdp">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/light_gray"
+                        android:background="@drawable/shape_custom_border_login_et"
+                        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                        <com.kcteam.widgets.AppCustomEditText
+                            android:id="@+id/username_EDT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/username"
+                            android:imeOptions="actionNext"
+                            android:inputType="textEmailAddress"
+                            android:singleLine="true"
+                            android:textSize="@dimen/_13sdp"
+                            app:theme="@style/EvoEditTextTheme" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColorHint="@color/light_gray"
+                        app:passwordToggleEnabled="true"
+                        android:background="@drawable/shape_custom_border_login_et"
+                        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/password_EDT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="@string/password"
+                            android:imeOptions="actionDone"
+                            android:inputType="textPassword"
+                            android:singleLine="true"
+                            android:textSize="@dimen/_13sdp"
+                            app:theme="@style/EvoEditTextTheme" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_40sdp"
+                        android:orientation="horizontal">
+
+                        <CheckBox
+                            android:id="@+id/cb_remember_me"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:text="@string/remember_me"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="@dimen/_11sdp"/>
+
+
+                   <com.kcteam.widgets.AppCustomTextView
+                       android:id="@+id/share_log_login_TV"
+                       android:layout_width="wrap_content"
+                       android:layout_height="match_parent"
+                       android:drawableStart="@drawable/ic_share_svg"
+                       android:gravity="center"
+                       android:text="@string/share_log"
+                       android:textColor="#084e8b"
+                       android:textStyle="bold"
+                       android:textSize="@dimen/_12sdp"
+                       android:visibility="gone"
+                       android:layout_alignParentRight="true"
+                       android:drawablePadding="5dp"/>
+
+                    </RelativeLayout>
+
+
+
+                    <com.kcteam.widgets.AppCustomTextView
+                        android:id="@+id/login_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_80sdp"
+                        android:layout_marginRight="@dimen/_80sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:background="@drawable/shape_custom_border_blue_button"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:gravity="center"
+                        android:padding="@dimen/_10sdp"
+                        android:text="@string/login"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13sdp"
+                        android:textStyle="bold" />
+
+                    <com.kcteam.widgets.AppCustomTextView
+                        android:id="@+id/forgot_password_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:gravity="center"
+                        android:text="@string/forgot_password"
+                        android:textColor="@color/default_text_color"
+                        android:textSize="@dimen/_11sdp"
+                        android:visibility="gone" />
+
+                    <!--<com.kcteam.widgets.AppCustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:text="@string/login_logout_msg"
+                        android:textColor="@color/default_text_color"
+                        android:textSize="@dimen/_12sdp"
+                        android:textStyle="bold"/>
+
+                    <com.kcteam.widgets.AppCustomTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_15sdp"
+                        android:gravity="center"
+                        android:text="Internet connection strength is good, you can login now"
+                        android:textColor="@color/default_text_color"
+                        android:textSize="@dimen/_11sdp" />-->
+
+                </LinearLayout>
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@+id/progress_wheel"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        wheel:matProg_barColor="@color/default_text_color"
+        wheel:matProg_progressIndeterminate="true" />
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/alert_snack_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true" />
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_internet_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/color_custom_green"
+        android:text="@string/login_logout_msg"
+        android:textColor="@color/white"
+        android:padding="@dimen/_10sdp"/>
+
+</RelativeLayout>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bottom_layout_LL"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="bottom"
+    android:baselineAligned="false"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/_10sdp"
+    android:paddingBottom="@dimen/_10sdp"
+    android:weightSum="4">
+    <!--Home-->
+    <RelativeLayout
+        android:id="@+id/home_RL"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/home_IV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/selector_bottom_tab_home"
+            android:clickable="false"
+            android:contentDescription="@null"
+            android:focusable="false" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/home_TV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/home_IV"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="center"
+            android:text="@string/home"
+            android:textColor="@drawable/selector_text_clor_blue_gray"
+            android:textSize="@dimen/_11sdp" />
+
+    </RelativeLayout>
+
+    <!--Add Shop-->
+    <RelativeLayout
+        android:id="@+id/add_shop_RL"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/add_shop_IV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/selector_bottom_tab_addshop"
+            android:clickable="false"
+            android:contentDescription="@null"
+            android:focusable="false" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/add_shop_TV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/add_shop_IV"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="center"
+            android:text="@string/add_shop"
+            android:textColor="@drawable/selector_text_clor_blue_gray"
+            android:textSize="@dimen/_11sdp" />
+    </RelativeLayout>
+
+    <!--Near Shops-->
+
+    <RelativeLayout
+        android:id="@+id/nearby_shops_RL"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/nearby_shops_IV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/selector_bottom_tab_nearbyshops"
+            android:clickable="false"
+            android:contentDescription="@null"
+            android:focusable="false"
+
+            />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/nearby_shops_TV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/nearby_shops_IV"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="center"
+            android:text="@string/nearby_shops"
+            android:textColor="@drawable/selector_text_clor_blue_gray"
+            android:textSize="@dimen/_11sdp" />
+    </RelativeLayout>
+    <!--My Orders-->
+
+    <RelativeLayout
+        android:id="@+id/my_orders_RL"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center">
+
+        <ImageView
+            android:id="@+id/my_orders_IV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/selector_bottom_tab_myorder"
+            android:clickable="false"
+            android:contentDescription="@null"
+            android:focusable="false" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/my_orders_TV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/my_orders_IV"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:clickable="false"
+            android:focusable="false"
+            android:gravity="center"
+            android:text="@string/my_orders"
+            android:textColor="@drawable/selector_text_clor_blue_gray"
+            android:textSize="@dimen/_11sdp" />
+    </RelativeLayout>
+</LinearLayout>
+

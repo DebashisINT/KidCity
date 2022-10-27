@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    >
+
+    <LinearLayout
+        android:id="@+id/order_detail_header_LL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_7sdp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="@dimen/_7sdp"
+        android:weightSum="4">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/item_name_TV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/item_name"
+            android:textColor="@color/default_text_color"
+            android:textSize="@dimen/_11sdp" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/quantity_TV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/quantity"
+            android:textColor="@color/default_text_color"
+            android:textSize="@dimen/_11sdp" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/price_TV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/price"
+            android:textColor="@color/default_text_color"
+            android:textSize="@dimen/_11sdp" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/total_TV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/total"
+            android:textColor="@color/default_text_color"
+            android:textSize="@dimen/_11sdp" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/order_detail_RCV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/order_detail_header_LL"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/order_detail_RCV"
+        android:background="@color/colorPrimary"
+        android:gravity="end"
+        android:padding="@dimen/_8sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/total_price_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:text="@string/total_price"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_13sdp" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/total_label_TV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/_5sdp"
+            android:layout_toLeftOf="@id/total_price_TV"
+            android:text="@string/total"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_11sdp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

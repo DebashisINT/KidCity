@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="attendance" translatable="false">ଉପସ୍ଥିତି |</string>
+    <string name="reports" translatable="false">ରିପୋର୍ଟ କରନ୍ତୁ |</string>
+    <string name="logout" translatable="false">ପ୍ରସ୍ଥାନ</string>
+    <string name="yes" translatable="false">ହଁ</string>
+    <string name="no" translatable="false">ନା।</string>
+    <string name="history" translatable="false">ସମୟସୀମା</string>
+    <string name="login" translatable="false">ପ୍ରବେଶ କରନ୍ତୁ |</string>
+    <string name="open" translatable="false">ଖୋଲନ୍ତୁ |</string>
+    <string name="visit" translatable="false">ପରିଦର୍ଶନ |</string>
+    <string name="total_visit_without_colon" translatable="false">ସମୁଦାୟ ପରିଦର୍ଶନ |</string>
+    <string name="revisit" translatable="false">ପୁନ isit ପରିଦର୍ଶନ କରନ୍ତୁ |</string>
+    <string name="visit_sync" translatable="false">ସିଙ୍କ ପରିଦର୍ଶନ କରନ୍ତୁ |</string>
+    <string name="help" translatable="false">ସାହାଯ୍ୟ</string>
+    <string name="tips" translatable="false">ଟିପ୍ସ</string>
+    <string name="data_clear" translatable="false">ଡାଟା ସଫା</string>
+    <string name="sync_data" translatable="false">ଡାଟା ସିଙ୍କ୍ କରନ୍ତୁ |</string>
+    <string name="contact_us" translatable="false">ଆମ ସହିତ ଯୋଗାଯୋଗ କରନ୍ତୁ |</string>
+    <string name="sales" translatable="false">ବିକ୍ରୟ</string>
+    <string name="analytics" translatable="false">ଆନାଲିଟିକ୍ସ |</string>
+    <string name="only_weather" translatable="false">ପାଣିପାଗ</string>
+    <string name="reach_us" translatable="false">ଆମ ପାଖରେ ପହଞ୍ଚ |</string>
+    <string name="share_log_only" translatable="false">ଲଗ୍ ଅଂଶୀଦାର କରନ୍ତୁ |</string>
+    <string name="please_select_to_started" translatable="false">ଆରମ୍ଭ କରିବାକୁ ଦୟାକରି ନିମ୍ନଲିଖିତ ବିକଳ୍ପଗୁଡ଼ିକୁ ବାଛନ୍ତୁ |</string>
+    <string name="wrong_date" translatable="false">ଆପଣ ପ୍ରବେଶ କରିଥିବା ତାରିଖ ସାମ୍ପ୍ରତିକ ତାରିଖ କିମ୍ବା ଭବିଷ୍ୟତ ତାରିଖ ହୋଇପାରିବ ନାହିଁ |</string>
+    <string name="can_i_help" translatable="false">ମୁଁ ତୁମକୁ ଅନ୍ୟ କିଛି ସାହାଯ୍ୟ କରିପାରିବି କି?</string>
+    <string name="want_to_see_visit_report" translatable="false">ଆପଣ ସମୁଦାୟ ଭ୍ରମଣର ରିପୋର୍ଟ ତାରିଖ ଜ୍ଞାନୀ ଦେଖିବାକୁ ଚାହୁଁଛନ୍ତି କି?</string>
+    <string name="your_total_visit" translatable="false">ଆପଣଙ୍କର ସମୁଦାୟ ପରିଦର୍ଶନ\u0020</string>
+    <string name="is_with_space" translatable="false">\u0020ହେଉଛି\u0020</string>
+    <string name="check_attendance" translatable="false">ଉପସ୍ଥାନ ଯାଞ୍ଚ କରନ୍ତୁ |</string>
+    <string name="enter_date_for_attendance" translatable="false">ଉପସ୍ଥାନ ସ୍ଥିତି ଯାଞ୍ଚ କରିବାକୁ ଦୟାକରି ତାରିଖ ପ୍ରବେଶ କରନ୍ତୁ |</string>
+    <string name="thanks_want_all_visit" translatable="false">ଧନ୍ୟବାଦ। ଆପଣ ସମସ୍ତ ଭ୍ରମଣ ବିକଳ୍ପ ଦେଖିବାକୁ ଚାହୁଁଛନ୍ତି କି?</string>
+    <string name="thanks_want_all_options" translatable="false">ଧନ୍ୟବାଦ ଆପଣ ସମସ୍ତ ବିକଳ୍ପ ଦେଖିବାକୁ ଚାହୁଁଛନ୍ତି କି?</string>
+    <string name="have_grt_dat" translatable="false">ଧନ୍ୟବାଦ! ଦିନଟି ଭଲରେ କଟିବ :)</string>
+    <string name="check_total_visit" translatable="false">ସମୁଦାୟ ପରିଦର୍ଶନ ଯାଞ୍ଚ କରନ୍ତୁ |</string>
+    <string name="enter_date_check_total_visit" translatable="false">ସମୁଦାୟ ପରିଦର୍ଶନ ଯାଞ୍ଚ କରିବାକୁ ଦୟାକରି ତାରିଖ ପ୍ରବେଶ କରନ୍ତୁ |</string>
+    <string name="only_visit" translatable="false">ପରିଦର୍ଶନ କରନ୍ତୁ |</string>
+    <string name="data_clr_alert" translatable="false">ଆପଣ ନିଶ୍ଚିତ କି, କାରଣ ଏହା APP କୁ ଲଗଆଉଟ୍ କରିବ ଏବଂ ଆପଣଙ୍କୁ ଅନୁମତି ସହିତ ପୁନ - ଲଗଇନ୍ କରିବାକୁ ପଡିବ?</string>
+    <string name="write_us" translatable="false">"ଆମକୁ ଲେଖ:\n"</string>
+    <!--<string name="login_msg" translatable="false">"1. How to take Orders?\n\na. If you are doing Visit or Revisit to any party, once visit/revisit confirms by you, app will itself give you option to Book Order. You need to Select Items, Qty, Rate &amp; can submit the order.\n\nb. Also from Dashboard, click on 'Party(s)' to get the list, from their you may select 'Order' to book this. It will show you existing order list of the party &amp; one floating icon with (+) sign clicking on which you can book orders.\n\n2. Wish to see order history?\nFrom the Dashboard click on 'Orders', it will give you all the details &amp; you can see upto Items, Qty, Rate level details.\n\n3. Orders not showing Rate or unable to enter Rate?\n\nTalk to your reporting head/Organization head to get this."</string>-->
+    <string name="login_msg" translatable="false">"1. ଲଗ୍ଇନ୍ କରିବାବେଳେ ଭଲ ଇଣ୍ଟରନେଟ୍ ରହିବା ଜରୁରୀ |
+        \n2। ଲଗଇନ୍ କରିବାବେଳେ ଆପଣ ନିଶ୍ଚିତ କରନ୍ତୁ ଯେ ଆପଣ ପ୍ରବେଶ କରିଥିବା ଲଗଇନ୍ ID ଏବଂ ପାସୱାର୍ଡ ସଠିକ୍ ଅଟେ ଅନ୍ୟଥା ତଳେ ସନ୍ଦେଶ ଦୃଶ୍ୟମାନ ହୁଏ: \n କ ତଥ୍ୟ ଣସି ତଥ୍ୟ ମିଳିଲା ନାହିଁ | '
+        \n3। ସଠିକ୍ ଲଗଇନ୍ ID ଏବଂ ପାସୱାର୍ଡ ସହିତ ଲଗଇନ୍ କରିବାବେଳେ, ଯଦି ନିମ୍ନଲିଖିତ ସନ୍ଦେଶ ଦୃଶ୍ୟମାନ ହୁଏ: \n ଆପଣଙ୍କର IMEI ଅନୁମୋଦିତ ନୁହେଁ | ଦୟାକରି ଆଡମିନିଷ୍ଟ୍ରେଟର୍ ସହିତ ସଂଯୋଗ କରନ୍ତୁ |
+        \n4। ହ୍ୟାଣ୍ଡସେଟ ପରିବର୍ତ୍ତନ ହୋଇଛି? \n ଦୟାକରି ଏହି ବିଷୟରେ ସଂଗଠନ ମୁଖ୍ୟଙ୍କ ସହ କଥାବାର୍ତ୍ତା କରନ୍ତୁ, ସେମାନେ ଏହାକୁ ଅନୁମତି ଦେବେ ଏବଂ ଆପଣ ଆପଣଙ୍କର ନୂତନ ହ୍ୟାଣ୍ଡସେଟରେ ସଫଳତାର ସହ ଲଗଇନ୍ କରିବାକୁ ସମର୍ଥ ହେବେ |"</string>
+
+    <string name="attendance_msg" translatable="false">"1. ଧୀର ଲଗଇନ୍?
+        \na। ଯଦି ଗତ ଦିନ APP ରେ ଲଗଆଉଟ୍ ହୋଇନଥାଏ, ତେବେ ଏହା ପ୍ରଥମେ ଲଗଆଉଟ୍ ହେବ ଏବଂ ତା’ପରେ ଲଗଇନ୍ ହେବ | ତେଣୁ, ଆପରେ କାମ ସରିବା ପରେ ଦୟାକରି ପ୍ରତିଦିନ ଲଗଆଉଟ୍ କରନ୍ତୁ |
+        \nb। ଯଦି ଆପଣଙ୍କର APP ରେ ସ୍ୱଚ୍ଛ ତଥ୍ୟ ଅଛି, ତେବେ ଏହା ସମସ୍ତ ତଥ୍ୟକୁ ହ୍ୟାଣ୍ଡସେଟରେ ସିଙ୍କ କରିବ ଯାହା ଦ୍ AP ାରା APP ରେ ଅଫଲାଇନ୍ କାର୍ଯ୍ୟ ସମ୍ଭବ ହେବ | ତେଣୁ, ଏହା କିଛି ସମୟ ନେବ |
+        \nc ଶୀଘ୍ର ଲଗଇନ୍ କରିବାକୁ ସ୍ଥିର ଇଣ୍ଟରନେଟ୍ ସଂଯୋଗ ଗୁରୁତ୍ୱପୂର୍ଣ୍ଣ | ଦୟାକରି ଇଣ୍ଟରନେଟ୍ ଯାଞ୍ଚ କରନ୍ତୁ |
+        \n2। ଲଗଇନ୍ ପରେ କଣ କରିବେ?
+        \na କାର୍ଯ୍ୟରେ: ଏହା ତୁମ ଇନ୍ ଟାଇମ୍ ସହିତ ଦିନ ପାଇଁ ଉପସ୍ଥାପିତ କରିବ | ଆପଣଙ୍କୁ କାର୍ଯ୍ୟର ପ୍ରକାର ମଧ୍ୟ ବାଛିବା ଆବଶ୍ୟକ | \n *** ଦୟାକରି ପ୍ରଯୁଜ୍ୟ ସମୟକୁ ଦେଖନ୍ତୁ ଯାହା ଆପଣଙ୍କର ସଂଗଠନ ନୀତି ଅନୁଯାୟୀ ସେଟ୍ ହୋଇଛି |
+        \nb। ଛୁଟିରେ: ଏହା ଆପଣଙ୍କୁ ବାଛିଥିବା ଛୁଟି ପ୍ରକାର ସହିତ ଦିନ ପାଇଁ ଛୁଟି ଚିହ୍ନିତ କରିବ | ତୁମକୁ ଛାଡିବାକୁ ଏବଂ ଆଜି ପର୍ଯ୍ୟନ୍ତ ଚୟନ କରିବାକୁ ପଡିବ ଏବଂ ଧ୍ୟାନ ରଖିପାରିବ |
+        \n3। ଉପସ୍ଥାନ ଏବଂ ରିପୋର୍ଟ ଛାଡିବାକୁ ଚାହୁଁଛନ୍ତି କି? \n ମେନୁ ଖୋଲିବା ପାଇଁ ଉପର ବାମ ଚୟନ ବିକଳ୍ପରୁ, ତାପରେ 'ଉପସ୍ଥାନ ଦର୍ଶନ' ବା ଅନ୍ୟଥା ଡ୍ୟାସବୋର୍ଡରୁ, ଉପରେ ପ୍ରଦର୍ଶିତ 'ଉପସ୍ଥାନ' ଚୟନ କରନ୍ତୁ |
+        \n4। ପାସୱାର୍ଡ ପରିବର୍ତ୍ତନ କରିବାକୁ ଚାହୁଁଛନ୍ତି କି? \n ଆପଣଙ୍କ ସଂଗଠନ ନୀତି ଅନୁଯାୟୀ, ଆପଣଙ୍କ ପାଇଁ ଏହା କରିବାକୁ ଆପଣଙ୍କୁ ସଂଗଠନ ମୁଖ୍ୟଙ୍କୁ ଅନୁରୋଧ କରିବାକୁ ପଡିପାରେ | ଯଦି ସେମାନେ ଆପଣଙ୍କୁ ନିଜେ ଏହା କରିବାକୁ ଅନୁମତି ଦିଅନ୍ତି, ତେବେ ଆପଣ ମେନୁ ବିକଳ୍ପ ଖୋଲିପାରିବେ ଏବଂ ସମାନ କାର୍ଯ୍ୟ କରିବାକୁ 'ପାସୱାର୍ଡ ପରିବର୍ତ୍ତନ' ଚୟନ କରିପାରିବେ |
+        \n5। ଲଗଇନ୍ ଏବଂ ଉପସ୍ଥାନ ପରେ, ଭବିଷ୍ୟତ ତାରିଖ ପାଇଁ ଛୁଟି ଆବେଦନ କରିବାକୁ ଚାହୁଁଛନ୍ତି କି? ମେନୁ ଅପ୍ସନ୍ ରୁ ତୁମକୁ ସମାନ କରିବାକୁ 'ଆବେଦନ ପ୍ରୟୋଗ' ବିକଳ୍ପ ରହିବ |"</string>
+
+    <string name="r_u_sure" translatable="false">ତମେ ନିଶ୍ଚିତ କି?</string>
+    <string name="typing" translatable="false">ଟାଇପିଂ ...</string>
+    <string name="leave_status" translatable="false">"ତୁମର ଉପସ୍ଥାନ ସ୍ଥିତି ହେଉଛି 'ଛାଡ' |"</string>
+    <string name="present_status" translatable="false">"ତୁମର ଉପସ୍ଥାନ ସ୍ଥିତି ହେଉଛି 'ଉପସ୍ଥିତ' |"</string>
+    <string name="absent_status" translatable="false">"ତୁମର ଉପସ୍ଥିତି ସ୍ଥିତି ହେଉଛି 'ଅନୁପସ୍ଥିତ' |"</string>
+    <string name="want_to_see_attendance" translatable="false">ଆପଣ ଉପସ୍ଥାନ ରିପୋର୍ଟ ଦେଖିବାକୁ ଚାହୁଁଛନ୍ତି କି?</string>
+    <string name="can_not_get_attendance_status" translatable="false">ଉପସ୍ଥାନ ସ୍ଥିତି ପାଇପାରିବ ନାହିଁ |</string>
+    <string name="visit_already_syncing" translatable="false">ପରିଦର୍ଶନ ପୂର୍ବରୁ ଆପରୁ ସିଙ୍କ୍ କରୁଛି |</string>
+    <string name="sync_done" translatable="false">ସିଙ୍କ୍ ସଫଳ ହୋଇଛି | ଧନ୍ୟବାଦ</string>
+    <string name="req_done" translatable="false">ଅନୁରୋଧ ସମାପ୍ତ</string>
+    <string name="unsuccessful_sync" translatable="false">ସିଙ୍କ ଅସଫଳ ଅଟେ |</string>
+    <string name="visit_msg" translatable="false">"1. ଏକ ନୂତନ ପରିଦର୍ଶନ କରିବାକୁ ଚାହୁଁଛନ୍ତି କି? \n ସଫଳ ଉପସ୍ଥାନ ପରେ (+) ଭାସମାନ ଆଇକନ୍ ଉପରେ କ୍ଲିକ୍ କରନ୍ତୁ | ତୁମର ସାମ୍ପ୍ରତିକ ଅବସ୍ଥାନ ଅନୁସନ୍ଧାନ ହେବ | ଡାଟା ପରିଦର୍ଶନ କରିବା ଏବଂ ସଂରକ୍ଷଣ କରିବା ଆବଶ୍ୟକ |
+        \n2। ପୁନ isit ପରିଦର୍ଶନ କରିବାକୁ ଚାହୁଁଛନ୍ତି କି?
+        \na ଯଦି ଆପଣ ଭ୍ରମଣ କରିବାକୁ ଚାହୁଁଥିବା ପାର୍ଟିର ନିକଟବର୍ତ୍ତୀ ସ୍ଥାନରେ ଅଛନ୍ତି, ପ୍ରଦର୍ଶିତ ହେବା ପାଇଁ ସ୍ୱୟଂଚାଳିତ ଭାବରେ ବିଜ୍ଞପ୍ତିକୁ ଦବାନ୍ତୁ ଏବଂ ଆପଣଙ୍କଠାରୁ ପୁନ Rev ପରିଦର୍ଶନ କରନ୍ତୁ | କେବଳ 'ହଁ' ଚୟନ କରନ୍ତୁ ଏବଂ ପୁନ isit ପରିଦର୍ଶନ ସମାପ୍ତ କରିବାକୁ ଆବଶ୍ୟକୀୟ ବିବରଣୀ ରଖନ୍ତୁ |
+        \nb। ଯଦି ଆପଣ ଜିପିଏସ୍ ସମସ୍ୟା ହେତୁ ବିଜ୍ଞପ୍ତି ଗ୍ରହଣ କରୁନାହାଁନ୍ତି, ତେବେ ଆପଣ ବାମ ପାର୍ଶ୍ୱ ମେନୁ ବିକଳ୍ପ ଖୋଲିପାରିବେ ଏବଂ ତାଲିକା ପାଇବାକୁ 'ନିକଟବର୍ତ୍ତୀ' ବ feature ଶିଷ୍ଟ୍ୟରୁ ଯାଞ୍ଚ କରିପାରିବେ ଏବଂ ସେଠାରୁ ଆପଣ ପୁନ isit ପରିଦର୍ଶନ କରିପାରିବେ |
+        \nc ଯଦି ଆପଣ ପୁନ Rev ପରିଦର୍ଶନ ପାଇଁ ପାର୍ଟିର ତାଲିକା ପାଇ ନାହାଁନ୍ତି, ତେବେ ପୋର୍ଟାଲରୁ ଜିପିଏସ୍ ମୂଲ୍ୟ ବୃଦ୍ଧି କରି ଆପଣଙ୍କୁ ସାହାଯ୍ୟ କରିବାକୁ ଆପଣଙ୍କର ସୁପରଭାଇଜର ଏବଂ / କିମ୍ବା ସଂଗଠନ ମୁଖ୍ୟଙ୍କ ସହ କଥା ହୁଅନ୍ତୁ |
+        \n3। ପରିଦର୍ଶନ ରିପୋର୍ଟ ଦେଖିବାକୁ ଚାହୁଁଛନ୍ତି କି? \n ଡ୍ୟାସବୋର୍ଡରୁ 'ମୋଟ ପରିଦର୍ଶନ' ଚୟନ କରନ୍ତୁ |
+        \n4। ଆପଣ ପ୍ରତ୍ୟେକ ଭ୍ରମଣରେ ବିତାଇଥିବା ସମୟ ଦେଖିବାକୁ ଚାହୁଁଛନ୍ତି କି? \n ଡ୍ୟାସବୋର୍ଡରୁ 'ପରିଦର୍ଶନ ସମୟ' ଚୟନ କରନ୍ତୁ |
+        \n5। ଯଦି ଆପଣଙ୍କର ଅର୍ଡର ବୁକିଂ ସୁବିଧା ଅଛି, ଆପଣ ବୁକ୍ କରିଥିବା ଅର୍ଡର ଦେଖିବାକୁ ଚାହୁଁଛନ୍ତି କି? \n ଡ୍ୟାସବୋର୍ଡରୁ 'ଟୋଟାଲ୍ ଅର୍ଡର (ଗୁଡିକ) ଚୟନ କରନ୍ତୁ |
+        \n6। ଆଜି ଟାଇମଲାଇନ୍ ସହିତ ଆପଣ ଘୁଞ୍ଚୁଥିବା ସ୍ଥାନଗୁଡିକ ଦେଖିବାକୁ ଚାହୁଁଛନ୍ତି କି?
+        \n ଡ୍ୟାସବୋର୍ଡରୁ 'ଟାଇମଲାଇନ୍' ଚୟନ କରନ୍ତୁ | ବିଭିନ୍ନ ତାରିଖ ଚୟନ କରି ଆପଣ ବିଗତ ଦିନର ତଥ୍ୟ ମଧ୍ୟ ଦେଖିପାରିବେ |"</string>
+
+    <string name="sale_msg" translatable="false">"1. ଅର୍ଡରଗୁଡିକ କିପରି ଗ୍ରହଣ କରିବେ?
+        \na। ଯଦି ଆପଣ କ party ଣସି ପାର୍ଟିକୁ ଭ୍ରମଣ କିମ୍ବା ପୁନ isit ପରିଦର୍ଶନ କରୁଛନ୍ତି, ଥରେ ପରିଦର୍ଶନ / ପୁନ isit ପରିଦର୍ଶନ ଆପଣଙ୍କ ଦ୍ ନିଶ୍ଚିତ କର | ାରା ନିଶ୍ଚିତ ହୋଇଛି, ଆପ୍ ନିଜେ ଆପଣଙ୍କୁ ବୁକ୍ ଅର୍ଡରକୁ ବିକଳ୍ପ ଦେବ | ଆପଣଙ୍କୁ ଆଇଟମ୍, Qty, ରେଟ୍ ଚୟନ କରିବାକୁ ପଡିବ ଏବଂ ଅର୍ଡର ଦାଖଲ କରିପାରିବେ |
+        \nb। ଡ୍ୟାସବୋର୍ଡରୁ, ତାଲିକା ପାଇବା ପାଇଁ 'ପାର୍ଟି (ଗୁଡିକ) ଉପରେ କ୍ଲିକ୍ କରନ୍ତୁ, ସେମାନଙ୍କଠାରୁ ଆପଣ ଏହାକୁ ବୁକ୍ କରିବା ପାଇଁ' ଅର୍ଡର 'ଚୟନ କରିପାରିବେ | ଏହା ଆପଣଙ୍କୁ ପାର୍ଟିର ବିଦ୍ୟମାନ ଅର୍ଡର ତାଲିକା ଏବଂ ଗୋଟିଏ ଫ୍ଲୋଟିଂ ଆଇକନ୍ ଦେଖାଇବ (+) ସାଇନ୍ କ୍ଲିକ୍ କରି ଯାହା ଉପରେ ଆପଣ ଅର୍ଡର ବୁକ୍ କରିପାରିବେ |
+        \n2। ଅର୍ଡର ଇତିହାସ ଦେଖିବାକୁ ଚାହାଁନ୍ତି କି?
+        \n3। ରେଟ୍ ଦେଖାଉ ନାହିଁ କିମ୍ବା ରେଟ୍ ପ୍ରବେଶ କରିବାକୁ ଅସମର୍ଥ?
+        \n ଏହାକୁ ପାଇବା ପାଇଁ ଆପଣଙ୍କର ରିପୋର୍ଟିଂ ହେଡ୍ / ସଂଗଠନ ମୁଣ୍ଡକୁ ଯାଆନ୍ତୁ |"</string>
+    <string name="orders" translatable="false">ଅର୍ଡର |</string>
+</resources>

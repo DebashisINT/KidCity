@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    >
+    <LinearLayout
+        android:id="@+id/selector_tab_LL"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/retail_branding_material_TV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selected_new_order_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/retail_marketing"
+            android:textStyle="bold"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@drawable/selector_text_clor_blue_white_new" />
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/pop_material_TV"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/selected_new_order_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/pop_material"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold"
+            android:textColor="@drawable/selector_text_clor_blue_white_new" />
+
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:id="@+id/common_bottom_RL"
+        android:layout_alignParentBottom="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/marketing_img_HRCV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_100sdp"/>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/save_TV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_60sdp"
+            android:layout_marginRight="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:layout_below="@id/marketing_img_HRCV"
+            android:background="@drawable/selector_blue_botton_bg"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="@string/save"
+            android:textColor="@android:color/white"
+            android:textSize="@dimen/_13sdp"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/marketing_viewpager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/selector_tab_LL"
+        android:layout_above="@id/common_bottom_RL"
+        />
+
+    <com.pnikosis.materialishprogress.ProgressWheel
+        android:id="@+id/progress_wheel"
+        android:layout_width="80dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        wheel:matProg_barColor="@color/default_text_color"
+        wheel:matProg_progressIndeterminate="true" />
+
+</RelativeLayout>

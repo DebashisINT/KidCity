@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/_5sdp"
+    android:layout_margin="@dimen/_3sdp">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        app:cardBackgroundColor="@android:color/white"
+        app:cardCornerRadius="@dimen/_4sdp"
+        app:cardElevation="@dimen/_2sdp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingBottom="@dimen/_10sdp"
+            android:paddingLeft="@dimen/_10sdp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_gravity="center"
+                    android:text="Vikas Kumar Khuranna"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_12sdp" />
+
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:fillViewport="true"
+                    android:visibility="visible"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:fadeScrollbars="false"
+                    android:scrollbarSize="@dimen/_2sdp"
+                    android:scrollbarThumbHorizontal="@color/color_blue_light_dark">
+
+                    <LinearLayout
+                        android:id="@+id/rl_icons"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content">
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_beat"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/iv_coll"
+                            android:contentDescription="@null"
+                            android:padding="@dimen/_5sdp"
+                            app:srcCompat="@drawable/ic_assigned_dd_icon"
+                            app:tint="@color/green" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_zero_order"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/iv_coll"
+                            android:contentDescription="@null"
+                            android:padding="@dimen/_5sdp"
+                            app:srcCompat="@drawable/ic_order_icon"
+                            app:tint="@color/blue" />
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_coll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/iv_leave"
+                            android:contentDescription="@null"
+                            android:padding="@dimen/_5sdp"
+                            app:srcCompat="@drawable/ic_collection_blue"
+                            app:tint="@color/violet" />
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_leave"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/iv_job"
+                            android:contentDescription="@null"
+                            android:padding="@dimen/_5sdp"
+                            app:srcCompat="@drawable/ic_applyleave"
+                            app:tint="@color/default_gray" />
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_job"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/iv_pjp_icon"
+                            android:contentDescription="@null"
+                            android:padding="@dimen/_5sdp"
+                            app:srcCompat="@drawable/ic_activity_blue" />
+
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/iv_pjp_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/iv_map_icon"
+                            android:contentDescription="@null"
+                            android:padding="@dimen/_5sdp"
+                            app:srcCompat="@drawable/ic_pjp" />
+
+                        <ImageView
+                            android:id="@+id/iv_map_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_toLeftOf="@+id/iv_call_icon"
+                            android:contentDescription="@null"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@drawable/ic_green_location" />
+
+                        <ImageView
+                            android:id="@+id/iv_call_icon"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_marginRight="@dimen/_5sdp"
+                            android:contentDescription="@null"
+                            android:padding="@dimen/_5sdp"
+                            android:src="@drawable/ic_registered_shop_call_select" />
+                    </LinearLayout>
+
+                </HorizontalScrollView>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:background="@android:color/black"
+                android:visibility="gone"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/tv_team_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/click_for_team_details"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_10sdp" />
+
+                <com.kcteam.widgets.AppCustomTextView
+                    android:id="@+id/tv_shop_details"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tv_team_details"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="@dimen/_3sdp"
+                    android:text="@string/click_for_shop_details"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_10sdp" />
+            </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

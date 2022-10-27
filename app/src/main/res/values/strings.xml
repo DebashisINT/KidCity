@@ -1,0 +1,1575 @@
+<resources>
+    <!--<string name="app_name">Field Tracking System</string>-->
+    <string name="app_name" translatable="false">KC Team</string>
+    <string name="blank" translatable="false"></string>
+    <string name="enter_a_title" translatable="false">Enter a title</string>
+    <string name="entry_details_default_text" translatable="false">Entry Details!</string>
+    <string name="submit_button_text" translatable="false">Submit</string>
+    <string name="dummy_text" translatable="false">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry\'s standard dummy text ever since the 1500s</string>
+    <string name="terms_conditions" translatable="false">Terms &amp; Conditions</string>
+    <string name="ideal_loc" translatable="false">IDLE Alert</string>
+    <string name="net_status" translatable="false">App current status:</string>
+
+    <!--Map Key-->
+    <!--<string name="MAP_ProjectAPIKey">AIzaSyBRrqsLZFqThqM8uxw_k94pZMbv3-3h0dM</string>-->
+    <string name="MAP_ProjectAPIKey" translatable="false">AIzaSyDTOAPwSEKsbJtJYBfw1SiwEUCDKbxapTg</string>
+
+    <!--Login-->
+    <string name="username_new" translatable="false">Username</string>
+    <string name="username" translatable="false">Enter Login ID</string>
+    <string name="password" translatable="false">Password</string>
+    <string name="password_new" translatable="false">*********</string>
+    <string name="login" translatable="false">Login</string>
+    <string name="select_login" translatable="false">Select to Login</string>
+    <string name="forgot_password" translatable="false">Forgot Password?</string>
+    <string name="login_logout_msg" translatable="false">Good Internet connectivity is \nmandatory for Login &amp; Logout.</string>
+    <string name="login_net_connected" translatable="false">Internet connection strength is good, you can login now.</string>
+    <string name="login_net_connected1" translatable="false">You can login now.</string>
+    <string name="login_net_disconnected" translatable="false">Internet is disconnected, you cannot login, please switch on the internet.</string>
+    <string name="login_net_disconnected1" translatable="false">Please switch on the internet.</string>
+    <string name="remember_me" translatable="false">Remember me</string>
+
+    <!--Menu-->
+    <string name="add_order" translatable="false">Add Order</string>
+    <string name="photo_registration" translatable="false">Photo Registration</string>
+    <string name="team_attendance" translatable="false">Team Attendance</string>
+    <string name="clear_attendance" translatable="false">Attendance clear</string>
+    <string name="photo_attd" translatable="false">Photo Attendance</string>
+    <string name="view_order" translatable="false">View Order</string>
+    <string name="add" translatable="false">Add</string>
+    <string name="my_allowence_request" translatable="false">My Allowance Request</string>
+    <string name="settings" translatable="false">Settings</string>
+    <string name="logout" translatable="false">Logout</string>
+    <string name="shop_detail" translatable="false">Shop Details</string>
+    <string name="customer_details" translatable="false">Customer Details</string>
+    <string name="order_detail" translatable="false">Order Details</string>
+    <string name="view_yesterdays_route" translatable="false">View Yesterday\'s Route</string>
+    <string name="assigned_areas" translatable="false">Assigned Areas</string>
+    <string name="my_registered_shop" translatable="false">My Registered Shops</string>
+    <string name="history" translatable="false">Timelines</string>
+    <string name="traveling_history" translatable="false">Traveling history</string>
+    <string name="scan_visiting_card" translatable="false">Scan Visiting Card</string>
+    <string name="code_scanner" translatable="false">Code Scanner</string>
+    <string name="attendance" translatable="false">Attendance</string>
+    <string name="view_attendance" translatable="false">View Attendance</string>
+    <string name="order_list" translatable="false">Order List</string>
+    <string name="add_attendance" translatable="false">Add Attendance</string>
+    <string name="ta_text" translatable="false">TA</string>
+    <string name="pp_dd_text" translatable="false">View PP/DD Stock</string>
+    <string name="pp_dd_header_text" translatable="false">PP/DD Stock</string>
+    <string name="report" translatable="false">Report</string>
+    <string name="mis" translatable="false">MIS</string>
+    <string name="mis_reports" translatable="false">MIS Reports</string>
+    <string name="average_shop" translatable="false">Average shop visits/day</string>
+    <string name="average_time" translatable="false">Average time spent/shop</string>
+    <string name="average_order" translatable="false">Average order value/shop</string>
+    <string name="performance" translatable="false">Performance</string>
+    <string name="gps_status" translatable="false">GPS Status</string>
+    <string name="collection_details" translatable="false">Collection Details</string>
+    <string name="product_list" translatable="false">Product List</string>
+    <string name="cart" translatable="false">Cart</string>
+    <string name="cart_details" translatable="false">Cart Details</string>
+    <string name="stock_list" translatable="false">Stock List</string>
+    <string name="current_stock_list" translatable="false">Current Stock Details</string>
+    <string name="current_stock_product_list" translatable="false">Product Details</string>
+    <string name="competetor_stock_list" translatable="false">Competitor Stock Details</string>
+    <string name="new_order_scr_add_order" translatable="false">Add Order</string>
+    <string name="new_order_scr_cart" translatable="false">Cart</string>
+    <string name="outlet_stock_list" translatable="false">Outlet Stock List</string>
+    <string name="gps_restriction" translatable="false">GPS Restriction</string>
+    <string name="view_cart" translatable="false">View Cart</string>
+    <string name="product_details" translatable="false">Product Details</string>
+    <string name="search_product" translatable="false">Search Product(s)</string>
+    <string name="stock_details_pp_dd" translatable="false">Stock Details - PP/DD</string>
+    <string name="outstanding_details_pp_dd" translatable="false">Outstanding Details - PP/DD</string>
+    <string name="outstanding_list" translatable="false">Outstanding List</string>
+    <string name="achievement" translatable="false">Achievement</string>
+    <string name="average_shop_visited" translatable="false">Average Shop Visited</string>
+    <string name="average_time_visited" translatable="false">Average Time Spent</string>
+    <string name="average_order_visited" translatable="false">Average Order Value</string>
+    <string name="my_profile" translatable="false">My Profile</string>
+    <string name="stock_detail" translatable="false">Stock Details</string>
+    <string name="opening_stock" translatable="false">Opening Stock</string>
+    <string name="report_on_state" translatable="false">Performance Status</string>
+    <string name="list_of_party" translatable="false">List of party</string>
+    <string name="plan_details" translatable="false">Plan Details</string>
+    <string name="reports" translatable="false">Reports</string>
+    <string name="new_attendance_report" translatable="false">Attendance Report</string>
+    <string name="new_visit_report" translatable="false">Visit Report</string>
+    <string name="meeting_list" translatable="false">Meeting List</string>
+    <string name="meeting_details" translatable="false">Meeting Details</string>
+    <string name="team_details" translatable="false">Team Details</string>
+    <string name="all_team_details" translatable="false">All Team Details</string>
+    <string name="team_shop_details" translatable="false">Party Details <!--Team Shop Details--></string>
+    <string name="pjp_list" translatable="false">PJP List</string>
+    <string name="journey_plan_list" translatable="false">List of Journey Plan</string>
+    <string name="add_pjp" translatable="false">Add PJP</string>
+    <string name="edit_pjp" translatable="false">Edit PJP</string>
+    <string name="change_pwd" translatable="false">Change Password</string>
+    <string name="area_list" translatable="false">Area Details</string>
+    <string name="add_quo" translatable="false">Add Quot.</string>
+    <string name="quot_list" translatable="false">Quot. List</string>
+    <string name="quot_details" translatable="false">Quot. Details</string>
+    <string name="edit_quot" translatable="false">Edit Quot.</string>
+    <string name="all_team" translatable="false">All Team - Online</string>
+    <string name="update_work_type" translatable="false">Update Your Work Type</string>
+    <string name="achv_report" translatable="false">Achv. Report</string>
+    <string name="achv_report_details" translatable="false">Achv. Report Details</string>
+    <string name="targ_achv_report" translatable="false">Targ. vs Achv. Report</string>
+    <string name="targ_achv_report_details" translatable="false">Targ. vs Achv. Report Details</string>
+    <string name="leave_list" translatable="false">Leave List</string>
+    <string name="apply_leave" translatable="false">Apply Leave</string>
+    <string name="leave" translatable="false">Leave</string>
+    <string name="task_without_colon" translatable="false">Task</string>
+    <string name="task_list" translatable="false">Task List</string>
+    <string name="add_task" translatable="false">Add Task</string>
+    <string name="edit_task" translatable="false">Edit Task</string>
+    <string name="dynamic" translatable="false">Dynamic</string>
+    <string name="dynamic_list" translatable="false">Dynamic List</string>
+    <string name="add_activity" translatable="false">Add Activity</string>
+    <string name="edit_activity" translatable="false">Edit Activity</string>
+    <string name="activities" translatable="false">Activities</string>
+    <string name="myjobs" translatable="false">My Jobs</string>
+    <string name="customers_title" translatable="false">Customer(s)</string>
+    <string name="due_today" translatable="false">Due Today</string>
+    <string name="date_wise_activities" translatable="false">Datewise Activities</string>
+    <string name="activity_party" translatable="false">Activity Party(s)</string>
+    <string name="entry" translatable="false">Entry</string>
+    <string name="activity_details" translatable="false">Activity Details</string>
+    <string name="weather" translatable="false">Weather Details</string>
+    <string name="doc_repo" translatable="false">Document Repository</string>
+    <string name="chat_bot" translatable="false">BreezeBot</string>
+    <string name="chat" translatable="false">Chat</string>
+    <string name="new_grp" translatable="false">New Group</string>
+    <string name="add_people" translatable="false">Add People</string>
+    <string name="new_conversation" translatable="false">New Conversation</string>
+    <string name="scan" translatable="false">Scan QR Code</string>
+    <string name="nearby_user" translatable="false">Nearby Team Members</string>
+    <string name="beat_list" translatable="false">Beat List</string>
+    <string name="device_info" translatable="false">Device Info.</string>
+    <string name="permission_info" translatable="false">Permission Info.</string>
+    <string name="micro_learning" translatable="false">Micro Learning</string>
+    <string name="training_contents" translatable="false">Training Contents</string>
+    <string name="My_Jobs" translatable="false">My Jobs</string>
+    <string name="service_history" translatable="false">Service History</string>
+
+    <!--bottom layout-->
+    <string name="home" translatable="false">Home</string>
+    <string name="dashboard" translatable="false">Dashboard</string>
+    <string name="add_shop" translatable="false">Add Shop</string>
+    <string name="nearby_shops" translatable="false">Nearby Shops</string>
+    <string name="share_log" translatable="false">Share Logs</string>
+    <string name="share_db" translatable="false">Share db</string>
+    <string name="map_view" translatable="false">Map View</string>
+    <string name="shops" translatable="false">Shops</string>
+    <string name="my_orders" translatable="false">My Orders</string>
+    <string name="take_picture" translatable="false">Take a Photo</string>
+    <string name="add_customer" translatable="false">Add Customer</string>
+    <string name="customers" translatable="false">Customers</string>
+    <string name="nearby_customer" translatable="false">Nearby Customers</string>
+    <string name="share_loc" translatable="false">Share My Location</string>
+    <string name="view_home_loc" translatable="false">View Home Location</string>
+
+    <!--Add Shop-->
+    <string name="shop_name" translatable="false">Shop Name</string>
+    <string name="customer_name" translatable="false">Customer Name</string>
+    <string name="address" translatable="false">Address</string>
+    <string name="pin_code" translatable="false">Pin Code</string>
+    <string name="owner_name" translatable="false">Owner Name</string>
+    <string name="owner_name1" translatable="false">Contact Name</string>
+    <string name="owner_contact_number" translatable="false">Owner Contact Number</string>
+    <string name="owner_contact_number1" translatable="false">Contact Number</string>
+    <string name="owner_email" translatable="false">Owner Email</string>
+    <string name="owner_email1" translatable="false">Email</string>
+    <string name="only_email" translatable="false">Email</string>
+    <string name="dob" translatable="false">Date of Birth</string>
+    <string name="date_aniversary" translatable="false">Date of Anniversary</string>
+    <string name="save" translatable="false">Save</string>
+    <string name="send" translatable="false">Send</string>
+    <string name="mandatory_mark" translatable="false"><sup>*</sup></string>
+    <string name="email_error" translatable="false">Please enter valid email ID</string>
+    <string name="emailblank_error" translatable="false">Please enter email ID</string>
+    <string name="numbervalid_error" translatable="false">Please enter valid phone number</string>
+    <string name="numberblank_error" translatable="false">Please enter contact number</string>
+    <string name="agency_name_error" translatable="false">Please enter agency name</string>
+    <string name="contact_number_exist" translatable="false">Contact number already exist</string>
+    <string name="shopname_error" translatable="false">Please enter shop name</string>
+    <string name="shopadd_error" translatable="false">Please enter shop address</string>
+    <string name="shoppin_error" translatable="false">Please enter shop pin</string>
+    <string name="ownername_error" translatable="false">Please enter owner name</string>
+    <string name="contactname_error" translatable="false">Please enter contact name</string>
+    <string name="assign_to_hint_text" translatable="false">Assigned to</string>
+    <string name="assign_to_pp_hint_text" translatable="false">Assigned to PP</string>
+    <string name="assign_to_dd_hint_text" translatable="false">Assigned to DD</string>
+    <string name="assigned_to_pp_error" translatable="false">Please select assigned to pp</string>
+    <string name="assigned_to_dd_error" translatable="false">Please select assigned to dd</string>
+    <string name="amount_error" translatable="false">Please enter amount</string>
+    <string name="valid_amount_error" translatable="false">Please enter valid amount</string>
+    <string name="feedback" translatable="false">Feedback</string>
+    <string name="feedback1" translatable="false">Type your feedback</string>
+    <string name="type_your_feedback" translatable="false">Type your Feedback</string>
+    <string name="error_enter_valid_phn_no" translatable="false">Mobile number should start only with 6 or 7 or 8 or 9</string>
+    <string name="area" translatable="false">Area</string>
+    <string name="error_select_area" translatable="false">Please select one area</string>
+    <string name="model" translatable="false">Model</string>
+    <string name="primary_app" translatable="false">Primary Application</string>
+    <string name="secondary_app" translatable="false">Secondary Application</string>
+    <string name="booking_amount" translatable="false">Booking Amount</string>
+    <string name="lead_type" translatable="false">Lead Type</string>
+    <string name="stage" translatable="false">Stage</string>
+    <string name="funnel_stage" translatable="false">Funnel Stage</string>
+    <string name="error_select_model" translatable="false">Please select one model</string>
+    <string name="error_select_stage" translatable="false">Please select one stage</string>
+    <string name="type_without_colon" translatable="false">Type</string>
+    <string name="enter_type" translatable="false">Enter Type</string>
+    <string name="enter_product" translatable="false">Enter Product</string>
+    <string name="next_visit_date" translatable="false">Next Visit Date</string>
+    <string name="next_visit_date1" translatable="false">Select next visit date</string>
+    <string name="select_next_visit_date" translatable="false">Select Next Visit Date</string>
+    <string name="audio_record" translatable="false">Audio Record</string>
+    <string name="competitor_image" translatable="false">Attach Competitor Image</string>
+    <string name="contact_info" translatable="false">Contact Info:</string>
+    <string name="more_info" translatable="false">More info:</string>
+    <string name="addl_details" translatable="false">Additional Details:</string>
+    <string name="dir_name" translatable="false">Prop./Partner/Director Name</string>
+    <string name="family_member_dob" translatable="false">Family Members DOB</string>
+    <string name="key_persons_name" translatable="false">Key Person\'s Name</string>
+    <string name="key_phn_no" translatable="false">Phone No.</string>
+    <string name="error_enter_director_name" translatable="false">Please enter prop./partner/director name</string>
+    <string name="error_enter_family_member_dob" translatable="false">Please enter family member dob</string>
+    <string name="error_enter_person_name" translatable="false">Please enter key person\'s name</string>
+    <string name="error_enter_phn_no" translatable="false">Please enter phone no.</string>
+    <string name="specalization" translatable="false">Specialization</string>
+    <string name="average_patient" translatable="false">Average Patient Per Day</string>
+    <string name="chemist_name" translatable="false">Chemist Name (Where Prescription Generates)</string>
+    <string name="have_any_assistant" translatable="false">If have any Assistant, Then</string>
+    <string name="degree_attachment" translatable="false">Degree Attachment</string>
+    <string name="error_capture_doc_pic" translatable="false">Please capture doctor\'s degree pic</string>
+    <string name="error_enter_speciallization" translatable="false">Please enter speciallization</string>
+    <string name="error_enter_patient_count" translatable="false">Please enter patient count</string>
+    <string name="error_enter_cateogory" translatable="false">Please enter category</string>
+    <string name="error_enter_pincode" translatable="false">Please enter pincode</string>
+    <string name="error_select_chamber" translatable="false">Please select yes or no for chambers</string>
+    <string name="error_enter_remarks" translatable="false">Please enter remarks</string>
+    <string name="chambeers_same_headquarter" translatable="false">Chambers or Hospital under same Headquarter</string>
+    <string name="error_enter_chemist_name" translatable="false">Please enter chemist name</string>
+    <string name="error_enter_chemist_address" translatable="false">Please enter chemist address</string>
+    <string name="error_enter_chemist_pincode" translatable="false">Please enter chemist pincode</string>
+    <string name="error_enter_beat" translatable="false">Please enter beat type</string>
+    <string name="contact_email" translatable="false">Contact Email</string>
+    <string name="confirm_revisit" translatable="false">Confirm Revisit</string>
+    <string name="entity_type" translatable="false">Entity Type</string>
+    <string name="party_status" translatable="false">Party Status</string>
+    <string name="select_retailer" translatable="false">Select Retailer/Entity</string>
+    <string name="select_dealer" translatable="false">Select GPTPL/Distributor</string>
+    <string name="select_beat" translatable="false">Select Beat/Group</string>
+    <string name="select_purpose" translatable="false">Select Purpose</string>
+
+    <!--my order-->
+    <string name="capital_electronics" translatable="false">Capital Electronics</string>
+    <string name="order_date" translatable="false">Order Date:</string>
+    <string name="order_id" translatable="false">Order ID:</string>
+    <string name="order_status" translatable="false">Order Status: </string>
+    <string name="order_amount" translatable="false">Order Amount</string>
+    <string name="order" translatable="false">Order</string>
+    <string name="orders" translatable="false">Orders</string>
+    <string name="delivered" translatable="false">Delivered</string>
+    <string name="order_status_date" translatable="false">03/09/2017</string>
+    <string name="order_id_txt" translatable="false">568AB89758</string>
+    <string name="order_amount_price" translatable="false">\u20B9 1250</string>
+    <string name="click_to_sign" translatable="false">Click to take Signatures</string>
+    <string name="clear" translatable="false">Clear</string>
+    <string name="patient_name_colon" translatable="false">Patient:</string>
+    <string name="phone_colon" translatable="false">Phone:</string>
+
+    <!--order detail-->
+    <string name="item_name" translatable="false">Item Name</string>
+    <string name="quantity" translatable="false">Quantity</string>
+    <string name="price" translatable="false">Price</string>
+    <string name="total" translatable="false">Total</string>
+    <string name="total_price" translatable="false">53,520.00</string>
+    <string name="item_name_txt" translatable="false">Electric Wire</string>
+    <string name="quantity_txt" translatable="false">100Ft.</string>
+    <string name="price_txt" translatable="false">20.00</string>V
+    <string name="total_txt" translatable="false">2000.00</string>
+    <string name="total_items" translatable="false">Total item(s):</string>
+    <string name="total_amount" translatable="false">Total Amount:</string>
+    <string name="order_items" translatable="false">Order item(s):</string>
+    <string name="return_items" translatable="false">Return item(s):</string>
+    <string name="new_order_amount" translatable="false">Order Amount:</string>
+    <string name="new_return_amount" translatable="false">Return Amount:</string>
+
+    <!--Alerts-->
+    <string name="alert_exit" translatable="false">Use back option of device to exit.</string>
+    <string name="alert_login_failed" translatable="false">Unable to Login.Please try again later.</string>
+    <string name="alert_location_unavailable" translatable="false">GPS location unavailable. Please try again later.</string>
+    <string name="alert_imei_unavailable" translatable="false">Device Info unavailable. Please provide read phone permission and try again.</string>
+    <string name="under_development" translatable="false">Under Development</string>
+
+    <!--Add Order-->
+    <string name="total_price_label" translatable="false">Total Price</string>
+    <string name="add_order_total_price_txt" translatable="false">1250.00</string>
+    <string name="add_order_continue" translatable="false">Continue</string>
+    <string name="add_item" translatable="false">Add Item</string>
+    <string name="philips_led_bulb" translatable="false">Philips LED Bulb</string>
+    <string name="variety_of_bulbs" translatable="false">Variety of bulbs has been discovered so far presently Consumer.</string>
+    <string name="add_order_order_date" translatable="false">Order Date</string>
+    <string name="enter_rate" translatable="false">Please enter rate</string>
+    <string name="enter_qty" translatable="false">Please enter quantity</string>
+    <string name="confirm_order" translatable="false">Confirm Order</string>
+    <string name="add_product_cart" translatable="false">Product added to cart</string>
+    <string name="enter_valid_qty" translatable="false">Enter valid quantity</string>
+    <string name="enter_valid_rate" translatable="false">Enter valid Rate</string>
+    <string name="view_bill" translatable="false">View Billing Details</string>
+    <string name="update_bill" translatable="false">Update Billing Details WithIn 3 Days</string>
+    <string name="select_all" translatable="false">Select All</string>
+    <string name="error_added_all_items" translatable="false">You\'ve already added all products</string>
+    <string name="add_all_product_cart" translatable="false">All product added to cart</string>
+    <string name="error_enter_values" translatable="false">Please enter proper values</string>
+
+    <!--NearBy Shops-->
+    <string name="address_txt" translatable="false">39/40 Ezra Street, Near Poddar Court Crossing, Kolkata, West Bengal 700001</string>
+    <string name="call_txt" translatable="false">Call</string>
+    <string name="order_amount_text" translatable="false">Order Amount: \u20B9 10,000</string>
+    <string name="given_order_amount" translatable="false">Given Order: \u20B9 10,000</string>
+    <string name="view_all_text" translatable="false">View All</string>
+    <string name="direction_txt" translatable="false">Direction</string>
+    <string name="location" translatable="false">Location</string>
+    <string name="unverified" translatable="false">Unverified</string>
+    <string name="not_verified" translatable="false">Not Verified</string>
+    <string name="verified" translatable="false">Verified</string>
+    <string name="addorder_txt" translatable="false">Add Order</string>
+    <string name="order_amount_l" translatable="false">Total Order Amt.:</string>
+    <string name="total_visitd" translatable="false">Total Visited:</string>
+    <string name="total_visit_new" translatable="false">Total Visit(s):</string>
+    <string name="total_visits" translatable="false">Total Visits:</string>
+    <string name="last_visited" translatable="false">Last Visited:</string>
+    <string name="last_visits" translatable="false">Last Visit Date:</string>
+    <string name="update_address" translatable="false">Update Address</string>
+    <string name="update_stock" translatable="false">Update Stock</string>
+    <string name="view_stock" translatable="false">View Stock</string>
+    <string name="stock_update_success" translatable="false">Stock updated successfully</string>
+    <string name="outstanding_update_success" translatable="false">Outstanding updated successfully</string>
+    <string name="face_reg_success" translatable="false">Face  Registration successfully</string>
+    <string name="face_match_success" translatable="false">Face  matched successfully</string>
+    <string name="not_match" translatable="false">Not Matched</string>
+    <string name="no_reg_face" translatable="false">Face  is not registered </string>
+    <string name="enter_closing_stock_alert" translatable="false">Please enter closing stock</string>
+    <string name="add_order_text" translatable="false">Add Order</string>
+    <string name="add_order_rate" translatable="false">Add Rate</string>
+    <string name="order_value_text" translatable="false">Order value</string>
+    <string name="rate" translatable="false">Rate</string>
+    <string name="collection" translatable="false">Collection</string>
+    <string name="order_desc" translatable="false">Order Description</string>
+    <string name="enter_quantity" translatable="false">Enter Quantity</string>
+    <string name="add_ta_text" translatable="false">Add TA</string>
+    <string name="view_ta_text" translatable="false">View TA</string>
+    <string name="address_not_accurate_old" translatable="false">Accurate location not detected through GPS, Please stop &amp; start
+    internet &amp; GPS in your device &amp; Retry.</string>
+    <string name="address_not_accurate" translatable="false">Unable to fetch accurate address. Do you want to fetch location from map view?</string>
+    <string name="update" translatable="false">Update</string>
+    <string name="update_outstanding" translatable="false">Update Outstanding</string>
+    <string name="view_outstanding" translatable="false">View Outstanding</string>
+    <string name="billing_list" translatable="false">Billing List</string>
+    <string name="update_billing_details" translatable="false">Update Billing Details</string>
+    <string name="attendance_report" translatable="false">View Attendance Report</string>
+    <string name="performance_report" translatable="false">Performance Report</string>
+    <string name="visit_report" translatable="false">View Visit Report</string>
+    <string name="visit_report_details" translatable="false">Visit Report Details</string>
+    <string name="notification" translatable="false">Notification</string>
+    <string name="type" translatable="false">Type:</string>
+    <string name="distributor_with_colon" translatable="false">Distributor:</string>
+    <string name="map" translatable="false">Map</string>
+    <string name="shop_code" translatable="false">Entity Code:</string>
+    <string name="stage_with_colon" translatable="false">Stage:</string>
+    <string name="funnel_stage_with_colon" translatable="false">Funnel Stage:</string>
+    <string name="update_stage" translatable="false">Update Stage</string>
+    <string name="quot" translatable="false">Quot.</string>
+    <string name="quot_amount" translatable="false">Quot. Amt:</string>
+    <string name="next_visit_date_with_colon" translatable="false">Next Visit Date:</string>
+    <string name="distance_with_colon" translatable="false">Distance (KM):</string>
+    <string name="last_visit_age" translatable="false">Last Visit Age (as on today):</string>
+    <string name="average_visit_time" translatable="false">Average Visit time spent:</string>
+    <string name="create_qr" translatable="false">Create QR</string>
+    <string name="entity_type_colon" translatable="false">Entity Type:</string>
+    <string name="party_status_colon" translatable="false">Party Status:</string>
+    <string name="update_party_status" translatable="false">Update Party Status</string>
+    <string name="no_beat_available" translatable="false">No Beats Available</string>
+    <string name="update_bank_details" translatable="false">Update Bank Details</string>
+    <string name="account_holder" translatable="false">Account Holder</string>
+    <string name="bank_name" translatable="false">Bank Name</string>
+    <string name="ifsc" translatable="false">IFSC Code</string>
+    <string name="upi" translatable="false">UPI Id</string>
+    <string name="account_no" translatable="false">Account No.</string>
+
+    <!--Shop Detail-->
+    <string name="name" translatable="false">Name</string>
+    <string name="view_on_google_map" translatable="false">View this shop on Google Map</string>
+    <string name="view_on_map" translatable="false">View on Map</string>
+    <string name="add_collection_text" translatable="false">Add Collection</string>
+    <string name="view_collection_text" translatable="false">View Collection</string>
+    <string name="dist" translatable="false">DD:</string>
+    <string name="pp_super" translatable="false">PP:</string>
+    <string name="retailer" translatable="false">Retailer/Entity</string>
+    <string name="dealer" translatable="false">GPTPL/Distributor</string>
+    <string name="beat" translatable="false">Beat/Group</string>
+    <string name="select_entity_type" translatable="false">Select Entity Type</string>
+    <string name="select_party_status" translatable="false">Select Party Status</string>
+
+    <!--my_allowance-->
+    <string name="id" translatable="false">ID:</string>
+    <string name="Submitted_date" translatable="false">Submitted Date</string>
+    <string name="Disbursment_date" translatable="false">Disbursement Date</string>
+    <string name="Request_Amount" translatable="false">Requested Amount</string>
+    <string name="Disbursment_Amount" translatable="false">Disbursement Amount</string>
+
+    <!--Forgot Password-->
+    <string name="enter_email" translatable="false">Enter Email ID</string>
+    <string name="email" translatable="false">Email ID</string>
+
+
+    <!--kcteam-->
+    <string name="kcteam_user_name" translatable="false">Mr. Kinsuk Roy</string>
+    <string name="kcteam_login" translatable="false">Logged in at 10:55 AM</string>
+    <string name="kcteam_location" translatable="false">You have covered the distance of 3 KM in last hour </string>
+    <string name="kcteam_shops" translatable="false">You have visited 2 shops</string>
+    <string name="kcteam_time" translatable="false">10:30 AM</string>
+
+    <!--Change Password-->
+    <string name="old_pwd" translatable="false">Old Password</string>
+    <string name="new_pwd" translatable="false">New Password</string>
+    <string name="confirm_pwd" translatable="false">Confirm New Password</string>
+    <string name="error_enter_old_password" translatable="false">Please enter old password</string>
+    <string name="error_enter_new_password" translatable="false">Please enter new password</string>
+    <string name="error_enter_confirm_password" translatable="false">Please enter confirm password</string>
+    <string name="error_enter_valid_new_password" translatable="false">Old &amp; New Password can not be same</string>
+    <string name="error_enter_valid_confirm_password" translatable="false">New &amp; Confirm Password must be same</string>
+
+    <!--Settings-->
+    <string name="autologout" translatable="false">Set Auto Logout Time</string>
+    <string name="shop_location" translatable="false">Shop Location</string>
+    <string name="password_changed" translatable="false">Password changed successfully</string>
+    <string name="auto_start_msg" translatable="false">Start Autostart Service to get Accurate location</string>
+    <string name="auto_start_note" translatable="false">(Applicable handset -  Xiaomi,  letv,  Asus,  Honor,  Oppo, Vivo,  Nokia)</string>
+    <string name="overlay_permission" translatable="false">Allow display over other apps Permission</string>
+    <string name="photo_permission" translatable="false">Allow Photo Permission</string>
+    <string name="loc_permission" translatable="false">Allow Device\'s access location</string>
+    <string name="phone_permission" translatable="false">Allow make and manage phone calls</string>
+    <string name="gallery_permission" translatable="false">Allow access photo, media and files</string>
+    <string name="audio_permission" translatable="false">Allow record audio</string>
+    <string name="calender_permission" translatable="false">Allow add event in calender</string>
+
+    <string name="daywise" translatable="false">Day Wise</string>
+    <string name="consolidated" translatable="false">Consolidated</string>
+
+    <!--DashBoard-->
+    <string name="login_time" translatable="false">Last login time:</string>
+    <string name="distance_covered" translatable="false">Kms travelled Approx.</string>
+    <string name="no_of_shop_visited" translatable="false">Party(s) visited</string>
+    <string name="shop_visited" translatable="false">Shop Visited</string>
+    <string name="kms" translatable="false">KMs</string>
+    <string name="todays_task" translatable="false">Today\'s Task</string>
+    <string name="shop_loc_unavailable" translatable="false">Shop location is not available</string>
+    <string name="no_of_meeting_visited" translatable="false">Meeting(s) attended</string>
+
+    <!--Attendance-->
+    <string name="last_15_days" translatable="false">Last 15 days</string>
+    <string name="date_range" translatable="false">Pick Date Range</string>
+    <string name="pick_a_date" translatable="false">Pick a Date</string>
+
+
+    <!--History Consolidate-->
+    <string name="last_week" translatable="false">Last Week</string>
+    <string name="this_week" translatable="false">This Week</string>
+    <string name="this_month" translatable="false">This Month</string>
+    <string name="last_month" translatable="false">Last Month</string>
+    <string name="select_date_range" translatable="false">Select Date Range</string>
+    <string name="total_distance" translatable="false">Total Distance Covered : </string>
+    <string name="total_shop" translatable="false">Total Shop(s) Visited</string>
+    <string name="functionality_disabled" translatable="false">Feature coming soon&#8230;</string>
+    <!--<string name="functionality_disabled">Functionality Disabled</string>-->
+    <string name="ok" translatable="false">Ok</string>
+    <string name="cancel" translatable="false">Cancel</string>
+    <string name="confirm_logout" translatable="false">Select Ok to confirm Logout.</string>
+    <string name="alert_logout" translatable="false">Please logout to continue.</string>
+    <string name="field_cannot_be_blank" translatable="false">Field can\'t be blank</string>
+    <string name="capture_shop_image" translatable="false">Capture an image of shop</string>
+    <string name="welcome" translatable="false">Welcome</string>
+    <string name="vikas_malhotra" translatable="false">Vikash Malhotra</string>
+    <string name="dashboard_kcteam_item" translatable="false">10.30\nAM</string>
+    <string name="dashboard_kcteam_address" translatable="false">SDF Building, GP Block, Saltlake </string>
+    <string name="ten" translatable="false">10</string>
+    <string name="five" translatable="false">5</string>
+    <string name="organization_name" translatable="false">Nordusk</string>
+    <string name="yes" translatable="false">Yes</string>
+    <string name="no" translatable="false">No</string>
+    <string name="alert_revisit" translatable="false"><!--Do you want to revisit this shop?--> Wish to Revisit now?</string>
+    <string name="error_message_next_visit_date" translatable="false">Please select next visit date</string>
+    <string name="error_message_audio" translatable="false">Please record audio</string>
+    <string name="error_message_approx" translatable="false">Please Approx value enter</string>
+
+    <!--fonts-->
+    <string name="no_registered_shops" translatable="false">No Registered Shops Available</string>
+    <string name="no_order" translatable="false">No Orders Available</string>
+    <string name="no_collection" translatable="false">No Collection Available</string>
+    <string name="no_attendance" translatable="false">No Registered Shops Available</string>
+    <string name="no_data_available" translatable="false">No Data Available</string>
+    <string name="no_notification_available" translatable="false">No Notification Available</string>
+    <string name="no_collect_available" translatable="false">No Pending Collection Available</string>
+    <string name="no_billing_available" translatable="false">No Bill(Invoice) found in the system.</string>
+    <string name="monthly" translatable="false">Monthly</string>
+    <string name="daily" translatable="false">Daily</string>
+    <string name="rupee_symbol" translatable="false">\u20B9</string>
+    <string name="rupee_symbol_with_space" translatable="false">\u20B9 </string>
+    <string name="order_in_value" translatable="false">\u20B952,000</string>
+    <string name="zero_order_in_value" translatable="false">\u20B96,54,332</string>
+    <string name="zero_order_in_value_colon" translatable="false">:\u20B90</string>
+    <string name="total_order_value" translatable="false">Total Orders</string>
+    <string name="visit_to_shops" translatable="false">Shop(s) visit / day</string>
+    <string name="visits_to_shops" translatable="false">Shop(s) \nvisited / day</string>
+    <string name="visits_to_shops_new" translatable="false"><!--Shop(s) visited-->
+        Total Visits </string>
+    <string name="visits_shops" translatable="false">Shop(s) visited / day</string>
+    <string name="time_spent_on_each_shop" translatable="false">Duration\nspent / shop</string>
+    <string name="time_spent_on_each_shop_new" translatable="false"><!--Duration spent--> Visit Duration </string>
+    <string name="time_spent_each_shop" translatable="false">Duration spent / shop</string>
+    <string name="spent_on_each_shop" translatable="false">spent/shop</string>
+    <string name="avg_order_on_each_shop" translatable="false">average order value/shop</string>
+    <string name="avg_order_value" translatable="false">Avg.order \nvalue / shop</string>
+    <string name="total_order_value_new" translatable="false"><!--Order taken-->
+        Total Order(s)</string>
+    <string name="total_quot" translatable="false">Total quot.</string>
+    <string name="time_spent_on_shop" translatable="false">Duration spent / shop</string>
+    <string name="avg_order" translatable="false">\u20B9150</string>
+    <string name="best_performing_shop" translatable="false">Best performing 5 shops</string>
+    <string name="add_image" translatable="false">Add Image</string>
+    <string name="near_by_shop" translatable="false">You are near to </string>
+    <string name="shop" translatable="false">shop </string>
+    <string name="visit_shop" translatable="false">Do you want to visit the shop?</string>
+    <string name="revisit_shop" translatable="false">Do you want to revisit the shop?</string>
+    <string name="nordusk" translatable="false">Nordusk</string>
+    <string name="am" translatable="false">AM</string>
+    <string name="my_shops" translatable="false">My Shops</string>
+    <string name="date" translatable="false">Date</string>
+    <string name="no_stock" translatable="false">No Stocks Available</string>
+    <string name="visits_shops_total" translatable="false">Shop(s) visited in total</string>
+    <string name="total_time_spent" translatable="false">Time spent in total</string>
+    <string name="total_time_spent_in" translatable="false">Time spent in total</string>
+    <string name="total_ordered_value" translatable="false">orders valued in total</string>
+    <string name="today_activity" translatable="false">Due Activity</string>  <!--Today\'s-->
+
+    <string name="shops_new" translatable="false">Shop(s)\nvisit / day</string>
+    <string name="duration_new" translatable="false">Duration\nspent / shop</string>
+    <string name="order_avg" translatable="false">Avg. order\n value / shop</string>
+    <string name="order_avg_without_new_line" translatable="false">Avg. order value / shop</string>
+    <string name="shop_added_successfully" translatable="false">Added Successfully</string>
+    <string name="version_name" translatable="false">Version 9.6.3D</string>
+
+
+    <!--type drop down-->
+    <string name="shop_type" translatable="false">Shop</string>
+    <string name="distributor_type" translatable="false">Distributor</string>
+    <string name="pp_type" translatable="false">PP</string>
+    <string name="new_party_type" translatable="false">New Party</string>
+    <string name="diamond_type" translatable="false">Diamond</string>
+    <string name="company_name" translatable="false">Company Name</string>
+    <string name="valid_sddress" translatable="false">Please enter a valid address</string>
+    <string name="no_internet" translatable="false">Please check your internet connection.</string>
+    <string name="alert_nolocation" translatable="false">Please enable your device location.</string>
+    <string name="something_went_wrong" translatable="false">Something went wrong. Please try again later</string>
+    <string name="something_went_wrong_new" translatable="false">Something went wrong. Please try again later..</string>
+    <string name="something_went_wrong1" translatable="false">Something went wrong. Please try again later...............</string>
+    <string name="no_value" translatable="false">Please Insert Value</string>
+    <string name="unable_to_sync" translatable="false">Unable to sync</string>
+    <string name="unable_to_sync_order" translatable="false">Unable to sync order</string>
+    <string name="category" translatable="false">Category</string>
+    <string name="sync_all" translatable="false">Sync All</string>
+    <string name="unable_to_sync_stock" translatable="false">Unable to sync stock</string>
+    <string name="unable_to_sync_quot" translatable="false">Unable to sync quotation</string>
+
+    <!--Date & Time-->
+    <string name="date_n_time" translatable="false">Date and Time</string>
+    <string name="auto_time_zone" translatable="false">Please turn automatic Date and Time update to continue.</string>
+
+
+    <!--Search-->
+    <string name="search_hint" translatable="false">Search&#8230;</string>
+    <string name="hint_prompt" translatable="false">Speak an item name or a number</string>
+    <string name="cd_up_button" translatable="false">Up navigation button</string>
+    <string name="cd_voice_search" translatable="false">Voice search</string>
+    <string name="cd_clear_button" translatable="false">Clear field</string>
+    <string name="cd_suggestion_icon" translatable="false">List item icon</string>
+    <string name="old_address" translatable="false">Old Address</string>
+    <string name="opening_stock_text" translatable="false">Opening Stock</string>
+    <string name="closing_stock_text" translatable="false">Closing Stock</string>
+    <string name="new_address" translatable="false">New Address</string>
+
+    <!--MyProfile-->
+    <string name="alert_no_profile_img" translatable="false">Please capture profile picture</string>
+    <string name="alert_no_address" translatable="false">Please enter your address</string>
+    <string name="alert_no_state" translatable="false">Please select your state</string>
+    <string name="alert_no_city" translatable="false">Please select your city</string>
+    <string name="alert_no_pincode" translatable="false">Please enter your pincode</string>
+
+    <string name="retail_marketing" translatable="false">Retail Branding Materials</string>
+    <string name="pop_material" translatable="false">POP Materials</string>
+    <string name="marketing_details" translatable="false">Marketing Details</string>
+    <string name="india" translatable="false">India</string>
+    <string name="alert_delete_marketing_img" translatable="false">Do you want to delete this image?</string>
+
+    <string name="blank_location" translatable="false">Please enter some location</string>
+
+    <string name="todays_delivered" translatable="false">Today\'s Delivered</string>
+    <string name="todays_pending" translatable="false">Today\'s Pending</string>
+    <string name="total_qty" translatable="false">Total QTY:</string>
+    <string name="delivery_date" translatable="false">Delivery Date:</string>
+    <string name="delivery_pending" translatable="false">Pending</string>
+    <string name="delivered_on" translatable="false">Delivered On:</string>
+    <string name="calendar_status" translatable="false">Calendar Status</string>
+    <string name="select_log_type" translatable="false">Select Log Type</string>
+    <string name="write_text" translatable="false">Write your text here</string>
+    <string name="write_remarks" translatable="false">Write your day remarks</string>
+    <string name="capture_image" translatable="false">Capture Image</string>
+    <string name="vehicle_log" translatable="false">Vehicle Log</string>
+    <string name="calendar" translatable="false">Calendar</string>
+    <string name="route" translatable="false">Route</string>
+    <string name="delivery_list" translatable="false">Delivery List</string>
+    <string name="delivary_details" translatable="false">Delivery Details</string>
+    <string name="new_order_id" translatable="false">Order ID</string>
+    <string name="status" translatable="false">Status</string>
+    <string name="product_name" translatable="false">Product Name</string>
+    <string name="qty" translatable="false">Qty</string>
+    <string name="write_delivery_note" translatable="false">Write your Delivery Note</string>
+    <string name="exchange_old_items" translatable="false">Exchange/ Old Items</string>
+    <string name="receive" translatable="false">Receive</string>
+    <string name="write_exchange_note" translatable="false">Write your Exchange Note</string>
+    <string name="order_delivered" translatable="false">Order(s) delivered</string>
+    <string name="select_work_type" translatable="false">Select Work Type</string>
+    <string name="select_leave_type" translatable="false">Select Leave Type</string>
+    <string name="select_category_type" translatable="false">Search by Category</string>
+    <string name="select_watt_type" translatable="false">Search by Measurement</string>
+    <string name="select_brand_type" translatable="false">Search by Band</string>
+    <string name="select_group_type" translatable="false">Search by Group</string>
+    <string name="select_route" translatable="false">Select Route</string>
+    <string name="choose_attendance_type" translatable="false">Mark your Attendance: <!--Choose Plan Type:--> </string>
+    <string name="on_leave" translatable="false">On Leave</string>
+    <string name="todays_plan" translatable="false">Today\'s Plan</string>
+    <string name="at_work" translatable="false">At Work</string>
+    <string name="ta_list" translatable="false">TA List</string>
+    <string name="total_amount_text" translatable="false">Total Amount</string>
+    <string name="from_date_text" translatable="false">From Date</string>
+    <string name="to_date_text" translatable="false">To Date</string>
+    <string name="description_text" translatable="false">Description</string>
+    <string name="upload_text" translatable="false">Upload</string>
+    <string name="status_text" translatable="false">Status</string>
+    <string name="email_text" translatable="false">Email</string>
+    <string name="supervisor_email_text" translatable="false">Supervisor email</string>
+    <string name="select_from_date" translatable="false">Please select from date first</string>
+    <string name="accept_permission" translatable="false">Please accept permission from settings.</string>
+    <string name="accept_permission_storage" translatable="false">Please accept Storage permission from settings.</string>
+    <string name="total_distance_km" translatable="false">Total Distance (KM)</string>
+    <string name="duration" translatable="false">Duration (HRS)</string>
+    <string name="distance" translatable="false">Distance (KM)</string>
+
+    <!--PP/DD-->
+    <string name="error_enter_stock_amount" translatable="false">Please enter stock amount</string>
+    <string name="error_enter_order_amount" translatable="false">Please enter some order</string>
+    <string name="error_enter_order_collection" translatable="false">Please enter some collection</string>
+    <string name="market_outstanding" translatable="false">Market Outstanding</string>
+    <string name="company_outstanding" translatable="false">Company Outstanding</string>
+    <string name="pp_outstanding" translatable="false">PP Outstanding</string>
+    <string name="opening_stock_amount" translatable="false">Opening Stock</string>
+    <string name="error_enter_valid_collection" translatable="false">Please enter valid collection</string>
+    <string name="error_enter_valid_stock" translatable="false">Please enter valid stock amount</string>
+    <string name="error_enter_valid_po" translatable="false">Please enter valid p/o</string>
+    <string name="error_enter_valid_mo" translatable="false">Please enter valid m/o</string>
+    <string name="error_enter_valid_co" translatable="false">Please enter valid c/o</string>
+    <string name="error_enter_mo" translatable="false">Please enter m/o</string>
+    <string name="error_enter_po" translatable="false">Please enter p/o</string>
+    <string name="error_enter_co" translatable="false">Please enter c/o</string>
+    <string name="select_pp" translatable="false">Please select assigned to PP first</string>
+
+    <!--Product-->
+    <string name="product_particulars" translatable="false">Products</string>
+    <string name="selected_product" translatable="false">Selected Product(s)</string>
+    <string name="add_product" translatable="false">Add Product(s) to cart</string>
+    <string name="product_brand" translatable="false">Brand</string>
+    <string name="product_category" translatable="false">Category</string>
+    <string name="product_watt" translatable="false">Watt</string>
+    <string name="product_total_order" translatable="false">Total Product(s):\u0020</string>
+    <string name="product_total_order_amount" translatable="false">Total Amount (\u20B9):\u0020</string>
+    <string name="total_order_amount" translatable="false">Order Amount (\u20B9):\u0020</string>
+    <string name="total_order_value_with_colon" translatable="false">Total Order Value (\u20B9):\u0020</string>
+    <string name="total_return_value_with_colon" translatable="false">Total Return Value (\u20B9):\u0020</string>
+    <string name="total_stock_value_with_colon" translatable="false">Total Stock Value (\u20B9):\u0020</string>
+    <string name="total_invoice_amount" translatable="false">Invoice Amount (\u20B9):\u0020</string>
+    <string name="new_total_order_amount" translatable="false">Order Amount:\u0020</string>
+    <string name="product_rate" translatable="false">Rate (\u20B9)</string>
+    <string name="product_total_amount" translatable="false">Total Price (\u20B9)</string>
+    <string name="product_qty" translatable="false">Qty</string>
+    <string name="add_to_cart" translatable="false">Add to Cart</string>
+    <string name="stock" translatable="false">Stock:</string>
+
+    <!--OTP-->
+    <string name="otp_verification" translatable="false">OTP Verification</string>
+    <string name="pls_enter_otp" translatable="false">Please enter the OTP you have received in your registered mobile number</string>
+    <string name="otp" translatable="false">OTP</string>
+    <string name="otp_can_not_blank" translatable="false">OTP can\'t be blank</string>
+    <string name="erro_enter_otp" translatable="false">Please Enter OTP</string>
+    <string name="shop_verification" translatable="false">Shop Verification</string>
+    <string name="shop_verfication_msg_1" translatable="false">Shop verification code will be sent to the registered mobile number </string>
+    <string name="customer_verfication_msg_1" translatable="false">Customer verification code will be sent to the registered mobile number </string>
+    <string name="shop_verification_msg_2" translatable="false">Please confirm to receive the OTP. </string>
+    <string name="edit_number" translatable="false"><u>Edit Number</u></string>
+    <string name="enter_new_number" translatable="false">Enter New Number</string>
+    <string name="edit_number_error" translatable="false">Please enter new number</string>
+    <string name="resend_otp" translatable="false"><u>Resend OTP</u></string>
+
+    <!--Add Attendance-->
+    <string name="attendance_alert" translatable="false">Attendance Notification</string>
+    <string name="attendance_msg_bdy" translatable="false">Select OK to mark your Attendance. Thanks.</string>
+    <string name="set_todays_target" translatable="false">Set Your Today\'s Target</string>
+    <string name="target_order_value" translatable="false">Target value</string>
+    <string name="target_collection_value" translatable="false">Collection value</string>
+    <string name="new_shop_visit" translatable="false">New shop visit</string>
+    <string name="shop_revisit" translatable="false">Revisit shop</string>
+    <string name="primary_value" translatable="false">Primary Value plan</string>
+    <string name="field_work" translatable="false">Field Work</string>
+    <string name="sales_visit" translatable="false">Sales Visit</string>
+    <string name="dd_name" translatable="false">Distributor Name</string>
+    <string name="marked_worked" translatable="false">Market Worked</string>
+    <string name="set_market" translatable="false">Set Your Market Details</string>
+    <string name="send_for_approval" translatable="false">Send for Approval</string>
+    <string name="from_date" translatable="false">From Date:</string>
+    <string name="to_date" translatable="false">To Date:</string>
+    <string name="leave_type" translatable="false">Leave Type:</string>
+    <string name="reason" translatable="false">Reason:</string>
+    <string name="status_with_colon" translatable="false">Status:</string>
+    <string name="current_date_time" translatable="false">Current Date &amp; Time:</string>
+    <string name="visit_plan" translatable="false">Visit Plan</string>
+    <string name="start_loc" translatable="false">Start Location</string>
+    <string name="end_loc" translatable="false">End Location</string>
+    <string name="no_date_found" translatable="false">No date found</string>
+    <string name="distance_per_plan" translatable="false">Distance as per Plan</string>
+    <string name="applicable_in_time" translatable="false">Applicable In Time:</string>
+    <string name="type_remarks" translatable="false">Type remarks if any.</string>
+    <string name="reason_without_colon" translatable="false">Reason</string>
+
+    <!--error message-->
+    <string name="error_enter_username" translatable="false">Please enter login id</string>
+    <string name="error_enter_pwd" translatable="false">Please enter password</string>
+
+
+    <!--Logout Sync-->
+    <string name="add_shop_sync" translatable="false">Shops</string>
+    <string name="add_order_sync" translatable="false">Order</string>
+    <string name="add_collection_sync" translatable="false">Collection</string>
+    <string name="update_gps_sync" translatable="false">GPS</string>
+    <string name="revisit_shops_sync" translatable="false">Revisit</string>
+    <string name="data_is_sync" translatable="false">Please wait while data sync is going on</string>
+    <string name="data_sync_completed" translatable="false">Data sync is completed, you may Logout now.</string>
+    <string name="data_sync_completed_header" translatable="false">Data Sync</string>
+    <string name="data_sync_completed_content" translatable="false">Data sync is completed. </string>
+    <string name="data_sync_retry" translatable="false">Retry</string>
+    <string name="sync_logout" translatable="false">Sync &amp; Logout</string>
+    <string name="bill" translatable="false">Billing Details</string>
+    <string name="meeting" translatable="false">Meeting</string>
+    <string name="new_stock" translatable="false">Stock</string>
+    <string name="quotation" translatable="false">Quotation</string>
+    <string name="team_shop" translatable="false">Team shop</string>
+    <string name="return_sync" translatable="false">Return</string>
+
+    <!--reimbursement-->
+    <string name="reimbursement_local" translatable="false">Local</string>
+    <string name="reimbursement_outstation" translatable="false">Outstation</string>
+    <string name="select_date" translatable="false">Select Date (You can apply for past 7 days only)</string>
+    <string name="reimbursement_type_selections" translatable="false">Select Reimbursement Type</string>
+    <string name="mode_of_travel" translatable="false">Mode of Travel</string>
+    <string name="amount" translatable="false">Amount</string>
+    <string name="enter_amount" translatable="false">Enter Amount</string>
+    <string name="remark" translatable="false">Remark</string>
+    <string name="leave_remark" translatable="false">Leave Remark</string>
+    <string name="approver_remark" translatable="false">Approver Remark</string>
+    <string name="enter_remark" translatable="false">Enter Remarks</string>
+    <string name="select_type" translatable="false">Select Type</string>
+    <string name="Submit" translatable="false">SUBMIT</string>
+    <string name="image" translatable="false">IMAGE</string>
+    <string name="from" translatable="false">From</string>
+    <string name="to" translatable="false">To</string>
+    <string name="enterKMTraveled" translatable="false">Enter Kilometers Travelled</string>
+    <string name="KMTraveled" translatable="false">Kilometers Travelled</string>
+    <string name="upload_ticket_bill" translatable="false">Upload Ticket/Bills</string>
+    <string name="maximumAllowanceIs" translatable="false">(Maximum allowance is </string>
+    <string name="maximumAllowanceIsBracket" translatable="false">)</string>
+    <string name="reimersment_add_new_TA" translatable="false">ADD NEW TA</string>
+    <string name="fuel_type" translatable="false">Fuel Type</string>
+    <string name="submit_ta" translatable="false">Submit TA</string>
+    <string name="edit_ta" translatable="false">Edit TA</string>
+    <string name="Rs" translatable="false">\u20B9</string>
+    <string name="error_location_validation" translatable="false">From &amp; to location can not be same</string>
+    <string name="from_loc_smaller_than_to_loc" translatable="false">From location can not be greater than to location</string>
+
+    <string name="bike" translatable="false">Bike</string>
+    <string name="car" translatable="false">Car</string>
+    <string name="bus" translatable="false">Bus</string>
+    <string name="taxi" translatable="false">Taxi</string>
+    <string name="flight" translatable="false">Flight</string>
+    <string name="train" translatable="false">Train</string>
+
+    <string name="reimbursement" translatable="false">Reimbursement</string>
+    <string name="reimbursement_list" translatable="false">Reimbursement List</string>
+    <string name="Rs340" translatable="false">\u20B9 340</string>
+    <string name="Rs180" translatable="false">\u20B9 10</string>
+    <string name="Rs120" translatable="false">\u20B9 120</string>
+    <string name="Rs40" translatable="false">\u20B9 150</string>
+    <string name="Rs_symbol" translatable="false">\u20B9</string>
+    <string name="Rs99999" translatable="false">\u20B9 145545</string>
+
+    <string name="travel" translatable="false">Travel</string>
+    <string name="hotel" translatable="false">Hotel</string>
+    <string name="food" translatable="false">Food</string>
+    <string name="hotel_name" translatable="false">Hotel Name</string>
+    <string name="hotel_name_hint" translatable="false">Enter Hotel Name</string>
+    <string name="enter_location_hint" translatable="false">Enter Location</string>
+    <string name="select_location_hint" translatable="false">Select Location</string>
+    <!--<string name="checkin_date">Check in</string>
+    <string name="check_out_date">Out Date</string>-->
+
+    <string name="checkin_date" translatable="false">Check In Date and Time</string>
+    <string name="check_out_date" translatable="false">Check Out Date and Time</string>
+    <string name="breakfast" translatable="false">Breakfast</string>
+    <string name="lunch" translatable="false">Lunch</string>
+    <string name="dinner" translatable="false">Dinner</string>
+    <string name="select_expense_type" translatable="false">Select Expense Type</string>
+    <string name="select" translatable="false">Select</string>
+    <string name="select_travel_type" translatable="false">Select Travel Type</string>
+    <string name="select_fuel_type" translatable="false">Select Fuel Type</string>
+    <string name="expense_type" translatable="false">Expense Type</string>
+    <string name="food_type" translatable="false">Food Type</string>
+    <string name="approved" translatable="false">Approved</string>
+    <string name="pending" translatable="false">Pending</string>
+    <string name="total_claim_amount" translatable="false">Total Claim Amount:</string>
+    <string name="accept" translatable="false">A:</string>
+    <string name="claim" translatable="false">C:</string>
+    <string name="applied_on" translatable="false">Applied on</string>
+    <string name="travel_mode" translatable="false">Travel mode</string>
+    <string name="total_visit" translatable="false">Total Visit:</string>
+    <string name="last_visit_date" translatable="false">Last Visit Date:</string>
+    <string name="last_order_date" translatable="false">Last Order Date:</string>
+    <string name="last_order_amount" translatable="false">Last Order Amount:</string>
+    <string name="reorder" translatable="false">Reorder</string>
+    <string name="new_order" translatable="false">New Order</string>
+    <string name="pin" translatable="false">Pin</string>
+    <string name="contact_number" translatable="false">Contact Number</string>
+    <string name="order_no" translatable="false">Order No:</string>
+    <string name="collection_date" translatable="false">Collection Date</string>
+    <string name="collection_amount" translatable="false">Collection Amount</string>
+    <string name="new_collection" translatable="false">New Collection</string>
+    <string name="total_order_value_v1" translatable="false">Total Order Value</string>
+    <string name="total_collection_value" translatable="false">Total Collection Value</string>
+    <string name="error_select_expense_type" translatable="false">Please select expense type</string>
+    <string name="error_select_travel_type" translatable="false">Please select travel type</string>
+    <string name="error_select_fuel_type" translatable="false">Please select fuel type</string>
+    <string name="error_select_from_location" translatable="false">Please select from location</string>
+    <string name="error_select_to_location" translatable="false">Please select to location</string>
+    <string name="error_select_amount" translatable="false">Please select amount</string>
+    <string name="error_select_km" translatable="false">Please select kilometers travelled</string>
+    <string name="error_select_hotel" translatable="false">Please select hotel name</string>
+    <string name="error_select_start_date" translatable="false">Please select check in date time</string>
+    <string name="error_select_end_date" translatable="false">Please select check out date time</string>
+    <string name="error_select_loc" translatable="false">Please select location</string>
+    <string name="error_select_food_type" translatable="false">Please select food type</string>
+    <string name="error_select_remark" translatable="false">Please select remark</string>
+    <string name="no_ta_available" translatable="false">No TA available</string>
+    <string name="reimbursement_details" translatable="false">Reimbursement Details</string>
+    <string name="reimbursement_edit" translatable="false">Edit Reimbursement</string>
+    <string name="my_performance" translatable="false">My Performance</string>
+
+    <string-array name="shop_sort_array">
+        <item>Last Week</item>
+        <item>Last 7 Day\'s</item>
+        <item>Last 30 Day\'s</item>
+        <item>Last 60 Days\'s</item>
+
+    </string-array>
+
+    <string-array name="location">
+        <item>Alumnus Software Ltd, Plot A3, GP Block, Sector V, Bidhannagar, Kolkata, West Bengal 700091, India </item>
+        <item>SDF Building, GP Block, Sector V, Bidhannagar, Kolkata, West Bengal 700091, India</item>
+        <item>L2, GP Block, Sector V, Bidhannagar, Kolkata, West Bengal 700091, India</item>
+    </string-array>
+
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
+
+
+    <!--Activity-->
+    <string name="total_distance_travelled" translatable="false">Approx. distance travelled:</string>
+    <string name="travel_log" translatable="false">Travel Log</string>
+    <string name="sync" translatable="false">Sync</string>
+    <string name="view" translatable="false">View</string>
+    <string name="no_activity" translatable="false">No activity available</string>
+    <string name="chemist_visit" translatable="false">Chemist Visit</string>
+    <string name="which_product_talked" translatable="false">Which Product(s) Talked Today</string>
+    <string name="which_product_talked_with_doc" translatable="false">Which Product(s) Talked with Doctor</string>
+    <string name="enter_keyword" translatable="false">Enter Keyword</string>
+    <string name="any_pob" translatable="false">Any POB Today</string>
+    <string name="which_product" translatable="false">Which Product(s)</string>
+    <string name="volume" translatable="false">Volume</string>
+    <string name="remarks_for_mr" translatable="false">Remarks of MR</string>
+    <string name="error_select_visit_date" translatable="false">Please select next visit date</string>
+    <string name="error_enter_remarks_mr" translatable="false">Please enter remarks of mr</string>
+    <string name="doctor_visit" translatable="false">Doctor Visit</string>
+    <string name="doc_remark" translatable="false">Doctor\'s remark</string>
+    <string name="perscriber" translatable="false">Prescriber or not</string>
+    <string name="qty_vol" translatable="false">Quantity or Volume Per Month</string>
+    <string name="sample_provide_today" translatable="false">Any Samples Provide Today or Not</string>
+    <string name="crm_or_cme" translatable="false">CRM or CME</string>
+    <string name="crm" translatable="false">CRM</string>
+    <string name="cme" translatable="false">CME</string>
+    <string name="money_or_kind" translatable="false">Money or Kind</string>
+    <string name="money" translatable="false">Money</string>
+    <string name="kind" translatable="false">Kind</string>
+    <string name="what" translatable="false">What</string>
+    <string name="crm_cme_contract" translatable="false">CRM or CME Contract Period</string>
+    <string name="vol_pre" translatable="false">How Much Volume Prescribe/PM against CRM or CME *</string>
+    <string name="any_gift" translatable="false">Any Gift</string>
+    <string name="which_kind" translatable="false">Which Kind</string>
+    <string name="unable_to_sync_doc" translatable="false">Unable to sync Doctor</string>
+    <string name="unable_to_sync_chemist" translatable="false">Unable to sync Chemist</string>
+    <string name="error_select_valid_from_date" translatable="false">From Date can not be greater than To Date</string>
+    <string name="error_select_product" translatable="false">Please select at least one product</string>
+    <string name="error_select_pob_options" translatable="false">Please select any pob today</string>
+    <string name="error_select_pob_product" translatable="false">Please select at least one POB product</string>
+    <string name="error_enter_vol" translatable="false">Please enter volume</string>
+    <string name="error_enter_doc_remark" translatable="false">Please enter doctor\'s remarks</string>
+    <string name="error_select_prescriber" translatable="false">Please select prescriber or not</string>
+    <string name="error_select_vol_qty" translatable="false">Please select volume or quantity</string>
+    <string name="error_enter_vol_text" translatable="false">Please enter volume text</string>
+    <string name="error_enter_qty_text" translatable="false">Please enter quantity text</string>
+    <string name="error_enter_qty_product" translatable="false">Please select at least one quantity product</string>
+    <string name="error_enter_vol_product" translatable="false">Please select at least one volume product</string>
+    <string name="error_select_sample" translatable="false">Please select any samples provide or not</string>
+    <string name="error_select_sample_product" translatable="false">Please select at least one sample product</string>
+    <string name="error_select_crm_cme" translatable="false">Please select CRM or CME</string>
+    <string name="error_select_money_kind" translatable="false">Please select money or kind</string>
+    <string name="error_enter_what_kind" translatable="false">Please enter what kind</string>
+    <string name="error_from_contract_period" translatable="false">Please select from contract period</string>
+    <string name="error_to_contract_period" translatable="false">Please select to contract period</string>
+    <string name="error_select_gift" translatable="false">Please select any gift</string>
+    <string name="error_enter_which_kind" translatable="false">Please enter which kind</string>
+    <string name="action" translatable="false">Action</string>
+    <string name="error_select_activity_first" translatable="false">Please select activity first</string>
+    <string name="no_data_found" translatable="false">No data found</string>
+    <string name="visit_distance" translatable="false">Distance as per Visit Plan:</string>
+    <string name="share_pdf" translatable="false">Share PDF</string>
+    <string name="battery" translatable="false">Battery:</string>
+    <string name="network" translatable="false">Network:</string>
+
+    <!--Achievement-->
+    <string name="target" translatable="false">Target:</string>
+    <string name="achieved" translatable="false">Achieved:</string>
+    <string name="shortage" translatable="false">Shortage:</string>
+    <string name="ordertaken" translatable="false">Order Taken</string>
+    <string name="amount_achieved" translatable="false">\u20B9 3,00,000</string>
+    <string name="amount_shortage" translatable="false">\u20B9 2,00,000</string>
+    <string name="collection_taken" translatable="false">Collection Taken</string>
+    <string name="shops_visited" translatable="false">Shops Visited</string>
+    <string name="shops_revisited" translatable="false">Shops Revisited</string>
+
+    <!--Alarm-->
+    <string name="review_attendance" translatable="false">Review Subordinates\' Attendance</string>
+    <string name="snooze" translatable="false">SNOOZE</string>
+    <string name="view_report" translatable="false">VIEW REPORT</string>
+    <string name="time_5" translatable="false">5 min</string>
+    <string name="time_10" translatable="false">10 min</string>
+    <string name="time_15" translatable="false">15 min</string>
+    <string name="overlaypermission" translatable="false">Screen Overlay permission</string>
+    <string name="overlay_permission_description" translatable="false">Screen Overlay permission is required to work app properly. Grant this permission.</string>
+    <string name="in_time" translatable="false">In Time</string>
+    <string name="confirm" translatable="false">Confirm</string>
+    <string name="reviewed" translatable="false">Reviewed</string>
+    <string name="error_check_review" translatable="false">Please check reviewed</string>
+    <string name="error_phn_no_unavailable" translatable="false">Call not possible. No contact no. possible</string>
+    <string name="report_to" translatable="false">Report To:</string>
+    <string name="visit_count" translatable="false">Visit Count:</string>
+    <string name="travel_in_km" translatable="false">Travel (KM):</string>
+    <string name="order_value" translatable="false">Order Value:</string>
+    <string name="collection_value" translatable="false">Collection Value:</string>
+    <string name="shop_count" translatable="false">Shop Count</string>
+    <string name="visit_time" translatable="false">Visit Time</string>
+
+    <!--Billing List-->
+    <string name="invoice_no" translatable="false">Invoice No:</string>
+    <string name="invoice_date" translatable="false">Invoice Date:</string>
+    <string name="invoice_total_amount" translatable="false">Total Amount:</string>
+    <string name="invoice_paid_amount" translatable="false">Paid Amount:</string>
+    <string name="invoice_bal" translatable="false">Balance:</string>
+
+    <!--Add Billing-->
+    <string name="please_enter_bill" translatable="false">Please enter billing details</string>
+    <string name="add_bill_invoice_no" translatable="false">Invoice No.</string>
+    <string name="enter_invoice_no" translatable="false">Enter Invoice No.</string>
+    <string name="add_bill_invoice_date" translatable="false">Invoice Date</string>
+    <string name="enter_invoice_date" translatable="false">Enter Invoice Date</string>
+    <string name="write_your_text" translatable="false">Write Your Text</string>
+    <string name="add_bill_invoice_amount" translatable="false">Invoice Amount</string>
+    <string name="error_enter_invoice_no" translatable="false">Please enter invoice number</string>
+    <string name="error_enter_invoice_date" translatable="false">Please enter invoice date</string>
+    <string name="error_enter_invoice_amount" translatable="false">Please enter invoice amount</string>
+    <!--<string name="error_invoice_no_available">Invoice no. must be unique for a specific order</string>-->
+    <string name="error_invoice_no_available" translatable="false">Invoice number already exists for the order</string>
+    <string name="new_quantity" translatable="false">Quantity: \u0020</string>
+    <string name="new_rate" translatable="false">Rate: \u0020\u20B9</string>
+    <string name="error_invoice_amount_mismatch" translatable="false">Invoice amount mismatch. Check rate &amp; qty.</string>
+    <string name="error_invoice_amount_cannot_greater_than_order" translatable="false">Total invoice amount should not be greater than balance Order Amount.</string>
+    <string name="error_select_attachment" translatable="false">Please select attachment</string>
+
+    <!--Know your state-->
+    <string name="select_month" translatable="false">Select Month</string>
+    <string name="select_year" translatable="false">Select Year</string>
+    <string name="know_state" translatable="false">Report</string>
+
+
+    <!--Daily Plan-->
+    <string name="plan_date" translatable="false">Plan Date:\u0020</string>
+    <string name="last_plan_date" translatable="false">Last Plan Date:\u0020</string>
+    <string name="plan_amount" translatable="false">Plan Amt:\u0020</string>
+    <string name="last_plan_amount" translatable="false">Last Plan Amount:\u0020</string>
+    <string name="last_achievement_amount" translatable="false">Last Achievement Amount:\u0020</string>
+    <string name="achievement_amount" translatable="false">Achv Amt:\u0020</string>
+    <string name="update_plan" translatable="false">Update Plan</string>
+    <string name="update_achv" translatable="false">Update Achv</string>
+    <string name="shops_updated" translatable="false">Record(s) updated</string>
+    <string name="primary_plan_date" translatable="false">Primary Plan Date</string>
+    <string name="primary_plan_value" translatable="false">Primary Plan Value</string>
+    <string name="write_your_text_here" translatable="false">Write your text here</string>
+    <string name="error_enter_primary_value" translatable="false">Please enter Primary value</string>
+    <string name="error_enter_valid_primary_value" translatable="false">Please enter valid Primary value</string>
+    <string name="error_enter_achv_value" translatable="false">Please enter Achievement value</string>
+    <string name="error_enter_valid_achv_value" translatable="false">Please enter valid Achievement value</string>
+    <string name="achieved_value" translatable="false">Achieved Value</string>
+    <string name="update_achievement" translatable="false">Update Achievement</string>
+    <string name="planned" translatable="false">Planned</string>
+    <string name="new_achieved" translatable="false">Achieved</string>
+    <string name="error_update_plan" translatable="false">Please update plan or achievement for at least one shop.</string>
+    <string name="percent" translatable="false">%</string>
+    <string name="view_history" translatable="false">View History</string>
+    <string name="percentage" translatable="false">Percentage:\u0020</string>
+    <string name="plan_remark" translatable="false">Plan remarks:\u0020</string>
+    <string name="achv_remark" translatable="false">Achv remarks:\u0020</string>
+
+
+    <!--Meeting-->
+    <string name="remarks" translatable="false">Remarks</string>
+    <string name="meeting_type" translatable="false">Meeting Type</string>
+    <string name="error_select_meeting_type" translatable="false">Please select meeting type</string>
+    <string name="no_meeting_available" translatable="false">No Meeting Available</string>
+    <string name="duration_colon" translatable="false">Duration:</string>
+    <string name="remarks_colon" translatable="false">Remarks:</string>
+    <string name="meeting_type_colon" translatable="false">Meeting Type:</string>
+    <string name="unable_to_sync_meeting" translatable="false">Unable to sync meeting</string>
+    <string name="meeting_date_time" translatable="false">Meeting Date Time:</string>
+    <string name="visit_date_time" translatable="false">Visit Date &amp; Time:</string>
+
+    <!--Member-->
+    <string name="click_for_team_details" translatable="false">Click for Team Details</string>
+    <string name="click_for_shop_details" translatable="false">Click for Shop Details</string>
+    <string name="no_member_available" translatable="false">No Member Available</string>
+    <string name="no_shop_available" translatable="false">No Shop Available</string>
+    <string name="total_shops" translatable="false">View Party</string>
+    <string name="new_visit_shop" translatable="false">Revisit Now</string>
+    <string name="supervisor_name" translatable="false">Supervisor Name:</string>
+    <string name="supervisor" translatable="false">Supervisor:</string>
+    <string name="time_slot" translatable="false">Time Slot</string>
+    <string name="customer" translatable="false">Customer</string>
+    <string name="enter_location" translatable="false">Enter Location</string>
+    <string name="error_select_from_time" translatable="false">Please select from time</string>
+    <string name="error_select_to_time" translatable="false">Please select to time</string>
+    <string name="error_select_customer" translatable="false">Please select customer</string>
+    <string name="error_enter_location" translatable="false">Please enter location</string>
+    <string name="error_from_time_must_be_greate" translatable="false">From time must be before or equal to time</string>
+    <string name="select_customer_type" translatable="false">Select Customer Type</string>
+    <string name="colon_remarks" translatable="false">Remarks:</string>
+    <string name="radius" translatable="false">Radius</string>
+    <string name="meter" translatable="false">Meter</string>
+    <string name="error_select_radius" translatable="false">Please enter radius length</string>]
+    <string name="sync_msg" translatable="false">Offline data is syncing. Please do not turn off internet &amp; app.</string>
+    <string name="shop_loading" translatable="false">Refresh process is running. Please wait....</string>
+    <string name="no_plan_available" translatable="false">No plan available</string>
+
+
+    <!--Map-->
+    <string name="current_loc" translatable="false">Current Location</string>
+    <string name="between_loc" translatable="false">In Between Points</string>
+    <string name="start_point" translatable="false">Start Point</string>
+    <string name="end_point" translatable="false">End Point</string>
+    <string name="shop_loc" translatable="false">Shop Location</string>
+
+
+    <!--Fingerprint-->
+    <string name="fingerprint_authentication" translatable="false">Fingerprint Authentication</string>
+    <string name="use_fingerprint" translatable="false">Use fingerprint to confirm</string>
+    <string name="touch_sensor" translatable="false">Please touch the sensor</string>
+    <string name="selfie_authentication" translatable="false">Selfie Authentication</string>
+    <string name="use_selfie" translatable="false">Take your selfie to authenticate</string>
+
+    <!--Refresh Data-->
+    <string name="error_msg" translatable="false">Refresh Failed! Please refresh again when internet connection is stable.</string>
+    <string name="success_msg" translatable="false">Data refreshed Successfully.</string>
+    <string name="wait_msg" translatable="false">Please wait! Data being refreshed from server.</string>
+
+    <!--Order-->
+    <string name="unable_sync_order" translatable="false">Unable to sync Order</string>
+
+    <!--Timesheet-->
+    <string name="client_name" translatable="false">Client:</string>
+    <string name="project" translatable="false">Project:</string>
+    <string name="comments" translatable="false">Comments:</string>
+    <string name="activity" translatable="false">Activity:</string>
+    <string name="product" translatable="false">Product:</string>
+    <string name="timesheet" translatable="false">Timesheet</string>
+    <string name="timesheet_list" translatable="false">Timesheet List</string>
+    <string name="timesheet_add" translatable="false">Add Timesheet</string>
+    <string name="timesheet_edit" translatable="false">Edit Timesheet</string>
+    <string name="time" translatable="false">Time</string>
+    <string name="select_client" translatable="false">Select Client</string>
+    <string name="select_project" translatable="false">Select Project</string>
+    <string name="select_product" translatable="false">Select Product</string>
+    <string name="select_activity" translatable="false">Select Activity</string>
+    <string name="client_name_without_colon" translatable="false">Client</string>
+    <string name="project_without_colon" translatable="false">Project</string>
+    <string name="product_without_colon" translatable="false">Product</string>
+    <string name="activity_without_colon" translatable="false">Activity</string>
+    <string name="enter_activity" translatable="false">Enter Activity</string>
+    <string name="error_select_activity" translatable="false">Please select activity</string>
+    <string name="error_enter_time" translatable="false">Please enter time</string>
+    <string name="error_enter_valid_time" translatable="false">Please enter valid time. Hours can not be 0 or more than 5</string>
+    <string name="error_you_are_in_leave" translatable="false">You are on leave</string>
+    <string name="hrs" translatable="false">Hrs</string>
+    <string name="mins" translatable="false">Mins</string>
+    <string name="error_enter_hrs" translatable="false">Please enter hours</string>
+    <string name="error_enter_mins" translatable="false">Please enter minutes</string>
+    <string name="error_enter_valid_hrs" translatable="false">Please enter valid hours. Hours can not be more than 23 <!--Please enter valid hours. Hours can not be 0 or more than 5--></string>
+    <string name="error_enter_valid_mins" translatable="false">Please enter valid minutes. Minutes can not be more than 59</string>
+    <string name="no_timesheet_available" translatable="false">No Timesheeet Available</string>
+    <string name="hours" translatable="false">Hours:</string>
+    <string name="reject" translatable="false">Reject</string>
+    <string name="upload_image" translatable="false">Upload image</string>
+
+    <!--Area-->
+    <string name="no_area_available" translatable="false">No area available</string>
+
+    <!--Quotation-->
+    <string name="quot_no" translatable="false">Quotation No.</string>
+    <string name="hypothecation" translatable="false">Hypothecation</string>
+    <string name="account" translatable="false">A/C No.</string>
+    <string name="bs" translatable="false">BS</string>
+    <string name="particulars" translatable="false">Particulars</string>
+    <string name="desc_1" translatable="false">Desc1</string>
+    <string name="speed_gearbox" translatable="false">Speed Gearbox</string>
+    <string name="desc_2" translatable="false">Desc2</string>
+    <string name="nos" translatable="false">Nos</string>
+    <string name="desc_3" translatable="false">Desc3</string>
+    <string name="pr" translatable="false">(16PR)</string>
+    <string name="value" translatable="false">Value</string>
+    <string name="desc_4" translatable="false">Desc4</string>
+    <string name="tyres" translatable="false">Tyres</string>
+    <string name="desc_5" translatable="false">Desc5</string>
+    <string name="desc_6" translatable="false">Desc6</string>
+    <string name="pr_pd" translatable="false">(16PR PD)</string>
+    <string name="less_discount" translatable="false">Less Discount</string>
+    <string name="cgst" translatable="false">CGST</string>
+    <string name="sgst" translatable="false">SGST</string>
+    <string name="tcs" translatable="false">TCS</string>
+    <string name="insurance" translatable="false">Insurance</string>
+    <string name="nert_amount" translatable="false">Net Amount</string>
+    <string name="error_enter_quotation_no" translatable="false">Please enter quotation no.</string>
+    <string name="error_select_date" translatable="false">Please select any date</string>
+    <string name="quot_amt" translatable="false">Quot. Amount:</string>
+    <string name="desc_7" translatable="false">Desc7</string>
+    <string name="sms" translatable="false">SMS</string>
+    <string name="phone" translatable="false">Phone</string>
+
+    <!--Achievement-->
+    <string name="visit_date" translatable="false">Visit date</string>
+    <string name="stage_count" translatable="false">Stage Count</string>
+
+    <!--Target vs Achievement-->
+    <string name="enquiry" translatable="false">Enquiry</string>
+    <string name="lead" translatable="false">Lead</string>
+    <string name="test_drive" translatable="false">Test Drive</string>
+    <string name="booking" translatable="false">Booking</string>
+    <string name="retail" translatable="false">Retail</string>
+    <string name="target_achv" translatable="false">Targ. | Achv.</string>
+
+
+    <!--Task-->
+    <string name="enter_details" translatable="false">Enter Details</string>
+    <string name="enter_new_task" translatable="false">Enter New Task</string>
+    <string name="error_enter_task" translatable="false">Please enter task</string>
+    <string name="completed" translatable="false">Completed</string>
+    <string name="task" translatable="false">Task:</string>
+    <string name="details" translatable="false">Details:</string>
+    <string name="no_task_available" translatable="false">No Task Available</string>
+    <string name="no_completed_task_available" translatable="false">No Completed Task Available</string>
+    <string name="no_pending_task_available" translatable="false">No Pending Task Available</string>
+
+
+    <!--Activity-->
+    <string name="party" translatable="false">Enter Party</string>
+    <string name="select_party" translatable="false">Select Party</string>
+    <string name="date_time" translatable="false">Date Time</string>
+    <string name="date_time2" translatable="false">Date &amp; Time</string>
+    <string name="date_and_time" translatable="false">Enter Date &amp; Time</string>
+    <string name="contact_name" translatable="false">Contact Name</string>
+    <string name="enter_contact_name" translatable="false">Enter Contact Name</string>
+    <string name="subject" translatable="false">Enter Subject</string>
+    <string name="details_without_colon" translatable="false">Details</string>
+    <string name="priority" translatable="false">Enter Priority</string>
+    <string name="select_priority" translatable="false">Select Priority</string>
+    <string name="due_date_time" translatable="false">Enter Due Date &amp; Time</string>
+    <string name="attachment" translatable="false">Attachment</string>
+    <string name="duration_hh_mm" translatable="false">Enter Duration(hh:mm)</string>
+    <string name="error_select_party" translatable="false">Please select party</string>
+    <string name="error_select_time" translatable="false">Please select time</string>
+    <string name="error_select_type" translatable="false">Please select type</string>
+    <string name="error_enter_subject" translatable="false">Please enter subject</string>
+    <string name="error_enter_details" translatable="false">Please enter details</string>
+    <string name="error_select_priority" translatable="false">Please select priority</string>
+    <string name="error_select_due_date" translatable="false">Please select due date</string>
+    <string name="error_select_due_time" translatable="false">Please select due time</string>
+    <string name="error_select_date_first" translatable="false">Please select date first</string>
+    <string name="error_select_proper_time" translatable="false">Please select due time after time</string>
+    <string name="due_date_time_colon" translatable="false">Due Date &amp; Time:</string>
+    <string name="priority_colon" translatable="false">Priority:</string>
+    <string name="subject_colon" translatable="false">Subject:</string>
+    <string name="attachment_colon" translatable="false">Attachment:</string>
+    <string name="photo" translatable="false">Photo:</string>
+    <string name="photo_without_colon" translatable="false">Photo</string>
+
+    <!--Collection-->
+    <string name="total_collection" translatable="false">Total Collections</string>
+    <string name="today_collection" translatable="false">Today Collections</string>
+    <string name="paid" translatable="false">Paid</string>
+    <string name="total_collection_with_colon" translatable="false">Today Collection:</string>
+    <string name="total_bal" translatable="false">Total Balance:</string>
+    <string name="error_collection_cannot_more" translatable="false">Collection can not be more than</string>
+    <string name="collected_amount" translatable="false">Collected Amount</string>
+    <string name="payment_mode" translatable="false">Payment Mode</string>
+    <string name="instrument_no" translatable="false">Instrument No.</string>
+    <string name="bank" translatable="false">Bank</string>
+    <string name="payment_pic" translatable="false">Payment Document Picture</string>
+    <string name="error_enter_payment_mode" translatable="false">Please select atleast one payment mode</string>
+    <string name="attach_document" translatable="false">Attach documents</string>
+    <string name="patient" translatable="false">Patient</string>
+
+    <!--Weather-->
+    <string name="degree" translatable="false">\u00B0</string>
+
+    <!--Document Repository-->
+    <string name="upload_doc_msg" translatable="false">Upload documents here to continue the process</string>
+
+    <!--Chat Bot-->
+    <string name="open" translatable="false">Open</string>
+    <string name="visit" translatable="false">Visits</string>
+    <string name="total_visit_without_colon" translatable="false">Total Visit</string>
+    <string name="revisit" translatable="false">Revisit</string>
+    <string name="visit_sync" translatable="false">Visit Sync</string>
+    <string name="help" translatable="false">Help</string>
+    <string name="tips" translatable="false">Tips</string>
+    <string name="data_clear" translatable="false">Data Clear</string>
+    <string name="sync_data" translatable="false">Sync Data</string>
+    <string name="contact_us" translatable="false">Contact us</string>
+    <string name="sales" translatable="false">Sales</string>
+    <string name="analytics" translatable="false">Analytics</string>
+    <string name="only_weather" translatable="false">Weather</string>
+    <string name="reach_us" translatable="false">Reach us</string>
+    <string name="share_log_only" translatable="false">Share Log</string>
+    <string name="please_select_to_started" translatable="false">Please select following options to get started.</string>
+    <string name="wrong_date" translatable="false">The date you entered can not be current date or future date.</string>
+    <string name="can_i_help" translatable="false">Can I help you with anything else?</string>
+    <string name="want_to_see_visit_report" translatable="false">Do you want to see the Total Visit\'s report date wise?</string>
+    <string name="your_total_visit" translatable="false">Your Total Visits on\u0020</string>
+    <string name="is_with_space" translatable="false">\u0020is\u0020</string>
+    <string name="check_attendance" translatable="false">Check Attendance.</string>
+    <string name="enter_date_for_attendance" translatable="false">Please enter date to check attendance status.</string>
+    <string name="thanks_want_all_visit" translatable="false">Thank you. Do you want to see all the visit options?</string>
+    <string name="thanks_want_all_options" translatable="false">Thanks. Do you want to see all the options?</string>
+    <string name="have_grt_dat" translatable="false">Thank you! Have a great day:)</string>
+    <string name="check_total_visit" translatable="false">Check Total Visits.</string>
+    <string name="enter_date_check_total_visit" translatable="false">Please enter date to check the Total Visits.</string>
+    <string name="only_visit" translatable="false">Visit</string>
+    <string name="data_clr_alert" translatable="false">Are you Sure, because it will logout the APP and you need to Re-login with permissions?</string>
+    <string name="write_us" translatable="false">"Write to us:\n"</string>
+    <!--<string name="login_msg" translatable="false">"1. How to take Orders?\n\na. If you are doing Visit or Revisit to any party, once visit/revisit confirms by you, app will itself give you option to Book Order. You need to Select Items, Qty, Rate &amp; can submit the order.\n\nb. Also from Dashboard, click on 'Party(s)' to get the list, from their you may select 'Order' to book this. It will show you existing order list of the party &amp; one floating icon with (+) sign clicking on which you can book orders.\n\n2. Wish to see order history?\nFrom the Dashboard click on 'Orders', it will give you all the details &amp; you can see upto Items, Qty, Rate level details.\n\n3. Orders not showing Rate or unable to enter Rate?\n\nTalk to your reporting head/Organization head to get this."</string>-->
+    <string name="login_msg" translatable="false">"1. Must have good internet while login otherwise below message appears:\n'Internet is disconnected, you can not login, please switch on the internet.'
+        \n2. While login you make sure that the Login ID &amp; Password you have entered is proper otherwise below message appears:\n'No Data Found.'
+        \n3. While Login with proper Login ID &amp; Password, if the following message appears:\n'Your IMEI is not authorised. Please connect with administrator.'\n Then please call to your Organization Head to inform this &amp; once he authorized, you will be able to login successfully.
+        \n4. Handset Changed? \nPlease talk to Organization Head about this, they will authorize this &amp; you will be able to login successfully in your new handset."</string>
+
+    <string name="attendance_msg" translatable="false">"1. Slow Login?
+        \na.If last day logout not done in APP, then it will first logout &amp; then login. So, please logout everyday once work in app completed.
+        \nb. If you have clear data in APP, then it will sync all data into the handset so that offline work in the APP to be possible. Hence, it will take some time.
+        \nc. Important is stable internet connectivity to login faster. Check the internet please.
+        \n2. After login what to do?
+        \na. At Work: It will mark you present for the day with your In Time. You need to select the type of work also.\n ***Please look into Applicable In Time which is set as per your Organization policy.
+        \nb. On Leave: It will mark you Leave for the day with the type of leave you selected. You have to select Leave From &amp; To date &amp; can put Remarks.
+        \n3. Wish to see Attendance &amp; Leave Reports?\nFrom top left select option to open Menu, then select 'View attendance' or  otherwise from the Dashboard, select 'Attendance' displayed at top.
+        \n4. Wish to change Password?\nAs per your Organisation policy, you may have to request Organization head to do this for you. If they allow you to do this by yourself, you may open menu options &amp; select 'Change Password' to do the same.
+        \n5. After Login &amp; Attendance, wish to apply leave for future date? From menu option you will have option 'Apply Leave' to do the same."</string>
+
+    <string name="r_u_sure" translatable="false">Are you sure?</string>
+    <string name="typing" translatable="false">typing...</string>
+    <string name="leave_status" translatable="false">"Your attendance status is 'Leave'."</string>
+    <string name="present_status" translatable="false">"Your attendance status is 'Present'."</string>
+    <string name="absent_status" translatable="false">"Your attendance status is 'Absent'."</string>
+    <string name="want_to_see_attendance" translatable="false">Do you want to see Attendance Report?</string>
+    <string name="can_not_get_attendance_status" translatable="false">Can not get attendance status.</string>
+    <string name="visit_already_syncing" translatable="false">Visit is syncing from app already.</string>
+    <string name="sync_done" translatable="false">Sync Successfully done. Thanks.</string>
+    <string name="req_done" translatable="false">Request Done.</string>
+    <string name="unsuccessful_sync" translatable="false">Sync is unsuccessful.</string>
+    <string name="visit_msg" translatable="false">"1. Wish to do a New Visit?\nJust Click on (+) floating icon after successful attendance. Your current location to be traced. Visit Data need to enter &amp; save.
+        \n2. Wish to do Revisit?
+        \na. If you are at nearby location of the party you wish to visit, automatically push notification at top to be displayed &amp; ask from you Revisit. Just select 'Yes' &amp; put the neccessary details to complete Revisit.
+        \nb. If you are not getting notification due to GPS issue, you may open left side menu option &amp; check from 'Nearby' feature to get the list &amp; from there you can Revisit.
+        \nc. If you are not getting the list of Party for Revisit, talk to your Supervisor &amp;/or Organisation head to help you out by increasing GPS value from portal.
+        \n3. Wish to see visit reports?\nFrom the dashboard select 'Total Visits.'
+        \n4. Wish to see the time you spent in each visits?\nFrom the dashboard select 'Visit Duration'.
+        \n5. If you have Order Booking Facility, wish to see the orders you booked?\nFrom the Dashboard select 'Total Order(s).'
+        \n6. Wish to see the places you move today with Timeline?
+        \nFrom the Dashboard select 'Timeline'. You can view past days data also by selecting the different date."</string>
+
+    <string name="sale_msg" translatable="false">"1. How to take Orders?
+        \na. If you are doing Visit or Revisit to any party, once visit/revisit confirms by you, app will itself give you option to Book Order. You need to Select Items, Qty, Rate &amp; can submit the order.
+        \nb. Also from Dashboard, click on 'Party(s)' to get the list, from their you may select 'Order' to book this. It will show you existing order list of the party &amp; one floating icon with (+) sign clicking on which you can book orders.
+        \n2. Wish to see order history?\nFrom the Dashboard click on 'Orders', it will give you all the details &amp; you can see upto Items, Qty, Rate level details.
+        \n3. Orders not showing Rate or unable to enter Rate?
+        \nTalk to your reporting head/Organization head to get this."</string>
+    <string name="select_language" translatable="false">Select language</string>
+    <string name="english" translatable="false">English</string>
+    <string name="hindi" translatable="false">Hindi</string>
+    <string name="bengali" translatable="false">Bengali</string>
+    <string name="urdu" translatable="false">Urdu</string>
+    <string name="malayalam" translatable="false">Malayalam</string>
+    <string name="tamil" translatable="false">Tamil</string>
+    <string name="kannada" translatable="false">Kannada</string>
+    <string name="telugu" translatable="false">Telugu</string>
+    <string name="marathi" translatable="false">Marathi</string>
+    <string name="oriya" translatable="false">Oriya</string>
+
+    <!--Reports-->
+    <string name="attendance_reports" translatable="false">Attendance Report</string>
+    <string name="my_timeline" translatable="false">My Timeline</string>
+    <string name="collection_report" translatable="false">Collection Report</string>
+    <string name="party_location" translatable="false">Party Location in Map</string>
+    <string name="quotation_list" translatable="false">Quotation List</string>
+    <string name="target_achievement" translatable="false">Target vs Achievement</string>
+    <string name="achievement_details" translatable="false">Achievement Details</string>
+
+    <!--Chat-->
+    <string name="type_msg_here" translatable="false">Type your message here..</string>
+    <string name="error_enter_msg" translatable="false">Type message &amp; click on send.</string>
+    <string name="name_group" translatable="false">Enter group name</string>
+    <string name="select_frm_list" translatable="false">Select items from below list</string>
+    <string name="error_enter_grp_name" translatable="false">Please enter group name</string>
+    <string name="error_select_user" translatable="false">Please select alteast one user</string>
+    <string name="member_list" translatable="false">Member List</string>
+
+    <!--GpsDisable-->
+    <string name="gps_off_msg" translatable="false">GPS(Location) must be kept on to use this APP to help you to detect near by party
+        location alerts, get party locations on map etc. Thanks.</string>
+    <string name="enable_now" translatable="false">Enable Now</string>
+
+    <!--Scanner-->
+    <string name="scan_copy_visiting_card" translatable="false">Scan &amp; Copy Visiting Card</string>
+    <string name="copy_text" translatable="false">Copy Text</string>
+    <string name="copy_clipboard" translatable="false">Scanned Info</string>
+    <string name="share" translatable="false">Share</string>
+
+    <!--Nearby User-->
+    <string name="no_user_available" translatable="false">No user available</string>
+    <string name="contact_number_with_colon" translatable="false">Contact No.:</string>
+
+    <!--Nearby Shop-->
+    <string name="approx_distance" translatable="false">Approx Distance:</string>
+
+    <!--Home Location-->
+    <string name="your_home_loc" translatable="false">Your Home Location</string>
+    <string name="latitude" translatable="false">Latitude:</string>
+    <string name="longitude" translatable="false">Longitude:</string>
+    <string name="address_colon" translatable="false">Address:</string>
+    <string name="state_colon" translatable="false">State:</string>
+    <string name="city_colon" translatable="false">City:</string>
+    <string name="country_colon" translatable="false">Country:</string>
+    <string name="pincode_colon" translatable="false">Pin Code:</string>
+
+    <!--Average Shop-->
+    <string name="device_model" translatable="false">Device Model:</string>
+    <string name="android_version" translatable="false">Android Version:</string>
+    <string name="net_status_colon" translatable="false">Network Status:</string>
+    <string name="net_type" translatable="false">Network Type:</string>
+
+    <!--Device Info-->
+    <string name="no_device_info_available" translatable="false">No Device Info. Available</string>
+    <string name="date_colon" translatable="false">Date:</string>
+
+    <!--Micro Learning-->
+    <string name="size" translatable="false">Size:</string>
+    <string name="update_note" translatable="false">Update Note</string>
+    <string name="note" translatable="false">Note</string>
+    <string name="wait_for_preview" translatable="false">Please wait for the preview...</string>
+    <string name="video_duration" translatable="false">Video duration (in HH:MM:SS):</string>
+    <string name="video_duration1" translatable="false">Video duration (hh:mm:ss) :</string>
+
+    <!--Splash-->
+    <string name="use_location" translatable="false">Use your location</string>
+    <string name="loc_msg" translatable="false">Field Sales Management App collects location data after you open and login into the App,\u0020to identify nearby Parties location even when the app is running in the background and not in use.</string>
+
+    <!--My Jobs-->
+    <string name="view_details" translatable="false">View Details</string>
+    <string name="cust_name" translatable="false">ICICI-WB-SALTLAKE</string>
+    <string name="logistic_awaited" translatable="false">Logistic awaited</string>
+    <string name="services_for" translatable="false">Services For:</string>
+    <string name="total_service" translatable="false">Total no. of Service(s):</string>
+    <string name="service_frequency" translatable="false">Service Frequency:</string>
+    <string name="total_service_committed" translatable="false">Total no. Service(s) committed:</string>
+    <string name="last_service_committed" translatable="false">Last Service committed on:</string>
+    <string name="total_service_pending" translatable="false">Total no. Service(s) Pending:</string>
+    <string name="update_status" translatable="false">Update Status</string>
+    <string name="wip" translatable="false">Work In Progress</string>
+    <string name="woh" translatable="false">Work On Hold</string>
+    <string name="work_completed" translatable="false">Work Completed</string>
+    <string name="work_cancelled" translatable="false">Work Cancelled</string>
+    <string name="update_review" translatable="false">Update Review</string>
+    <string name="enter_start_date_time" translatable="false">Enter Start Sate &amp; Time</string>
+    <string name="next_date_service" translatable="false">Next date of service:</string>
+    <string name="error_select_start_date_first" translatable="false">Please select start date first</string>
+    <string name="enter_reason_hold" translatable="false">Enter Reason of Hold</string>
+    <string name="enter_reason_unhold" translatable="false">Enter Reason of Unhold</string>
+    <string name="enter_reason" translatable="false">Enter Reason</string>
+    <string name="error_enter_reason_hold" translatable="false">Please enter Reason of Hold</string>
+    <string name="error_enter_reason_unhold" translatable="false">Please enter Reason of Unhold</string>
+    <string name="enter_hold_date_time" translatable="false">Enter Hold Date &amp; Time</string>
+    <string name="enter_finish_date_time" translatable="false">Enter Finish Date &amp; Time</string>
+    <string name="enter_date_time" translatable="false">Enter Date &amp; Time</string>
+    <string name="enter_reason_cancellation" translatable="false">Enter Reason for Cancellation</string>
+    <string name="error_enter_reason_cancellation" translatable="false">Please enter Reason of Cancellation</string>
+    <string name="enter_review" translatable="false">Please enter your review</string>
+    <string name="enter_review_100_chars" translatable="false">Enter review upto 100 chars.</string>
+    <string name="you_rated" translatable="false">You rated:</string>
+    <string name="last_status" translatable="false">Last Status:</string>
+    <string name="unhold_service" translatable="false">Unhold the Service</string>
+    <string name="error_select_proper_next_time" translatable="false">Please select next time after time</string>
+    <string name="error_select_attachemnt" translatable="false">Please select attachment</string>
+    <string name="enter_phn_no" translatable="false">Enter phone no.</string>
+    <string name="job_code" translatable="false">Job Code:</string>
+    <string name="schedule_date_time" translatable="false">Schedule date &amp; time:</string>
+    <string name="team" translatable="false">Team:</string>
+    <string name="start_date_time" translatable="false">Start Date &amp; Time:</string>
+    <string name="next_date_time" translatable="false">Next Date &amp; Time:</string>
+    <string name="hold_date_time" translatable="false">Hold Date &amp; Time:</string>
+    <string name="hold_reason" translatable="false">Reason for hold:</string>
+    <string name="completed_date_time" translatable="false">Completed Date &amp; Time:</string>
+    <string name="cancelled_date_time" translatable="false">Cancelled Date &amp; Time:</string>
+    <string name="review_details" translatable="false">Review Details:</string>
+    <string name="ratings" translatable="false">Ratings:</string>
+    <string name="by_us" translatable="false">By Us</string>
+    <string name="by_customer" translatable="false">By Customer</string>
+    <string name="canceled_by" translatable="false">Cancelled By</string>
+    <string name="current_lat_long" translatable="false">Current Latitude, Longitude</string>
+    <string name="current_address" translatable="false">Current Address</string>
+    <string name="error_enter_canceled_by" translatable="false">Please enter cancelled by</string>
+
+
+    <string name="tfe_od_app_name" translation_description="Object Detection kcteam app [CHAR_LIMIT=40]">Face Recognition</string>
+    <string name="tfe_od_camera_error" translation_description="Error regarding camera support[CHAR_LIMIT=40]">This device doesn\'t support Camera2 API.</string>
+    <string name="label_install_anydesk" translatable="false">Install Anydesk</string>
+    <string name="label_open_anydesk" translatable="false">Open Anydesk</string>
+    <string name="label_own_files" translatable="false">Own Files</string>
+    <string name="label_from_organization" translatable="false">From Organization</string>
+    <string name="label_click_view_file" translatable="false">Click me For View files</string>
+    <string name="Name" translatable="false">File Name</string>
+    <string name="already_download" translatable="false">Already Downloaded</string>
+    <string name="day_start" translatable="false">Day Start</string>
+    <string name="day_end" translatable="false">Day End</string>
+    <string name="Stop" translatable="false">STOP</string>
+    <string name="Start" translatable="false">START</string>
+    <string name="dd_visit" translatable="false">Point Visit</string>
+    <string name="new_order_scr_list" translatable="false">Order  Details</string>
+
+
+    <string name="error_message_remarks_manadatory" translatable="false">Please put the remarks</string>
+    <string name="error_message_feedback_manadatory" translatable="false">Please put the feedback</string>
+
+
+    <string-array name="order_sort_gender">
+        <item>Select Gender</item>
+        <item>MALE</item>
+        <item>FEMALE</item>
+    </string-array>
+    <string name="title_activity_custom_dialog">CustomDialog</string>
+    <!--
+    This string is used for square devices and overridden by hello_world in
+    values-round/strings.xml for round devices.
+    -->
+    <string name="hello_world">Hello Square World!</string>
+
+
+    <string name="battery_setting_message" translatable="false">Device Battery Percentage is low.\n
+    GPS Tracking or detection may not be working Properly.</string>
+    <string name="power_setting_message" translatable="false">"Device Power Saver is ON.\n
+    GPS Tracking or detection may not be working Properly."</string>
+
+    <string name="power_off_msg" translatable="false">Device Power Saver is ON.
+    GPS Tracking or detection may not be working Properly.</string>
+
+
+    <string name="lead_name" translatable="false">Lead Name</string>
+    <string name="agency_name" translatable="false">Agency Name</string>
+    <string name="lead_contact_name" translatable="false">Lead Contact Number</string>
+    <string name="prospect_name" translatable="false">Prospect</string>
+    <string name="questionnaire" translatable="false">Questionnaire</string>
+
+
+    <string name="return_details" translatable="false">Return Details</string>
+
+    <string name="returns" translatable="false">Return</string>
+
+    <string name="pro_name" translatable="false">Project Name</string>
+    <string name="landline_contact_number" translatable="false">Landline Number</string>
+
+    <string name="name_filed_managenent_system" translatable="false">FIELD SALES MANAGEMENT</string>
+
+    <string name="alternate_number" translatable="false">Alternate Number</string>
+    <string name="whatsapp" translatable="false">Whatsapp Number</string>
+
+    <string name="quotation_no" translatable="false">Quot No.</string>
+    <string name="date_quot" translatable="false">Date</string>
+    <string name="no_quot" translatable="false">No Quotation Available</string>
+    <string name="quotation_detail" translatable="false">Quotation Details</string>
+    <string name="quotation_detail2" translatable="false">Quot. Details</string>
+    <string name="quotation_add" translatable="false">Add Quotation</string>
+    <string name="custo_name" translatable="false">Customer Name</string>
+    <string name="project_name" translatable="false">Project Name</string>
+    <string name="colors" translatable="false">Color</string>
+    <string name="source" translatable="false">Source :\u0020</string>
+    <string name="times" translatable="false">Time    :\u0020</string>
+    <string name="emails" translatable="false">Email    :\u0020</string>
+    <string name="dates" translatable="false">Date :\u0020</string>
+    <string name="contact_persons" translatable="false">Contact Person :\u0020</string>
+    <string name="product_req" translatable="false">Product Req        :\u0020</string>
+    <string name="qtys" translatable="false">Qty :\u0020</string>
+    <string name="order_values" translatable="false">Order Values      :\u0020</string>
+    <string name="uom" translatable="false">UOM                        :\u0020</string>
+    <string name="enquiry_dtls" translatable="false">Enquiry details   :\u0020</string>
+    <string name="statuss" translatable="false">Status                 :\u0020</string>
+    <string name="camera_back" translatable="false">Back Camera :\u0020 </string>
+    <string name="camera_front" translatable="false">Front Camera :\u0020 </string>
+    <string name="historys" translatable="false">Historys</string>
+    <string name="firebase_key" translatable="false">key=AAAAyDUFMDc:APA91bGzUPitq4UxgQh9M62HHzbnzB0mowtAzlYQZcmnLjCDXmYlu2Rb4YW-U0m0ZZ9xy1LDd3xto7UAfgZWF1OJ3eJQlck619VUbm91CqweAa8494hRaIu9xJqI0vOL4CzSLREbcNCM</string>
+
+    <string name="GenderTextNewOrd" translatable="false">Gender</string>
+    <string name="ProductTextNewOrd" translatable="false">Product Type</string>
+
+</resources>

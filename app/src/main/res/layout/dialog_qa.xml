@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/transparent"
+    app:cardBackgroundColor="@color/transparent"
+    app:cardCornerRadius="@dimen/_10sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/rounded_corner_white_bg"
+        android:orientation="vertical">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/dialog_qa_headerTV"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:gravity="center"
+            android:padding="@dimen/_1sdp"
+            android:text="@string/app_name"
+            android:textColor="@color/colorPrimary"
+            android:textSize="@dimen/_12sdp" />
+
+        <View
+            android:id="@+id/dialog_adhaar_reg_view"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginTop="@dimen/_1sdp"
+            android:background="@color/light_gray"
+            android:layout_marginLeft="@dimen/_7sdp"
+            android:layout_marginRight="@dimen/_7sdp"/>
+
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rv_qa_list"
+                android:layout_width="@dimen/_250sdp"
+                android:layout_height="@dimen/_355sdp" />
+
+
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/dialog_qa_ok"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_gravity="center"
+            android:background="@drawable/shape_custom_border_blue_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="Confirm"
+            android:textColor="@drawable/selector_text_clor_blue_white"
+            android:textSize="@dimen/_13sdp" />
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

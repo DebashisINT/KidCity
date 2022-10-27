@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="5dp"
+    app:cardBackgroundColor="@android:color/white"
+    app:cardCornerRadius="@dimen/_4sdp"
+    app:cardElevation="@dimen/_2sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="@dimen/_3sdp"
+        android:background="@drawable/shape_cursor_one">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp">
+
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/photo_reg_user_name_tv"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_11sdp"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_11sdp" />
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/photo_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center|start"
+                android:layout_weight="1"
+                android:layout_gravity="end"
+                android:text="( Photo Profile )"
+                android:textColor="@color/color_custom_red"
+                android:textSize="@dimen/_8sdp" />
+
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp">
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/photo_reg_dd_name_tv"
+                android:layout_width="200dp"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginLeft="@dimen/_11sdp"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:textColor="@color/login_txt_color"
+                android:textSize="@dimen/_11sdp" />
+
+
+            <LinearLayout
+                android:id="@+id/ll_row_user_list_face_regis_tagline"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginEnd="1dp"
+                android:layout_gravity="end|bottom">
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:visibility="gone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:background="@drawable/shape_cursor_three"
+                    android:text="Delete face image."
+                    android:paddingTop="@dimen/_3sdp"
+                    android:paddingBottom="@dimen/_3sdp"
+                    android:textColor="#FFFFFF"
+                    android:paddingLeft="@dimen/_5sdp"
+                    android:paddingRight="@dimen/_5sdp"
+                    />
+
+                <ImageView
+                    android:id="@+id/imageView7"
+                    android:layout_width="15dp"
+                    android:layout_height="15dp"
+                    android:layout_weight="1"
+                    android:visibility="gone"
+                    android:src="@drawable/arrow_img_aadhaar"
+                    app:tint="@color/color_blue_light_dark"
+                    android:layout_marginLeft="@dimen/_50sdp"/>
+
+
+
+            </LinearLayout>
+
+
+        </FrameLayout>
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_weight="1"
+            android:orientation="horizontal"
+            android:layout_marginLeft="@dimen/_10sdp">
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/photo_reg_user_ph_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:drawableStart="@drawable/ic_registered_shop_call_select"
+                android:gravity="center|start"
+                android:textColor="@color/login_txt_color"
+                android:textSize="@dimen/_11sdp" />
+
+            <ImageView
+                android:id="@+id/iv_aadhaar_ion"
+                android:layout_width="@dimen/_45sdp"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:contentDescription="@null"
+                android:gravity="center"
+                android:src="@drawable/ic_aadhaar_icon"
+                android:textSize="@dimen/_11sdp" />
+
+            <ImageView
+                android:id="@+id/sync_image_view"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:contentDescription="@null"
+                android:gravity="center"
+                android:src="@drawable/ic_dashboard_attendance_icon_deselect"
+                android:textSize="@dimen/_11sdp"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_4sdp"/>
+
+            <ImageView
+                android:id="@+id/sync_whatsapp_iv"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:contentDescription="@null"
+                android:gravity="center"
+                android:src="@drawable/ic_whatsapp"
+                android:textSize="@dimen/_11sdp" />
+
+            <ImageView
+                android:id="@+id/sync_delete_iv"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:contentDescription="@null"
+                android:gravity="center"
+                android:src="@drawable/ic_delete_black_24dp"
+                android:textSize="@dimen/_11sdp"
+                android:visibility="gone"/>
+
+
+            <ImageView
+                android:id="@+id/sync_delete_iv_red"
+                android:layout_width="@dimen/_20sdp"
+                android:layout_height="@dimen/_17sdp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:contentDescription="@null"
+                android:gravity="center"
+                android:src="@drawable/trash_red"
+                android:textSize="@dimen/_11sdp" />
+
+
+            <ImageView
+                android:id="@+id/sync_status_iv"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:contentDescription="@null"
+                android:gravity="center"
+                android:src="@drawable/ic_registered_shop_sync"
+                android:textSize="@dimen/_11sdp" />
+
+            <ImageView
+                android:id="@+id/sync_status_failed_iv"
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_20sdp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="@dimen/_4sdp"
+                android:layout_marginRight="@dimen/_4sdp"
+                android:contentDescription="@null"
+                android:gravity="center"
+                android:src="@drawable/ic_unsunc_face1"
+                android:textSize="@dimen/_11sdp" />
+
+        </LinearLayout>
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginLeft="@dimen/_12sdp"
+            android:layout_marginTop="@dimen/_3sdp"
+            android:layout_marginRight="@dimen/_12sdp"
+            android:layout_marginBottom="@dimen/_3sdp"
+            android:background="@color/light_gray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/_5sdp">
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/click_for_update_type_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:gravity="center|start"
+                android:paddingStart="@dimen/_10sdp"
+                android:text="Update Type"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/_11sdp"
+                android:visibility="gone"/>
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/click_for_photo_reg_tv"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_gravity="end"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:paddingEnd="@dimen/_10sdp"
+                android:text="Click for Registration"
+                android:textColor="@color/blue"
+                android:textSize="@dimen/_11sdp" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

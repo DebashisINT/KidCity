@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_5sdp"
+    app:cardBackgroundColor="#F1F0F0"
+    app:cardCornerRadius="@dimen/_5sdp"
+    app:cardElevation="@dimen/_5sdp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:minHeight="@dimen/_35sdp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/breakage_date_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.3"
+            android:gravity="center"
+            android:hint="05-07-22"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/_10sdp" />
+
+
+        <TextView
+            android:id="@+id/breakage_no_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.3"
+            android:gravity="center"
+            android:hint="Breakage Number"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/_10sdp" />
+
+        <Space
+            android:layout_width="@dimen/_3sdp"
+            android:layout_height="match_parent" />
+
+
+        <TextView
+            android:id="@+id/breakage_product_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.3"
+            android:gravity="center"
+            android:hint="Product"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/_10sdp"/>
+
+        <Space
+            android:layout_width="@dimen/_3sdp"
+            android:layout_height="match_parent" />
+
+        <TextView
+            android:id="@+id/breakage_type_tv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.3"
+            android:gravity="center"
+            android:hint="Breakage Type"
+            android:visibility="gone"
+            android:textColor="@color/black"
+            android:textColorHint="@color/black"
+            android:textSize="@dimen/_10sdp"/>
+
+        <Space
+            android:layout_width="@dimen/_3sdp"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/tv_breakage_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:src="@drawable/ic_view_icon"
+            android:textColor="@color/black"
+            app:tint="@color/black" />
+
+        <Space
+            android:layout_width="@dimen/_3sdp"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/breakage_del_iv"
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            app:tint="@color/color_custom_red"
+            android:src="@drawable/ic_delete"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_12sdp" />
+
+
+        <Space
+            android:layout_width="@dimen/_3sdp"
+            android:layout_height="match_parent" />
+
+        <ImageView
+            android:id="@+id/breakage_share_iv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:gravity="center"
+            android:src="@drawable/ic_share"
+            android:textColor="@color/black"
+            app:tint="@color/color_custom_green" />
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>

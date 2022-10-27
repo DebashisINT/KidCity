@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_10sdp">
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_shop_name"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1.3"
+        android:text="Balaji Light House"
+        android:textColor="@color/login_txt_color"
+        android:textSize="@dimen/_10sdp"
+        android:gravity="center_vertical"/>
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_date_visit_report_dtls"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="2022-05-30"
+        android:textColor="@color/login_txt_color"
+        android:textSize="@dimen/_10sdp"
+        android:gravity="center"/>
+
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_visit_time"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="10:20 AM"
+        android:textColor="@color/login_txt_color"
+        android:textSize="@dimen/_10sdp"
+        android:gravity="center"/>
+
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_duration"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="00:15"
+        android:textColor="@color/login_txt_color"
+        android:textSize="@dimen/_10sdp"
+        android:gravity="center"/>
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/tv_distance"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:text="1.00"
+        android:textColor="@color/login_txt_color"
+        android:textSize="@dimen/_10sdp"
+        android:gravity="center"/>
+</LinearLayout>

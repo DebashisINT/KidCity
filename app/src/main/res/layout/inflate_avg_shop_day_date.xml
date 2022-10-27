@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.kcteam.widgets.AppCustomTextView
+        android:id="@+id/day_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:text="Sun"
+        android:textColor="@color/login_txt_color"
+        android:textSize="@dimen/_13sdp"
+        />
+    <com.kcteam.app.widgets.AppCustomTextViewRegular
+        android:id="@+id/date_TV"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/day_TV"
+        android:layout_centerHorizontal="true"
+        android:text="16"
+        android:textColor="@color/login_txt_color"
+        android:textSize="@dimen/_18sdp"
+        />
+
+
+
+</RelativeLayout>

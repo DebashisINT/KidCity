@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/route_CV"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    card_view:cardCornerRadius="@dimen/_10sdp"
+    card_view:cardElevation="@dimen/_3sdp"
+    card_view:cardUseCompatPadding="true"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_3sdp">
+
+        <!--1st row-->
+
+        <RelativeLayout
+            android:id="@+id/f_row_RL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/login_report"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawablePadding="@dimen/_8sdp"
+                android:drawableStart="@drawable/ic_dashboard_my_order_icon_select"
+                android:gravity="center"
+                android:text="@string/kcteam_login"
+                android:visibility="gone"
+                android:textColor="@color/login_txt_color"
+                android:textSize="@dimen/_12sdp" />
+
+            <View
+                android:id="@+id/view"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_below="@id/login_report"
+                android:background="@color/colorPrimary"
+                android:visibility="gone"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+                />
+
+        </RelativeLayout>
+
+        <!--4th row-->
+        <RelativeLayout
+            android:id="@+id/u_row_RL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp">
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/time_log"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:drawablePadding="@dimen/_8sdp"
+                android:gravity="center"
+                android:text="@string/kcteam_time"
+                android:textColor="@color/login_txt_color"
+                android:textSize="@dimen/_12sdp" />
+
+            <ImageView
+                android:layout_width="@dimen/_30sdp"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_current_location_image" />
+
+
+        </RelativeLayout>
+        <View
+            android:id="@+id/view_2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:layout_below="@id/u_row_RL"
+            android:background="@color/colorPrimary"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginRight="@dimen/_30sdp"
+
+            />
+
+        <!--2nd row-->
+        <RelativeLayout
+            android:id="@+id/s_row_RL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/view_2"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:padding="@dimen/_7sdp"
+            >
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/distance_log"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawablePadding="@dimen/_8sdp"
+                android:drawableStart="@drawable/ic_dashboard_add_shop_icon_select"
+                android:text="@string/kcteam_location"
+                android:textColor="@color/login_txt_color"
+                android:textSize="@dimen/_12sdp" />
+
+        </RelativeLayout>
+
+        <!--3rd row-->
+        <RelativeLayout
+            android:id="@+id/t_row_RL"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/s_row_RL"
+            android:layout_centerVertical="true"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:visibility="gone"
+            >
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/shops_log_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:gravity="center"
+                android:text="@string/kcteam_shops"
+                android:textColor="@color/login_txt_color"
+                android:textSize="@dimen/_12sdp" />
+            <View
+                android:id="@+id/view_22"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_1sdp"
+                android:layout_below="@id/shops_log_1"
+                android:background="@color/colorPrimary"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginLeft="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_30sdp"
+
+                />
+
+
+
+        </RelativeLayout>
+
+
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

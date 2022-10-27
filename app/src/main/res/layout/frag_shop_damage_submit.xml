@@ -1,0 +1,248 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:wheel="http://schemas.android.com/tools"
+    android:background="@color/color_silver"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/_5sdp"
+            android:layout_weight="1">
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_5sdp"
+                android:layout_gravity="center"
+                android:layout_marginTop="@dimen/_5sdp">
+
+                <FrameLayout
+                    android:layout_width="@dimen/_160sdp"
+                    android:layout_height="@dimen/_160sdp"
+                    android:layout_gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv_frag_damage_reg_pic"
+                        android:layout_width="@dimen/_160sdp"
+                        android:layout_height="@dimen/_160sdp"
+                        android:layout_gravity="center" />
+
+                    <ImageView
+                        android:id="@+id/iv_frag_damage_reg_camera_icon"
+                        android:layout_width="@dimen/_55sdp"
+                        android:layout_height="@dimen/_55sdp"
+                        android:layout_gravity="center"
+                        android:src="@drawable/ic_camera_color"/>
+
+                    <TextView
+                        android:id="@+id/tv_frag_damage_product_takephoto"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp"
+                        android:hint="Take a photo"
+                        android:textSize="@dimen/_11sdp"
+                        android:gravity="center"
+                        android:textColor="@color/default_text_color"
+                        android:layout_gravity="bottom|center"
+                        android:paddingStart="@dimen/_5sdp" />
+
+                </FrameLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                app:cardBackgroundColor="@color/white"
+                app:cardCornerRadius="@dimen/_10sdp"
+                app:cardElevation="@dimen/_5sdp"
+                android:layout_marginTop="@dimen/_7sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingTop="@dimen/_3sdp"
+                    android:paddingBottom="@dimen/_3sdp">
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_3sdp">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/shape_custom_border_light_curve"
+                            android:orientation="horizontal">
+
+                            <ImageView
+                                android:id="@+id/product_IV"
+                                android:layout_width="@dimen/_30sdp"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center|start"
+                                android:src="@drawable/ic_product_new_order" />
+
+
+                            <TextView
+                                android:id="@+id/ProductTv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:padding="@dimen/_5sdp"
+                                android:text="Product"
+                                android:textColor="@color/default_text_color"
+                                android:textSize="@dimen/_14sdp" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="end"
+                            android:text="@string/mandatory_mark"
+                            android:textColor="@color/red"
+                            android:textSize="@dimen/_12sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_10sdp"/>
+
+                    </FrameLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_damage_scr_product"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:background="@drawable/shape_custom_border_back"
+                        android:orientation="horizontal">
+
+                        <com.kcteam.widgets.AppCustomTextView
+                            android:id="@+id/ProductSpinner"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_30sdp"
+                            android:layout_weight="1"
+                            android:padding="@dimen/_5sdp"
+                            android:text="Select Product"
+                            android:textColor="@color/login_txt_color"
+                            android:textColorHint="@color/login_txt_color"
+                            android:textSize="@dimen/_12sdp" />
+
+                        <ImageView
+                            android:id="@+id/iv_drop_down_Product"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:padding="@dimen/_2sdp"
+                            android:src="@drawable/ic_gray_down_arrow_icon"
+                            android:tint="@color/black"
+                            android:visibility="gone" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/_7sdp">
+
+                <EditText
+                    android:id="@+id/et_frag_shop_damage_desc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minHeight="@dimen/_45sdp"
+                    android:background="@drawable/curve_border_bg"
+                    android:hint="Description of Breakage"
+                    android:textSize="@dimen/_11sdp"
+                    android:paddingStart="@dimen/_5sdp"
+                    android:maxLength="500"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:text="@string/mandatory_mark"
+                    android:textColor="@color/red"
+                    android:textSize="@dimen/_12sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_10sdp" />
+
+            </FrameLayout>
+
+            <EditText
+                android:id="@+id/et_frag_shop_damage_feedback"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/_45sdp"
+                android:background="@drawable/curve_border_bg"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:hint="Customer feedback"
+                android:textSize="@dimen/_11sdp"
+                android:paddingStart="@dimen/_5sdp"
+                android:maxLength="500"/>
+
+            <EditText
+                android:id="@+id/et_frag_shop_damage_remarks"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="@dimen/_45sdp"
+                android:background="@drawable/curve_border_bg"
+                android:layout_marginTop="@dimen/_7sdp"
+                android:hint="Remarks"
+                android:textSize="@dimen/_11sdp"
+                android:paddingStart="@dimen/_5sdp"
+                android:maxLength="500"/>
+
+            <com.kcteam.widgets.AppCustomTextView
+                android:id="@+id/iv_frag_shop_damage_submit"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_60sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_60sdp"
+                android:background="@drawable/shape_cursor_button"
+                android:textColor="@color/login_txt_color"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:padding="@dimen/_8sdp"
+                android:text="@string/save"
+                android:textSize="@dimen/_13sdp"
+                android:visibility="visible" />
+
+        </LinearLayout>
+
+        </ScrollView>
+
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:id="@+id/progress_wheel"
+            android:layout_width="75dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            wheel:matProg_barColor="@color/default_text_color"
+            wheel:matProg_progressIndeterminate="true" />
+
+    </FrameLayout>
+
+</LinearLayout>

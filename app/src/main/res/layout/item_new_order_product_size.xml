@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardBackgroundColor="#F8F7F7"
+    android:layout_margin="@dimen/_3sdp"
+    app:cardElevation="@dimen/_5sdp"
+    android:outlineSpotShadowColor="#4FFFD700">
+
+    <LinearLayout
+        android:id="@+id/ll_item_new_ord_pr_size_root"
+        android:layout_width="@dimen/_55sdp"
+        android:layout_height="@dimen/_75sdp"
+        android:orientation="vertical"
+        android:layout_gravity="center"
+        android:padding="@dimen/_5sdp">
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/item_new_order_product_sizeTv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1.1"
+            android:gravity="center_horizontal"
+            android:textSize="@dimen/_10sdp"
+            android:textStyle="bold"
+            android:textColor="@color/black"/>
+
+        <EditText
+            android:id="@+id/et_size_count"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:inputType="number"
+            android:gravity="center"
+            android:hint="Qty"
+            android:maxLength="5"
+            android:textColor="@color/login_txt_color"
+            android:textSize="@dimen/_10sdp"
+            android:background="@drawable/blue_line_custom"/>
+
+    </LinearLayout>
+
+
+</androidx.cardview.widget.CardView>
