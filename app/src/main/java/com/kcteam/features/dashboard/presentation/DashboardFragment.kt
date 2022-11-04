@@ -91,6 +91,7 @@ import com.kcteam.features.login.api.user_config.UserConfigRepoProvider
 import com.kcteam.features.login.model.alarmconfigmodel.AlarmConfigResponseModel
 import com.kcteam.features.login.model.globalconfig.ConfigFetchResponseModel
 import com.kcteam.features.login.model.mettingListModel.MeetingListResponseModel
+import com.kcteam.features.login.model.productlistmodel.ProductListOfflineResponseModelNew
 import com.kcteam.features.login.model.productlistmodel.ProductListResponseModel
 import com.kcteam.features.login.model.userconfig.UserConfigResponseModel
 import com.kcteam.features.login.presentation.LoginActivity
@@ -2519,7 +2520,54 @@ class DashboardFragment : BaseFragment(), View.OnClickListener, HBRecorderListen
 
 
         //callUserConfigApi()   // calling instead of checkToCallAssignedDDListApi()
-        getBeatListApi()
+        //getBeatListApi()
+        getProductRateListApi()
+    }
+
+    private fun getProductRateListApi() {
+        if(Pref.isOrderShow){
+            XLog.d("API_Optimization getProductRateListApi Login : enable " +  "Time : " + AppUtils.getCurrentDateTime() + ", USER :" + Pref.user_name )
+            val repository = ProductListRepoProvider.productListProvider()
+            progress_wheel.spin()
+            BaseActivity.compositeDisposable.add(
+                repository.getProductRateOfflineListNew()
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribeOn(Schedulers.io())
+                    .subscribe({ result ->
+                        //val response = result as ProductListOfflineResponseModel
+                        val response = result as ProductListOfflineResponseModelNew
+                        BaseActivity.isApiInitiated = false
+                        if (response.status == NetworkConstant.SUCCESS) {
+                            val productRateList = response.product_rate_list
+                            if (productRateList != null && productRateList.size > 0) {
+                                doAsync {
+                                    AppDatabase.getDBInstance()!!.productRateDao().deleteAll()
+                                    AppDatabase.getDBInstance()?.productRateDao()?.insertAll(productRateList)
+                                    uiThread {
+                                        progress_wheel.stopSpinning()
+                                        getBeatListApi()
+                                    }
+                                }
+                            } else {
+                                progress_wheel.stopSpinning()
+                                getBeatListApi()
+                            }
+                        } else {
+                            progress_wheel.stopSpinning()
+                            getBeatListApi()
+                        }
+
+                    }, { error ->
+                        error.printStackTrace()
+                        BaseActivity.isApiInitiated = false
+                        progress_wheel.stopSpinning()
+                        getBeatListApi()
+                    })
+            )
+        }else{
+            XLog.d("API_Optimization getProductRateListApi DashFrag : disable " +  "Time : " + AppUtils.getCurrentDateTime() + ", USER :" + Pref.user_name )
+            getBeatListApi()
+        }
     }
 
     private fun getBeatListApi() {
@@ -4116,6 +4164,9 @@ class DashboardFragment : BaseFragment(), View.OnClickListener, HBRecorderListen
 
                                 if (configResponse.IsDistributorSelectionRequiredinAttendance != null)
                                     Pref.IsDistributorSelectionRequiredinAttendance = configResponse.IsDistributorSelectionRequiredinAttendance!!
+
+                                if (configResponse.IsAllowNearbyshopWithBeat != null)
+                                    Pref.IsAllowNearbyshopWithBeat = configResponse.IsAllowNearbyshopWithBeat!!
 
                             }
                             BaseActivity.isApiInitiated = false

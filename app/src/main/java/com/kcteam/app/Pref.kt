@@ -469,5 +469,7 @@ object Pref : PreferenceHolder() {
     var prevGpsNetSyncTimeStamp: Long by bindToPreferenceField(0, "prevGpsNetSyncTimeStamp")
     var prevGpsNetSyncTimeStampService: Long by bindToPreferenceField(0, "prevGpsNetSyncTimeStampService")
 
+    var IsAllowNearbyshopWithBeat: Boolean by bindToPreferenceField(false, "IsAllowNearbyshopWithBeat")
+
 
 }

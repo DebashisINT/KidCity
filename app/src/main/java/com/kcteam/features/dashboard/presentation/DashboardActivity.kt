@@ -814,10 +814,10 @@ class DashboardActivity : BaseActivity(), View.OnClickListener, BaseNavigation, 
         if (isTermsAndConditionsPopShow) {
             callTermsAndConditionsdApi()
         } else {
-            if (!Pref.isSeenTermsConditions)
+            if (!Pref.isSeenTermsConditions){
                 showTermsConditionsPopup()
+            }
         }
-
 
         //AlarmReceiver.setAlarm(this, 12, 11, 12345)
 
@@ -1127,7 +1127,6 @@ class DashboardActivity : BaseActivity(), View.OnClickListener, BaseNavigation, 
     }
 
     private fun showTermsConditionsPopup() {
-
         if (TextUtils.isEmpty(Pref.termsConditionsText)) {
             checkToShowHomeLocationAlert()
             return
@@ -1147,6 +1146,8 @@ class DashboardActivity : BaseActivity(), View.OnClickListener, BaseNavigation, 
             }
         })//.show(supportFragmentManager, "CommonDialogSingleBtn")
         termsConditionsDialog?.show(supportFragmentManager, "CommonDialogSingleBtn")
+
+
     }
 
     fun checkLocationMode() {
@@ -5448,6 +5449,7 @@ class DashboardActivity : BaseActivity(), View.OnClickListener, BaseNavigation, 
          headerTV.text = title
     }
 
+    @RequiresApi(Build.VERSION_CODES.HONEYCOMB_MR1)
     private fun setTopBarVisibility(mTopBarConfig: TopBarConfig) {
         tv_noti_count.visibility = View.GONE
         when (mTopBarConfig) {
