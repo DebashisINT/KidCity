@@ -189,6 +189,8 @@ class DashboardFragment : BaseFragment(), View.OnClickListener, HBRecorderListen
     lateinit var cancel_timer: TextView
     lateinit var pause_record: TextView
 
+    lateinit var tv_beatNamenew: TextView
+
     private lateinit var n_shops_TV: AppCustomTextView
     private lateinit var no_of_shop_TV: AppCustomTextView
 
@@ -614,7 +616,7 @@ class DashboardFragment : BaseFragment(), View.OnClickListener, HBRecorderListen
 
     @SuppressLint("UseRequireInsteadOfGet", "RestrictedApi")
     private fun initView(view: View?) {
-
+        tv_beatNamenew =  view!!.findViewById(R.id.tv_beatNamenew)
         cancel_timer = view!!.findViewById(R.id.cancel_timer)
         iv_screen_status = view!!.findViewById(R.id.iv_screen_status)
         tv_timer = view!!.findViewById(R.id.tv_timer)
@@ -1779,6 +1781,10 @@ class DashboardFragment : BaseFragment(), View.OnClickListener, HBRecorderListen
             //Pref.IsBeatRouteAvailableinAttendance=true
 
             if(!Pref.SelectedBeatIDFromAttend.equals("-1") && Pref.IsBeatRouteAvailableinAttendance && Pref.isAddAttendence){
+
+                tv_beatNamenew.visibility = View.VISIBLE
+                tv_beatNamenew.text = "Beat Name: " +AppDatabase.getDBInstance()?.beatDao()?.getSingleItem(Pref.SelectedBeatIDFromAttend)!!.name
+                return
 
                 scope.launch {
                     pjpList = loadpjpWithThread(pjpList)
