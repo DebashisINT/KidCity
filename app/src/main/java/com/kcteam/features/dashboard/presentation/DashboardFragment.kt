@@ -190,6 +190,7 @@ class DashboardFragment : BaseFragment(), View.OnClickListener, HBRecorderListen
     lateinit var pause_record: TextView
 
     lateinit var tv_beatNamenew: TextView
+    lateinit var ll_beat_shop_wise: LinearLayout
 
     private lateinit var n_shops_TV: AppCustomTextView
     private lateinit var no_of_shop_TV: AppCustomTextView
@@ -616,6 +617,7 @@ class DashboardFragment : BaseFragment(), View.OnClickListener, HBRecorderListen
 
     @SuppressLint("UseRequireInsteadOfGet", "RestrictedApi")
     private fun initView(view: View?) {
+        ll_beat_shop_wise = view!!.findViewById(R.id.ll_beat_shop_wise)
         tv_beatNamenew =  view!!.findViewById(R.id.tv_beatNamenew)
         cancel_timer = view!!.findViewById(R.id.cancel_timer)
         iv_screen_status = view!!.findViewById(R.id.iv_screen_status)
@@ -834,6 +836,7 @@ class DashboardFragment : BaseFragment(), View.OnClickListener, HBRecorderListen
         tv_pick_date_range.setOnClickListener(this)
         n_shops_TV.setOnClickListener(this)
         n_time_TV.setOnClickListener(this)
+        ll_beat_shop_wise.setOnClickListener(this)
 
         fab_bot.setCustomClickListener {
             (mContext as DashboardActivity).showLanguageAlert(false)
@@ -1393,13 +1396,31 @@ class DashboardFragment : BaseFragment(), View.OnClickListener, HBRecorderListen
                 if (!Pref.isShowShopBeatWise) {
                     (mContext as DashboardActivity).isShopFromChatBot = false
                     if (!Pref.isServiceFeatureEnable)
+                            if(Pref.SelectedBeatIDFromAttend.equals("-1")){
                         (mContext as DashboardActivity).loadFragment(FragType.NearByShopsListFragment, false, "")
+                            }else{
+                            (mContext as DashboardActivity).loadFragment(FragType.NearByShopsListFragment, true, Pref.SelectedBeatIDFromAttend!!)
+                            }
                     else
                         (mContext as DashboardActivity).loadFragment(FragType.CustomerListFragment, false, "")
                 } else
                     (mContext as DashboardActivity).loadFragment(FragType.BeatListFragment, false, "")
                 //(mContext as DashboardActivity).loadFragment(FragType.NewNearByShopsListFragment, false, "")
 
+            }
+            R.id.ll_beat_shop_wise -> {
+                if (!Pref.isShowShopBeatWise) {
+                    (mContext as DashboardActivity).isShopFromChatBot = false
+                    if (!Pref.isServiceFeatureEnable)
+                        if(Pref.SelectedBeatIDFromAttend.equals("-1")){
+                            (mContext as DashboardActivity).loadFragment(FragType.NearByShopsListFragment, false, "")
+                        }else{
+                            (mContext as DashboardActivity).loadFragment(FragType.NearByShopsListFragment, true, Pref.SelectedBeatIDFromAttend!!)
+                        }
+                    else
+                        (mContext as DashboardActivity).loadFragment(FragType.CustomerListFragment, false, "")
+                } else
+                    (mContext as DashboardActivity).loadFragment(FragType.BeatListFragment, false, "")
             }
             R.id.attandance_ll -> {
                 (mContext as DashboardActivity).isChatBotAttendance = false
@@ -1442,6 +1463,7 @@ class DashboardFragment : BaseFragment(), View.OnClickListener, HBRecorderListen
             R.id.n_time_TV -> {
                 (mContext as DashboardActivity).loadFragment(FragType.AvgTimespentShopListFragment, true, "")
             }
+
 
 //            R.id.price_RL ->
                 R.id.ll_dash_total_order_newD -> {
@@ -1782,8 +1804,19 @@ class DashboardFragment : BaseFragment(), View.OnClickListener, HBRecorderListen
 
             if(!Pref.SelectedBeatIDFromAttend.equals("-1") && Pref.IsBeatRouteAvailableinAttendance && Pref.isAddAttendence){
 
-                tv_beatNamenew.visibility = View.VISIBLE
-                tv_beatNamenew.text = "Beat Name: " +AppDatabase.getDBInstance()?.beatDao()?.getSingleItem(Pref.SelectedBeatIDFromAttend)!!.name
+
+
+try{
+    ll_beat_shop_wise .visibility = View.VISIBLE
+//    tv_beatNamenew.visibility = View.VISIBLE
+     var beatName:String = "Beat Name: " +AppDatabase.getDBInstance()?.beatDao()?.getSingleItem(Pref.SelectedBeatIDFromAttend)!!.name
+   var beatShopSize = AppDatabase.getDBInstance()!!.addShopEntryDao().getShopBeatWise(Pref.SelectedBeatIDFromAttend).size
+    tv_beatNamenew.text = "Total Shop Count : " +beatShopSize+" "+"\n"+beatName
+}catch (ex:Exception){
+    ex.printStackTrace()
+}
+
+
                 return
 
                 scope.launch {
