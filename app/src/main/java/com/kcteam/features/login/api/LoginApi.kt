@@ -46,7 +46,7 @@ interface LoginApi {
     fun getNewSettings(@Field("user_name") email: String, @Field("password") password: String): Observable<NewSettingsResponseModel>
 
     @Multipart
-    @POST("kcteamAttendance/AddLoginImage")
+    @POST("DemoAttendance/AddLoginImage")
     fun loginWithImage(@Query("data") addAttendence: String, @Part logo_img_data: MultipartBody.Part?): Observable<BaseResponse>
 
 

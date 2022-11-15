@@ -3287,7 +3287,8 @@ class LoginActivity : BaseActivity(), View.OnClickListener, LocationListener {
                         fingerprintDialog?.dismiss()
 
                         if (Pref.isSelfieMandatoryForAttendance)
-                            showSelfieDialog()
+                            //showSelfieDialog()
+                        prapareLogin(this@LoginActivity)
                         else
                             prapareLogin(this@LoginActivity)
                     }
@@ -3776,12 +3777,14 @@ class LoginActivity : BaseActivity(), View.OnClickListener, LocationListener {
                                             fingerprintDialog?.show(supportFragmentManager, "")
                                         } else {
                                             if (Pref.isSelfieMandatoryForAttendance)
-                                                showSelfieDialog()
+                                                prapareLogin(this@LoginActivity)
+                                                //showSelfieDialog()
                                             else
                                                 prapareLogin(this@LoginActivity)
                                         }
                                     } else if (Pref.isSelfieMandatoryForAttendance)
-                                        showSelfieDialog()
+                                        //showSelfieDialog()
+                                        prapareLogin(this@LoginActivity)
                                     else
                                         prapareLogin(this@LoginActivity)
                                 } else

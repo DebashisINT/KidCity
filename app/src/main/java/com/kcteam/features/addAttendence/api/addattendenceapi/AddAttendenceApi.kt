@@ -24,27 +24,45 @@ interface AddAttendenceApi {
     fun sendLeaveApproval(@Body sendLeaveApprovalInputParams: SendLeaveApprovalInputParams): Observable<BaseResponse>
 
     @Multipart
-    @POST("kcteamAttendance/AddAttendanceImage")
-    fun attendenceWithImage(@Query("data") addAttendence: String, @Part logo_img_data: MultipartBody.Part?): Observable<BaseResponse>
+    @POST("DemoAttendance/AddAttendanceImage")
+    fun attendenceWithImage(
+        @Query("data") addAttendence: String,
+        @Part logo_img_data: MultipartBody.Part?
+    ): Observable<BaseResponse>
 
     @FormUrlEncoded
     @POST("Worktypes/UpdateWorkType")
-    fun updateWorkType(@Field("session_token") session_token: String, @Field("user_id") user_id: String, @Field("work_type") work_type: String,
-                       @Field("work_desc") work_desc: String, @Field("distributor_name") distributor_name: String,
-                       @Field("market_worked") market_worked: String): Observable<BaseResponse>
+    fun updateWorkType(
+        @Field("session_token") session_token: String,
+        @Field("user_id") user_id: String,
+        @Field("work_type") work_type: String,
+        @Field("work_desc") work_desc: String,
+        @Field("distributor_name") distributor_name: String,
+        @Field("market_worked") market_worked: String
+    ): Observable<BaseResponse>
 
     @FormUrlEncoded
     @POST("Leave/GetLeaveList")
-    fun leaveList(@Field("session_token") session_token: String, @Field("user_id") user_id: String, @Field("from_date") from_date: String,
-                       @Field("to_date") to_date: String): Observable<LeaveListResponseModel>
+    fun leaveList(
+        @Field("session_token") session_token: String,
+        @Field("user_id") user_id: String,
+        @Field("from_date") from_date: String,
+        @Field("to_date") to_date: String
+    ): Observable<LeaveListResponseModel>
 
     @FormUrlEncoded
     @POST("UserHierarchy/UserReportToInfo")
-    fun getReportToUserIDAPI(@Field("user_id") user_id: String,@Field("session_token") session_token: String): Observable<GetReportToResponse>
+    fun getReportToUserIDAPI(
+        @Field("user_id") user_id: String,
+        @Field("session_token") session_token: String
+    ): Observable<GetReportToResponse>
 
     @FormUrlEncoded
     @POST("Devicetoken/UserDeviceTokenInfo")
-    fun getReportToFCMInfoAPI(@Field("user_id") user_id: String,@Field("session_token") session_token: String): Observable<GetReportToFCMResponse>
+    fun getReportToFCMInfoAPI(
+        @Field("user_id") user_id: String,
+        @Field("session_token") session_token: String
+    ): Observable<GetReportToFCMResponse>
 
     /**
      * Companion object to create the GithubApiService
@@ -52,35 +70,36 @@ interface AddAttendenceApi {
     companion object Factory {
         fun create(): AddAttendenceApi {
             val retrofit = Retrofit.Builder()
-                    .client(NetworkConstant.setTimeOut())
-                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .baseUrl(NetworkConstant.BASE_URL)
-                    .build()
+                .client(NetworkConstant.setTimeOut())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create())
+                .baseUrl(NetworkConstant.BASE_URL)
+                .build()
 
             return retrofit.create(AddAttendenceApi::class.java)
         }
 
         fun approveLeave(): AddAttendenceApi {
             val retrofit = Retrofit.Builder()
-                    .client(NetworkConstant.setTimeOut())
-                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .baseUrl(NetworkConstant.BASE_URL)
-                    .build()
+                .client(NetworkConstant.setTimeOut())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create())
+                .baseUrl(NetworkConstant.BASE_URL)
+                .build()
 
             return retrofit.create(AddAttendenceApi::class.java)
         }
 
         fun sendAttendanceImg(): AddAttendenceApi {
             val retrofit = Retrofit.Builder()
-                    .client(NetworkConstant.setTimeOut())
-                    .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
-                    .addConverterFactory(GsonConverterFactory.create())
-                    .baseUrl(NetworkConstant.ADD_SHOP_BASE_URL)
-                    .build()
+                .client(NetworkConstant.setTimeOut())
+                .addCallAdapterFactory(RxJava2CallAdapterFactory.create())
+                .addConverterFactory(GsonConverterFactory.create())
+                .baseUrl(NetworkConstant.ADD_SHOP_BASE_URL)
+                .build()
 
             return retrofit.create(AddAttendenceApi::class.java)
         }
     }
+
 }
