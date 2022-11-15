@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:wheel="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_gravity="center_horizontal"
+            android:textColor="@color/color_custom_red"
+            android:textSize="@dimen/_11sdp"
+            android:gravity="center_horizontal"
+            android:text="File's size can not be greater than 20 MB.File support png,jpg,jpeg etc.."/>
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/_12sdp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_70sdp"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shape_cursor"
+                        android:gravity="center"
+                        android:text="Attachment 1"
+                        android:textColor="@color/black_50"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/iv_upload_image_view"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@null"
+                            android:rotation="90"
+                            android:src="@drawable/ic_attachment"
+                            app:tint="@color/gray" />
+
+
+                        <ImageView
+                            android:id="@+id/iv_hand1"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/hand_point"
+                            android:layout_marginTop="@dimen/_3sdp"/>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_text1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/black_50"
+                        android:textSize="@dimen/_12sdp" />
+
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_image_cross_icon_1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:contentDescription="@null"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_cancel_red" />
+
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_70sdp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shape_cursor"
+                        android:gravity="center"
+                        android:text="Attachment 2"
+                        android:textColor="@color/black_50"
+                        android:textSize="@dimen/_12sdp"
+                          />
+
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/iv_upload_image_view_image1"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@null"
+                            android:rotation="90"
+                            android:src="@drawable/ic_attachment"
+                            app:tint="@color/gray" />
+
+
+                        <ImageView
+                            android:id="@+id/iv_hand2"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/hand_point"
+                            android:layout_marginTop="@dimen/_3sdp"/>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/black_50"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_image_cross_icon_2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:contentDescription="@null"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_cancel_red" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/_70sdp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shape_cursor"
+                        android:gravity="center"
+                        android:text="Attachment 3"
+                        android:textColor="@color/black_50"
+                        android:textSize="@dimen/_12sdp"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/iv_upload_image_view_image2"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@null"
+                            android:rotation="90"
+                            android:src="@drawable/ic_attachment"
+                            app:tint="@color/gray" />
+
+
+                        <ImageView
+                            android:id="@+id/iv_hand3"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/hand_point"
+                            android:layout_marginTop="@dimen/_3sdp"/>
+
+                    </LinearLayout>
+
+
+                    <TextView
+                        android:id="@+id/tv_text3"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/black_50"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_image_cross_icon_3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:contentDescription="@null"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_cancel_red" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:id="@+id/rl_upload_image3"
+                    android:layout_height="@dimen/_70sdp"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/_10sdp">
+
+                    <TextView
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/shape_cursor"
+                        android:gravity="center"
+                        android:text="Attachment 4"
+                        android:textColor="@color/black_50"
+                        android:textSize="@dimen/_12sdp"
+                        />
+
+
+
+                    <LinearLayout
+                        android:layout_width="@dimen/_30sdp"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/iv_upload_image_view_image3"
+                            android:layout_width="@dimen/_30sdp"
+                            android:layout_height="@dimen/_30sdp"
+                            android:layout_gravity="center"
+                            android:contentDescription="@null"
+                            android:rotation="90"
+                            android:src="@drawable/ic_attachment"
+                            app:tint="@color/gray" />
+
+
+                        <ImageView
+                            android:id="@+id/iv_hand4"
+                            android:layout_width="@dimen/_25sdp"
+                            android:layout_height="@dimen/_25sdp"
+                            android:layout_gravity="center"
+                            android:src="@drawable/hand_point"
+                            android:layout_marginTop="@dimen/_3sdp"/>
+
+                    </LinearLayout>
+
+
+
+
+
+                    <TextView
+                        android:id="@+id/tv_text4"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text=""
+                        android:textColor="@color/black_50"
+                        android:textSize="@dimen/_12sdp" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/iv_image_cross_icon_4"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentTop="true"
+                        android:layout_alignParentRight="true"
+                        android:contentDescription="@null"
+                        android:visibility="gone"
+                        app:srcCompat="@drawable/ic_cancel_red" />
+
+
+
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <com.kcteam.widgets.AppCustomTextView
+            android:id="@+id/upload_TV"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginLeft="@dimen/_60sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_60sdp"
+            android:background="@drawable/shape_cursor_button"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:padding="@dimen/_8sdp"
+            android:text="Upload"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginBottom="@dimen/_12sdp"
+            android:visibility="visible" />
+
+        <com.pnikosis.materialishprogress.ProgressWheel
+            android:id="@+id/progress_wheel"
+            android:layout_width="75dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            wheel:matProg_barColor="@color/default_text_color"
+            wheel:matProg_progressIndeterminate="true" />
+
+
+    </FrameLayout>
+
+</LinearLayout>

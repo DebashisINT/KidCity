@@ -189,9 +189,6 @@ class DashboardFragment : BaseFragment(), View.OnClickListener, HBRecorderListen
     lateinit var cancel_timer: TextView
     lateinit var pause_record: TextView
 
-    lateinit var tv_beatNamenew: TextView
-    lateinit var ll_beat_shop_wise: LinearLayout
-
     private lateinit var n_shops_TV: AppCustomTextView
     private lateinit var no_of_shop_TV: AppCustomTextView
 
@@ -236,6 +233,8 @@ class DashboardFragment : BaseFragment(), View.OnClickListener, HBRecorderListen
     private lateinit var ll_dash_point_visit_newD   : LinearLayout
     private lateinit var ll_dash_day_end_newD   : LinearLayout
 
+    lateinit var tv_beatNamenew: TextView
+    lateinit var ll_beat_shop_wise: LinearLayout
 
 
 
@@ -259,7 +258,6 @@ class DashboardFragment : BaseFragment(), View.OnClickListener, HBRecorderListen
         val view = inflater.inflate(R.layout.fragment_dashboard_new, container, false)
         //saheli added 27-07-21
         AppUtils.changeLanguage(mContext, "en")
-
 
         println("dash_test_check initView begin "+AppUtils.getCurrentDateTime()  );
         initView(view)
@@ -1396,11 +1394,7 @@ class DashboardFragment : BaseFragment(), View.OnClickListener, HBRecorderListen
                 if (!Pref.isShowShopBeatWise) {
                     (mContext as DashboardActivity).isShopFromChatBot = false
                     if (!Pref.isServiceFeatureEnable)
-                            if(Pref.SelectedBeatIDFromAttend.equals("-1")){
                         (mContext as DashboardActivity).loadFragment(FragType.NearByShopsListFragment, false, "")
-                            }else{
-                            (mContext as DashboardActivity).loadFragment(FragType.NearByShopsListFragment, true, Pref.SelectedBeatIDFromAttend!!)
-                            }
                     else
                         (mContext as DashboardActivity).loadFragment(FragType.CustomerListFragment, false, "")
                 } else
@@ -1463,7 +1457,6 @@ class DashboardFragment : BaseFragment(), View.OnClickListener, HBRecorderListen
             R.id.n_time_TV -> {
                 (mContext as DashboardActivity).loadFragment(FragType.AvgTimespentShopListFragment, true, "")
             }
-
 
 //            R.id.price_RL ->
                 R.id.ll_dash_total_order_newD -> {
@@ -1743,9 +1736,13 @@ class DashboardFragment : BaseFragment(), View.OnClickListener, HBRecorderListen
 
     @SuppressLint("WrongConstant")
     public fun initBottomAdapter() {
+
         if(initBottomAdapterUpdaton){
+            println("pjp_tag returning");
             return
         }
+        initBottomAdapterUpdaton = true
+
         /*val performList = ArrayList<AddShopDBModelEntity>()
         val updatedPerformList = ArrayList<AddShopDBModelEntity>()
 
@@ -1771,8 +1768,6 @@ class DashboardFragment : BaseFragment(), View.OnClickListener, HBRecorderListen
             best_performing_shop_TV.text = "Best performing " + updatedPerformList.size + " shop"
         else
             best_performing_shop_TV.text = "Best performing " + updatedPerformList.size + " shops"*/
-
-        initBottomAdapterUpdaton=true
 
         println("pjp_tag_insert")
 
@@ -1803,22 +1798,17 @@ class DashboardFragment : BaseFragment(), View.OnClickListener, HBRecorderListen
             //Pref.IsBeatRouteAvailableinAttendance=true
 
             if(!Pref.SelectedBeatIDFromAttend.equals("-1") && Pref.IsBeatRouteAvailableinAttendance && Pref.isAddAttendence){
-
-
-
-try{
-    ll_beat_shop_wise .visibility = View.VISIBLE
+                try{
+                    ll_beat_shop_wise .visibility = View.VISIBLE
 //    tv_beatNamenew.visibility = View.VISIBLE
-     var beatName:String = "Beat Name: " +AppDatabase.getDBInstance()?.beatDao()?.getSingleItem(Pref.SelectedBeatIDFromAttend)!!.name
-   var beatShopSize = AppDatabase.getDBInstance()!!.addShopEntryDao().getShopBeatWise(Pref.SelectedBeatIDFromAttend).size
-    tv_beatNamenew.text = "Total Shop Count : " +beatShopSize+" "+"\n"+beatName
-}catch (ex:Exception){
-    ex.printStackTrace()
-}
-
+                    var beatName:String = "Beat Name: " +AppDatabase.getDBInstance()?.beatDao()?.getSingleItem(Pref.SelectedBeatIDFromAttend)!!.name
+                    var beatShopSize = AppDatabase.getDBInstance()!!.addShopEntryDao().getShopBeatWise(Pref.SelectedBeatIDFromAttend).size
+                    tv_beatNamenew.text = "Total Shop Count : " +beatShopSize+" "+"\n"+beatName
+                }catch (ex:Exception){
+                    ex.printStackTrace()
+                }
 
                 return
-
                 scope.launch {
                     pjpList = loadpjpWithThread(pjpList)
                 }.invokeOnCompletion {
@@ -1856,7 +1846,12 @@ try{
                     }
                 }
 
-                /*var shopListWithBeat = AppDatabase.getDBInstance()!!.addShopEntryDao().getShopBeatWise(Pref.SelectedBeatIDFromAttend)
+                /*var shopListWithBeat:Any
+                if(Pref.IsDistributorSelectionRequiredinAttendance){
+                    shopListWithBeat = AppDatabase.getDBInstance()!!.addShopEntryDao().getShopBeatWiseDD(Pref.SelectedBeatIDFromAttend,Pref.SelectedDDIDFromAttend)
+                }else{
+                    shopListWithBeat = AppDatabase.getDBInstance()!!.addShopEntryDao().getShopBeatWise(Pref.SelectedBeatIDFromAttend)
+                }
                 if(shopListWithBeat.size>0){
                     doAsync {
                         for(l in 0..shopListWithBeat.size-1){
@@ -1881,6 +1876,8 @@ try{
                             println("pjp_tag ${obj.pjp_id}");
                         }
                         uiThread {
+                            println("pjp_tag inside uiThread ");
+
                             if (pjpList != null && pjpList.isNotEmpty()) {
                                 no_shop_tv.visibility = View.GONE
                                 rv_pjp_list.visibility = View.VISIBLE
@@ -4206,6 +4203,12 @@ try{
 
                                 if (configResponse.IsAllowNearbyshopWithBeat != null)
                                     Pref.IsAllowNearbyshopWithBeat = configResponse.IsAllowNearbyshopWithBeat!!
+
+                                if (configResponse.IsGSTINPANEnableInShop != null)
+                                    Pref.IsGSTINPANEnableInShop = configResponse.IsGSTINPANEnableInShop!!
+
+                                if (configResponse.IsMultipleImagesRequired != null)
+                                    Pref.IsMultipleImagesRequired = configResponse.IsMultipleImagesRequired!!
 
                             }
                             BaseActivity.isApiInitiated = false

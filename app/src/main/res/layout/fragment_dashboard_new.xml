@@ -890,6 +890,7 @@
                             android:paddingBottom="@dimen/_5sdp"
                             app:layout_behavior="@string/appbar_scrolling_view_behavior" />
 
+                        <!--Pjpwise beat name show-->
                         <LinearLayout
                             android:id="@+id/ll_beat_shop_wise"
                             android:layout_width="match_parent"
@@ -905,7 +906,6 @@
                             android:gravity="center|start"
                             android:background="@drawable/shape_cursor_two_button">
 
-
                             <ImageView
                                 android:layout_width="@dimen/_30sdp"
                                 android:layout_height="@dimen/_30sdp"
@@ -919,17 +919,11 @@
                                 android:layout_weight="1"
                                 android:text="@string/beat"
                                 android:gravity="center|start"
-                                android:textColor="@color/colorPrimary"
-                                />
-
-
+                                android:textColor="@color/colorPrimary" />
 
                         </LinearLayout>
 
-
-
                     </LinearLayout>
-
                 </androidx.core.widget.NestedScrollView>
 
                 <com.kcteam.widgets.AppCustomTextView

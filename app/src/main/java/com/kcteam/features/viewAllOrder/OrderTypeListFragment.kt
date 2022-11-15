@@ -2,6 +2,7 @@ package com.kcteam.features.viewAllOrder
 
 import android.content.Context
 import android.os.Bundle
+import android.os.Handler
 import android.speech.tts.TextToSpeech
 import androidx.core.widget.NestedScrollView
 import androidx.appcompat.widget.AppCompatTextView
@@ -140,71 +141,71 @@ class OrderTypeListFragment : BaseFragment(), View.OnClickListener {
         val repository = ProductListRepoProvider.productListProvider()
         progress_wheel.spin()
         BaseActivity.compositeDisposable.add(
-                repository.getProductRateOfflineListNew()
-                        .observeOn(AndroidSchedulers.mainThread())
-                        .subscribeOn(Schedulers.io())
-                        .subscribe({ result ->
-                            //val response = result as ProductListOfflineResponseModel
-                            val response = result as ProductListOfflineResponseModelNew
-                            BaseActivity.isApiInitiated = false
-                            if (response.status == NetworkConstant.SUCCESS) {
-                                val productRateList = response.product_rate_list
+            repository.getProductRateOfflineListNew()
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe({ result ->
+                    //val response = result as ProductListOfflineResponseModel
+                    val response = result as ProductListOfflineResponseModelNew
+                    BaseActivity.isApiInitiated = false
+                    if (response.status == NetworkConstant.SUCCESS) {
+                        val productRateList = response.product_rate_list
 
-                                if (productRateList != null && productRateList.size > 0) {
-                                    //AppUtils.saveSharedPreferencesProductRateList(this@LoginActivity, productRateList)
+                        if (productRateList != null && productRateList.size > 0) {
+                            //AppUtils.saveSharedPreferencesProductRateList(this@LoginActivity, productRateList)
 
-                                    if (!isFromOnAttach)
-                                        AppDatabase.getDBInstance()?.productRateDao()?.deleteAll()
+                            if (!isFromOnAttach)
+                                AppDatabase.getDBInstance()?.productRateDao()?.deleteAll()
 
-                                    doAsync {
+                            doAsync {
 
-                                        AppDatabase.getDBInstance()?.productRateDao()?.insertAll(productRateList)
+                                AppDatabase.getDBInstance()?.productRateDao()?.insertAll(productRateList)
 
-                                        /*productRateList.forEach {
-                                            val productRate = ProductRateEntity()
-                                            AppDatabase.getDBInstance()?.productRateDao()?.insert(productRate.apply {
-                                                product_id = it.product_id
-                                                rate1 = it.rate1
-                                                rate2 = it.rate2
-                                                rate3 = it.rate3
-                                                rate4 = it.rate4
-                                                rate5 = it.rate5
-                                                stock_amount = it.stock_amount
-                                                stock_unit = it.stock_unit
-                                                isStockShow = it.isStockShow
-                                                isRateShow = it.isRateShow
-                                            })
-                                        }*/
+                                /*productRateList.forEach {
+                                    val productRate = ProductRateEntity()
+                                    AppDatabase.getDBInstance()?.productRateDao()?.insert(productRate.apply {
+                                        product_id = it.product_id
+                                        rate1 = it.rate1
+                                        rate2 = it.rate2
+                                        rate3 = it.rate3
+                                        rate4 = it.rate4
+                                        rate5 = it.rate5
+                                        stock_amount = it.stock_amount
+                                        stock_unit = it.stock_unit
+                                        isStockShow = it.isStockShow
+                                        isRateShow = it.isRateShow
+                                    })
+                                }*/
 
-                                        uiThread {
-                                            productRateListDb = AppDatabase.getDBInstance()?.productRateDao()?.getAll() as ArrayList<ProductRateEntity>?
-                                            progress_wheel.stopSpinning()
-
-                                            if (!isFromOnAttach)
-                                                (mContext as DashboardActivity).showSnackMessage(getString(R.string.success_msg), 1000)
-                                        }
-                                    }
-                                } else {
+                                uiThread {
+                                    productRateListDb = AppDatabase.getDBInstance()?.productRateDao()?.getAll() as ArrayList<ProductRateEntity>?
                                     progress_wheel.stopSpinning()
 
                                     if (!isFromOnAttach)
-                                        (mContext as DashboardActivity).showSnackMessage(getString(R.string.error_msg), 1000)
+                                        (mContext as DashboardActivity).showSnackMessage(getString(R.string.success_msg), 1000)
                                 }
-                            } else {
-                                progress_wheel.stopSpinning()
-
-                                if (!isFromOnAttach)
-                                    (mContext as DashboardActivity).showSnackMessage(getString(R.string.error_msg), 1000)
                             }
-
-                        }, { error ->
-                            error.printStackTrace()
-                            BaseActivity.isApiInitiated = false
+                        } else {
                             progress_wheel.stopSpinning()
 
                             if (!isFromOnAttach)
                                 (mContext as DashboardActivity).showSnackMessage(getString(R.string.error_msg), 1000)
-                        })
+                        }
+                    } else {
+                        progress_wheel.stopSpinning()
+
+                        if (!isFromOnAttach)
+                            (mContext as DashboardActivity).showSnackMessage(getString(R.string.error_msg), 1000)
+                    }
+
+                }, { error ->
+                    error.printStackTrace()
+                    BaseActivity.isApiInitiated = false
+                    progress_wheel.stopSpinning()
+
+                    if (!isFromOnAttach)
+                        (mContext as DashboardActivity).showSnackMessage(getString(R.string.error_msg), 1000)
+                })
         )
     }
 
@@ -248,86 +249,119 @@ class OrderTypeListFragment : BaseFragment(), View.OnClickListener {
 
         BaseActivity.isApiInitiated = true
         val repository = ProductListRepoProvider.productListProvider()
+        if(Pref.isShowAllProduct){
         progress_wheel.spin()
+        }else{
+
+        }
         BaseActivity.compositeDisposable.add(
-                repository.getProductRateList(shopId)
-                        .observeOn(AndroidSchedulers.mainThread())
-                        .subscribeOn(Schedulers.io())
-                        .subscribe({ result ->
-                            val response = result as ProductRateListResponseModel
-                            BaseActivity.isApiInitiated = false
-                            if (response.status == NetworkConstant.SUCCESS) {
+            repository.getProductRateList(shopId)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe({ result ->
+                    val response = result as ProductRateListResponseModel
+                    BaseActivity.isApiInitiated = false
+                    if (response.status == NetworkConstant.SUCCESS) {
 
-                                if (response.product_rate_list != null && response.product_rate_list!!.size > 0) {
-                                    if (!isForDb) {
-                                        progress_wheel.stopSpinning()
-                                        productRateList = response.product_rate_list
-                                        AppUtils.saveSharedPreferencesProductRateList(mContext, productRateList!!)
-
-                                        if (Pref.isShowAllProduct) {
-                                            productList = AppDatabase.getDBInstance()?.productListDao()?.getAll() as ArrayList<ProductListEntity>?
-                                            setProductAdapter(productList!!)
-                                        }
-
-                                    } else {
-                                        doAsync {
-
-                                            response.product_rate_list!!.forEach {
-                                                val productRate = ProductRateEntity()
-                                                AppDatabase.getDBInstance()?.productRateDao()?.insert(productRate.apply {
-                                                    product_id = it.product_id
-                                                    //rate = it.rate
-                                                    stock_amount = it.stock_amount
-                                                    stock_unit = it.stock_unit
-                                                    isStockShow = it.isStockShow
-                                                    isRateShow = it.isRateShow
-                                                })
-                                            }
-
-                                            uiThread {
-                                                productRateListDb = AppDatabase.getDBInstance()?.productRateDao()?.getAll() as ArrayList<ProductRateEntity>?
-                                                progress_wheel.stopSpinning()
-                                                isForDb = false
-                                            }
-                                        }
-                                    }
-                                } else {
-                                    progress_wheel.stopSpinning()
-
-                                    if (!isForDb && Pref.isShowAllProduct) {
-                                        productList = AppDatabase.getDBInstance()?.productListDao()?.getAll() as ArrayList<ProductListEntity>?
-                                        setProductAdapter(productList!!)
-                                    }
-
-                                    if (isForDb)
-                                        isForDb = false
-                                }
-                            } else {
+                        if (response.product_rate_list != null && response.product_rate_list!!.size > 0) {
+                            if (!isForDb) {
                                 progress_wheel.stopSpinning()
+                                productRateList = response.product_rate_list
+                                AppUtils.saveSharedPreferencesProductRateList(mContext, productRateList!!)
 
-                                if (/*!isForDb && */Pref.isShowAllProduct) {
+                                if (Pref.isShowAllProduct) {
                                     productList = AppDatabase.getDBInstance()?.productListDao()?.getAll() as ArrayList<ProductListEntity>?
                                     setProductAdapter(productList!!)
                                 }
 
-                                if (isForDb)
-                                    isForDb = false
+                            } else {
+                                doAsync {
+
+                                    response.product_rate_list!!.forEach {
+                                        val productRate = ProductRateEntity()
+                                        AppDatabase.getDBInstance()?.productRateDao()?.insert(productRate.apply {
+                                            product_id = it.product_id
+                                            //rate = it.rate
+                                            stock_amount = it.stock_amount
+                                            stock_unit = it.stock_unit
+                                            isStockShow = it.isStockShow
+                                            isRateShow = it.isRateShow
+                                        })
+                                    }
+
+                                    uiThread {
+                                        productRateListDb = AppDatabase.getDBInstance()?.productRateDao()?.getAll() as ArrayList<ProductRateEntity>?
+                                        progress_wheel.stopSpinning()
+                                        isForDb = false
+                                    }
+                                }
                             }
-
-
-                        }, { error ->
-                            error.printStackTrace()
-                            BaseActivity.isApiInitiated = false
+                        } else {
                             progress_wheel.stopSpinning()
 
-                            if (/*!isForDb &&*/ Pref.isShowAllProduct) {
+                            if (!isForDb && Pref.isShowAllProduct) {
                                 productList = AppDatabase.getDBInstance()?.productListDao()?.getAll() as ArrayList<ProductListEntity>?
                                 setProductAdapter(productList!!)
                             }
 
                             if (isForDb)
                                 isForDb = false
-                        })
+                        }
+                    } else {
+                        progress_wheel.stopSpinning()
+
+                        if (/*!isForDb && */Pref.isShowAllProduct) {
+                            productList = AppDatabase.getDBInstance()?.productListDao()?.getAll() as ArrayList<ProductListEntity>?
+                            setProductAdapter(productList!!)
+                        }
+
+                        if (isForDb)
+                            isForDb = false
+                    }
+
+
+                }, { error ->
+                    error.printStackTrace()
+                    BaseActivity.isApiInitiated = false
+                    progress_wheel.stopSpinning()
+
+                    if (/*!isForDb &&*/ Pref.isShowAllProduct) {
+                        productList = AppDatabase.getDBInstance()?.productListDao()?.getAll() as ArrayList<ProductListEntity>?
+                        setProductAdapter(productList!!)
+                    }
+
+                    if (isForDb)
+                        isForDb = false
+                })
+        )
+    }
+
+    private fun getProductRateListApiOnline() {
+        BaseActivity.isApiInitiated = true
+        val repository = ProductListRepoProvider.productListProvider()
+        progress_wheel.spin()
+        BaseActivity.compositeDisposable.add(
+            repository.getProductRateList(shopId)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe({ result ->
+                    val response = result as ProductRateListResponseModel
+                    BaseActivity.isApiInitiated = false
+                    if (response.status == NetworkConstant.SUCCESS) {
+                        if (response.product_rate_list != null && response.product_rate_list!!.size > 0) {
+                            progress_wheel.stopSpinning()
+                                productRateList = response.product_rate_list
+                                AppUtils.saveSharedPreferencesProductRateList(mContext, productRateList!!)
+                        } else {
+                            progress_wheel.stopSpinning()
+                        }
+                    }else{
+                        progress_wheel.stopSpinning()
+                    } }, { error ->
+                    error.printStackTrace()
+                    BaseActivity.isApiInitiated = false
+                    progress_wheel.stopSpinning()
+                })
         )
     }
 
@@ -387,15 +421,24 @@ class OrderTypeListFragment : BaseFragment(), View.OnClickListener {
         list.clear()
         list.addAll(hashSet)
 
-        if (list != null && list.size > 0) {
-            checkToShowAllProducts()
-            setBrandAdapter(list)
-        } else {
-            if (AppUtils.isOnline(mContext))
-                getProductList("", true)
-            else
-                (mContext as DashboardActivity).showSnackMessage(getString(R.string.no_internet))
+        if(Pref.isRateOnline && AppUtils.isOnline(mContext)){
+            getProductRateListApiOnline()
         }
+
+        Handler().postDelayed(Runnable {
+            if (list != null && list.size > 0) {
+                checkToShowAllProducts()
+                setBrandAdapter(list)
+            } else {
+                if (AppUtils.isOnline(mContext))
+                    getProductList("", true)
+                else
+                    (mContext as DashboardActivity).showSnackMessage(getString(R.string.no_internet))
+            }
+        }, 1500)
+
+
+
 
         //}
     }
@@ -456,116 +499,116 @@ class OrderTypeListFragment : BaseFragment(), View.OnClickListener {
         val repository = ProductListRepoProvider.productListProvider()
         progress_wheel.spin()
         BaseActivity.compositeDisposable.add(
-                //repository.getProductList(Pref.session_token!!, Pref.user_id!!, date!!)
-                repository.getProductList(Pref.session_token!!, Pref.user_id!!,"")
-                        .observeOn(AndroidSchedulers.mainThread())
-                        .subscribeOn(Schedulers.io())
-                        .subscribe({ result ->
-                            val response = result as ProductListResponseModel
-                            if (response.status == NetworkConstant.SUCCESS) {
-                                val list = response.product_list
+            //repository.getProductList(Pref.session_token!!, Pref.user_id!!, date!!)
+            repository.getProductList(Pref.session_token!!, Pref.user_id!!,"")
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe({ result ->
+                    val response = result as ProductListResponseModel
+                    if (response.status == NetworkConstant.SUCCESS) {
+                        val list = response.product_list
 
-                                if (list != null && list.isNotEmpty()) {
+                        if (list != null && list.isNotEmpty()) {
+
+                            if (!isFromInitView)
+                                AppDatabase.getDBInstance()?.productListDao()?.deleteAllProduct()
+
+
+
+
+                            doAsync {
+
+                                AppDatabase.getDBInstance()?.productListDao()?.insertAll(list!!)
+
+
+                                /*          for (i in list.indices) {
+                                              val productEntity = ProductListEntity()
+                                              productEntity.id = list[i].id?.toInt()!!
+                                              productEntity.product_name = list[i].product_name
+                                              productEntity.watt = list[i].watt
+                                              productEntity.category = list[i].category
+                                              productEntity.brand = list[i].brand
+                                              productEntity.brand_id = list[i].brand_id
+                                              productEntity.watt_id = list[i].watt_id
+                                              productEntity.category_id = list[i].category_id
+                                              productEntity.date = AppUtils.getCurrentDateForShopActi()
+                                              AppDatabase.getDBInstance()?.productListDao()?.insert(productEntity)
+                                          }*/
+
+
+                                /*list.forEach {
+                                    val productEntity = ProductListEntity()
+                                    productEntity.apply {
+                                        id = it.id?.toInt()!!
+                                        product_name = it.product_name
+                                        watt = it.watt
+                                        category = it.category
+                                        brand = it.brand
+                                        brand_id = it.brand_id
+                                        watt_id = it.watt_id
+                                        category_id = it.category_id
+                                        this.date = AppUtils.getCurrentDateForShopActi()
+                                    }.let {
+                                        AppDatabase.getDBInstance()?.productListDao()?.insert(it)
+                                    }
+                                }*/
+
+                                uiThread {
+                                    progress_wheel.stopSpinning()
+                                    //val list_ = AppDatabase.getDBInstance()?.productListDao()?.getBrandList() as ArrayList<String>
+                                    val list_ = AppDatabase.getDBInstance()?.productListDao()?.getUniqueBrandList() as ArrayList<ProductListEntity>
+
+                                    val hashSet = HashSet<ProductListEntity>()
+                                    hashSet.addAll(list_)
+                                    list_.clear()
+                                    list_.addAll(hashSet)
 
                                     if (!isFromInitView)
-                                        AppDatabase.getDBInstance()?.productListDao()?.deleteAllProduct()
-
-
-
-
-                                    doAsync {
-
-                                        AppDatabase.getDBInstance()?.productListDao()?.insertAll(list!!)
-
-
-                              /*          for (i in list.indices) {
-                                            val productEntity = ProductListEntity()
-                                            productEntity.id = list[i].id?.toInt()!!
-                                            productEntity.product_name = list[i].product_name
-                                            productEntity.watt = list[i].watt
-                                            productEntity.category = list[i].category
-                                            productEntity.brand = list[i].brand
-                                            productEntity.brand_id = list[i].brand_id
-                                            productEntity.watt_id = list[i].watt_id
-                                            productEntity.category_id = list[i].category_id
-                                            productEntity.date = AppUtils.getCurrentDateForShopActi()
-                                            AppDatabase.getDBInstance()?.productListDao()?.insert(productEntity)
-                                        }*/
-
-
-                                        /*list.forEach {
-                                            val productEntity = ProductListEntity()
-                                            productEntity.apply {
-                                                id = it.id?.toInt()!!
-                                                product_name = it.product_name
-                                                watt = it.watt
-                                                category = it.category
-                                                brand = it.brand
-                                                brand_id = it.brand_id
-                                                watt_id = it.watt_id
-                                                category_id = it.category_id
-                                                this.date = AppUtils.getCurrentDateForShopActi()
-                                            }.let {
-                                                AppDatabase.getDBInstance()?.productListDao()?.insert(it)
-                                            }
-                                        }*/
-
-                                        uiThread {
-                                            progress_wheel.stopSpinning()
-                                            //val list_ = AppDatabase.getDBInstance()?.productListDao()?.getBrandList() as ArrayList<String>
-                                            val list_ = AppDatabase.getDBInstance()?.productListDao()?.getUniqueBrandList() as ArrayList<ProductListEntity>
-
-                                            val hashSet = HashSet<ProductListEntity>()
-                                            hashSet.addAll(list_)
-                                            list_.clear()
-                                            list_.addAll(hashSet)
-
-                                            if (!isFromInitView)
-                                                getProductRateListOfflineApi(false)
-
-                                            checkToShowAllProducts()
-                                            setBrandAdapter(list_)
-
-                                            /*AppDatabase.getDBInstance()?.productListDao()?.let {
-                                                it.getUniqueBrandList().distinct() as ArrayList<ProductListEntity>
-                                            }?.let {
-                                                checkToShowAllProducts()
-                                                setBrandAdapter(it)
-                                            }*/
-                                        }
-                                    }
-                                } else {
-                                    progress_wheel.stopSpinning()
-
-                                    if (isFromInitView)
-                                        (mContext as DashboardActivity).showSnackMessage(response.message!!)
-                                    else
                                         getProductRateListOfflineApi(false)
+
+                                    checkToShowAllProducts()
+                                    setBrandAdapter(list_)
+
+                                    /*AppDatabase.getDBInstance()?.productListDao()?.let {
+                                        it.getUniqueBrandList().distinct() as ArrayList<ProductListEntity>
+                                    }?.let {
+                                        checkToShowAllProducts()
+                                        setBrandAdapter(it)
+                                    }*/
                                 }
-                            } else if (response.status == NetworkConstant.NO_DATA) {
-                                progress_wheel.stopSpinning()
-
-                                if (isFromInitView)
-                                    (mContext as DashboardActivity).showSnackMessage(response.message!!)
-                                else
-                                    getProductRateListOfflineApi(false)
-                            } else {
-                                progress_wheel.stopSpinning()
-                                if (isFromInitView)
-                                    (mContext as DashboardActivity).showSnackMessage(response.message!!)
-                                else
-                                    (mContext as DashboardActivity).showSnackMessage(getString(R.string.error_msg), 1000)
                             }
-
-                        }, { error ->
+                        } else {
                             progress_wheel.stopSpinning()
-                            error.printStackTrace()
 
                             if (isFromInitView)
-                                (mContext as DashboardActivity).showSnackMessage(getString(R.string.something_went_wrong))
+                                (mContext as DashboardActivity).showSnackMessage(response.message!!)
                             else
-                                (mContext as DashboardActivity).showSnackMessage(getString(R.string.error_msg), 1000)
-                        })
+                                getProductRateListOfflineApi(false)
+                        }
+                    } else if (response.status == NetworkConstant.NO_DATA) {
+                        progress_wheel.stopSpinning()
+
+                        if (isFromInitView)
+                            (mContext as DashboardActivity).showSnackMessage(response.message!!)
+                        else
+                            getProductRateListOfflineApi(false)
+                    } else {
+                        progress_wheel.stopSpinning()
+                        if (isFromInitView)
+                            (mContext as DashboardActivity).showSnackMessage(response.message!!)
+                        else
+                            (mContext as DashboardActivity).showSnackMessage(getString(R.string.error_msg), 1000)
+                    }
+
+                }, { error ->
+                    progress_wheel.stopSpinning()
+                    error.printStackTrace()
+
+                    if (isFromInitView)
+                        (mContext as DashboardActivity).showSnackMessage(getString(R.string.something_went_wrong))
+                    else
+                        (mContext as DashboardActivity).showSnackMessage(getString(R.string.error_msg), 1000)
+                })
         )
     }
 
@@ -696,7 +739,7 @@ class OrderTypeListFragment : BaseFragment(), View.OnClickListener {
                     (mContext as DashboardActivity).schemaqtyList.add("0")
                     (mContext as DashboardActivity).mrpList.add("0.00")
 
-                    if (!Pref.isRateNotEditable) {
+                    if (!Pref.isRateNotEditable && false) {
                         (mContext as DashboardActivity).rateList.add("0.00")
                         (mContext as DashboardActivity).schemarateList.add("0.00")
                     }
@@ -863,7 +906,7 @@ class OrderTypeListFragment : BaseFragment(), View.OnClickListener {
 
                 (mContext as DashboardActivity).mrpList.add("0.00")
 
-                if (!Pref.isRateNotEditable){
+                if (!Pref.isRateNotEditable && false){
                     (mContext as DashboardActivity).rateList.add("0.00")
                     (mContext as DashboardActivity).schemarateList.add("0.00")
                 }
@@ -964,7 +1007,7 @@ class OrderTypeListFragment : BaseFragment(), View.OnClickListener {
                         tv_category_type.text.toString().trim()) as ArrayList<ProductListEntity>?)!!*/
 
                 productList = (AppDatabase.getDBInstance()?.productListDao()?.getAllValueAccordingToCategoryBrandId(category?.brand_id!!,
-                        category.category_id!!) as ArrayList<ProductListEntity>?)!!
+                    category.category_id!!) as ArrayList<ProductListEntity>?)!!
 
                 setProductAdapter(productList!!)
             }
@@ -1036,13 +1079,13 @@ class OrderTypeListFragment : BaseFragment(), View.OnClickListener {
                                     tv_category_type.text.toString().trim(), tv_watt_type.text.toString().trim()) as ArrayList<ProductListEntity>?)!!*/
 
                     (AppDatabase.getDBInstance()?.productListDao()?.getAllValueAccordingToCategoryBrandFilteredByWattId(category?.brand_id!!,
-                            category.category_id!!, category.watt_id!!) as ArrayList<ProductListEntity>?)!!
+                        category.category_id!!, category.watt_id!!) as ArrayList<ProductListEntity>?)!!
                 } else {
                     /*productList = (AppDatabase.getDBInstance()?.productListDao()?.getAllValueAccordingToBrandWattWise(tv_brand_type.text.toString().trim(),
                                     tv_watt_type.text.toString().trim()) as ArrayList<ProductListEntity>?)!!*/
 
                     (AppDatabase.getDBInstance()?.productListDao()?.getAllValueAccordingToBrandWattIdWise(category?.brand_id!!,
-                            category.watt_id!!) as ArrayList<ProductListEntity>?)!!
+                        category.watt_id!!) as ArrayList<ProductListEntity>?)!!
                 }
 
                 setProductAdapter(productList!!)
@@ -1052,7 +1095,7 @@ class OrderTypeListFragment : BaseFragment(), View.OnClickListener {
     }
 
     fun saveOrder(totalOrderValue: String, selectedProductList: ArrayList<ProductListEntity>?, totalPrice: java.util.ArrayList<Double>,
-                 remarks: String, imagePath: String, patient_name: String, patient_address: String, patient_no: String,totalScValue: String,totalScPrice: java.util.ArrayList<Double>,
+                  remarks: String, imagePath: String, patient_name: String, patient_address: String, patient_no: String,totalScValue: String,totalScPrice: java.util.ArrayList<Double>,
                   hospital: String,emailAddress:String) {
 
         try {
@@ -1184,7 +1227,7 @@ class OrderTypeListFragment : BaseFragment(), View.OnClickListener {
                     } else {
                         AppDatabase.getDBInstance()!!.orderListDao().updateDate(AppUtils.getCurrentDateForShopActi(), shopId)
                         AppDatabase.getDBInstance()!!.orderListDao().updateDateLong(AppUtils.convertDateStringToLong(
-                                AppUtils.getCurrentDateForShopActi()), shopId)
+                            AppUtils.getCurrentDateForShopActi()), shopId)
                     }
 
                     if(true){
@@ -1204,7 +1247,7 @@ class OrderTypeListFragment : BaseFragment(), View.OnClickListener {
                             obj.shop_revisit_uniqKey=shopAll.get(shopAll.size-1).shop_revisit_uniqKey
                         }
                         if(shopAll.size!=0)
-                        AppDatabase.getDBInstance()?.shopVisitOrderStatusRemarksDao()!!.insert(obj)
+                            AppDatabase.getDBInstance()?.shopVisitOrderStatusRemarksDao()!!.insert(obj)
                     }
 
 
@@ -1226,12 +1269,12 @@ class OrderTypeListFragment : BaseFragment(), View.OnClickListener {
 
                             if (addShop.isUploaded) {
                                 addOrderApi(orderListDetails.shop_id, orderListDetails.order_id, totalOrderValue,
-                                        "", "", orderListDetails.date, lat, long, orderListDetails.remarks,
-                                        orderListDetails.signature, orderListDetails)
+                                    "", "", orderListDetails.date, lat, long, orderListDetails.remarks,
+                                    orderListDetails.signature, orderListDetails)
                             } else {
                                 syncShop(addShop, orderListDetails.shop_id, orderListDetails.order_id, totalOrderValue,
-                                        "", "", orderListDetails.date!!, lat, long, "", orderListDetails.remarks,
-                                        orderListDetails.signature, orderListDetails)
+                                    "", "", orderListDetails.date!!, lat, long, "", orderListDetails.remarks,
+                                    orderListDetails.signature, orderListDetails)
                             }
                         } else {
                             (mContext as DashboardActivity).showSnackMessage("Order added successfully")
@@ -1251,8 +1294,8 @@ class OrderTypeListFragment : BaseFragment(), View.OnClickListener {
         if (Pref.isVoiceEnabledForOrderSaved) {
             val msg = "Hi, Order saved successfully."
             val speechStatus = (mContext as DashboardActivity).textToSpeech.speak(msg, TextToSpeech.QUEUE_FLUSH, null)
-             if (speechStatus == TextToSpeech.ERROR)
-                 Log.e("Add Order", "TTS error in converting Text to Speech!")
+            if (speechStatus == TextToSpeech.ERROR)
+                Log.e("Add Order", "TTS error in converting Text to Speech!")
 
         }
     }
@@ -1386,54 +1429,54 @@ class OrderTypeListFragment : BaseFragment(), View.OnClickListener {
         if (TextUtils.isEmpty(signature)) {
             val repository = AddOrderRepoProvider.provideAddOrderRepository()
             BaseActivity.compositeDisposable.add(
-                    repository.addNewOrder(addOrder)
-                            .observeOn(AndroidSchedulers.mainThread())
-                            .subscribeOn(Schedulers.io())
-                            .subscribe({ result ->
-                                val orderList = result as BaseResponse
-                                progress_wheel.stopSpinning()
-                                if (orderList.status == NetworkConstant.SUCCESS) {
-                                    AppDatabase.getDBInstance()!!.orderDetailsListDao().updateIsUploaded(true, order_id)
-                                }
+                repository.addNewOrder(addOrder)
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribeOn(Schedulers.io())
+                    .subscribe({ result ->
+                        val orderList = result as BaseResponse
+                        progress_wheel.stopSpinning()
+                        if (orderList.status == NetworkConstant.SUCCESS) {
+                            AppDatabase.getDBInstance()!!.orderDetailsListDao().updateIsUploaded(true, order_id)
+                        }
 
-                                (mContext as DashboardActivity).showSnackMessage("Order added successfully")
-                                showCongratsAlert(shop_id, order_id)
-                                voiceOrderMsg()
-                            }, { error ->
-                                error.printStackTrace()
-                                progress_wheel.stopSpinning()
+                        (mContext as DashboardActivity).showSnackMessage("Order added successfully")
+                        showCongratsAlert(shop_id, order_id)
+                        voiceOrderMsg()
+                    }, { error ->
+                        error.printStackTrace()
+                        progress_wheel.stopSpinning()
 //                            (mContext as DashboardActivity).showSnackMessage("ERROR")
 
-                                (mContext as DashboardActivity).showSnackMessage("Order added successfully")
-                                showCongratsAlert(shop_id, order_id)
-                                voiceOrderMsg()
-                            })
+                        (mContext as DashboardActivity).showSnackMessage("Order added successfully")
+                        showCongratsAlert(shop_id, order_id)
+                        voiceOrderMsg()
+                    })
             )
         }
         else {
             val repository = AddOrderRepoProvider.provideAddOrderImageRepository()
             BaseActivity.compositeDisposable.add(
-                    repository.addNewOrder(addOrder, signature!!, mContext)
-                            .observeOn(AndroidSchedulers.mainThread())
-                            .subscribeOn(Schedulers.io())
-                            .subscribe({ result ->
-                                val orderList = result as BaseResponse
-                                progress_wheel.stopSpinning()
-                                if (orderList.status == NetworkConstant.SUCCESS) {
-                                    AppDatabase.getDBInstance()!!.orderDetailsListDao().updateIsUploaded(true, order_id)
-                                }
+                repository.addNewOrder(addOrder, signature!!, mContext)
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribeOn(Schedulers.io())
+                    .subscribe({ result ->
+                        val orderList = result as BaseResponse
+                        progress_wheel.stopSpinning()
+                        if (orderList.status == NetworkConstant.SUCCESS) {
+                            AppDatabase.getDBInstance()!!.orderDetailsListDao().updateIsUploaded(true, order_id)
+                        }
 
-                                (mContext as DashboardActivity).showSnackMessage("Order added successfully")
-                                showCongratsAlert(shop_id, order_id)
+                        (mContext as DashboardActivity).showSnackMessage("Order added successfully")
+                        showCongratsAlert(shop_id, order_id)
 
-                            }, { error ->
-                                error.printStackTrace()
-                                progress_wheel.stopSpinning()
+                    }, { error ->
+                        error.printStackTrace()
+                        progress_wheel.stopSpinning()
 //                            (mContext as DashboardActivity).showSnackMessage("ERROR")
 
-                                (mContext as DashboardActivity).showSnackMessage("Order added successfully")
-                                showCongratsAlert(shop_id, order_id)
-                            })
+                        (mContext as DashboardActivity).showSnackMessage("Order added successfully")
+                        showCongratsAlert(shop_id, order_id)
+                    })
             )
         }
     }
@@ -1575,7 +1618,7 @@ class OrderTypeListFragment : BaseFragment(), View.OnClickListener {
                                 addStockApi(addShop.type, stockListDetails.stock_id, totalOrderValue, stockListDetails.date, lat, long)
                             } else {
                                 syncShop(addShop, stockListDetails.shop_id, "", totalOrderValue, "", "", stockListDetails.date!!, lat,
-                                        long, stockListDetails.stock_id, "", "", null)
+                                    long, stockListDetails.stock_id, "", "", null)
                             }
                         } else {
                             (mContext as DashboardActivity).showSnackMessage("Stock added successfully")
@@ -1646,27 +1689,27 @@ class OrderTypeListFragment : BaseFragment(), View.OnClickListener {
         val repository = StockRepositoryProvider.provideStockRepository()
         progress_wheel.spin()
         BaseActivity.compositeDisposable.add(
-                repository.addStock(addStock)
-                        .observeOn(AndroidSchedulers.mainThread())
-                        .subscribeOn(Schedulers.io())
-                        .subscribe({ result ->
-                            val orderList = result as BaseResponse
-                            progress_wheel.stopSpinning()
-                            if (orderList.status == NetworkConstant.SUCCESS) {
-                                AppDatabase.getDBInstance()!!.stockDetailsListDao().updateIsUploaded(true, stock_id)
-                            }
+            repository.addStock(addStock)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe({ result ->
+                    val orderList = result as BaseResponse
+                    progress_wheel.stopSpinning()
+                    if (orderList.status == NetworkConstant.SUCCESS) {
+                        AppDatabase.getDBInstance()!!.stockDetailsListDao().updateIsUploaded(true, stock_id)
+                    }
 
-                            (mContext as DashboardActivity).showSnackMessage("Stock added successfully")
-                            (mContext as DashboardActivity).onBackPressed()
+                    (mContext as DashboardActivity).showSnackMessage("Stock added successfully")
+                    (mContext as DashboardActivity).onBackPressed()
 
-                        }, { error ->
-                            error.printStackTrace()
-                            progress_wheel.stopSpinning()
+                }, { error ->
+                    error.printStackTrace()
+                    progress_wheel.stopSpinning()
 //                            (mContext as DashboardActivity).showSnackMessage("ERROR")
 
-                            (mContext as DashboardActivity).showSnackMessage("Stock added successfully")
-                            (mContext as DashboardActivity).onBackPressed()
-                        })
+                    (mContext as DashboardActivity).showSnackMessage("Stock added successfully")
+                    (mContext as DashboardActivity).onBackPressed()
+                })
         )
     }
 
@@ -1763,8 +1806,11 @@ class OrderTypeListFragment : BaseFragment(), View.OnClickListener {
 
         addShopData.purpose=mAddShopDBModelEntity.purpose
 
+        addShopData.GSTN_Number=mAddShopDBModelEntity.gstN_Number
+        addShopData.ShopOwner_PAN=mAddShopDBModelEntity.shopOwner_PAN
+
         callAddShopApi(addShopData, mAddShopDBModelEntity.shopImageLocalPath, shop_id, order_id, amount, collection, currentDateForShopActi, desc, order_lat,
-                order_long, stock_id, mAddShopDBModelEntity.doc_degree, remarks, signature, orderListDetails)
+            order_long, stock_id, mAddShopDBModelEntity.doc_degree, remarks, signature, orderListDetails)
         //callAddShopApi(addShopData, "")
     }
 
@@ -1854,143 +1900,143 @@ class OrderTypeListFragment : BaseFragment(), View.OnClickListener {
         if (TextUtils.isEmpty(shop_imgPath) && TextUtils.isEmpty(degree_imgPath)) {
             val repository = AddShopRepositoryProvider.provideAddShopWithoutImageRepository()
             BaseActivity.compositeDisposable.add(
-                    repository.addShop(addShop)
-                            .observeOn(AndroidSchedulers.mainThread())
-                            .subscribeOn(Schedulers.io())
-                            .subscribe({ result ->
-                                val addShopResult = result as AddShopResponse
-                                XLog.d("syncShopFromShopList : " + ", SHOP: " + addShop.shop_name + ", RESPONSE:" + result.message)
-                                when (addShopResult.status) {
-                                    NetworkConstant.SUCCESS -> {
-                                        AppDatabase.getDBInstance()!!.addShopEntryDao().updateIsUploaded(true, addShop.shop_id)
-                                        //(mContext as DashboardActivity).showSnackMessage("Synced successfully")
-                                        doAsync {
-                                            val resultAs = runLongTask(addShop.shop_id)
-                                            uiThread {
-                                                if (resultAs == true) {
-                                                    if (AppUtils.stockStatus == 0)
-                                                        addOrderApi(shop_id, order_id, amount, desc, collection, currentDateForShopActi,
-                                                                order_lat, order_long, remarks, signature, orderListDetails)
-                                                    else if (AppUtils.stockStatus == 1)
-                                                        addStockApi(addShop.type!!, stock_id, amount, currentDateForShopActi, order_lat, order_long)
-                                                }
-                                            }
+                repository.addShop(addShop)
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribeOn(Schedulers.io())
+                    .subscribe({ result ->
+                        val addShopResult = result as AddShopResponse
+                        XLog.d("syncShopFromShopList : " + ", SHOP: " + addShop.shop_name + ", RESPONSE:" + result.message)
+                        when (addShopResult.status) {
+                            NetworkConstant.SUCCESS -> {
+                                AppDatabase.getDBInstance()!!.addShopEntryDao().updateIsUploaded(true, addShop.shop_id)
+                                //(mContext as DashboardActivity).showSnackMessage("Synced successfully")
+                                doAsync {
+                                    val resultAs = runLongTask(addShop.shop_id)
+                                    uiThread {
+                                        if (resultAs == true) {
+                                            if (AppUtils.stockStatus == 0)
+                                                addOrderApi(shop_id, order_id, amount, desc, collection, currentDateForShopActi,
+                                                    order_lat, order_long, remarks, signature, orderListDetails)
+                                            else if (AppUtils.stockStatus == 1)
+                                                addStockApi(addShop.type!!, stock_id, amount, currentDateForShopActi, order_lat, order_long)
                                         }
-                                        progress_wheel.stopSpinning()
-                                        isShopRegistrationInProcess = false
-
-                                    }
-                                    NetworkConstant.DUPLICATE_SHOP_ID -> {
-                                        XLog.d("DuplicateShop : " + ", SHOP: " + addShop.shop_name)
-                                        AppDatabase.getDBInstance()!!.addShopEntryDao().updateIsUploaded(true, addShop.shop_id)
-                                        progress_wheel.stopSpinning()
-                                        (mContext as DashboardActivity).showSnackMessage(addShopResult.message!!)
-                                        if (AppDatabase.getDBInstance()!!.addShopEntryDao().getDuplicateShopData(addShop.owner_contact_no).size > 0) {
-                                            AppDatabase.getDBInstance()!!.addShopEntryDao().deleteShopById(addShop.shop_id)
-                                            AppDatabase.getDBInstance()!!.shopActivityDao().deleteShopByIdAndDate(addShop.shop_id!!, AppUtils.getCurrentDateForShopActi())
-                                        }
-                                        doAsync {
-                                            val resultAs = runLongTask(addShop.shop_id)
-                                            uiThread {
-                                                if (resultAs == true) {
-                                                    if (AppUtils.stockStatus == 0)
-                                                        addOrderApi(shop_id, order_id, amount, desc, collection, currentDateForShopActi,
-                                                                order_lat, order_long, remarks, signature, orderListDetails)
-                                                    else if (AppUtils.stockStatus == 1)
-                                                        addStockApi(addShop.type!!, stock_id, amount, currentDateForShopActi, order_lat, order_long)
-                                                }
-                                            }
-                                        }
-                                        isShopRegistrationInProcess = false
-
-                                    }
-                                    else -> {
-                                        progress_wheel.stopSpinning()
-                                        (mContext as DashboardActivity).showSnackMessage(addShopResult.message!!)
-
-                                        isShopRegistrationInProcess = false
                                     }
                                 }
-
-                            }, { error ->
-                                error.printStackTrace()
                                 progress_wheel.stopSpinning()
-                                (mContext as DashboardActivity).showSnackMessage(getString(R.string.unable_to_sync))
                                 isShopRegistrationInProcess = false
-                                if (error != null)
-                                    XLog.d("syncShopFromShopList : " + ", SHOP: " + addShop.shop_name + error.localizedMessage)
-                            })
+
+                            }
+                            NetworkConstant.DUPLICATE_SHOP_ID -> {
+                                XLog.d("DuplicateShop : " + ", SHOP: " + addShop.shop_name)
+                                AppDatabase.getDBInstance()!!.addShopEntryDao().updateIsUploaded(true, addShop.shop_id)
+                                progress_wheel.stopSpinning()
+                                (mContext as DashboardActivity).showSnackMessage(addShopResult.message!!)
+                                if (AppDatabase.getDBInstance()!!.addShopEntryDao().getDuplicateShopData(addShop.owner_contact_no).size > 0) {
+                                    AppDatabase.getDBInstance()!!.addShopEntryDao().deleteShopById(addShop.shop_id)
+                                    AppDatabase.getDBInstance()!!.shopActivityDao().deleteShopByIdAndDate(addShop.shop_id!!, AppUtils.getCurrentDateForShopActi())
+                                }
+                                doAsync {
+                                    val resultAs = runLongTask(addShop.shop_id)
+                                    uiThread {
+                                        if (resultAs == true) {
+                                            if (AppUtils.stockStatus == 0)
+                                                addOrderApi(shop_id, order_id, amount, desc, collection, currentDateForShopActi,
+                                                    order_lat, order_long, remarks, signature, orderListDetails)
+                                            else if (AppUtils.stockStatus == 1)
+                                                addStockApi(addShop.type!!, stock_id, amount, currentDateForShopActi, order_lat, order_long)
+                                        }
+                                    }
+                                }
+                                isShopRegistrationInProcess = false
+
+                            }
+                            else -> {
+                                progress_wheel.stopSpinning()
+                                (mContext as DashboardActivity).showSnackMessage(addShopResult.message!!)
+
+                                isShopRegistrationInProcess = false
+                            }
+                        }
+
+                    }, { error ->
+                        error.printStackTrace()
+                        progress_wheel.stopSpinning()
+                        (mContext as DashboardActivity).showSnackMessage(getString(R.string.unable_to_sync))
+                        isShopRegistrationInProcess = false
+                        if (error != null)
+                            XLog.d("syncShopFromShopList : " + ", SHOP: " + addShop.shop_name + error.localizedMessage)
+                    })
             )
         }
         else {
             val repository = AddShopRepositoryProvider.provideAddShopRepository()
             BaseActivity.compositeDisposable.add(
-                    repository.addShopWithImage(addShop, shop_imgPath, degree_imgPath, mContext)
-                            .observeOn(AndroidSchedulers.mainThread())
-                            .subscribeOn(Schedulers.io())
-                            .subscribe({ result ->
-                                val addShopResult = result as AddShopResponse
-                                XLog.d("syncShopFromShopList : " + ", SHOP: " + addShop.shop_name + ", RESPONSE:" + result.message)
-                                when (addShopResult.status) {
-                                    NetworkConstant.SUCCESS -> {
-                                        AppDatabase.getDBInstance()!!.addShopEntryDao().updateIsUploaded(true, addShop.shop_id)
-                                        //(mContext as DashboardActivity).showSnackMessage("Synced successfully")
-                                        doAsync {
-                                            val resultAs = runLongTask(addShop.shop_id)
-                                            uiThread {
-                                                if (resultAs == true) {
-                                                    if (AppUtils.stockStatus == 0)
-                                                        addOrderApi(shop_id, order_id, amount, desc, collection, currentDateForShopActi,
-                                                                order_lat, order_long, remarks, signature, orderListDetails)
-                                                    else if (AppUtils.stockStatus == 1)
-                                                        addStockApi(addShop.type!!, stock_id, amount, currentDateForShopActi, order_lat, order_long)
-                                                }
-                                            }
+                repository.addShopWithImage(addShop, shop_imgPath, degree_imgPath, mContext)
+                    .observeOn(AndroidSchedulers.mainThread())
+                    .subscribeOn(Schedulers.io())
+                    .subscribe({ result ->
+                        val addShopResult = result as AddShopResponse
+                        XLog.d("syncShopFromShopList : " + ", SHOP: " + addShop.shop_name + ", RESPONSE:" + result.message)
+                        when (addShopResult.status) {
+                            NetworkConstant.SUCCESS -> {
+                                AppDatabase.getDBInstance()!!.addShopEntryDao().updateIsUploaded(true, addShop.shop_id)
+                                //(mContext as DashboardActivity).showSnackMessage("Synced successfully")
+                                doAsync {
+                                    val resultAs = runLongTask(addShop.shop_id)
+                                    uiThread {
+                                        if (resultAs == true) {
+                                            if (AppUtils.stockStatus == 0)
+                                                addOrderApi(shop_id, order_id, amount, desc, collection, currentDateForShopActi,
+                                                    order_lat, order_long, remarks, signature, orderListDetails)
+                                            else if (AppUtils.stockStatus == 1)
+                                                addStockApi(addShop.type!!, stock_id, amount, currentDateForShopActi, order_lat, order_long)
                                         }
-                                        progress_wheel.stopSpinning()
-                                        isShopRegistrationInProcess = false
-
-                                    }
-                                    NetworkConstant.DUPLICATE_SHOP_ID -> {
-                                        XLog.d("DuplicateShop : " + ", SHOP: " + addShop.shop_name)
-                                        AppDatabase.getDBInstance()!!.addShopEntryDao().updateIsUploaded(true, addShop.shop_id)
-                                        progress_wheel.stopSpinning()
-                                        (mContext as DashboardActivity).showSnackMessage(addShopResult.message!!)
-                                        if (AppDatabase.getDBInstance()!!.addShopEntryDao().getDuplicateShopData(addShop.owner_contact_no).size > 0) {
-                                            AppDatabase.getDBInstance()!!.addShopEntryDao().deleteShopById(addShop.shop_id)
-                                            AppDatabase.getDBInstance()!!.shopActivityDao().deleteShopByIdAndDate(addShop.shop_id!!, AppUtils.getCurrentDateForShopActi())
-                                        }
-                                        doAsync {
-                                            val resultAs = runLongTask(addShop.shop_id)
-                                            uiThread {
-                                                if (resultAs == true) {
-                                                    if (AppUtils.stockStatus == 0)
-                                                        addOrderApi(shop_id, order_id, amount, desc, collection, currentDateForShopActi,
-                                                                order_lat, order_long, remarks, signature, orderListDetails)
-                                                    else if (AppUtils.stockStatus == 1)
-                                                        addStockApi(addShop.type!!, stock_id, amount, currentDateForShopActi, order_lat, order_long)
-                                                }
-                                            }
-                                        }
-                                        isShopRegistrationInProcess = false
-
-                                    }
-                                    else -> {
-                                        progress_wheel.stopSpinning()
-                                        (mContext as DashboardActivity).showSnackMessage(addShopResult.message!!)
-
-                                        isShopRegistrationInProcess = false
                                     }
                                 }
-
-                            }, { error ->
-                                error.printStackTrace()
                                 progress_wheel.stopSpinning()
-                                (mContext as DashboardActivity).showSnackMessage(getString(R.string.unable_to_sync))
                                 isShopRegistrationInProcess = false
-                                if (error != null)
-                                    XLog.d("syncShopFromShopList : " + ", SHOP: " + addShop.shop_name + error.localizedMessage)
-                            })
+
+                            }
+                            NetworkConstant.DUPLICATE_SHOP_ID -> {
+                                XLog.d("DuplicateShop : " + ", SHOP: " + addShop.shop_name)
+                                AppDatabase.getDBInstance()!!.addShopEntryDao().updateIsUploaded(true, addShop.shop_id)
+                                progress_wheel.stopSpinning()
+                                (mContext as DashboardActivity).showSnackMessage(addShopResult.message!!)
+                                if (AppDatabase.getDBInstance()!!.addShopEntryDao().getDuplicateShopData(addShop.owner_contact_no).size > 0) {
+                                    AppDatabase.getDBInstance()!!.addShopEntryDao().deleteShopById(addShop.shop_id)
+                                    AppDatabase.getDBInstance()!!.shopActivityDao().deleteShopByIdAndDate(addShop.shop_id!!, AppUtils.getCurrentDateForShopActi())
+                                }
+                                doAsync {
+                                    val resultAs = runLongTask(addShop.shop_id)
+                                    uiThread {
+                                        if (resultAs == true) {
+                                            if (AppUtils.stockStatus == 0)
+                                                addOrderApi(shop_id, order_id, amount, desc, collection, currentDateForShopActi,
+                                                    order_lat, order_long, remarks, signature, orderListDetails)
+                                            else if (AppUtils.stockStatus == 1)
+                                                addStockApi(addShop.type!!, stock_id, amount, currentDateForShopActi, order_lat, order_long)
+                                        }
+                                    }
+                                }
+                                isShopRegistrationInProcess = false
+
+                            }
+                            else -> {
+                                progress_wheel.stopSpinning()
+                                (mContext as DashboardActivity).showSnackMessage(addShopResult.message!!)
+
+                                isShopRegistrationInProcess = false
+                            }
+                        }
+
+                    }, { error ->
+                        error.printStackTrace()
+                        progress_wheel.stopSpinning()
+                        (mContext as DashboardActivity).showSnackMessage(getString(R.string.unable_to_sync))
+                        isShopRegistrationInProcess = false
+                        if (error != null)
+                            XLog.d("syncShopFromShopList : " + ", SHOP: " + addShop.shop_name + error.localizedMessage)
+                    })
             )
         }
 
@@ -2182,21 +2228,21 @@ class OrderTypeListFragment : BaseFragment(), View.OnClickListener {
         val repository = ShopDurationRepositoryProvider.provideShopDurationRepository()
 
         BaseActivity.compositeDisposable.add(
-                repository.shopDuration(shopDurationApiReq)
-                        .observeOn(AndroidSchedulers.mainThread())
-                        .subscribeOn(Schedulers.io())
-                        .subscribe({ result ->
-                            XLog.d("syncShopActivityFromShopList : " + ", SHOP: " + list[0].shop_name + ", RESPONSE:" + result.message)
-                            if (result.status == NetworkConstant.SUCCESS) {
+            repository.shopDuration(shopDurationApiReq)
+                .observeOn(AndroidSchedulers.mainThread())
+                .subscribeOn(Schedulers.io())
+                .subscribe({ result ->
+                    XLog.d("syncShopActivityFromShopList : " + ", SHOP: " + list[0].shop_name + ", RESPONSE:" + result.message)
+                    if (result.status == NetworkConstant.SUCCESS) {
 
-                            }
+                    }
 
-                        }, { error ->
-                            error.printStackTrace()
-                            if (error != null)
-                                XLog.d("syncShopActivityFromShopList : " + ", SHOP: " + list[0].shop_name + error.localizedMessage)
+                }, { error ->
+                    error.printStackTrace()
+                    if (error != null)
+                        XLog.d("syncShopActivityFromShopList : " + ", SHOP: " + list[0].shop_name + error.localizedMessage)
 //                                (mContext as DashboardActivity).showSnackMessage("ERROR")
-                        })
+                })
         )
 
     }
@@ -2231,3 +2277,4 @@ class OrderTypeListFragment : BaseFragment(), View.OnClickListener {
             (mContext as DashboardActivity).showSnackMessage(getString(R.string.no_internet))
     }
 }
+

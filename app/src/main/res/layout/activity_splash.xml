@@ -8,8 +8,8 @@
 
     <ImageView
         android:id="@+id/logo_new"
-        android:layout_width="@dimen/_175sdp"
-        android:layout_height="@dimen/_95sdp"
+        android:layout_width="@dimen/_135sdp"
+        android:layout_height="@dimen/_50sdp"
         android:src="@drawable/breezelogo"
         android:layout_marginTop="@dimen/_170sdp"
         android:layout_centerHorizontal="true" />
@@ -26,7 +26,6 @@
         android:text="@string/name_filed_managenent_system"
         android:textColor="#287fb2"
         android:textSize="@dimen/_12sdp"
-        android:visibility="gone"
         android:textStyle="bold" />
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout

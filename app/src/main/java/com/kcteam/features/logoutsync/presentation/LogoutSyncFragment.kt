@@ -1320,6 +1320,9 @@ class LogoutSyncFragment : BaseFragment(), View.OnClickListener {
 
         addShopData.purpose=mAddShopDBModelEntity.purpose
 
+        addShopData.GSTN_Number=mAddShopDBModelEntity.gstN_Number
+        addShopData.ShopOwner_PAN=mAddShopDBModelEntity.shopOwner_PAN
+
 
         callAddShopApi(addShopData, mAddShopDBModelEntity.shopImageLocalPath, mAddShopDBModelEntity.doc_degree, shopList)
         //callAddShopApi(addShopData, "")
@@ -1958,6 +1961,17 @@ class LogoutSyncFragment : BaseFragment(), View.OnClickListener {
         addShopData.landline_number = mAddShopDBModelEntity.landline_number
         addShopData.alternateNoForCustomer = mAddShopDBModelEntity.alternateNoForCustomer
         addShopData.whatsappNoForCustomer = mAddShopDBModelEntity.whatsappNoForCustomer
+
+        /*GSTIN & PAN NUMBER*/
+        if (addShopData.GSTN_Number!=null && !addShopData.GSTN_Number.equals(""))
+            mAddShopDBModelEntity.gstN_Number =addShopData.GSTN_Number!!
+        else
+            mAddShopDBModelEntity.gstN_Number = ""
+
+        if (addShopData.ShopOwner_PAN!=null && !addShopData.ShopOwner_PAN.equals(""))
+            mAddShopDBModelEntity.shopOwner_PAN =addShopData.ShopOwner_PAN!!
+        else
+            mAddShopDBModelEntity.shopOwner_PAN = ""
 
 
         XLog.d("=====SyncEditShop Input Params (Logout sync)======")

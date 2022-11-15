@@ -5,6 +5,7 @@ import com.kcteam.base.BaseResponse
 import com.kcteam.features.addshop.model.AddQuestionSubmitRequestData
 import com.kcteam.features.addshop.model.AddShopRequestData
 import com.kcteam.features.addshop.model.AddShopResponse
+import com.kcteam.features.addshop.model.imageListResponse
 import io.reactivex.Observable
 import okhttp3.MultipartBody
 import retrofit2.Retrofit
@@ -33,6 +34,10 @@ interface AddShopApi {
     @POST("Shoplist/AddShop")
     fun getAddShop(@Body addShop: AddShopRequestData?): Observable<AddShopResponse>
 
+    @FormUrlEncoded
+    @POST("Shoplist/ShopAttachmentImagesList")
+    fun geimagelist(@Field("shop_id") shop_id: String,@Field("user_id") user_id: String,@Field("session_token") session_token: String): Observable<imageListResponse>
+
     @Multipart
     @POST("ShopRegistration/NewShopRegister")
     fun getAddShopWithDocImage(@Query("data") addShop: String, @Part logo_img_data: MultipartBody.Part?): Observable<AddShopResponse>
@@ -49,6 +54,23 @@ interface AddShopApi {
     @POST("RubyLeadImage/RubyLeadImage2Save")
     fun getAddShopUploadImage2(@Query("data") addImageupload: String, @Part competitor_img: MultipartBody.Part?): Observable<BaseResponse>
     /*9-12-2021*/
+
+    /*Mutliple Image*/
+    @Multipart
+    @POST("ShopRegistration/ShopAttachmentImage1")
+    fun UploadAttachImage1(@Query("data") addImageupload: String, @Part competitor_img: MultipartBody.Part?): Observable<BaseResponse>
+
+    @Multipart
+    @POST("ShopRegistration/ShopAttachmentImage2")
+    fun UploadAttachImage2(@Query("data") addImageupload: String, @Part competitor_img: MultipartBody.Part?): Observable<BaseResponse>
+
+    @Multipart
+    @POST("ShopRegistration/ShopAttachmentImage3")
+    fun UploadAttachImage3(@Query("data") addImageupload: String, @Part competitor_img: MultipartBody.Part?): Observable<BaseResponse>
+
+    @Multipart
+    @POST("ShopRegistration/ShopAttachmentImage4")
+    fun UploadAttachImage4(@Query("data") addImageupload: String, @Part competitor_img: MultipartBody.Part?): Observable<BaseResponse>
 
     @Multipart
     @POST("ShopRegistration/RegisterShop")

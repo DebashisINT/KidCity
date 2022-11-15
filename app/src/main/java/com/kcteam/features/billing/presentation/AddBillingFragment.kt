@@ -551,6 +551,9 @@ class AddBillingFragment : BaseFragment(), View.OnClickListener {
 
         addShopData.purpose=shop.purpose
 
+        addShopData.GSTN_Number=shop.gstN_Number
+        addShopData.ShopOwner_PAN=shop.shopOwner_PAN
+
         callAddShopApi(addShopData, shop.shopImageLocalPath, shop.doc_degree, billing)
         //}
     }

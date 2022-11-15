@@ -624,6 +624,9 @@ class QuotationListFragment : BaseFragment() {
 
             addShopData.purpose=purpose
 
+            addShopData.GSTN_Number=gstN_Number
+            addShopData.ShopOwner_PAN=shopOwner_PAN
+
 
 
 

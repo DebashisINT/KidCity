@@ -868,6 +868,10 @@ class NewDateWiseOrderListFragment : BaseFragment(), DatePickerListener, View.On
             override fun onSurveyClick(shop_id: String) {
 
             }
+
+            override fun onMultipleImageClick(shop: Any, position: Int) {
+
+            }
         }, { shopId: String, orderId: String ->
             val shopType = AppDatabase.getDBInstance()?.addShopEntryDao()?.getShopType(shopId)
             senOrderEmail(shopId, orderId, shopType)
@@ -1755,7 +1759,8 @@ class NewDateWiseOrderListFragment : BaseFragment(), DatePickerListener, View.On
         addShopData.isShopDuplicate=mAddShopDBModelEntity.isShopDuplicate
         addShopData.purpose=mAddShopDBModelEntity.purpose
 
-
+        addShopData.GSTN_Number=mAddShopDBModelEntity.gstN_Number
+        addShopData.ShopOwner_PAN=mAddShopDBModelEntity.shopOwner_PAN
 
         callAddShopApi(addShopData, mAddShopDBModelEntity.shopImageLocalPath, shop_id, collection_id, amount, collection,
                 currentDateForShopActi, desc, billId, mAddShopDBModelEntity.doc_degree, orderId, collectionDetails)
@@ -2380,7 +2385,8 @@ class NewDateWiseOrderListFragment : BaseFragment(), DatePickerListener, View.On
 
         addShopData.purpose=shop.purpose
 
-
+        addShopData.GSTN_Number=shop.gstN_Number
+        addShopData.ShopOwner_PAN=shop.shopOwner_PAN
 
 
         callAddShopApi(addShopData, shop.shopImageLocalPath, position, list, shop.doc_degree)

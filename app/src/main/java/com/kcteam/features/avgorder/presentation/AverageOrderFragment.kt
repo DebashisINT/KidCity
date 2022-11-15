@@ -194,6 +194,10 @@ class AverageOrderFragment : BaseFragment(), DatePickerListener {
             override fun onSurveyClick(shop_id: String) {
 
             }
+
+            override fun onMultipleImageClick(shop: Any, position: Int) {
+                TODO("Not yet implemented")
+            }
         })
         layoutManager = LinearLayoutManager(mContext, LinearLayout.VERTICAL, false)
         shopList.layoutManager = layoutManager

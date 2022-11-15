@@ -2242,6 +2242,9 @@ val revisitStatusList : MutableList<ShopRevisitStatusRequestData> = ArrayList()
 
             addShopData.purpose=mAddShopDBModelEntity.purpose
 
+            addShopData.GSTN_Number=mAddShopDBModelEntity.gstN_Number
+            addShopData.ShopOwner_PAN=mAddShopDBModelEntity.shopOwner_PAN
+
 
             callAddShopApi(addShopData, mAddShopDBModelEntity.shopImageLocalPath, shopList, true,
                     mAddShopDBModelEntity.doc_degree)

@@ -31,7 +31,29 @@ import com.kcteam.features.location.LocationWizard
 import com.kcteam.features.nearbyshops.model.NewOrderModel
 import com.kcteam.widgets.AppCustomTextView
 import com.squareup.picasso.Picasso
+import kotlinx.android.synthetic.main.inflate_nearby_shops.view.*
 import kotlinx.android.synthetic.main.inflate_registered_shops.view.*
+import kotlinx.android.synthetic.main.inflate_registered_shops.view.add_order_ll
+import kotlinx.android.synthetic.main.inflate_registered_shops.view.add_quot_ll
+import kotlinx.android.synthetic.main.inflate_registered_shops.view.call_iv
+import kotlinx.android.synthetic.main.inflate_registered_shops.view.call_ll
+import kotlinx.android.synthetic.main.inflate_registered_shops.view.call_tv
+import kotlinx.android.synthetic.main.inflate_registered_shops.view.direction_ll
+import kotlinx.android.synthetic.main.inflate_registered_shops.view.direction_view
+import kotlinx.android.synthetic.main.inflate_registered_shops.view.last_visited_date_TV
+import kotlinx.android.synthetic.main.inflate_registered_shops.view.ll_shop_code
+import kotlinx.android.synthetic.main.inflate_registered_shops.view.myshop_address_TV
+import kotlinx.android.synthetic.main.inflate_registered_shops.view.myshop_name_TV
+import kotlinx.android.synthetic.main.inflate_registered_shops.view.order_amt_p_TV
+import kotlinx.android.synthetic.main.inflate_registered_shops.view.order_view
+import kotlinx.android.synthetic.main.inflate_registered_shops.view.shop_IV
+import kotlinx.android.synthetic.main.inflate_registered_shops.view.shop_damage_ll
+import kotlinx.android.synthetic.main.inflate_registered_shops.view.shop_damage_view
+import kotlinx.android.synthetic.main.inflate_registered_shops.view.shop_image_IV
+import kotlinx.android.synthetic.main.inflate_registered_shops.view.shop_list_LL
+import kotlinx.android.synthetic.main.inflate_registered_shops.view.total_visited_value_TV
+import kotlinx.android.synthetic.main.inflate_registered_shops.view.tv_shop_code
+import kotlinx.android.synthetic.main.inflate_registered_shops.view.tv_shop_contact_no
 
 
 /**
@@ -846,27 +868,75 @@ class NearByShopsListAdapter(context: Context, list: List<AddShopDBModelEntity>,
                 //itemView.low_value_month_tv.visibility=View.GONE
 
                 //Hardcoded for Pure chemical
-                itemView.ll_last_visit_age.visibility=View.GONE
-                itemView.ll_average_visit_time.visibility=View.GONE
-                itemView.ll_distance.visibility=View.GONE
-                itemView.order_amount_tv.visibility=View.GONE
-                itemView.highest_order_amount_tv.visibility=View.GONE
-                itemView.avg_order_amount_tv.visibility=View.GONE
-                itemView.lowest_order_amount_tv.visibility=View.GONE
-                itemView.high_value_month_tv.visibility=View.GONE
-                itemView.low_value_month_tv.visibility=View.GONE
-                itemView.tv_funnel_stage_header.visibility = View.GONE
-                itemView.tv_funnel_stage.visibility = View.GONE
-                itemView.rl_beat_type.visibility = View.GONE
-                itemView.rl_entity_type.visibility = View.GONE
-                itemView.rl_party_status.visibility = View.GONE
-                itemView.next_visit_date_RL.visibility = View.GONE
-                itemView.ll_shop_code.visibility = View.GONE
+//                itemView.ll_last_visit_age.visibility=View.GONE
+//                itemView.ll_average_visit_time.visibility=View.GONE
+//                itemView.ll_distance.visibility=View.GONE
+//                itemView.order_amount_tv.visibility=View.GONE
+//                itemView.highest_order_amount_tv.visibility=View.GONE
+//                itemView.avg_order_amount_tv.visibility=View.GONE
+//                itemView.lowest_order_amount_tv.visibility=View.GONE
+//                itemView.high_value_month_tv.visibility=View.GONE
+//                itemView.low_value_month_tv.visibility=View.GONE
+//                itemView.tv_funnel_stage_header.visibility = View.GONE
+//                itemView.tv_funnel_stage.visibility = View.GONE
+//                itemView.rl_beat_type.visibility = View.GONE
+//                itemView.rl_entity_type.visibility = View.GONE
+//                itemView.rl_party_status.visibility = View.GONE
+//                itemView.next_visit_date_RL.visibility = View.GONE
+//                itemView.ll_shop_code.visibility = View.GONE
 
             } catch (e: Exception) {
                 e.printStackTrace()
                 itemView.order_amount_tv.visibility = View.GONE
             }
+
+            try{
+                if(Pref.IsGSTINPANEnableInShop) {
+                    if (list[adapterPosition].gstN_Number.isNotEmpty()) {
+                        itemView.myshop_Gstin_TV.text = "GSTIN : " + list[adapterPosition].gstN_Number
+                        itemView.myshop_Gstin_TV.visibility = View.VISIBLE
+                    } else {
+                        itemView.myshop_Gstin_TV.text = "GSTIN : " + "N.A"
+                        itemView.myshop_Gstin_TV.visibility = View.VISIBLE
+                    }
+                }else{
+                    itemView.myshop_Gstin_TV.visibility = View.GONE
+                }
+                if(Pref.IsGSTINPANEnableInShop) {
+                    if (list[adapterPosition].shopOwner_PAN.isNotEmpty()) {
+                        itemView.myshop_Pan_TV.text = "PAN     : " + list[adapterPosition].shopOwner_PAN
+                        itemView.myshop_Pan_TV.visibility = View.VISIBLE
+                    } else {
+                        itemView.myshop_Pan_TV.text = "PAN     : " + "N.A"
+                        itemView.myshop_Pan_TV.visibility = View.VISIBLE
+                    }
+                }else{
+                    itemView.myshop_Pan_TV.visibility = View.GONE
+                }
+            }
+            catch (ex:Exception){
+                itemView.myshop_Gstin_TV.text =  "GSTIN : "+"N.A"
+                itemView.myshop_Pan_TV.text = "PAN     : "+"N.A"
+            }
+
+
+                    if(Pref.IsMultipleImagesRequired){
+                        itemView.add_multiple_ll.visibility = View.VISIBLE
+                        itemView.new_multi_view.visibility = View.VISIBLE
+                        itemView.add_multiple_ll.setOnClickListener {
+                            listener.onMultipleImageClick(list[adapterPosition],adapterPosition)
+                        }
+                    }
+                    else{
+                        itemView.add_multiple_ll.visibility = View.GONE
+                        itemView.new_multi_view.visibility = View.GONE
+                    }
+
+
+
+
+
+
         }
     }
 

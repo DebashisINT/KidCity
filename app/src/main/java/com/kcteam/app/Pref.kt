@@ -470,6 +470,9 @@ object Pref : PreferenceHolder() {
     var prevGpsNetSyncTimeStampService: Long by bindToPreferenceField(0, "prevGpsNetSyncTimeStampService")
 
     var IsAllowNearbyshopWithBeat: Boolean by bindToPreferenceField(false, "IsAllowNearbyshopWithBeat")
+    var IsGSTINPANEnableInShop:Boolean by bindToPreferenceField(false, "IsGSTINPANEnableInShop")
+
+    var IsMultipleImagesRequired:Boolean by bindToPreferenceField(false, "IsMultipleImagesRequired")
 
 
 }

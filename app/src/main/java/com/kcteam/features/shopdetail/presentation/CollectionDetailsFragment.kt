@@ -567,6 +567,9 @@ class CollectionDetailsFragment : BaseFragment(), View.OnClickListener {
 
         addShopData.purpose=mAddShopDBModelEntity.purpose
 
+        addShopData.GSTN_Number=mAddShopDBModelEntity.gstN_Number
+        addShopData.ShopOwner_PAN=mAddShopDBModelEntity.shopOwner_PAN
+
         callAddShopApi(addShopData, mAddShopDBModelEntity.shopImageLocalPath, shop_id, order_id, amount, collection, currentDateForShopActi, desc, mAddShopDBModelEntity.doc_degree)
     }
 
@@ -1202,6 +1205,9 @@ class CollectionDetailsFragment : BaseFragment(), View.OnClickListener {
         // duplicate shop api call
         addShopData.isShopDuplicate=mAddShopDBModelEntity.isShopDuplicate
         addShopData.purpose=mAddShopDBModelEntity.purpose
+
+        addShopData.GSTN_Number=mAddShopDBModelEntity.gstN_Number
+        addShopData.ShopOwner_PAN=mAddShopDBModelEntity.shopOwner_PAN
 
         callAddShopApiForSync(addShopData, mAddShopDBModelEntity.shopImageLocalPath, shop_id, collection_id, amount, collection,
                 currentDateForShopActi, desc, mAddShopDBModelEntity.doc_degree, billId, orderId, collectionDetailsEntity)

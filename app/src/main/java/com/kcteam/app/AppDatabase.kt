@@ -58,7 +58,7 @@ import com.kcteam.features.login.*
         QuestionEntity::class, QuestionSubmitEntity::class, AddShopSecondaryImgEntity::class, ReturnDetailsEntity::class, ReturnProductListEntity::class, UserWiseLeaveListEntity::class, ShopFeedbackEntity::class, ShopFeedbackTempEntity::class, LeadActivityEntity::class,
         ShopDtlsTeamEntity::class, CollDtlsTeamEntity::class, BillDtlsTeamEntity::class, OrderDtlsTeamEntity::class,
         TeamAllShopDBModelEntity::class, DistWiseOrderTblEntity::class, NewGpsStatusEntity::class),
-        version = 1, exportSchema = false)
+        version = 2, exportSchema = false)
 @TypeConverters(DateConverter::class)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun addShopEntryDao(): AddShopDao
@@ -203,7 +203,8 @@ abstract class AppDatabase : RoomDatabase() {
                         // allow queries on the main thread.
                         // Don't do this on a real app! See PersistenceBasicSample for an example.
                         .allowMainThreadQueries()
-                        .addMigrations( )
+                        .addMigrations(MIGRATION_1_2
+                        )
 //                        .fallbackToDestructiveMigration()
                         .build()
             }
@@ -218,14 +219,16 @@ abstract class AppDatabase : RoomDatabase() {
             INSTANCE = null
         }
 
+        val MIGRATION_1_2: Migration = object : Migration(1, 2) {
+            override fun migrate(database: SupportSQLiteDatabase) {
+                database.execSQL("alter table shop_detail ADD COLUMN GSTN_Number TEXT")
+                database.execSQL("alter table shop_detail ADD COLUMN ShopOwner_PAN TEXT")
 
 
+            }
+        }
 
 
     }
-
-
-//}
-
 
 }

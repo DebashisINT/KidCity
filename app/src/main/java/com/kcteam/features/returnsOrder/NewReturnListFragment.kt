@@ -371,6 +371,10 @@ class NewReturnListFragment : BaseFragment() {
             override fun onSurveyClick(shop_id: String) {
 
             }
+
+            override fun onMultipleImageClick(shop: Any, position: Int) {
+                TODO("Not yet implemented")
+            }
         }, {
 
             val heading = "ORDERS RETURN"
@@ -697,6 +701,9 @@ class NewReturnListFragment : BaseFragment() {
         addShopData.isShopDuplicate=mAddShopDBModelEntity.isShopDuplicate
 
         addShopData.purpose=mAddShopDBModelEntity.purpose
+
+        addShopData.GSTN_Number=mAddShopDBModelEntity.gstN_Number
+        addShopData.ShopOwner_PAN=mAddShopDBModelEntity.shopOwner_PAN
 
 
         callAddShopApi(addShopData, mAddShopDBModelEntity.shopImageLocalPath, shop_id, collection_id, amount, collection,
@@ -1308,6 +1315,9 @@ class NewReturnListFragment : BaseFragment() {
         // duplicate shop api call
         addShopData.isShopDuplicate=shop.isShopDuplicate
         addShopData.purpose=shop.purpose
+
+        addShopData.GSTN_Number=shop.gstN_Number
+        addShopData.ShopOwner_PAN=shop.shopOwner_PAN
 
         callAddShopApi(addShopData, shop.shopImageLocalPath, position, list, shop.doc_degree)
         //}
@@ -2053,6 +2063,9 @@ class NewReturnListFragment : BaseFragment() {
         addShopData.isShopDuplicate=mAddShopDBModelEntity.isShopDuplicate
 
         addShopData.purpose=mAddShopDBModelEntity.purpose
+
+        addShopData.GSTN_Number=mAddShopDBModelEntity.gstN_Number
+        addShopData.ShopOwner_PAN=mAddShopDBModelEntity.shopOwner_PAN
 
 
         callAddShopApi(addShopData, mAddShopDBModelEntity.shopImageLocalPath, shopList, orderDetailsList,

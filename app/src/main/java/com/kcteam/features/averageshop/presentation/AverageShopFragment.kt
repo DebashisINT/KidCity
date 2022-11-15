@@ -1225,6 +1225,26 @@ class AverageShopFragment : BaseFragment(), DatePickerListener, View.OnClickList
                 }
             }
 
+            override fun onMultipleImageClick(shop: Any,position: Int) {
+                if (AppUtils.isOnline(mContext)) {
+                    var shopIsuploaded =AppDatabase.getDBInstance()!!.addShopEntryDao().getShopDetail(ShopActivityEntityList[position].shopid).isUploaded
+                    if(shopIsuploaded){
+                        val shop = AppDatabase.getDBInstance()!!.addShopEntryDao().getShopDetail(ShopActivityEntityList[position].shopid)
+                        if(Pref.IsMultipleImagesRequired){
+                            (mContext as DashboardActivity).loadFragment(FragType.MultipleImageFragment, true, shop)
+                        }
+                    }
+                    else{
+                        (this as DashboardActivity).showSnackMessage("Please snyc shop First..")
+                    }
+
+                }
+                else{
+                    (this as DashboardActivity).showSnackMessage(getString(R.string.no_internet))
+                }
+
+            }
+
             override fun OnItemClick(position: Int) {
                 try {
                     (mContext as DashboardActivity).loadFragment(FragType.ShopDetailFragment, true, ShopActivityEntityList[position].shopid!!)

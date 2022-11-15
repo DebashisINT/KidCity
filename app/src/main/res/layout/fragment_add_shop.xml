@@ -1353,6 +1353,138 @@
 
                 </RelativeLayout>
 
+                <!-- GSTIN NUMBER -->
+
+                <RelativeLayout
+                    android:id="@+id/GSTINNumberRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <ImageView
+                        android:id="@+id/iv_GSTIN_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:src="@drawable/gst_icon" />
+
+                    <com.kcteam.widgets.AppCustomTextView
+                        android:id="@+id/tv_GSTIN_asterisk_mark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:paddingTop="@dimen/_7sdp"
+                        android:text="@string/mandatory_mark"
+                        android:visibility="gone"
+                        android:textColor="@color/red"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/GSTIN_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_toLeftOf="@+id/tv_GSTIN_asterisk_mark"
+                        android:layout_toRightOf="@+id/iv_GSTIN_icon"
+                        android:textColorHint="@color/light_gray"
+                        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                        <com.kcteam.widgets.AppCustomEditText
+                            android:id="@+id/GSTINnumber_EDT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/GSTIN"
+                            android:textAllCaps="true"
+                            android:imeOptions="actionNext"
+                            android:singleLine="true"
+                            android:textSize="@dimen/_13sdp"
+                            app:theme="@style/EvoEditTextTheme" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_below="@id/GSTIN_no"
+                        android:layout_alignLeft="@+id/GSTIN_no"
+                        android:layout_marginRight="@dimen/_2sdp"
+                        android:background="@color/light_gray" />
+
+                </RelativeLayout>
+
+                <!-- PAN NUMBER -->
+
+                <RelativeLayout
+                    android:id="@+id/PANNumberRL"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_5sdp">
+
+                    <ImageView
+                        android:id="@+id/iv_PAN_icon"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/_10sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:src="@drawable/pan_card_icon" />
+
+                    <com.kcteam.widgets.AppCustomTextView
+                        android:id="@+id/tv_PAN_asterisk_mark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="@dimen/_3sdp"
+                        android:paddingTop="@dimen/_7sdp"
+                        android:text="@string/mandatory_mark"
+                        android:textColor="@color/red"
+                        android:visibility="gone"
+                        android:textSize="@dimen/_15sdp" />
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/PAN_no"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/_5sdp"
+                        android:layout_marginRight="@dimen/_5sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:layout_toLeftOf="@+id/tv_PAN_asterisk_mark"
+                        android:layout_toRightOf="@+id/iv_PAN_icon"
+                        android:textColorHint="@color/light_gray"
+                        app:hintTextAppearance="@style/TextAppearance.App.TextInputLayout">
+
+                        <com.kcteam.widgets.AppCustomEditText
+                            android:id="@+id/PANnumber_EDT"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@android:color/transparent"
+                            android:hint="@string/pan"
+                            android:textAllCaps="true"
+                            android:imeOptions="actionNext"
+                            android:singleLine="true"
+                            android:textSize="@dimen/_13sdp"
+                            app:theme="@style/EvoEditTextTheme" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_1sdp"
+                        android:layout_below="@id/PAN_no"
+                        android:layout_alignLeft="@+id/PAN_no"
+                        android:layout_marginRight="@dimen/_2sdp"
+                        android:background="@color/light_gray" />
+
+                </RelativeLayout>
+
                 <!--Landline Design-->
 
 

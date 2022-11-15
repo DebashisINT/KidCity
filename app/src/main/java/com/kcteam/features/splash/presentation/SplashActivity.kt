@@ -16,6 +16,10 @@ import android.text.TextUtils
 import android.util.Log
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationManagerCompat
+import com.android.volley.Request
+import com.android.volley.Response
+import com.android.volley.toolbox.StringRequest
+import com.android.volley.toolbox.Volley
 import com.kcteam.BuildConfig
 import com.kcteam.R
 import com.kcteam.app.NetworkConstant
@@ -94,6 +98,7 @@ class SplashActivity : BaseActivity(), GpsStatusDetector.GpsStatusDetectorCallBa
         progress_wheel.stopSpinning()
 
 
+
         if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.M)
             if (Pref.isLocationPermissionGranted)
                 initPermissionCheck()
@@ -119,6 +124,7 @@ class SplashActivity : BaseActivity(), GpsStatusDetector.GpsStatusDetectorCallBa
         }
         permissionCheck()
     }
+
 
 
     private fun locDesc(){

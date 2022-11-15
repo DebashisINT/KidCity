@@ -494,6 +494,9 @@ class StockListFragment : BaseFragment(), View.OnClickListener {
         // duplicate shop api call
         addShopData.isShopDuplicate=mAddShopDBModelEntity.isShopDuplicate
 
+        addShopData.GSTN_Number=mAddShopDBModelEntity.gstN_Number
+        addShopData.ShopOwner_PAN=mAddShopDBModelEntity.shopOwner_PAN
+
         callAddShopApiForSync(addShopData, mAddShopDBModelEntity.shopImageLocalPath, shop_id, stock_id, amount,
                 currentDateForShopActi, stock_lat, stock_long, mAddShopDBModelEntity.doc_degree)
         //callAddShopApi(addShopData, "")

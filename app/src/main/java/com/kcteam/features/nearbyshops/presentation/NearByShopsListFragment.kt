@@ -678,6 +678,26 @@ class NearByShopsListFragment : BaseFragment(), View.OnClickListener {
                }
             }
 
+            override fun onMultipleImageClick(shop: Any,position: Int) {
+                if (AppUtils.isOnline(mContext)) {
+                    var shopIsuploaded =AppDatabase.getDBInstance()!!.addShopEntryDao().getShopDetail(list[position].shop_id).isUploaded
+                    if(shopIsuploaded){
+                        if(Pref.IsMultipleImagesRequired){
+                            (mContext as DashboardActivity).loadFragment(FragType.MultipleImageFragment, true, shop)
+                        }
+                    }
+                    else{
+                        (this as DashboardActivity).showSnackMessage("Please snyc shop First..")
+                    }
+
+                }
+                else{
+                    (this as DashboardActivity).showSnackMessage(getString(R.string.no_internet))
+                }
+
+
+            }
+
             override fun onUpdateStageClick(position: Int) {
                 if (list[position].isUploaded) {
                     val stageList = AppDatabase.getDBInstance()?.stageDao()?.getAll() as ArrayList<StageEntity>
@@ -1088,6 +1108,9 @@ class NearByShopsListFragment : BaseFragment(), View.OnClickListener {
 
                     addShopData.purpose=mAddShopDBModelEntity.purpose
 
+                    addShopData.GSTN_Number=mAddShopDBModelEntity.gstN_Number
+                    addShopData.ShopOwner_PAN=mAddShopDBModelEntity.shopOwner_PAN
+
 
                     callAddShopApi(addShopData, mAddShopDBModelEntity.shopImageLocalPath, null, true,
                             mAddShopDBModelEntity.doc_degree)
@@ -1413,6 +1436,9 @@ class NearByShopsListFragment : BaseFragment(), View.OnClickListener {
         addShopData.isShopDuplicate=mAddShopDBModelEntity.isShopDuplicate
 
         addShopData.purpose=mAddShopDBModelEntity.purpose
+
+        addShopData.GSTN_Number=mAddShopDBModelEntity.gstN_Number
+        addShopData.ShopOwner_PAN=mAddShopDBModelEntity.shopOwner_PAN
 
 
         callAddShopApi(addShopData, mAddShopDBModelEntity.shopImageLocalPath, shop_id, order_id, amount, collection,
@@ -2146,6 +2172,11 @@ class NearByShopsListFragment : BaseFragment(), View.OnClickListener {
         addShopReqData.beat_id = addShopData.beat_id
         addShopReqData.assigned_to_shop_id = addShopData.assigned_to_shop_id
         addShopReqData.actual_address = addShopData.actual_address
+
+
+        addShopReqData.GSTN_Number = addShopData.gstN_Number
+        addShopReqData.ShopOwner_PAN = addShopData.shopOwner_PAN
+
 
         callEditShopApi(addShopReqData, addShopData.shopImageLocalPath, false, isAddressUpdated, addShopData.doc_degree)
     }
@@ -3256,6 +3287,9 @@ class NearByShopsListFragment : BaseFragment(), View.OnClickListener {
         addShopData.isShopDuplicate=mAddShopDBModelEntity.isShopDuplicate
 
         addShopData.purpose=mAddShopDBModelEntity.purpose
+
+        addShopData.GSTN_Number=mAddShopDBModelEntity.gstN_Number
+        addShopData.ShopOwner_PAN=mAddShopDBModelEntity.shopOwner_PAN
 
 
         callAddShopApi(addShopData, mAddShopDBModelEntity.shopImageLocalPath, shopList, true,

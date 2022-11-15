@@ -148,10 +148,36 @@
                         android:textSize="@dimen/_11sdp" />
 
                     <com.kcteam.widgets.AppCustomTextView
-                        android:id="@+id/project_name"
+                        android:id="@+id/myshop_pancard_TV"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_below="@id/myshop_address_TV"
+                        android:layout_marginBottom="@dimen/_3sdp"
+                        android:singleLine="true"
+                        android:text="PAN     : N.A"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:drawableLeft="@drawable/pan_card_icon"
+                        android:textColor="@color/light_gray"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <com.kcteam.widgets.AppCustomTextView
+                        android:id="@+id/myshop_gstin_TV"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/myshop_pancard_TV"
+                        android:layout_marginBottom="@dimen/_3sdp"
+                        android:singleLine="true"
+                        android:text="GSTIN : N.A"
+                        android:drawablePadding="@dimen/_5sdp"
+                        android:drawableLeft="@drawable/gst_icon"
+                        android:textColor="@color/light_gray"
+                        android:textSize="@dimen/_11sdp" />
+
+                    <com.kcteam.widgets.AppCustomTextView
+                        android:id="@+id/project_name"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/myshop_gstin_TV"
                         android:layout_marginBottom="@dimen/_3sdp"
                         android:singleLine="true"
                         android:text="Project Name:"

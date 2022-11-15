@@ -865,6 +865,9 @@ class AvgTimespentShopListFragment : BaseFragment(), DatePickerListener, View.On
 
          addShopData.purpose=shop.purpose
 
+        addShopData.GSTN_Number=shop.gstN_Number
+        addShopData.ShopOwner_PAN=shop.shopOwner_PAN
+
 
         callAddShopApi(addShopData, shop.shopImageLocalPath, shop.doc_degree, position)
         //}
@@ -2282,7 +2285,8 @@ class AvgTimespentShopListFragment : BaseFragment(), DatePickerListener, View.On
             addShopData.isShopDuplicate=mAddShopDBModelEntity.isShopDuplicate
             addShopData.purpose=mAddShopDBModelEntity.purpose
 
-
+            addShopData.GSTN_Number=mAddShopDBModelEntity.gstN_Number
+            addShopData.ShopOwner_PAN=mAddShopDBModelEntity.shopOwner_PAN
 
             callAddShopApi(addShopData, mAddShopDBModelEntity.shopImageLocalPath, shopList, true,
                     mAddShopDBModelEntity.doc_degree)

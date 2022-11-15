@@ -1243,6 +1243,150 @@
                         </RelativeLayout>
                     </RelativeLayout>
 
+                    <!--GSTIN Number-->
+
+                    <RelativeLayout
+                        android:id="@+id/GSTIN_RL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp">
+
+                        <ImageView
+                            android:id="@+id/GSTIN_IV"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_centerVertical="true"
+                            android:paddingTop="@dimen/_5sdp"
+                            android:src="@drawable/gst_icon" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/GSTIN_IV">
+
+                            <com.kcteam.widgets.AppCustomTextView
+                                android:id="@+id/GSTIN_label_TV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:text="@string/GSTIN"
+                                android:textColor="@color/light_gray"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <com.kcteam.widgets.AppCustomEditText
+                                android:id="@+id/GSTIN_TV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/GSTIN_label_TV"
+                                android:layout_toLeftOf="@+id/tv_GSTIN_asterisk_mark"
+                                android:background="@android:color/transparent"
+                                android:imeOptions="actionNext"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:text="N.A"
+                                android:textColor="@color/login_txt_color"
+                                android:textSize="@dimen/_11sdp" />
+
+                            <TextView
+                                android:id="@+id/tv_GSTIN_asterisk_mark"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBaseline="@+id/GSTIN_TV"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/_3sdp"
+                                android:gravity="bottom"
+                                android:includeFontPadding="false"
+                                android:lineSpacingExtra="0dp"
+                                android:paddingTop="@dimen/_2sdp"
+                                android:text="@string/mandatory_mark"
+                                android:visibility="gone"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:layout_below="@id/GSTIN_TV"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:background="@color/light_gray" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
+                    <!--PAN Number-->
+
+                    <RelativeLayout
+                        android:id="@+id/PAN_RL"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/_7sdp">
+
+                        <ImageView
+                            android:id="@+id/PAN_IV"
+                            android:layout_width="@dimen/_20sdp"
+                            android:layout_height="@dimen/_20sdp"
+                            android:layout_centerVertical="true"
+                            android:paddingTop="@dimen/_5sdp"
+                            android:src="@drawable/pan_card_icon" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@id/PAN_IV">
+
+                            <com.kcteam.widgets.AppCustomTextView
+                                android:id="@+id/PAN_label_TV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:text="@string/pan"
+                                android:textColor="@color/light_gray"
+                                android:textSize="@dimen/_10sdp" />
+
+                            <com.kcteam.widgets.AppCustomEditText
+                                android:id="@+id/PAN_TV"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/PAN_label_TV"
+                                android:layout_toLeftOf="@+id/tv_PAN_asterisk_mark"
+                                android:background="@android:color/transparent"
+                                android:imeOptions="actionNext"
+                                android:paddingLeft="@dimen/_5sdp"
+                                android:paddingRight="@dimen/_5sdp"
+                                android:text="N.A"
+                                android:textColor="@color/login_txt_color"
+                                android:textSize="@dimen/_11sdp" />
+
+                            <TextView
+                                android:id="@+id/tv_PAN_asterisk_mark"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBaseline="@+id/PAN_TV"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:layout_marginRight="@dimen/_3sdp"
+                                android:gravity="bottom"
+                                android:includeFontPadding="false"
+                                android:lineSpacingExtra="0dp"
+                                android:paddingTop="@dimen/_2sdp"
+                                android:text="@string/mandatory_mark"
+                                android:visibility="gone"
+                                android:textColor="@color/red"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/_1sdp"
+                                android:layout_below="@id/PAN_TV"
+                                android:layout_marginLeft="@dimen/_5sdp"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:background="@color/light_gray" />
+                        </RelativeLayout>
+                    </RelativeLayout>
+
                     <!--pincode-->
                     <RelativeLayout
                         android:layout_width="match_parent"

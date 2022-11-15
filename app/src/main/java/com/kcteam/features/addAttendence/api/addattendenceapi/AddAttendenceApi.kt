@@ -24,7 +24,7 @@ interface AddAttendenceApi {
     fun sendLeaveApproval(@Body sendLeaveApprovalInputParams: SendLeaveApprovalInputParams): Observable<BaseResponse>
 
     @Multipart
-    @POST("DemoAttendance/AddAttendanceImage")
+    @POST("kcteamAttendance/AddAttendanceImage")
     fun attendenceWithImage(@Query("data") addAttendence: String, @Part logo_img_data: MultipartBody.Part?): Observable<BaseResponse>
 
     @FormUrlEncoded

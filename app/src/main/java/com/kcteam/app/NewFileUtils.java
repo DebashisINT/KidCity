@@ -138,7 +138,9 @@ public class NewFileUtils {
                 } else if ("audio".equals(type)) {
                     contentUri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
                 }
-
+//                else if ("document".equals(type)) {
+//                    contentUri = MediaStore.Audio.Media.EXTERNAL_CONTENT_URI;
+//                }
                 final String selection = "_id=?";
                 final String[] selectionArgs = new String[]{
                         split[1]

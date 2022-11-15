@@ -21,8 +21,11 @@ import com.kcteam.app.utils.Toaster
 import com.kcteam.features.dashboard.presentation.DashboardActivity
 import kotlinx.android.synthetic.main.inflate_avg_shop_item.view.*
 import kotlinx.android.synthetic.main.inflate_avg_shop_item.view.activity_view
+import kotlinx.android.synthetic.main.inflate_avg_shop_item.view.myshop_gstin_TV
+import kotlinx.android.synthetic.main.inflate_avg_shop_item.view.myshop_pancard_TV
 import kotlinx.android.synthetic.main.inflate_avg_shop_item.view.shop_damage_ll
 import kotlinx.android.synthetic.main.inflate_avg_shop_item.view.shop_damage_view
+import kotlinx.android.synthetic.main.inflate_nearby_shops.view.*
 import kotlinx.android.synthetic.main.inflate_registered_shops.view.*
 import kotlinx.android.synthetic.main.inflate_registered_shops.view.add_order_ll
 import kotlinx.android.synthetic.main.inflate_registered_shops.view.add_quot_ll
@@ -49,6 +52,9 @@ import kotlinx.android.synthetic.main.inflate_registered_shops.view.tv_shop_code
 import kotlinx.android.synthetic.main.inflate_registered_shops.view.tv_shop_contact_no
 import kotlinx.android.synthetic.main.inflate_registered_shops.view.update_address_TV
 import kotlinx.android.synthetic.main.inflate_registered_shops.view.update_stage_TV
+import kotlinx.android.synthetic.main.inflate_avg_shop_item.view.add_multiple_ll
+import kotlinx.android.synthetic.main.inflate_avg_shop_item.view.multiple_tv
+import kotlinx.android.synthetic.main.inflate_avg_shop_item.view.new_multi_view
 import java.util.*
 
 /**
@@ -488,6 +494,52 @@ class AverageShopListAdapter(context: Context, userLocationDataEntity: List<Shop
 
             } catch (e: Exception) {
                 e.printStackTrace()
+            }
+
+            try {
+                val shopGSTINNumber = AppDatabase.getDBInstance()?.addShopEntryDao()
+                    ?.getGSTINNumber(userLocationDataEntity[adapterPosition].shopid)
+                val shopPANNumber = AppDatabase.getDBInstance()?.addShopEntryDao()
+                    ?.getPancardNumber(userLocationDataEntity[adapterPosition].shopid)
+                if (Pref.IsGSTINPANEnableInShop) {
+                    if (shopGSTINNumber!!.isNotEmpty()) {
+                        itemView.myshop_gstin_TV.text = "GSTIN : " + shopGSTINNumber
+                        itemView.myshop_gstin_TV.visibility = View.VISIBLE
+                    } else {
+                        itemView.myshop_Gstin_TV.text = "GSTIN : " + "N.A"
+                        itemView.myshop_gstin_TV.visibility = View.VISIBLE
+                    }
+                }
+                else {
+                    itemView.myshop_gstin_TV.visibility = View.GONE
+                }
+                if (Pref.IsGSTINPANEnableInShop) {
+                    if (shopPANNumber!!.isNotEmpty()) {
+                        itemView.myshop_pancard_TV.text = "PAN     : " + shopPANNumber
+                        itemView.myshop_pancard_TV.visibility = View.VISIBLE
+                    } else {
+                        itemView.myshop_pancard_TV.text = "PAN     : " + "N.A"
+                        itemView.myshop_pancard_TV.visibility = View.VISIBLE
+                    }
+                } else {
+                    itemView.myshop_pancard_TV.visibility = View.GONE
+                }
+            }
+            catch (ex:Exception){
+                itemView.myshop_gstin_TV.text = "GSTIN : "+"N.A"
+                itemView.myshop_pancard_TV.text = "PAN     : "+"N.A"
+            }
+
+            if(Pref.IsMultipleImagesRequired){
+                itemView.add_multiple_ll.visibility = View.VISIBLE
+                itemView.new_multi_view.visibility = View.GONE
+                itemView.add_multiple_ll.setOnClickListener {
+                    listener.onMultipleImageClick(userLocationDataEntity[adapterPosition],adapterPosition)
+                }
+            }
+            else{
+                itemView.add_multiple_ll.visibility = View.GONE
+                itemView.new_multi_view.visibility = View.GONE
             }
         }
     }

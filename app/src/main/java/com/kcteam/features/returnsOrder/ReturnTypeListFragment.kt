@@ -1309,6 +1309,9 @@ class ReturnTypeListFragment : BaseFragment(), View.OnClickListener {
 
         addShopData.purpose=mAddShopDBModelEntity.purpose
 
+        addShopData.GSTN_Number=mAddShopDBModelEntity.gstN_Number
+        addShopData.ShopOwner_PAN=mAddShopDBModelEntity.shopOwner_PAN
+
 
         callAddShopApi(addShopData, mAddShopDBModelEntity.shopImageLocalPath, shop_id, order_id, amount, collection, currentDateForShopActi, desc, order_lat,
                 order_long, stock_id, mAddShopDBModelEntity.doc_degree, remarks, signature, orderListDetails)

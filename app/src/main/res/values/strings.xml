@@ -179,6 +179,8 @@
     <string name="owner_name1" translatable="false">Contact Name</string>
     <string name="owner_contact_number" translatable="false">Owner Contact Number</string>
     <string name="owner_contact_number1" translatable="false">Contact Number</string>
+    <string name="GSTIN" translatable="false">GSTIN Number</string>
+    <string name="pan" translatable="false">PAN Number</string>
     <string name="owner_email" translatable="false">Owner Email</string>
     <string name="owner_email1" translatable="false">Email</string>
     <string name="only_email" translatable="false">Email</string>

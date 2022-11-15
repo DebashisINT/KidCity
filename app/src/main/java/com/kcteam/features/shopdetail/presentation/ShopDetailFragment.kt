@@ -71,6 +71,7 @@ import com.squareup.picasso.Picasso
 import com.themechangeapp.pickimage.PermissionHelper
 import io.reactivex.android.schedulers.AndroidSchedulers
 import io.reactivex.schedulers.Schedulers
+import kotlinx.android.synthetic.main.fragment_add_shop.*
 import org.jetbrains.anko.doAsync
 import org.jetbrains.anko.uiThread
 import java.util.*
@@ -90,6 +91,9 @@ class ShopDetailFragment : BaseFragment(), View.OnClickListener {
     private lateinit var shop_name_label_TV: AppCustomTextView
 
     private lateinit var shopAddress: AppCustomEditText
+    private lateinit var shopGSTIN: AppCustomEditText
+    private lateinit var shopPancard: AppCustomEditText
+
     private lateinit var shopPin: AppCustomEditText
     private lateinit var shopOwnerName: AppCustomTextView
     private lateinit var shopContactNumber: AppCustomEditText
@@ -385,6 +389,8 @@ class ShopDetailFragment : BaseFragment(), View.OnClickListener {
 
 
         shopAddress = view.findViewById(R.id.address_TV)
+        shopGSTIN = view.findViewById(R.id.GSTIN_TV)
+        shopPancard = view.findViewById(R.id.PAN_TV)
         shopPin = view.findViewById(R.id.pincode_TV)
         shopContactNumber = view.findViewById(R.id.owner_contact_no_TV)
         shopOwnerEmail = view.findViewById(R.id.owner_email_TV)
@@ -2170,6 +2176,13 @@ class ShopDetailFragment : BaseFragment(), View.OnClickListener {
             if (!TextUtils.isEmpty(addShopData.pinCode))
                 shopPin.setText(addShopData.pinCode)
 
+
+            if (Pref.IsGSTINPANEnableInShop && !TextUtils.isEmpty(addShopData.gstN_Number))
+                shopGSTIN.setText(addShopData.gstN_Number)
+
+            if (Pref.IsGSTINPANEnableInShop && !TextUtils.isEmpty(addShopData.shopOwner_PAN))
+                shopPancard.setText(addShopData.shopOwner_PAN)
+
             if (!TextUtils.isEmpty(addShopData.ownerContactNumber)) {
                 shopContactNumber.setText(addShopData.ownerContactNumber)
 
@@ -2790,7 +2803,10 @@ class ShopDetailFragment : BaseFragment(), View.OnClickListener {
             }
 
             R.id.save_TV -> {
-                if (!addShopData.isUploaded || addShopData.isEditUploaded == 0) {
+                if(Pref.IsGSTINPANEnableInShop){
+                    checkValidation()
+                }
+                else if (!addShopData.isUploaded || addShopData.isEditUploaded == 0) {
                     (mContext as DashboardActivity).showSnackMessage("Please sync this shop first.")
                 } else {
                     checkValidation()
@@ -4936,6 +4952,8 @@ class ShopDetailFragment : BaseFragment(), View.OnClickListener {
 
         if (!TextUtils.isEmpty(imagePath))
             addShopData.shopImageLocalPath = imagePath
+        else
+            addShopData.shopImageLocalPath = ""
         addShopData.isEditUploaded = 0
 
 
@@ -5022,6 +5040,45 @@ class ShopDetailFragment : BaseFragment(), View.OnClickListener {
         addShopData.landline_number = land_contact_no_TV.text.toString().trim()
         addShopData.alternateNoForCustomer = alternate_no_TV.text.toString().trim()
         addShopData.whatsappNoForCustomer = whatsappp_no_TV.text.toString().trim()
+
+       /*GSTIN & PAN NUMBER*/
+        if(Pref.IsGSTINPANEnableInShop) {
+            var gstinStr : String = shopGSTIN.text!!.trim().toString()
+            if(!gstinStr.equals("N.A")) {
+                if (!shopGSTIN.text!!.trim().isBlank()) {
+                    if (AppUtils.isValidGSTINCardNo(shopGSTIN.text.toString())) {
+                        addShopData.gstN_Number = shopGSTIN.text.toString().trim()
+                    } else {
+                        BaseActivity.isApiInitiated = false
+                        openDialogPopup(
+                            "Hi ${Pref.user_name} !",
+                            "Please provide a valid GSTIN number as per the below format\n" +
+                                    "GSTIN Format : 19ABCDE1234E1ZT"
+                        )
+//                (mContext as DashboardActivity).showSnackMessage("Please use valid GSTIN Number")
+                        return
+                    }
+                }
+            }
+            var panStr : String = shopPancard.text!!.trim().toString()
+            if(!panStr.equals("N.A")) {
+                if (!(shopPancard.text!!.trim().isBlank()) ) {
+                    if (AppUtils.isValidPanCardNo(shopPancard.text.toString()) && !shopPancard.text!!.trim().equals("N.A")) {
+                        addShopData.shopOwner_PAN = shopPancard.text.toString().trim()
+                    } else {
+                        BaseActivity.isApiInitiated = false
+                        openDialogPopup("Hi ${Pref.user_name} !","Please provide a valid PAN number as per the below format\n" +
+                                "PAN Format : ADBCE1234G")
+//                    (mContext as DashboardActivity).showSnackMessage("Please use valid PAN Number")
+                        return
+                    }
+                }
+            }
+
+        }
+
+
+
 
         AppDatabase.getDBInstance()?.addShopEntryDao()?.updateShopDao(addShopData)
 
@@ -5134,6 +5191,16 @@ class ShopDetailFragment : BaseFragment(), View.OnClickListener {
             else
                 addShopReqData.whatsappNoForCustomer = ""
 
+            /*GSTIN & PAN NUMBER*/
+            if (addShopData.gstN_Number!=null && !addShopData.gstN_Number.equals(""))
+                addShopReqData.GSTN_Number =addShopData.gstN_Number!!
+            else
+                addShopReqData.GSTN_Number = ""
+
+            if (addShopData.shopOwner_PAN!=null && !addShopData.shopOwner_PAN.equals(""))
+                addShopReqData.ShopOwner_PAN =addShopData.shopOwner_PAN!!
+            else
+                addShopReqData.ShopOwner_PAN = ""
 
             callEditShopApi(addShopReqData, addShopData.shopImageLocalPath)
         } else {
@@ -6366,5 +6433,21 @@ class ShopDetailFragment : BaseFragment(), View.OnClickListener {
 
     fun refreshList() {
         getShopTypeListApi(shop_type_TV, true)
+    }
+
+    fun openDialogPopup(header:String,text:String){
+        val simpleDialog = Dialog(mContext)
+        simpleDialog.setCancelable(false)
+        simpleDialog.getWindow()!!.setBackgroundDrawable(ColorDrawable(Color.TRANSPARENT))
+        simpleDialog.setContentView(R.layout.dialog_ok_imei)
+        val dialogHeader = simpleDialog.findViewById(R.id.dialog_yes_header) as AppCustomTextView
+        val dialogBody = simpleDialog.findViewById(R.id.dialog_yes_body) as AppCustomTextView
+        dialogHeader.text = header
+        dialogBody.text = text
+        val dialogYes = simpleDialog.findViewById(R.id.tv_dialog_yes) as AppCustomTextView
+        dialogYes.setOnClickListener({ view ->
+            simpleDialog.cancel()
+        })
+        simpleDialog.show()
     }
 }

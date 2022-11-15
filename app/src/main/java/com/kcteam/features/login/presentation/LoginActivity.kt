@@ -523,6 +523,12 @@ class LoginActivity : BaseActivity(), View.OnClickListener, LocationListener {
                                 if (configResponse.IsAllowNearbyshopWithBeat != null)
                                     Pref.IsAllowNearbyshopWithBeat = configResponse.IsAllowNearbyshopWithBeat!!
 
+                                if (configResponse.IsGSTINPANEnableInShop != null)
+                                    Pref.IsGSTINPANEnableInShop = configResponse.IsGSTINPANEnableInShop!!
+
+                                if (configResponse.IsMultipleImagesRequired != null)
+                                    Pref.IsMultipleImagesRequired = configResponse.IsMultipleImagesRequired!!
+
 
                                 /*if (configResponse.willShowUpdateDayPlan != null)
                                     Pref.willShowUpdateDayPlan = configResponse.willShowUpdateDayPlan!!
@@ -3281,8 +3287,7 @@ class LoginActivity : BaseActivity(), View.OnClickListener, LocationListener {
                         fingerprintDialog?.dismiss()
 
                         if (Pref.isSelfieMandatoryForAttendance)
-                            //showSelfieDialog()
-                            prapareLogin(this@LoginActivity)
+                            showSelfieDialog()
                         else
                             prapareLogin(this@LoginActivity)
                     }
@@ -3771,14 +3776,12 @@ class LoginActivity : BaseActivity(), View.OnClickListener, LocationListener {
                                             fingerprintDialog?.show(supportFragmentManager, "")
                                         } else {
                                             if (Pref.isSelfieMandatoryForAttendance)
-                                                //showSelfieDialog()
-                                            prapareLogin(this@LoginActivity)
+                                                showSelfieDialog()
                                             else
                                                 prapareLogin(this@LoginActivity)
                                         }
                                     } else if (Pref.isSelfieMandatoryForAttendance)
-                                        //showSelfieDialog()
-                                        prapareLogin(this@LoginActivity)
+                                        showSelfieDialog()
                                     else
                                         prapareLogin(this@LoginActivity)
                                 } else
@@ -4568,6 +4571,7 @@ class LoginActivity : BaseActivity(), View.OnClickListener, LocationListener {
 
 
                                         //var listConv : List<ProductListEntity> = list!! as List<ProductListEntity>
+                                        println("xyzzz - getProductList db_______started size " + list.size);
                                         println("xyzzz - getProductList db_______started" + AppUtils.getCurrentDateTime());
 
                                         AppDatabase.getDBInstance()?.productListDao()?.insertAll(list!!)
@@ -6139,6 +6143,10 @@ class LoginActivity : BaseActivity(), View.OnClickListener, LocationListener {
             shopObj.isShopDuplicate=shop_list[i].isShopDuplicate
 
             shopObj.purpose=shop_list[i].purpose
+
+            /*GSTIN & PAN NUMBER*/
+            shopObj.gstN_Number=shop_list[i].GSTN_Number
+            shopObj.shopOwner_PAN=shop_list[i].ShopOwner_PAN
 
 
             list.add(shopObj)

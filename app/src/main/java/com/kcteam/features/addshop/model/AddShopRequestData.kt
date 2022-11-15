@@ -81,4 +81,7 @@ class AddShopRequestData {
     var isShopDuplicate: Boolean?= null
     var purpose: String?= null
 
+    var GSTN_Number:String?= null
+    var ShopOwner_PAN:String?= null
+
 }

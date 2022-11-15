@@ -27,4 +27,5 @@ interface NearByShopsListClickListener {
     fun onHistoryClick(shop: Any)
     fun onDamageClick(shop_id: String)
     fun onSurveyClick(shop_id: String)
+    fun onMultipleImageClick(shop: Any,position: Int)
 }
