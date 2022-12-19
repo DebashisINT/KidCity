@@ -139,10 +139,14 @@ class NearByShopsListAdapter(context: Context, list: List<AddShopDBModelEntity>,
 
                 itemView.direction_ll.findViewById<LinearLayout>(R.id.direction_ll).setOnClickListener(View.OnClickListener {
                     //listener.mapClick(adapterPosition)
-                    var intentt: Intent = Intent(Intent.ACTION_VIEW, Uri.parse("google.navigation:q=${list[adapterPosition].shopLat},${list[adapterPosition].shopLong}&mode=1"))
-                    intentt.setPackage("com.google.android.apps.maps")
-                    if(intentt.resolveActivity(context.packageManager) !=null){
-                        context.startActivity(intentt)
+                    try{
+                        var intentt: Intent = Intent(Intent.ACTION_VIEW, Uri.parse("google.navigation:q=${list[adapterPosition].shopLat},${list[adapterPosition].shopLong}&mode=1"))
+                        intentt.setPackage("com.google.android.apps.maps")
+                        if(intentt.resolveActivity(context.packageManager) !=null){
+                            context.startActivity(intentt)
+                        }
+                    }catch (ex:Exception){
+                        ex.printStackTrace()
                     }
                 })
 
