@@ -1,7 +1,9 @@
 package com.kcteam.features.nearbyshops.presentation
 
 import android.content.Context
+import android.content.Intent
 import android.graphics.Color
+import android.net.Uri
 import androidx.recyclerview.widget.RecyclerView
 import android.text.Html
 import android.text.SpannableString
@@ -136,7 +138,12 @@ class NearByShopsListAdapter(context: Context, list: List<AddShopDBModelEntity>,
                 })
 
                 itemView.direction_ll.findViewById<LinearLayout>(R.id.direction_ll).setOnClickListener(View.OnClickListener {
-                    listener.mapClick(adapterPosition)
+                    //listener.mapClick(adapterPosition)
+                    var intentt: Intent = Intent(Intent.ACTION_VIEW, Uri.parse("google.navigation:q=${list[adapterPosition].shopLat},${list[adapterPosition].shopLong}&mode=1"))
+                    intentt.setPackage("com.google.android.apps.maps")
+                    if(intentt.resolveActivity(context.packageManager) !=null){
+                        context.startActivity(intentt)
+                    }
                 })
 
                 itemView.add_order_ll.findViewById<LinearLayout>(R.id.add_order_ll).setOnClickListener(View.OnClickListener {
